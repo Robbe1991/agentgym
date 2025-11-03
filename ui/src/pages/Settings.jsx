@@ -1,6 +1,39 @@
-import { Save } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { Save, Check } from 'lucide-react'
 
 export default function Settings() {
+  const [saved, setSaved] = useState(false)
+  const [settings, setSettings] = useState({
+    framework: 'LangChain',
+    llmProvider: 'OpenAI',
+    maxEpisodes: 200,
+    learningRate: 0.001,
+    autoSave: true,
+    openaiKey: '',
+    anthropicKey: '',
+  })
+
+  // Load settings from localStorage on mount
+  useEffect(() => {
+    const savedSettings = localStorage.getItem('agentgym-settings')
+    if (savedSettings) {
+      setSettings(JSON.parse(savedSettings))
+    }
+  }, [])
+
+  const handleSave = () => {
+    // Save to localStorage (backend integration in Issue #18)
+    localStorage.setItem('agentgym-settings', JSON.stringify(settings))
+
+    // Show success message
+    setSaved(true)
+    setTimeout(() => setSaved(false), 3000)
+  }
+
+  const updateSetting = (key, value) => {
+    setSettings(prev => ({ ...prev, [key]: value }))
+  }
+
   return (
     <div className="p-8">
       {/* Header */}
@@ -25,7 +58,11 @@ export default function Settings() {
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Default Framework
               </label>
-              <select className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500">
+              <select
+                value={settings.framework}
+                onChange={(e) => updateSetting('framework', e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500"
+              >
                 <option>LangChain</option>
                 <option>AutoGen</option>
                 <option>CrewAI</option>
@@ -35,7 +72,11 @@ export default function Settings() {
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Default LLM Provider
               </label>
-              <select className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500">
+              <select
+                value={settings.llmProvider}
+                onChange={(e) => updateSetting('llmProvider', e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500"
+              >
                 <option>OpenAI</option>
                 <option>Anthropic</option>
                 <option>Mock (for testing)</option>
@@ -56,7 +97,8 @@ export default function Settings() {
               </label>
               <input
                 type="number"
-                defaultValue="200"
+                value={settings.maxEpisodes}
+                onChange={(e) => updateSetting('maxEpisodes', parseInt(e.target.value))}
                 className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500"
               />
             </div>
@@ -67,7 +109,8 @@ export default function Settings() {
               <input
                 type="number"
                 step="0.001"
-                defaultValue="0.001"
+                value={settings.learningRate}
+                onChange={(e) => updateSetting('learningRate', parseFloat(e.target.value))}
                 className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500"
               />
             </div>
@@ -75,7 +118,8 @@ export default function Settings() {
               <input
                 type="checkbox"
                 id="auto-save"
-                defaultChecked
+                checked={settings.autoSave}
+                onChange={(e) => updateSetting('autoSave', e.target.checked)}
                 className="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
               />
               <label
@@ -100,6 +144,8 @@ export default function Settings() {
               </label>
               <input
                 type="password"
+                value={settings.openaiKey}
+                onChange={(e) => updateSetting('openaiKey', e.target.value)}
                 placeholder="sk-..."
                 className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500"
               />
@@ -110,6 +156,8 @@ export default function Settings() {
               </label>
               <input
                 type="password"
+                value={settings.anthropicKey}
+                onChange={(e) => updateSetting('anthropicKey', e.target.value)}
                 placeholder="sk-ant-..."
                 className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500"
               />
@@ -119,9 +167,12 @@ export default function Settings() {
 
         {/* Save Button */}
         <div className="flex justify-end">
-          <button className="flex items-center gap-2 px-6 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors">
-            <Save className="w-4 h-4" />
-            Save Settings
+          <button
+            onClick={handleSave}
+            className="flex items-center gap-2 px-6 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors"
+          >
+            {saved ? <Check className="w-4 h-4" /> : <Save className="w-4 h-4" />}
+            {saved ? 'Saved!' : 'Save Settings'}
           </button>
         </div>
       </div>

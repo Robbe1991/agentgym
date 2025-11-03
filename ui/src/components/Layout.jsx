@@ -31,7 +31,7 @@ export default function Layout({ children }) {
               AgentGym
             </h1>
             <p className="text-xs text-gray-500 dark:text-gray-400">
-              AI Agent Training
+              Execution Without Friction
             </p>
           </div>
         </div>

@@ -1,4 +1,5 @@
-import { TrendingUp, Users, Target, Zap } from 'lucide-react'
+import { TrendingUp, Users, Target, Zap, Play } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 const stats = [
   {
@@ -32,6 +33,8 @@ const stats = [
 ]
 
 export default function Dashboard() {
+  const navigate = useNavigate()
+
   return (
     <div className="p-8">
       {/* Header */}
@@ -149,7 +152,10 @@ export default function Dashboard() {
             Quick Start
           </h2>
           <div className="space-y-3">
-            <button className="w-full flex items-center justify-between p-4 bg-primary-50 dark:bg-primary-900/20 hover:bg-primary-100 dark:hover:bg-primary-900/30 rounded-lg border border-primary-200 dark:border-primary-800 transition-colors">
+            <button
+              onClick={() => navigate('/scenarios')}
+              className="w-full flex items-center justify-between p-4 bg-primary-50 dark:bg-primary-900/20 hover:bg-primary-100 dark:hover:bg-primary-900/30 rounded-lg border border-primary-200 dark:border-primary-800 transition-colors"
+            >
               <div className="text-left">
                 <p className="text-sm font-medium text-primary-900 dark:text-primary-100">
                   Start New Training
@@ -160,7 +166,10 @@ export default function Dashboard() {
               </div>
               <Play className="w-5 h-5 text-primary-600 dark:text-primary-400" />
             </button>
-            <button className="w-full flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700/50 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">
+            <button
+              onClick={() => navigate('/scenarios')}
+              className="w-full flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700/50 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
+            >
               <div className="text-left">
                 <p className="text-sm font-medium text-gray-900 dark:text-white">
                   Browse Scenarios
@@ -171,7 +180,10 @@ export default function Dashboard() {
               </div>
               <Users className="w-5 h-5 text-gray-400" />
             </button>
-            <button className="w-full flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700/50 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">
+            <button
+              onClick={() => navigate('/models')}
+              className="w-full flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700/50 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
+            >
               <div className="text-left">
                 <p className="text-sm font-medium text-gray-900 dark:text-white">
                   View Models
