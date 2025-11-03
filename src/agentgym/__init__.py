@@ -36,6 +36,7 @@ from agentgym.scenarios.registry import ScenarioNotFoundError, ScenarioRegistry
 
 # Integration exports
 from agentgym.integrations.base import FrameworkAdapter
+from agentgym.integrations.langchain import LangChainAdapter
 
 __all__ = [
     # Version info
@@ -56,4 +57,5 @@ __all__ = [
     "CustomerSupportScenario",
     # Integrations
     "FrameworkAdapter",
+    "LangChainAdapter",
 ]
