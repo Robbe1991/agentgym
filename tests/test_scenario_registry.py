@@ -89,10 +89,12 @@ class TestScenarioRegistry:
         """Clear registry after each test."""
         ScenarioRegistry.clear()
 
-    def test_initial_state_empty(self):
-        """Test registry starts empty after clear."""
+    def test_initial_state_has_built_ins(self):
+        """Test registry starts with built-in scenarios after clear."""
         scenarios = ScenarioRegistry.list()
-        assert scenarios == []
+        # After clear, built-ins are lazily reloaded on first access
+        assert len(scenarios) >= 1  # At least customer_support
+        assert any(s["name"] == "customer_support" for s in scenarios)
 
     def test_register_scenario(self):
         """Test registering a scenario."""
@@ -161,39 +163,45 @@ class TestScenarioRegistry:
         assert "mock" in error.available_scenarios
 
     def test_load_from_empty_registry_raises_error(self):
-        """Test loading from empty registry raises ScenarioNotFoundError."""
+        """Test loading non-existent scenario raises ScenarioNotFoundError."""
         with pytest.raises(ScenarioNotFoundError) as exc_info:
             ScenarioRegistry.load("anything")
 
         error = exc_info.value
         assert error.scenario_name == "anything"
-        assert error.available_scenarios == []
+        # Built-ins are lazily loaded, so customer_support will be available
+        assert "customer_support" in error.available_scenarios
 
     def test_list_empty_registry(self):
-        """Test listing scenarios from empty registry."""
+        """Test listing scenarios includes built-ins."""
         scenarios = ScenarioRegistry.list()
 
-        assert scenarios == []
+        # Built-ins are lazily loaded
+        assert len(scenarios) >= 1
+        assert any(s["name"] == "customer_support" for s in scenarios)
 
     def test_list_single_scenario(self):
-        """Test listing single registered scenario."""
+        """Test listing registered scenario plus built-ins."""
         ScenarioRegistry.register("mock", MockScenario)
 
         scenarios = ScenarioRegistry.list()
 
-        assert len(scenarios) == 1
-        assert scenarios[0]["name"] == "mock"
-        assert scenarios[0]["description"] == "Mock scenario for testing"
-        assert scenarios[0]["difficulty"] == "beginner"
+        # Should have mock + built-ins (customer_support)
+        assert len(scenarios) >= 2
+        mock_scenario = next((s for s in scenarios if s["name"] == "mock"), None)
+        assert mock_scenario is not None
+        assert mock_scenario["description"] == "Mock scenario for testing"
+        assert mock_scenario["difficulty"] == "beginner"
 
     def test_list_multiple_scenarios(self):
-        """Test listing multiple registered scenarios."""
+        """Test listing multiple registered scenarios plus built-ins."""
         ScenarioRegistry.register("mock", MockScenario)
         ScenarioRegistry.register("advanced_mock", AdvancedMockScenario)
 
         scenarios = ScenarioRegistry.list()
 
-        assert len(scenarios) == 2
+        # Should have mock + advanced_mock + built-ins (customer_support)
+        assert len(scenarios) >= 3
 
         # Find scenarios by name
         mock_info = next(s for s in scenarios if s["name"] == "mock")
@@ -232,12 +240,17 @@ class TestScenarioRegistry:
         ScenarioRegistry.register("mock", MockScenario)
         ScenarioRegistry.register("advanced_mock", AdvancedMockScenario)
 
-        assert len(ScenarioRegistry.BUILT_IN) == 2
+        # Should have at least mock + advanced_mock (built-ins may or may not be loaded yet)
+        assert len(ScenarioRegistry.BUILT_IN) >= 2
 
         ScenarioRegistry.clear()
 
+        # BUILT_IN dict is cleared
         assert len(ScenarioRegistry.BUILT_IN) == 0
-        assert ScenarioRegistry.list() == []
+        # But list() will lazily reload built-ins
+        scenarios = ScenarioRegistry.list()
+        assert len(scenarios) >= 1  # Built-ins reloaded
+        assert any(s["name"] == "customer_support" for s in scenarios)
 
 
 class TestScenarioRegistryIntegration:
@@ -277,7 +290,7 @@ class TestScenarioRegistryIntegration:
 
         # List all scenarios
         scenarios = ScenarioRegistry.list()
-        assert len(scenarios) == 2
+        assert len(scenarios) >= 3  # mock + advanced_mock + built-ins
 
         # Load each scenario by name from list
         for scenario_info in scenarios:

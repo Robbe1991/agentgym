@@ -64,10 +64,18 @@ class ScenarioRegistry:
 
     # Built-in scenarios mapping (name -> scenario class)
     # This will be populated as scenarios are implemented
-    BUILT_IN: dict[str, type[Scenario]] = {
-        # "customer_support": CustomerSupportScenario,  # TODO: Add in Issue #6
-        # Future scenarios will be added here
-    }
+    BUILT_IN: dict[str, type[Scenario]] = {}
+    _built_ins_loaded: bool = False
+
+    # Lazy import to avoid circular dependencies
+    @classmethod
+    def _ensure_built_in_loaded(cls) -> None:
+        """Load built-in scenarios if not already loaded."""
+        if not cls._built_ins_loaded:
+            from agentgym.scenarios.customer_support import CustomerSupportScenario
+
+            cls.BUILT_IN["customer_support"] = CustomerSupportScenario
+            cls._built_ins_loaded = True
 
     @classmethod
     def load(cls, scenario_name: str) -> Scenario:
@@ -86,6 +94,8 @@ class ScenarioRegistry:
             >>> scenario = ScenarioRegistry.load("customer_support")  # doctest: +SKIP
             >>> env = scenario.create_environment()  # doctest: +SKIP
         """
+        cls._ensure_built_in_loaded()
+
         if scenario_name not in cls.BUILT_IN:
             available = list(cls.BUILT_IN.keys())
             raise ScenarioNotFoundError(scenario_name, available)
@@ -109,6 +119,8 @@ class ScenarioRegistry:
             ...     print(f"{scenario['name']} ({scenario['difficulty']})")
             customer_support (beginner)
         """
+        cls._ensure_built_in_loaded()
+
         return [
             {
                 "name": name,
@@ -204,3 +216,4 @@ class ScenarioRegistry:
             >>> assert len(ScenarioRegistry.list()) == 0  # doctest: +SKIP
         """
         cls.BUILT_IN.clear()
+        cls._built_ins_loaded = False

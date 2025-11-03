@@ -31,6 +31,7 @@ from agentgym.core.trainer import Trainer, Trajectory
 
 # Scenario exports
 from agentgym.scenarios.base import Scenario
+from agentgym.scenarios.customer_support import CustomerSupportScenario
 from agentgym.scenarios.registry import ScenarioNotFoundError, ScenarioRegistry
 
 # Integration exports
@@ -54,6 +55,7 @@ __all__ = [
     "Scenario",
     "ScenarioRegistry",
     "ScenarioNotFoundError",
+    "CustomerSupportScenario",
 
     # Integrations
     # "FrameworkAdapter",  # TODO: Implement in Issue #7
