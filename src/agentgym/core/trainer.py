@@ -141,16 +141,15 @@ class Trainer:
             Scenario instance.
 
         Raises:
-            NotImplementedError: If ScenarioRegistry not yet implemented.
+            ScenarioNotFoundError: If scenario_name is not registered.
 
         Note:
-            This will use ScenarioRegistry.load() once Issue #5 is implemented.
-            For now, raises NotImplementedError.
+            Loads scenarios using ScenarioRegistry. Scenarios must be registered
+            before they can be loaded by name.
         """
-        raise NotImplementedError(
-            "ScenarioRegistry not yet implemented (Issue #5). "
-            "Please provide scenario directly to Trainer.__init__()"
-        )
+        from agentgym.scenarios.registry import ScenarioRegistry
+
+        return ScenarioRegistry.load(self.config.scenario)
 
     def train(self) -> TrainingResult:
         """Train agent using on-policy reinforcement learning.

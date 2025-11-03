@@ -261,10 +261,12 @@ class TestTrainer:
         assert trainer._episode_count == 0
 
     def test_initialization_without_scenario_raises_error(self):
-        """Test that initializing without scenario raises NotImplementedError."""
+        """Test that initializing without registered scenario raises ScenarioNotFoundError."""
+        from agentgym.scenarios.registry import ScenarioNotFoundError
+
         config = TrainingConfig(scenario="test")
 
-        with pytest.raises(NotImplementedError, match="ScenarioRegistry not yet"):
+        with pytest.raises(ScenarioNotFoundError, match="Scenario 'test' not found"):
             Trainer(config)
 
     def test_train_basic(self):
