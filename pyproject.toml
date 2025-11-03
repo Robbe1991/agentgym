@@ -123,7 +123,7 @@ Repository = "https://github.com/agentgym/agentgym"
 Changelog = "https://github.com/agentgym/agentgym/blob/main/CHANGELOG.md"
 
 [project.scripts]
-agentgym = "agentgym.cli.main:app"
+agentgym = "agentgym.cli.main:main"
 
 [tool.setuptools]
 packages = ["agentgym"]
