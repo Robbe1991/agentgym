@@ -30,7 +30,7 @@ from agentgym.core.result import TrainingMetrics, TrainingResult
 from agentgym.core.trainer import Trainer, Trajectory
 
 # Scenario exports
-# from agentgym.scenarios.base import Scenario  # TODO: Implement in Issue #4
+from agentgym.scenarios.base import Scenario
 # from agentgym.scenarios.registry import ScenarioRegistry  # TODO: Implement in Issue #5
 
 # Integration exports
@@ -51,7 +51,7 @@ __all__ = [
     "Trajectory",
 
     # Scenarios
-    # "Scenario",  # TODO: Implement in Issue #4
+    "Scenario",
     # "ScenarioRegistry",  # TODO: Implement in Issue #5
 
     # Integrations
