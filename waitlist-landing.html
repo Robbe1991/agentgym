@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentGym - Train AI Agents with RL in 5 Minutes</title>
+    <meta name="description" content="The Vercel for Agent Lightning. Train AI agents with reinforcement learning in 5 minutes. No ML PhD required.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AgentGym - Train AI Agents with RL in 5 Minutes">
+    <meta property="og:description" content="The Vercel for Agent Lightning. No ML PhD required.">
+    <meta property="og:type" content="website">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #000000;
+            --bg-secondary: #0a0a0a;
+            --bg-tertiary: #111111;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --accent: #3b82f6;
+            --accent-hover: #2563eb;
+            --success: #10b981;
+            --border: #222222;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Background gradient effect */
+        .bg-gradient {
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header */
+        header {
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-icon {
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 50px;
+            color: var(--accent);
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.6s ease-out 0.1s both;
+            background: linear-gradient(135deg, #ffffff, #a0a0a0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.6s ease-out 0.2s both;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.6s ease-out 0.3s both;
+        }
+
+        /* Waitlist Form */
+        .waitlist-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto 1rem;
+            animation: fadeInUp 0.6s ease-out 0.4s both;
+        }
+
+        .waitlist-form input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .waitlist-form input:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: var(--bg-secondary);
+        }
+
+        .waitlist-form button {
+            padding: 1rem 2rem;
+            background: var(--accent);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .waitlist-form button:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.3);
+        }
+
+        .form-note {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            animation: fadeInUp 0.6s ease-out 0.5s both;
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            padding: 1rem 1.5rem;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 8px;
+            color: var(--success);
+            max-width: 500px;
+            margin: 2rem auto;
+        }
+
+        .success-message.show {
+            display: block;
+            animation: fadeInUp 0.3s ease-out;
+        }
+
+        /* Video Section */
+        .video-section {
+            margin: 6rem 0;
+            animation: fadeInUp 0.6s ease-out 0.6s both;
+        }
+
+        .video-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: var(--bg-tertiary);
+            aspect-ratio: 16 / 9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.4);
+        }
+
+        .play-button::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 20px solid white;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            margin-left: 5px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 4rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Problem Section */
+        .problem-section {
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .problem-box {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 3rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+        }
+
+        .problem-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .problem-list {
+            text-align: left;
+            list-style: none;
+            font-size: 1.125rem;
+            line-height: 2;
+        }
+
+        .problem-list li {
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .problem-list li::before {
+            content: '❌';
+            position: absolute;
+            left: 0;
+        }
+
+        /* Pricing Preview */
+        .pricing-section {
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 3rem auto;
+        }
+
+        .pricing-card {
+            padding: 2.5rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--accent);
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.2);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px) scale(1.02);
+        }
+
+        .pricing-card.featured:hover {
+            transform: translateY(-4px) scale(1.07);
+        }
+
+        .plan-name {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .plan-price {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-price span {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+        }
+
+        .plan-features {
+            list-style: none;
+            text-align: left;
+            margin-top: 2rem;
+        }
+
+        .plan-features li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .plan-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 8rem 0;
+            text-align: center;
+        }
+
+        .cta-box {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 4rem;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 16px;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.125rem;
+            }
+
+            .waitlist-form {
+                flex-direction: column;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            nav {
+                display: none;
+            }
+
+            .cta-box {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">⚡</span>
+                    AgentGym
+                </div>
+                <nav>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#faq">FAQ</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="badge">✨ The Vercel for Agent Lightning</div>
+            <h1>Train AI Agents with<br>RL in 5 Minutes</h1>
+            <p class="hero-subtitle">No ML PhD required. No configuration hell. Just upload your data and train.</p>
+            <p class="hero-description">
+                The first platform to make reinforcement learning accessible for AI agents. Built on Microsoft's Agent Lightning framework.
+            </p>
+
+            <form class="waitlist-form" id="waitlistForm">
+                <input
+                    type="email"
+                    id="emailInput"
+                    placeholder="Enter your email"
+                    required
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                >
+                <button type="submit">Join Waitlist</button>
+            </form>
+            <p class="form-note">🎁 Early access + lifetime Pro discount for first 100 signups</p>
+
+            <div class="success-message" id="successMessage">
+                ✓ You're on the list! We'll email you when we launch (+ exclusive early access perks)
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <div class="play-button"></div>
+                    <p style="color: var(--text-secondary);">Demo video coming soon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">The Problem</h2>
+            <p class="section-subtitle">AI agents are everywhere, but training them is still broken</p>
+
+            <div class="problem-box">
+                <p class="problem-title">Right now, improving AI agents means:</p>
+                <ul class="problem-list">
+                    <li>Agent Lightning requires ML PhD-level expertise</li>
+                    <li>No UI, just complex CLI commands</li>
+                    <li>Hours of configuration before your first training run</li>
+                    <li>Existing ML platforms (W&B, Comet) have no RL workflows</li>
+                    <li>Building agents is easy (LangChain). Training them? Impossible.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">How AgentGym Works</h2>
+            <p class="section-subtitle">Radical simplicity meets professional power</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Magic Train Button</h3>
+                    <p class="feature-description">
+                        Upload your dataset, click train. We auto-detect format, select model architecture, configure hyperparameters, and deploy. Zero config required.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Real-Time Dashboard</h3>
+                    <p class="feature-description">
+                        Watch your agent learn in real-time. Loss curves, episode rewards, success rates, GPU utilization—all updating live every 5 seconds.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3 class="feature-title">10 Ready Templates</h3>
+                    <p class="feature-description">
+                        Customer service bot, coding assistant, research agent—start with proven templates. Or build your own from scratch.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3 class="feature-title">One-Click Deploy</h3>
+                    <p class="feature-description">
+                        Best checkpoint automatically deployed to production API endpoint. Auto-scaling, custom domains, usage analytics included.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3 class="feature-title">Smart Error Handling</h3>
+                    <p class="feature-description">
+                        "Training diverged at epoch 15" → See why, get fix suggestions, click [Fix Automatically]. No PhD debugging required.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3 class="feature-title">Fair Pricing</h3>
+                    <p class="feature-description">
+                        $39/month Pro, $199/month Team. No "tracked hours" trap. Predictable pricing, generous free tier. Built for developers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple, Fair Pricing</h2>
+            <p class="section-subtitle">No hidden fees. No "tracked hours" trap. Just honest pricing.</p>
+
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="plan-name">Free</div>
+                    <div class="plan-price">$0<span>/month</span></div>
+                    <ul class="plan-features">
+                        <li>100 GPU hours/month</li>
+                        <li>5GB storage</li>
+                        <li>1-2 users</li>
+                        <li>All core features</li>
+                        <li>Public projects</li>
+                        <li>Community support</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="plan-name">Pro</div>
+                    <div class="plan-price">$39<span>/month</span></div>
+                    <ul class="plan-features">
+                        <li>1,000 GPU hours/month</li>
+                        <li>100GB storage</li>
+                        <li>Up to 5 users</li>
+                        <li>Private projects</li>
+                        <li>Priority compute queue</li>
+                        <li>Email support</li>
+                        <li>Advanced features</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="plan-name">Team</div>
+                    <div class="plan-price">$199<span>/month</span></div>
+                    <ul class="plan-features">
+                        <li>5,000 GPU hours/month</li>
+                        <li>1TB storage</li>
+                        <li>Unlimited users</li>
+                        <li>SSO/SAML</li>
+                        <li>Priority support (4-8hr)</li>
+                        <li>API access</li>
+                        <li>Distributed training</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <h2 class="cta-title">Ready to train smarter agents?</h2>
+                <p class="cta-subtitle">Join 0 developers on the waitlist. Launch in 90 days.</p>
+
+                <form class="waitlist-form" id="waitlistForm2">
+                    <input
+                        type="email"
+                        id="emailInput2"
+                        placeholder="Enter your email"
+                        required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    >
+                    <button type="submit">Join Waitlist</button>
+                </form>
+                <p class="form-note">🎁 Early access + lifetime Pro discount for first 100 signups</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://github.com/yourusername/agentgym" target="_blank">GitHub</a>
+                <a href="https://twitter.com/agentgym" target="_blank">Twitter</a>
+                <a href="mailto:hello@agentgym.dev">Contact</a>
+            </div>
+            <p>&copy; 2025 AgentGym. Built for developers who want to train better agents.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Waitlist form handling
+        function handleSubmit(e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const emailInput = form.querySelector('input[type="email"]');
+            const email = emailInput.value;
+
+            // TODO: Replace with your actual email collection service
+            // Options: ConvertKit, Loops, Tally, Google Sheets, Airtable
+            console.log('Email submitted:', email);
+
+            // For now, store in localStorage (you'll replace this)
+            let emails = JSON.parse(localStorage.getItem('waitlist') || '[]');
+            if (!emails.includes(email)) {
+                emails.push(email);
+                localStorage.setItem('waitlist', JSON.stringify(emails));
+
+                // Update counter in CTA
+                document.querySelectorAll('.cta-subtitle').forEach(el => {
+                    el.textContent = `Join ${emails.length} developers on the waitlist. Launch in 90 days.`;
+                });
+            }
+
+            // Show success message
+            const successMessage = document.getElementById('successMessage');
+            successMessage.classList.add('show');
+
+            // Reset form
+            emailInput.value = '';
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 5000);
+
+            // Track with analytics (add your analytics code here)
+            // gtag('event', 'waitlist_signup', { email: email });
+        }
+
+        // Attach to both forms
+        document.getElementById('waitlistForm').addEventListener('submit', handleSubmit);
+        document.getElementById('waitlistForm2').addEventListener('submit', handleSubmit);
+
+        // Update counter on load
+        window.addEventListener('load', () => {
+            const emails = JSON.parse(localStorage.getItem('waitlist') || '[]');
+            if (emails.length > 0) {
+                document.querySelectorAll('.cta-subtitle').forEach(el => {
+                    el.textContent = `Join ${emails.length} developers on the waitlist. Launch in 90 days.`;
+                });
+            }
+        });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

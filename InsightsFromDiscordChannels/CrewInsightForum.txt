@@ -1,0 +1,1710 @@
+**Big News: Starting Crews Marketplace!**
+
+![:waving\_hand:](https://emoji.discourse-cdn.com/twitter/waving_hand.png?v=14 ":waving_hand:") Hey there everyone!
+
+I’m incredibly excited to share something we’ve been experimenting with: **the early-announcement of the Crews Marketplace!**
+
+We deeply believe that the strength of CrewAI lies within our community. Now, we want to help amplify your work even further.
+
+### Why This Matters to You:
+
+* **![:glowing\_star:](https://emoji.discourse-cdn.com/twitter/glowing_star.png?v=14 ":glowing_star:") Early Recognition**: As some of our earliest and most dedicated community members, you’re first in line to feature your creations and get recognized as leading Crew developers.
+* **![:money\_bag:](https://emoji.discourse-cdn.com/twitter/money_bag.png?v=14 ":money_bag:") Earn and Grow**: We’re rolling out a revenue-sharing model soon, giving you a chance to monetize your templates as they’re adopted by enterprise customers.
+* **![:rocket:](https://emoji.discourse-cdn.com/twitter/rocket.png?v=14 ":rocket:") Reach Further**: Your crew templates will be showcased to a global audience of enterprise leaders, massively boosting your visibility and influence.
+
+### Want to know more?
+
+![](https://us1.discourse-cdn.com/flex025/uploads/crewai/original/2X/0/0fa38024467a49019216e1872a65e7a754b51e88.png)[marketplace.crewai.com](https://marketplace.crewai.com/)
+
+### [CrewAI Enterprise | Submit Your Crew for Evaluation](https://marketplace.crewai.com/)
+
+Submit your custom crew for evaluation and potential inclusion as a template in CrewAI Enterprise
+
+**Marketplace Official Launch?** Q2 2025, but as our inner circle, you’ll hear first.
+
+I can’t wait to see the amazing crews you’ll build and share. We’re creating something special together—thanks for being on this journey with us.
+
+**João (Joe)**\
+CEO at CrewAI
+
+
+Themenliste, Spaltenüberschriften mit Schaltflächen sind sortierbar.
+Thema	Beitragende
+About the Showcase category
+A place for you to showcase your crews
+	2	180	Sep. 2024
+Travel planner agent with open source Memori and CrewAI
+crewai
+memory
+	1	91	6. Aug.
+Sales Contact Finder SQL Agent with CrewAI and GibsonAI
+crewai
+agent
+	1	40	1. Aug.
+New MCP Server Available: Claude CrewAI for Vibe Programming
+	1	226	16. Juli
+Content gap and research question generator
+crewai
+agent
+	2	116	1. Mai
+Content gap analysis with InfraNodus portable GraphRAG
+crewai
+feature
+openai
+	1	98	24. Apr.
+Hacker News Analyzer with Streamlit
+crewai
+openai
+	2	588	23. Feb.
+CyberOps Crews - To streamline Security Events analysis
+	1	230	15. Jan.
+How to cut podcast preparation time from 4 hours to just 3 minutes at a cost of around $0.13 per flow run?
+	3	585	11. Jan.
+CrewNews - AI news generator that delivers an unbiased version of the news for a given topic
+crewai
+
+Themenliste, Spaltenüberschriften mit Schaltflächen sind sortierbar.
+Thema	Beitragende
+tada Big News: Starting Crews Marketplace!
+crewai
+agentic-apps
+marketplace
+Big News: Starting Crews Marketplace! waving_hand Hey there everyone! I’m incredibly excited to share something we’ve been experimenting with: the early-announcement of the Crews Marketplace! We deeply believe that … weiterlesen
+	6	465	3. Juni
+Welcome to CrewAI! wave
+0 Stimmen
+We are so glad you joined us. CrewAI Official CrewAI community Here are some things you can do to get started: speaking_head Introduce yourself by adding your picture and information about yourself and your intere… weiterlesen
+	1	1,2 T.	Sep. 2024
+About the General category
+This category is for conversations that don’t fit anywhere else
+	1	61	Sep. 2024
+Custom LLM Implementation
+crewai
+agent
+0 Stimmen
+	0	4	12 h
+Crew AI memory and chatbot
+2 Stimmen
+	8	821	1 d
+Using Custom LLM Request
+agent
+feature
+0 Stimmen
+	4	1,1 T.	3 d
+CrewAI Deployment Issue - Provisioning Failed
+2 Stimmen
+	1	160	5 d
+Problem with updating tool output
+0 Stimmen
+	0	3	7 d
+CrewAI Lightning Lessons repo
+0 Stimmen
+	0	30	10 d
+Building a Vendor-Agnostic Chat Application: Can CrewAI Replace proprietary Agent Logic (like in OpenAI ChatKit)?
+crewai
+agent
+1 Stimme
+	1	43	10 d
+Trouble connecting Gmail for parsing PDFs
+0 Stimmen
+	0	12	14 d
+“crewai install” fails on MacOS 15 with pylance errors and Python version 3.13.7
+crewai
+tools_issues
+0 Stimmen
+	6	92	21 d
+LLM used through Ollama is not working for fileread tool
+0 Stimmen
+	3	148	21 d
+How to enable reasoning for Grok 4 Fast and reasoning effort for GPT 5 (OpenRouter)
+0 Stimmen
+	3	73	23 d
+Crewai with deepseek replicate
+0 Stimmen
+	1	40	23 d
+Any example on how to have a crewai project call an exisitng agent that is exposed via a2a?
+0 Stimmen
+	1	145	23 d
+Download crawai cloud version to local
+0 Stimmen
+	1	22	30 d
+AMP Launch coupon not working’s
+0 Stimmen
+	1	22	30 d
+Studio Published Automation URL
+crewai
+0 Stimmen
+	1	20	3. Okt.
+Anybody had luck with gpt-oss and crewai?
+0 Stimmen
+	4	338	2. Okt.
+Unable to use MDXSearchTool with local Ollama LLM — OpenAI API key still required
+0 Stimmen
+	4	37	29. Sep.
+Nightmare with - Chroma requires sqlite3 >= 3.35.0
+2 Stimmen
+	8	2,1 T.	27. Sep.
+Ollama Web Search MCP Server
+crewai
+feature
+0 Stimmen
+	0	103	26. Sep.
+Agent cannot read my excel file path
+agent
+tools_issues
+task
+0 Stimmen
+	2	45	23. Sep.
+CrewAI Chatbot Performance - Agent Execution Time
+0 Stimmen
+	9	716	23. Sep.
+Contributing to crewai and career ambitions
+0 Stimmen
+	1	25	23. Sep.
+File Path Issue when calling a tool
+0 Stimmen
+	1	67	19. Sep.
+Starting Projects
+0 Stimmen
+	1	25	19. Sep.
+Hallucination is happening by agents
+agent
+tools_issues
+task
+0 Stimmen
+	3	62	19. Sep.
+Github Agents shows internal runtime errors about Python
+1 Stimme
+	0	34	18. Sep.
+Looking for feedback: Help shape open-source governance for CrewAI agents
+crewai
+0 Stimmen
+	0	10	16. Sep.
+Repaired JSON when using Serper tool
+0 Stimmen
+	2	27	15. Sep.
+Knowledge error in Studio
+0 Stimmen
+	1	20	13. Sep.
+Having a very hard time getting structured outputs to work
+crewai
+agent
+0 Stimmen
+	7	68	10. Sep.
+How to run a single method starting from a persisted state
+flows
+0 Stimmen
+	2	24	7. Sep.
+OpenAI GPT-5 Issues
+0 Stimmen
+	2	166	4. Sep.
+CrewAI CLI Scaffolding Questions
+crewai
+tools_issues
+flows
+0 Stimmen
+	3	38	2. Sep.
+Failed to init knowledge: table embeddings already exists
+0 Stimmen
+	2	19	2. Sep.
+Error while using MySQLSearchTool
+0 Stimmen
+	12	132	2. Sep.
+How to solve this error, its occurs when specifying the agent tasks using PDFKnowledgeSource.I already have the knowledge folder created with my datasets inside but kept running into thi error:
+0 Stimmen
+	1	10	1. Sep.
+Unable to Install Crewai In my local Pc
+crewai
+tools_issues
+0 Stimmen
+	1	210	29. Aug.
+CrewAI Memory [Vertex AI]
+memory
+1 Stimme
+	0	35	25. Aug.
+Multi agent Orchestration
+0 Stimmen
+	1	64	25. Aug.
+CrewAI Knowledge Reset Not Working
+0 Stimmen
+	5	100	22. Aug.
+How to Handle this issues Received None or empty response from LLM call
+crewai
+agent
+0 Stimmen
+	8	439	22. Aug.
+Interrupt the thinking process programmatically
+crewai
+agent
+tools_issues
+task
+0 Stimmen
+	0	36	21. Aug.
+CrewAI Examples
+crewai
+memory
+0 Stimmen
+	0	76	19. Aug.
+SSL certificate verify failed
+crewai
+8 Stimmen
+	22	1,6 T.	19. Aug.
+Crewai_tools catalog
+0 Stimmen
+	0	25	18. Aug.
+“litellm.Internal Server Error: Internal Server Error: OpenAIException - ValidationException: The model that you are using requires the last turn in the conversation to be a user message.”
+tools_issues
+openai
+0 Stimmen
+	0	69	17. Aug.
+How use web content credibility of web pages in crewai?
+crewai
+0 Stimmen
+	0	21	17. Aug.
+Incorrectly inputting arguments in MCP tool
+tools_issues
+0 Stimmen
+	1	67	16. Aug.
+CrewAI FileWriterTool keeps creating files in random locations in my project
+0 Stimmen
+	0	39	15. Aug.
+I use JSONKnowledgeSource init knwoledge is search failed
+tools_issues
+0 Stimmen
+	2	19	15. Aug.
+Refer to State in YAML
+flows
+0 Stimmen
+	5	41	13. Aug.
+After adding “knowledge_sources” in agent, I get the error sqlite3.OperationalError: table embeddings already exists
+crewai
+agent
+0 Stimmen
+	9	112	10. Aug.
+Tool Validation Error
+crewai
+agent
+tools_issues
+task
+0 Stimmen
+	0	33	9. Aug.
+Crew AI with oauth
+1 Stimme
+	1	39	7. Aug.
+Instruction to connect Crew AI to Atlassian Remote MCP Server
+0 Stimmen
+	0	99	5. Aug.
+Creation of crewai project
+0 Stimmen
+	0	43	5. Aug.
+How to reset Agents programatically
+1 Stimme
+	5	171	4. Aug.
+CrewAI Flow Infinite Loop - Steps Repeating Endlessly
+0 Stimmen
+	0	77	4. Aug.
+Redundant API Call When Using output_pydantic
+0 Stimmen
+	2	26	1. Aug.
+Issues with token’s limit
+0 Stimmen
+	3	393	31. Juli
+FIGMA integration in Crewai
+crewai
+tools_issues
+0 Stimmen
+	0	56	31. Juli
+Building a Chatbot with CrewAI
+crewai
+0 Stimmen
+	1	78	30. Juli
+Custom tool output structure
+tools_issues
+0 Stimmen
+	1	39	30. Juli
+I want to integrate Figma in my project
+agent
+0 Stimmen
+	3	41	26. Juli
+CrewAI External memory integration
+0 Stimmen
+	1	77	26. Juli
+Difference between RAG and knowledge source
+3 Stimmen
+	10	785	26. Juli
+Pb pour réaliser le tuto
+0 Stimmen
+	0	14	25. Juli
+Managing large data, need to cycle and then summarize
+0 Stimmen
+	3	60	24. Juli
+Is there a CrewAI community in Hong Kong?
+crewai
+0 Stimmen
+	1	27	24. Juli
+How to handle empty results from Executor Agent and trigger QueryBuilder Agent to simplify the query?
+0 Stimmen
+	5	48	19. Juli
+Seeking Agentic AI Providers & Experts for Master’s Thesis Survey (3 min)
+0 Stimmen
+	0	14	18. Juli
+Best Practices Integration into Existing CrewAI Workflow
+crewai
+agent
+tools_issues
+0 Stimmen
+	2	76	18. Juli
+BadRequestError( .BadRequestError:
+0 Stimmen
+	2	24	17. Juli
+How to obtain the output results of the agent, such as the name of the called tool, tool input parameters, etc
+tools_issues
+0 Stimmen
+	3	190	15. Juli
+Example of using PDF as a source to extract relevant information
+crewai
+task
+0 Stimmen
+	0	73	14. Juli
+The best way to orchestrate a Craw AI project
+crewai
+0 Stimmen
+	0	34	12. Juli
+Let me tell you something, about multi-modal
+crewai
+tools_issues
+tool
+0 Stimmen
+	1	78	11. Juli
+OpenAI streaming?
+crewai
+2 Stimmen
+	10	1,1 T.	9. Juli
+Fail to create crewai project
+1 Stimme
+	4	368	2. Juli
+How to analyze thousands of products in stock and generate individual recommendations for each one
+0 Stimmen
+	2	51	2. Juli
+Tools ValidationError
+0 Stimmen
+	0	36	30. Juni
+How to wrap an deployed agent/ais’ APIs as crew agent
+crewai
+agent
+1 Stimme
+	1	50	30. Juni
+How do you pause and resume flows?
+0 Stimmen
+	1	118	30. Juni
+Fork Join Crews with Supervisor
+0 Stimmen
+	0	31	29. Juni
+Crewai is having major problem , its takes openai reference though using other llms
+0 Stimmen
+	0	44	29. Juni
+Advice on how to prompt coding agents
+tools_issues
+0 Stimmen
+	0	72	27. Juni
+Litellm throwing 308 error with OPEN AI
+0 Stimmen
+	1	34	27. Juni
+Request for completed course certificate , not recieved yet
+1 Stimme
+	2	36	26. Juni
+How the pydantic output actually works
+task
+0 Stimmen
+	0	43	26. Juni
+Chatollama not working with CrewAi
+0 Stimmen
+	0	63	22. Juni
+CrewAI Crew Factory project
+crewai
+agent
+0 Stimmen
+	2	488	22. Juni
+Bright Data tools
+tools_issues
+0 Stimmen
+	0	29	22. Juni
+Alternative for Docker, while doing code execution by agent
+0 Stimmen
+	4	1,2 T.	21. Juni
+How to integrate human in loop feature within an UI like streamlit
+0 Stimmen
+	1	185	20. Juni
+Issues when declaring Agent with groq llm 2024-10-19 07:15:41,125 - 8140583488 - llm.py-llm:178 - ERROR: Failed to get supported params: argument of type ‘NoneType’ is not iterable
+0 Stimmen
+	4	804	19. Juni
+INFO: Backoff: Backing off send_request(…)
+1 Stimme
+	7	380	18. Juni
+No executables are provided by `crewai`
+crewai
+0 Stimmen
+	5	733	18. Juni
+Loading trained pkl file for flow
+1 Stimme
+	3	271	17. Juni
+Any working example of knwoledge csv
+agent
+memory
+0 Stimmen
+	1	154	17. Juni
+Test account wanted
+0 Stimmen
+	3	35	16. Juni
+Question: what files show all the API calls to the LLM APIs to complete the tasks
+0 Stimmen
+	4	135	16. Juni
+Crewai not reading the full pydantic model provided as output_json or output_pydantic
+0 Stimmen
+	0	33	16. Juni
+Error: HTTPSConnectionPool(host=‘google.serper.dev’, port=443)
+0 Stimmen
+	2	147	13. Juni
+How to make agents learn from human input?
+0 Stimmen
+	0	24	12. Juni
+Why is there no error information when fails?
+0 Stimmen
+	1	120	11. Juni
+Base64 String Gets Altered During Crew Execution
+0 Stimmen
+	5	125	11. Juni
+Crewai - Error using Multimodal Agent with Ollama (gemma3:4b)
+tools_issues
+1 Stimme
+	0	118	10. Juni
+Parallel Processing of Messages with CrewAI: Is It Possible to Set the Number of Workers?
+0 Stimmen
+	0	37	10. Juni
+Issue with how crewai queries mem0 external memory
+memory
+0 Stimmen
+	3	97	10. Juni
+Using /knowledge in CrewAI Enterprise
+enterprise
+0 Stimmen
+	3	41	10. Juni
+When i install pip install crewai==0.28.8 it is giving me a lot of error INFO: pip is still looking at multiple versions of embedchain to determine which version is compatible with other requirements. This could take a while
+0 Stimmen
+	1	65	9. Juni
+CrewAI Slices, Prompts and Control
+agent
+task
+crew
+1 Stimme
+	0	225	9. Juni
+Agent Tasks do not accurately process large JSON arrays (> 20 objects) in KnowledgeSource
+0 Stimmen
+	1	56	8. Juni
+Coping with ContentPolicyViolationError when using OpenAI o4-mini
+0 Stimmen
+	1	70	4. Juni
+Crew Ai in Microsoft Fabric
+crewai
+openai
+0 Stimmen
+	0	25	4. Juni
+How to Set Custom LLM Parameters (like `temperature`, `seed`) in YAML Config for Ollama
+crewai
+0 Stimmen
+	1	302	3. Juni
+Question about removal of YAML files for agents and tasks in version 0.13
+crewai
+feature
+0 Stimmen
+	0	38	2. Juni
+Passing outputs of One Task multiple times to other Task as ‘Template Variable’
+0 Stimmen
+	1	144	2. Juni
+CSVSearchTool always returns only 3 results - How to increase the limit?
+0 Stimmen
+	2	79	30. Mai
+Facing issues while trying to use Atlassian MCP servers confluence tool in crew.ai agent and task
+0 Stimmen
+	2	190	28. Mai
+LiteAgent Error: ‘generator’ object has no attribute ‘rstrip’ with human_input tool
+agent
+0 Stimmen
+	1	34	27. Mai
+Methods decorated with @start in flow get executed parallelly but …… head on to description
+0 Stimmen
+	0	25	27. Mai
+Issue: LLM Hallucination in Structured Data Extraction (CrewAI)
+crewai
+tools_issues
+task
+0 Stimmen
+	9	230	26. Mai
+Inconsistent Console Verbosity Between Windows and macOS When verbose=true
+0 Stimmen
+	3	52	26. Mai
+How to build ReAct (self learning and reasoning
+0 Stimmen
+	0	73	26. Mai
+Crew ai stuck on deploy
+agent
+0 Stimmen
+	1	46	26. Mai
+Does anyone have the details on how to use the new features in .121
+0 Stimmen
+	5	219	24. Mai
+I’m using CrewAI with Azure OpenAI (gpt-4o) to generate a short story, but the execution gets stuck after printing the crew kickoff message
+0 Stimmen
+	1	45	24. Mai
+Support for claude 4?
+0 Stimmen
+	0	101	23. Mai
+Tool Best Practice: Assign to Agent or Task?
+0 Stimmen
+	5	255	23. Mai
+Tool Usage not guaranteed
+crewai
+agent
+tools_issues
+task
+flows
+0 Stimmen
+	7	164	23. Mai
+CrewAI Deployment Issue with Permisson in AWS Lambda
+crewai
+tools_issues
+memory
+2 Stimmen
+	1	166	23. Mai
+Not able to upgrade crewai-tool separately
+tools_issues
+0 Stimmen
+	4	117	23. Mai
+Multi-Model Agents-Deeplearning Tutorial-Ex-L5-Embedding Model Issue(looking for OpenAI even after setting embedder as gemini’s text embedding model)
+0 Stimmen
+	5	84	23. Mai
+Whatsapp Integration
+1 Stimme
+	2	187	22. Mai
+Serper API tool from crewai tools throwing validation error
+0 Stimmen
+	7	671	21. Mai
+Unexpected behavior with @listen and missing nodes in Flow graph
+0 Stimmen
+	4	107	21. Mai
+Cannot access automatically created id in unstructured state
+0 Stimmen
+	1	37	21. Mai
+How to pass tool input if we are using custom tool,and expected agent output is tool output
+0 Stimmen
+	3	344	20. Mai
+Kickoff_async() How does it work?
+0 Stimmen
+	1	165	19. Mai
+In a multi-agent system, how to end the process early when the conditions are met
+agent
+task
+0 Stimmen
+	3	218	19. Mai
+How to Run Agents Sequentially and Stop on Success?
+1 Stimme
+	1	343	19. Mai
+Another annoying issue
+1 Stimme
+	4	58	17. Mai
+Decision making Algorithms used in CrewAI
+0 Stimmen
+	7	216	17. Mai
+:fire:New ollama model qwen3:8b fire
+0 Stimmen
+	12	732	17. Mai
+NL2SQL not working for MS SQL
+tools_issues
+0 Stimmen
+	1	232	16. Mai
+Custom Short and Long term memory persistance in crew.ai
+crewai
+memory
+0 Stimmen
+	3	226	16. Mai
+CSVSearchTool Tool Usage Failed
+tools_issues
+0 Stimmen
+	3	157	16. Mai
+Crewai install error on Mac with Sequoia 15.5
+0 Stimmen
+	1	139	15. Mai
+Invalid Format: I missed the ‘Action:’ after ‘Thought:’. I will do right next, and don’t use a tool I have already used
+crewai
+openai
+3 Stimmen
+	5	1,3 T.	14. Mai
+Craft a guide to using Memory in CrewAI please
+crewai
+0 Stimmen
+	2	432	13. Mai
+Intermittent 401 for my custom LiteLLM
+0 Stimmen
+	2	224	13. Mai
+CrewAI Short term memory?
+0 Stimmen
+	1	117	13. Mai
+Interested in talking about the new MCP Server capable https://app.crewai.com/
+0 Stimmen
+	2	86	13. Mai
+Agent fails to save the results from multiple tools ,and only executes first tool from the list and skips remaining
+agent
+tools_issues
+0 Stimmen
+	3	85	13. Mai
+Use memory db path with postgresql
+0 Stimmen
+	1	109	13. Mai
+PDF Search tool with S3 support
+crewai
+tools_issues
+0 Stimmen
+	1	40	13. Mai
+‘Tool’ object is not callable
+0 Stimmen
+	2	123	13. Mai
+CrewAI Examples Repo
+0 Stimmen
+	2	275	9. Mai
+Best Practices for Passing User-Specific Inputs in CrewAI Flows via Gradio UI
+feature
+flows
+0 Stimmen
+	1	217	9. Mai
+Choosing Between Sequential and Hierarchical Processes in Crewai for a Shopping Chatbot
+0 Stimmen
+	3	152	9. Mai
+Does hierarchical process even work? Your experience is highly appreciated!
+5 Stimmen
+	9	1,2 T.	8. Mai
+Collaborative Agents
+crewai
+agent
+task
+0 Stimmen
+	2	78	7. Mai
+Getting this error while running crewai run
+0 Stimmen
+	4	306	6. Mai
+Passing CrewStructuredTool to tools
+tools_issues
+2 Stimmen
+	7	260	6. Mai
+CrewAI’s expired certificate, they need to renew it
+0 Stimmen
+	4	266	5. Mai
+Forcing Tool Output as Result
+0 Stimmen
+	1	207	5. Mai
+I have a challenge while using Gemini with the YouTube Channel RAG Search. Any help and guidance is highly appreciated
+0 Stimmen
+	1	101	4. Mai
+CrewAI Studio Knowledge Problems
+0 Stimmen
+
+
+Themenliste, Spaltenüberschriften mit Schaltflächen sind sortierbar.
+Thema	Beitragende
+Guidelines for Creating a Helpful Post on the CrewAI Forum
+crewai
+We’re so glad you’ve found the CrewAI forum! star_struck Here are some guidelines to help you craft a thoughtful post that will receive helpful answers: 1. Search First Use the search bar to see if someone has previo… weiterlesen
+	1	315	9. Mai
+About the CrewAI Community Support category
+This channel is dedicated to providing you a way to request troubleshooting support for your CrewAI projects from the CrewAI community. Please keep discussions focused on troubleshooting & support. Off-topic conversatio… weiterlesen
+	1	267	Sep. 2024
+CrewAI LLM with Groq resulting in GroqException “is_litellm is unsupported”
+crewai
+	0	1	7 h
+Using locally trained LLM for Text summarization
+crewai
+	0	3	10 h
+How to disable execution trace prompt?
+	1	20	16 h
+RagTool with ollama (crewai==0.203.1 crewai-tools==0.76.0) does not work
+tools_issues
+feature
+	2	1	1 d
+Display full outputs in an Agent
+	1	10	2 d
+Crewai installation issue with python:alpine image
+crewai
+	1	174	5 d
+Unknown errors when implementing FileReadTool
+crewai
+tools_issues
+	5	16	6 d
+Best CrewAI Approach for Building a Ticketing Chatbot with API Workflows
+crewai
+	1	190	8 d
+ImportError: cannot import name ‘BaseTool’ from ‘crewai.tools’ when deploying to Cloud Run
+tools_issues
+	2	18	10 d
+How to fix the import error of base_tool using CrewAI?
+crewai
+tools_issues
+	3	340	10 d
+Task output in CSV format does not terminate with a newline
+	0	25	19 d
+MCP Server Integration Issue in CrewAI (Works Fine in Cursor AI)
+	4	43	21 d
+MCP Server Tool Returns Accurate Data But Final Report Contains Hallucinated Metrics
+tools_issues
+	2	34	22 d
+I have an issue with a SerperDev search tool
+	5	832	24 d
+Crewai Install - Pylance Distribution error
+crewai
+tools_issues
+	6	87	26 d
+red_question_mark Submission Issue – Fall 2025 Agentic AI Challenge
+crewai
+	0	37	27 d
+Files and Studio
+	0	22	27 d
+Sending artifacts from custom tools
+	0	8	29 d
+Use of Azure OpenAI token provider
+	3	275	30 d
+CrewAI AMP launch coupon code for existing users
+crewai
+agent
+	2	38	30 d
+How do I pass runtime-only arguments to a custom tool?
+tools_issues
+	5	111	3. Okt.
+Agents ignore custom_system_template and custom_prompt_template
+crewai
+agent
+	0	30	2. Okt.
+Unable to connect to Azure Open AI using AD token provider
+crewai
+agent
+task
+	1	95	1. Okt.
+Installation failure of crewai-tools on Python 3.13.7
+crewai
+tools_issues
+	5	58	30. Sep.
+Error: [EventBus Error] Handler ‘on_task_started’ failed for event ‘TaskStartedEvent’: ‘NoneType’ object has no attribute ‘key’
+	1	68	30. Sep.
+Task reliability issue - not following rules
+	2	28	29. Sep.
+Access OpenAI LLM through SAP Proxy Client
+	4	457	29. Sep.
+A Chatbot as Part of CrewAI Flows
+flows
+	2	141	29. Sep.
+Badge for deeplearning.ai
+	27	535	29. Sep.
+Validation error for TaskOutput
+output_issues
+	2	173	28. Sep.
+Persistent litellm.BadRequestError with ChatGoogleGenerativeAI (Gemini) in Colab
+tools_issues
+	2	16	25. Sep.
+CrewAI, output_pydantic json fencing still appearing even with guardrail
+crewai
+task
+	0	25	25. Sep.
+Persistent Import Error with BaseTool in Colab Environment
+crewai
+	0	12	25. Sep.
+GPT-5 + LiteLLM
+crewai
+	3	127	25. Sep.
+How to Resolve OSError: Read-only File System Error in AWS Lambda when Using CrewAI?
+crewai
+tools_issues
+memory
+	3	252	24. Sep.
+Long lived tasks crews / flows
+	0	10	24. Sep.
+Unable to connect Github for deployment on CrewAI Enterprise
+crewai
+tools_issues
+	9	108	23. Sep.
+How to upload or pass a file to the automation workflow in online version
+	2	45	23. Sep.
+Gpt 5 support - Does CrewAI currently support GPT-5 models?
+	2	203	19. Sep.
+Self-hosted GUI?
+	1	39	18. Sep.
+CrewAI NL2SQL Tool Truncates SQL Queries
+crewai
+tools_issues
+	4	127	18. Sep.
+Can CrewAI training be incremental instead of resetting?
+crewai
+	0	21	17. Sep.
+Issue with Google BigQuery MCP Server – CrewAI Only Returning First Row of Results
+	2	32	16. Sep.
+Bug Report: GitHub Integration Not Working (404 Error)
+crewai
+tools_issues
+	0	32	14. Sep.
+CrewAI Studio from Enterprise - Not seeing the option for “Knowledge”
+	0	17	13. Sep.
+Getting error while creating new project
+tools_issues
+	3	183	12. Sep.
+NL2SQLTool returning only validation errors
+tools_issues
+	0	23	12. Sep.
+Networkx bug for crew import
+crewai
+	2	33	10. Sep.
+How can we get approval for application connector we created on crew platform?
+	7	84	10. Sep.
+Trouble connect to Google sheet
+crewai
+	3	139	10. Sep.
+Unable to Set Default Model llama3.1 in CrewBase – Model Not Found Error
+crewai
+agent
+	2	33	10. Sep.
+The max_iter is not working as expected
+agent
+	2	96	9. Sep.
+The File paths: tool gets the list of files but then the agents somehow tries to read files that does not exisits
+	1	18	7. Sep.
+How to provide webhook for human input to the crew?
+agent
+task
+	4	167	4. Sep.
+Unable to Login/Signup using the crewai login or signup
+crewai
+task
+enterprise
+	2	31	1. Sep.
+Help with Human-in-the-Loop Conversational Flow (User Response via API)
+crewai
+agent
+	1	64	1. Sep.
+Unable to chat with the published crew and getting error: Sorry, I’m having trouble answering your question. Please try again later
+crewai
+agent
+	1	22	1. Sep.
+Batch Processing Best Practice
+flows
+	2	79	28. Aug.
+Cant able to connect to Azure OPENAI with CrewAI
+	16	827	28. Aug.
+How to Build a Generic Agent to Process Any Excel File
+	4	44	27. Aug.
+Can’t install “latest-ai-development” project dependecies
+	7	168	23. Aug.
+Planning and Self learning (React)
+crewai
+agent
+tools_issues
+task
+feature
+	0	41	22. Aug.
+Best practices to keep crewai active venv in sync with project venv?
+	8	908	19. Aug.
+ImportError: cannot import name ‘ResponseTextConfig’ from ‘openai.types.responses.response’
+	4	282	19. Aug.
+AgentOps observability removed from docs?
+crewai
+feature
+	0	27	18. Aug.
+Issue: Delayed Flow Logging in Interactive Mode After Upgrading CrewAI from 0.114.0 to 0.159.0
+flows
+	2	39	14. Aug.
+Failed to convert text into a Pydantic model due to error: ‘NoneType’ object has no attribute ‘function_calling_llm’
+crewai
+flows
+output_issues
+	3	215	13. Aug.
+Telemetry.crewai.com
+crewai
+agent
+task
+	8	454	13. Aug.
+Agent mutating raw tool output before passing to next tool (JWTs getting broken)
+	0	31	12. Aug.
+Mcp-remote Event loop is closed
+	0	81	11. Aug.
+MCP error when integrating Vapi MCP
+crewai
+tools_issues
+feature
+	7	259	11. Aug.
+Integrate requesty for custom llm
+	2	24	10. Aug.
+Code Interpreter Reruns Old Code After Fixing Errors
+	0	18	10. Aug.
+Gpt5 Crewai issues
+crewai
+	6	824	10. Aug.
+`crewai create crew project-name` command Error: Got unexpected extra argument (project-name)
+crewai
+	0	55	8. Aug.
+Trying to install crewai_tools[mcp], only crewai_tools-0.0.1 is installed at the end
+	2	66	8. Aug.
+Crewai chat command not working
+crewai
+	1	58	7. Aug.
+Crew is online but not available
+	6	133	7. Aug.
+Succesfully created MCP server with Streamable-HTTP in CrewBase! But error after a single tool call
+crewai
+agent
+tools_issues
+tool
+crew
+	4	219	6. Aug.
+Unable to Login from CLI for enterprise deployment
+crewai
+	0	25	6. Aug.
+Tool Key error in YAML
+tools_issues
+	11	63	5. Aug.
+Issue with Invalid API Key in CrewAI Agent for GEMINI API
+	9	808	5. Aug.
+Parsing a JSON to get proper data - Agent not using the tool
+	2	76	5. Aug.
+PDF reader agent returns a summary of the last page
+agent
+tools_issues
+	5	63	3. Aug.
+TypeError: LLMWithFixedStopWords
+	1	23	1. Aug.
+CrewAI bad request
+crewai
+	3	56	31. Juli
+Azure’s o3 and o3-mini fail to call CrewAI tool
+crewai
+agent
+tools_issues
+	3	81	31. Juli
+[HELP] DALL-E Agent Not Downloading Images Correctly (197-byte file) in crewai run
+tools_issues
+	3	37	31. Juli
+Request for Guidance on Adding Tool to crewAI-tools (SingleStore Support)
+tools_issues
+	5	56	30. Juli
+Agent and MS Excel files - Read and Write
+	4	239	30. Juli
+How to use MCP server as tool feature in google colab?
+crewai
+tools_issues
+	0	110	28. Juli
+Crewai reset-memories -kn failes but -l works
+tools_issues
+	2	122	25. Juli
+CrewAI and OpenAI-compatible vLLM-hosted model
+	5	221	25. Juli
+Agents Accessing Each Other’s Knowledge Sources Despite Explicit Scoping
+agent
+	0	26	24. Juli
+‘StructuredTool’ object has no attribute ‘model_fields’ error
+	3	221	23. Juli
+Knowledge in CrewAI is not Working
+crewai
+	1	104	22. Juli
+The agent is passing placeholder text instead of actual data to the tool
+crewai
+agent
+tools_issues
+task
+flows
+	0	46	22. Juli
+MCPServerAdapter does not have transport as an argument [Streamable-http]
+crewai
+agent
+tools_issues
+feature
+	3	86	21. Juli
+LLM failed after calling a tool from a user-defined MCP server
+tools_issues
+	7	201	17. Juli
+Need to know about output generation in specific language (Internationalisation)
+crewai
+	6	323	17. Juli
+CrewAI crashing with local llama.cpp
+crewai
+	0	151	16. Juli
+Issues with Bedrock LLM connectivity using instance profile ARN
+	4	94	16. Juli
+[LLM Response Error: ValueError: Invalid response from LLM call - None or empty]
+	0	96	16. Juli
+Persistence Knowledge
+crewai
+	2	66	15. Juli
+Update code source with crewai
+crewai
+task
+	0	29	14. Juli
+“Event loop is closed” error when calling MCP Tools
+tools_issues
+	6	467	14. Juli
+ImportError: cannot import name ‘LocalKnowledge’ from ‘crewai.knowledge’
+tools_issues
+	5	46	11. Juli
+Trying to learn
+agent
+	2	50	11. Juli
+ModuleNotFoundError: No module named ‘project_name’
+	26	1,5 T.	10. Juli
+How do I fix this error
+crewai
+task
+	1	46	9. Juli
+Crewai mcpadapter creating issues
+agent
+tools_issues
+task
+	2	128	8. Juli
+Storage Isolation in CrewAI: Per-Crew vs. Per-Flow – Recommendations?
+	1	30	7. Juli
+Trying to run Llama model that is downloaded on my server locally using huggingface hub
+	2	148	6. Juli
+Unable to use HuggingFace, OpenRouter nor Local LLM using LMStudio. Please help
+crewai
+agent
+	0	93	6. Juli
+Can’t use Gemini
+	3	543	6. Juli
+Calling task or agent based on the user input or prompt
+agent
+task
+	1	126	5. Juli
+I am trying to use mistral model for my agent and i am getting an error. I am making a mistake but don’t know where
+crewai
+	0	38	3. Juli
+How to use multiple independant “memory” and RAG database for different crews?
+memory
+	10	858	3. Juli
+I have mutiple task and multiple agents in a crew. For each invoke I want to run just one of these tasks and get response
+agent
+tasks_issues
+	4	272	2. Juli
+Crewai memory using other downloaded ollama model rather than openai api key
+memory
+	0	32	2. Juli
+User isolation in crewai memory
+crewai
+memory
+	3	192	1. Juli
+Problem with context window using tools
+crewai
+tools_issues
+memory
+	0	88	30. Juni
+Creating a Conversable Agent in CrewAI with Human-in-the-Loop Interaction
+	21	9,7 T.	30. Juni
+Crew run fails due to “Received None or empty response from LLM call.” when using Anthropic models
+	3	400	29. Juni
+Received None or empty response from LLM call (Only with Groq models)
+	4	185	29. Juni
+Looking for a crew AI developers
+crewai
+agent
+task
+feature
+openai
+	2	83	29. Juni
+Human in the loop CLI issue
+crewai
+	3	116	27. Juni
+Sorry - can’t delete this subject
+	1	203	25. Juni
+[BUG/HELP] ImportError: cannot import name ‘LLM’ from ‘crewai’ after Azure Deployment
+crewai
+tools_issues
+task
+feature
+	0	86	24. Juni
+SSL Certificate Error using ScrapeWebsiteTool
+	0	57	24. Juni
+Unable to create agent
+crewai
+agent
+	14	1,2 T.	22. Juni
+Unable to connect to LLM. Please help!
+	0	121	22. Juni
+Initialization of WebsiteSearchTool Without OpenAI Key — Embedder Provider Question
+tools_issues
+	0	64	22. Juni
+Do image analysis with locall ollama
+crewai
+agent
+task
+	1	137	21. Juni
+litellm.BadRequestError: OpenAIException - Unsupported parameter: ‘stop’ is not supported with this model
+	3	352	21. Juni
+Create crews using mcp tools to create flow & crews
+crewai
+tools_issues
+feature
+	0	79	18. Juni
+Is there a way to clear a RagTool’s database?
+	0	23	18. Juni
+Failed to convert text into a Pydantic model due to error: 2 validation errors
+	0	72	17. Juni
+Crew Events not returning “crew” field
+	4	42	16. Juni
+(knowledge source) Failed to upsert documents: Expected Embedings to be non-empty list or numpy array, got [] in upsert
+	1	202	12. Juni
+Failing to embed knowledge source using ollama
+	4	594	12. Juni
+CrewAI example installation fails to install on Windows 11
+	0	63	12. Juni
+CrewAI : maximum recursion depth exceeded
+crewai
+	9	410	12. Juni
+How to get input vars (kickoff) on function task?
+task
+	0	52	11. Juni
+Custom tool implementation with @tool decorator
+tools_issues
+	3	147	10. Juni
+PDFKnowledgeSource APIStatusError
+	4	164	10. Juni
+Crewai + multimodal
+crewai
+feature
+	13	863	10. Juni
+Error: ‘NoneType’ object has no attribute ‘choices’ during Crew Execution
+	0	80	10. Juni
+Distribution `yarl==1.20.1 @ registry+https://pypi.org/simple` can’t be installed because it doesn’t have a source distribution or wheel for the current platform
+	0	37	10. Juni
+Memory options for singular agents
+memory
+	2	84	9. Juni
+Maximum iterations reached. Requesting final answer. (for long time)
+crewai
+	0	162	8. Juni
+ExaSearchTool - Unable to get it configured
+crewai
+tools_issues
+	4	178	8. Juni
+Question about using a custom LLM Manager in a hierarchical setup
+	1	57	8. Juni
+How can i configure the agent to rollback to previous agent if some specific task is not performed successfully?
+agent
+	1	37	8. Juni
+Async Execution Slowing Down Hierarchical CrewAI Setup
+agent
+	0	48	6. Juni
+Agent retrieving duplicate chunks from knowledge source
+crewai
+tools_issues
+	0	59	5. Juni
+CrewAI Agents Use Old or Incorrect Input Despite Memory Reset and Cache Clear
+	2	249	4. Juni
+Agent reasoning
+	0	48	4. Juni
+Issue: Trouble Using Knowledge Feature with Google Gemini Free Tier in CrewAI
+	4	111	4. Juni
+Custom embedding model and custom Knowledge storage
+crewai
+	0	189	3. Juni
+Issue with Metadata Storage and Email Delivery in CrewAI
+crewai
+agent
+memory
+	0	29	1. Juni
+How to embed knowledge source with ollama2
+	10	1,9 T.	31. Mai
+Passing class instance (self) to CrewAI tools function
+crewai
+tools_issues
+	0	44	31. Mai
+How to log agent flow in hericha agent framework (caller and responder tracking)
+	1	34	31. Mai
+SQL Agent response time and multi user q&a
+	4	73	31. Mai
+Unable to install crewai: No executables are provided by `crewai`
+	3	210	30. Mai
+OpenAIError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1006)
+crewai
+agent
+tools_issues
+	1	268	29. Mai
+Discussion about the “Human input and execution” implementation
+crewai
+agent
+task
+memory
+feature
+	2	93	28. Mai
+Coworker mentioned not found
+crewai
+agent
+	9	332	28. Mai
+My app is running with streamlit and crewai but it brakes when i use crewai_tools
+tools_issues
+	0	63	27. Mai
+Crew and tasks output is not generating properly
+crewai
+	2	64	27. Mai
+Crewai is not running properly
+crewai
+	11	257	27. Mai
+How to integrate multiple MCP servers with CrewAI
+tools_issues
+	4	245	26. Mai
+Kickoff multiple crews in a flow within method decorated by @start
+crewai
+agent
+	0	32	26. Mai
+Regarding how CrewAI agents/task handles scenarios where the input tokens exceeds the LLMs context window?
+crewai
+task
+	0	79	26. Mai
+Documentation link for crewAI deployment in Cloud
+	2	146	26. Mai
+Custom Short and Long Memory
+crewai
+memory
+	1	107	26. Mai
+Mcp server tool - config, adapter example - in CrewAI cli setup
+	6	792	26. Mai
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Crew
+agent
+	5	233	25. Mai
+I need to use Azure OpenAI Gpt-4o-mini API for my crewai agents, I am struggling with errors only and I can;t find Documentation
+crewai
+openai
+	3	296	23. Mai
+AzureOpenAI LiteLLM CrewAI Connection Error
+crewai
+	8	831	23. Mai
+CodeInterpreterTool is not working with multiple tools
+crewai
+tools_issues
+	2	144	22. Mai
+Crewai enterprise inputs
+crewai
+	0	63	22. Mai
+Pydantic KeyError when MCPServerAdapter loads MS-365 tools (deep $ref in Message.bccRecipients)
+	0	43	22. Mai
+Debugging State Persistence: When Does @persist Save Flow State?
+	3	96	22. Mai
+Manager performs ALL tasks
+crewai
+tools_issues
+	0	43	22. Mai
+Clarification on crewai.tools vs crewai_tools
+	2	120	21. Mai
+Agent beats itself up over using Tool repeatedly (when it is supposed to do so)
+tools_issues
+	0	102	21. Mai
+Where to get help / chat about CrewAI?
+	5	114	21. Mai
+Request for completed course certificate
+	0	33	18. Mai
+I want that the Agent should never stop iterating and keep using its tools
+crewai
+agent
+task
+	3	189	18. Mai
+Make query consistent for rag tool
+crewai
+agent
+tools_issues
+	1	70	17. Mai
+CustomLLM Implementation Error
+	2	75	17. Mai
+Deployment Error: CrewAI Cannot Find src//crew.py or src//config despite Files Being Present
+crewai
+agent
+	1	52	16. Mai
+Is the OpenAI model o3-mini working on crewai
+	13	843	15. Mai
+List index out of range msg_i
+crewai
+	12	1,5 T.	14. Mai
+Crewai Agent Tool Logs Filtering
+	2	182	14. Mai
+CrewAI Training: Is the Crew Really Using the .pkl Files?
+crewai
+	2	168	14. Mai
+Why integer tool input is converted into float internally by Crew ai
+tools_issues
+	5	43	14. Mai
+Recommendations for running custom tools with local ollama models (having function calling capabilities)
+tools_issues
+	5	409	14. Mai
+MCP Server examples and integrations
+crewai
+	2	756	13. Mai
+Integrating Nebius AI
+memory
+	2	44	13. Mai
+Issue with Missing BaseTool Class in CrewAI 0.114.0 – Need Guidance on Custom Tool Creation
+crewai
+agent
+tools_issues
+	2	96	12. Mai
+My Crew makes an infinite loop and a few errors
+crewai
+agent
+tools_issues
+task
+automated
+	1	233	12. Mai
+I want to extract text from uploaded PDF documents (uploaded as images) How would I do this?
+	3	303	12. Mai
+Large Outputs from the Tools
+tools_issues
+	7	904	12. Mai
+What is the best way to create a flow, that uses multiple crews sharing common agents
+crewai
+agent
+flows
+	3	188	11. Mai
+Time out when running Ollama model
+	2	454	10. Mai
+Issues with complex crew architexture, tool calling / memory. Running in air gapped environments
+crewai
+agent
+tools_issues
+memory
+	3	128	9. Mai
+Can we have a feed from the GitHub to announcements
+	21	233	9. Mai
+LiteLLM Timeouts with Ollama models
+	3	591	9. Mai
+Im working on my crewAI task. I have been trying to run my main.py in my anaconda prompt, below error keeps popping up , who can assist me please , thank you
+	5	83	9. Mai
+Can’t create new crewai project
+	1	112	8. Mai
+Updated docs for gemini 2.0?
+	3	113	8. Mai
+How to get the output of each agent, so i can show it to the streamlit, how i integrate with that
+agents_issues
+	15	2,3 T.	8. Mai
+Ensuring Groundedness in Automated Data Analytics Responses
+	2	52	8. Mai
+TPM: Tokens per minute limiting
+crewai
+	3	512	6. Mai
+Please explain Manager LLM like I am 25
+crewai
+	6	274	6. Mai
+Scalability and Performance Issues for Multi-agents architechture
+	1	110	2. Mai
+Need architecture to create a conversation creator and evaluator crew
+	0	67	2. Mai
+Can we use Ruby on Rails to create multi AI agents using CrewAI tools?
+crewai
+agent
+	1	294	1. Mai
+Overcoming “litellm.ContextWindowExceededError” and too big context lenght
+	10	414	29. Apr.
+Ollama is dying with latest module update
+crewai
+	2	501	29. Apr.
+External memory `Mem0` config
+memory
+	2	152	29. Apr.
+ModuleNotFoundError: No module named ‘distutils’
+crewai
+tools_issues
+	3	365	28. Apr.
+How to search and scrape websites efficiently
+	6	257	28. Apr.
+Getting Error while running Crewai run
+crewai
+	3	191	28. Apr.
+Dynamic Knowledge
+crewai
+memory
+	2	158	27. Apr.
+Issue with CSVSearchTool
+tools_issues
+	9	797	27. Apr.
+CrewAI multimodal Capability
+	4	312	27. Apr.
+ThreadPoolExecutor: parallel processing with crewai
+	1	203	25. Apr.
+Issue with Prompt Customization Example – KeyError: ‘role_playing’
+crewai
+agent
+	1	66	24. Apr.
+Issue with persist Decorator – Not Working as Expected
+crewai
+	2	104	24. Apr.
+Long term memory [score]
+	0	47	23. Apr.
+crewAI: Update LiteLLM dependency (https://github.com/crewAIInc/crewAI/pull/2522)
+crewai
+	1	157	23. Apr.
+Local hosted searxng search
+	4	565	23. Apr.
+Issue with the search_tool
+tools_issues
+	10	369	22. Apr.
+Streaming crew.kickoff on streamlit
+	0	202	22. Apr.
+How to Gracefully Terminate Hierarchical Crew Execution on LLM Failure?
+crewai
+agent
+	1	155	22. Apr.
+Monitoring Mainframe Batch Jobs
+	2	24	22. Apr.
+Passing context between agents
+crewai
+agent
+task
+flows
+	7	935	20. Apr.
+String Knowledge sources not working with Gemini
+tools_issues
+	62	1,8 T.	19. Apr.
+Can Agent call multiple tools it has access to, and combine the output?
+crewai
+task
+tool
+	10	996	18. Apr.
+Failed to init knowledge: Please provide an OpenAI API key
+crewai
+	3	227	17. Apr.
+Issues with crewai flow kickoff Command: Timeout Error and Virtual Environment Mismatch
+crewai
+agent
+	4	345	17. Apr.
+Problem with Crewai Studio
+	3	73	17. Apr.
+Error when programmatically training
+	2	92	16. Apr.
+Embedding configuration error
+tools_issues
+memory
+	0	208	16. Apr.
+JSON Search Tool is not working as expected
+tools_issues
+	2	160	16. Apr.
+Getting Error while running trip_planner example
+	3	80	16. Apr.
+Using Pyinstaller with CrewAI
+	0	46	15. Apr.
+Agent distribution
+crewai
+agent
+	10	115	15. Apr.
+Why is CrewAI asking for OPENAI_API_KEY if I set another LLM provider (e.g., Groq) to the crew?
+crewai
+openai
+	9	3,0 T.	15. Apr.
+Errors or difficulty using custom models with tools like githubsearch
+tools_issues
+	0	59	15. Apr.
+Is long term memory activated by default?
+memory
+	3	186	14. Apr.
+Disable Telemetry for production
+	4	901	14. Apr.
+Please help! Task Input Question
+	5	95	14. Apr.
+Unable to save the Vector db of Crewai Docling Knowledge
+crewai
+agent
+	4	125	13. Apr.
+Why is my agent sometimes call tool with wrong parameter?
+tools_issues
+	10	808	11. Apr.
+Availability to convert markdown file to pdf
+	6	198	10. Apr.
+CrewAI enterprise erroring out?
+	8	204	10. Apr.
+Agent setup and configuration
+agent
+	8	282	10. Apr.
+thinking Flows - CrewDoclingSource Markdown Knowledge Source Error, Ollama Local LLM Environment
+crewai
+flows
+	6	710	10. Apr.
+Agents Sometimes Follow Deleted or Wrong Templates Despite Full Memory Reset and Cache Cleanup
+crewai
+memory
+	0	131	9. Apr.
+Error Connecting to Ollama for Embeddings in CrewAI Memory (Failed to connect to Ollama)
+crewai
+agent
+tools_issues
+task
+memory
+	3	350	9. Apr.
+litellm.InternalServerError: watsonxException
+	2	132	8. Apr.
+Agent does not recognize the knowledge sources file
+crewai
+agent
+	7	815	8. Apr.
+MCP enterprise-mcp-server - Working?
+crewai
+	1	283	7. Apr.
+CrewAI Flows Question
+agent
+flows
+	2	80	6. Apr.
+How can I have different crews talk to each other?
+crewai
+agent
+	2	121	5. Apr.
+Need help with asynchronous tasks
+	1	294	4. Apr.
+Error connecting with Higgingface models
+crewai
+agent
+tools_issues
+	1	139	4. Apr.
+Seeing what DOCXSearchTool actually returns
+	3	93	3. Apr.
+How to Train a crew inside a Flow?
+	4	87	3. Apr.
+Cant call Bedrock or Anthropic on demo project
+	1	270	3. Apr.
+Tool execution error: list.remove(x): x not in list
+	3	148	2. Apr.
+Knowledge configuration throwing error missing 2 required keyword-only arguments: ‘response’ and ‘body’ . Using azure openai and azure embedding-ada-2
+agent
+	6	701	2. Apr.
+CrewAI + Qdrant vector search + Ollama LLM in Docker- it is too slow
+crewai
+tools_issues
+	1	217	1. Apr.
+Human verification before tool execution
+crewai
+agent
+	1	97	1. Apr.
+Designing a Deterministic Intent Flow for a Reservation Chatbot
+crewai
+	1	150	31. März
+Fixing timeouts by Bypassing LiteLLM
+	0	330	31. März
+Tasks Output Validation (BaseModel with Output_pydantic)
+	3	172	31. März
+Crew AI Conversational Mode
+	7	868	30. März
+What’s the lifetime of agent instance
+	1	40	30. März
+Slow response from CrewAi to OpenAI
+	1	323	30. März
+Local LLMs tools calling
+crewai
+agent
+tools_issues
+	1	426	28. März
+Unable to connect to crewai project api deployed in crewai studio
+	0	52	27. März
+Memory embedder integration with hugging face and mistral
+memory
+	2	266	27. März
+The issue is that the manager agent isn’t properly delegating to the crew member agents (like company_Scheduling_Agent or Retriever_Agent). Instead, it’s attempting to use a coworker designation that only recognizes the manager itself. This means that whe
+crewai
+agent
+feature
+	3	375	27. März
+How can i add Thirdweb custom tools with crew ai
+	1	18	26. März
+Tools are not reading the result of before_kickoff
+tools_issues
+task
+	0	65	26. März
+Hierarchical process in CrewAI in 2025
+crewai
+agent
+	1	219	25. März
+Issue with PDFSearchTool and Azure Open AI
+tools_issues
+	1	648	24. März
+Unbound error attempting firecrawl tool use
+	1	156	24. März
+Exporting TEXT Generated using CrewAI as PDFs
+	1	166	24. März
+Customer service agent not working as expectd
+	0	47	24. März
+Validation Error When Initializing Short-Term and Long-Term Memory in CrewAI
+crewai
+	4	187	22. März
+Why having a separate crewai-tools?
+	2	34	22. März
+Crewai workflow deployment to production
+	0	117	21. März
+Custom tool usage fails
+tools_issues
+	4	547	21. März
+SnowflakeSearchTool - connecting to snowflake issue
+	0	83	21. März
+Playwright custom tool - should I use sync or async version?
+tools_issues
+	2	766	20. März
+Manager agent delegates task to wrong agent in a hierarchical process
+	7	1,6 T.	19. März
+Manager agent is not delegating the tasks appropriately
+crewai
+agent
+task
+	2	258	19. März
+The problem with testing the crew
+crewai
+	4	106	19. März
+Crewai run problem with onnxruntime
+crewai
+	0	530	19. März
+Issue with CrewAI & LangChain SQL Tools in FastAPI App
+	3	214	19. März
+Internal Server Error on crewai deployment
+	2	46	18. März
+Error: Input should be a valid dictionary or instance of BaseTool
+tools_issues
+	12	411	18. März
+Manager use by default “gpt-4o-mini” instead of my custom LLM
+	1	70	18. März
+Memory issue when using the Gemini API
+memory
+	4	460	18. März
+Crewai run getting keyerror for newly defined task and agents
+crewai
+agent
+tools_issues
+task
+	5	329	18. März
+Crew - How to keep the consistency of “Score”
+	1	66	18. März
+Llm connection to local server
+	2	320	17. März
+Azure with Mistral
+	2	60	17. März
+Trying to use ai mind tool error coming
+crewai
+tools_issues
+	0	87	17. März
+Getting error during training a model
+tools_issues
+	0	97	16. März
+How are environment variables handled?
+	1	664	16. März
+Why Crewai always ask OPENAI_API_KEY
+crewai
+	1	345	16. März
+Arguments validation failed: 1 validation error for get_market_analysis
+tools_issues
+	1	58	16. März
+Error if adding tools to agents
+tools_issues
+	2	242	15. März
+Issue with Litellm Perplexity API
+	16	460	15. März
+Agent every run result is differ and public result
+agent
+	0	71	15. März
+Why Agent is getting terminate , sometimes it’s provide result and sometime automatic terminate
+agent
+	0	99	15. März
+litellm.exceptions.AuthenticationError: litellm.AuthenticationError: AuthenticationError: OpenAIException - The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+
+
+
+
+

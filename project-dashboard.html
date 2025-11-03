@@ -1,0 +1,2684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentGym SaaS - Project Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-tertiary: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --accent-primary: #3b82f6;
+            --accent-secondary: #8b5cf6;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --border: #334155;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-secondary);
+            border-bottom: 2px solid var(--border);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-stats {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-primary);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--bg-secondary);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;
+        }
+
+        .nav-tab {
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .nav-tab:hover {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+        }
+
+        .nav-tab.active {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Main Content */
+        main {
+            padding: 2rem 0;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Section Headers */
+        .section-header {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 31px;
+            top: 60px;
+            bottom: -30px;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .timeline-item:last-child::before {
+            display: none;
+        }
+
+        .timeline-marker {
+            flex-shrink: 0;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.25rem;
+            border: 3px solid;
+        }
+
+        .timeline-marker.current {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+        }
+
+        .timeline-marker.completed {
+            background: var(--success);
+            border-color: var(--success);
+        }
+
+        .timeline-marker.upcoming {
+            background: var(--bg-tertiary);
+            border-color: var(--border);
+        }
+
+        .timeline-content {
+            flex: 1;
+            background: var(--bg-tertiary);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .timeline-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .timeline-tasks {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .timeline-tasks li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .timeline-tasks li:last-child {
+            border-bottom: none;
+        }
+
+        /* Task Board */
+        .task-board {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .task-column {
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .task-column-header {
+            font-weight: bold;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .task-count {
+            background: var(--bg-secondary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+        }
+
+        .task-item {
+            background: var(--bg-secondary);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .task-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .task-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .task-meta {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .badge.priority-high {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--danger);
+        }
+
+        .badge.priority-medium {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--warning);
+        }
+
+        .badge.priority-low {
+            background: rgba(59, 130, 246, 0.2);
+            color: var(--accent-primary);
+        }
+
+        .badge.status {
+            background: rgba(139, 92, 246, 0.2);
+            color: var(--accent-secondary);
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            background: var(--bg-tertiary);
+            border-radius: 20px;
+            height: 24px;
+            overflow: hidden;
+            position: relative;
+            margin: 1rem 0;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            height: 100%;
+            transition: width 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Metric Cards */
+        .metric-card {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .metric-label {
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .metric-change {
+            margin-top: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .metric-change.positive {
+            color: var(--success);
+        }
+
+        .metric-change.negative {
+            color: var(--danger);
+        }
+
+        /* Risk Matrix */
+        .risk-matrix {
+            display: grid;
+            grid-template-columns: 100px repeat(3, 1fr);
+            gap: 0;
+            margin: 2rem 0;
+        }
+
+        .risk-matrix-cell {
+            border: 1px solid var(--border);
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80px;
+        }
+
+        .risk-matrix-header {
+            background: var(--bg-tertiary);
+            font-weight: bold;
+            font-size: 0.875rem;
+        }
+
+        .risk-matrix-label {
+            background: var(--bg-tertiary);
+            font-weight: bold;
+        }
+
+        .risk-high {
+            background: rgba(239, 68, 68, 0.2);
+        }
+
+        .risk-medium {
+            background: rgba(245, 158, 11, 0.2);
+        }
+
+        .risk-low {
+            background: rgba(16, 185, 129, 0.2);
+        }
+
+        .risk-item {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            background: var(--bg-secondary);
+            border-radius: 4px;
+            margin: 0.25rem;
+        }
+
+        /* Checkbox */
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+
+        .checkbox-item:hover {
+            background: var(--bg-tertiary);
+        }
+
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border);
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .checkbox.checked {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+        }
+
+        .checkbox.checked::after {
+            content: '✓';
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background: var(--accent-primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2563eb;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-stats {
+                display: none;
+            }
+
+            .task-board {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-2, .grid-3, .grid-4 {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .timeline-item::before {
+                display: none;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            header, nav {
+                position: static;
+            }
+
+            .tab-content {
+                display: block !important;
+                page-break-before: always;
+            }
+
+            .task-item {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">⚡ AgentGym - Project Dashboard</div>
+                <div class="header-stats">
+                    <div class="stat">
+                        <div class="stat-value" id="days-to-launch">30</div>
+                        <div class="stat-label">Days to Launch</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" id="overall-progress">0%</div>
+                        <div class="stat-label">Overall Progress</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" id="tasks-completed">0/142</div>
+                        <div class="stat-label">Tasks Complete</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-tabs">
+                <div class="nav-tab active" data-tab="overview">📊 Strategic Overview</div>
+                <div class="nav-tab" data-tab="validation">✅ Validation (Weeks 1-4)</div>
+                <div class="nav-tab" data-tab="prelaunch">🚀 Pre-Launch (Weeks 5-12)</div>
+                <div class="nav-tab" data-tab="launch">🎯 Launch Week</div>
+                <div class="nav-tab" data-tab="postlaunch">📈 Post-Launch (Weeks 2-26)</div>
+                <div class="nav-tab" data-tab="operations">⚙️ Operations</div>
+                <div class="nav-tab" data-tab="risks">⚠️ Risk Management</div>
+                <div class="nav-tab" data-tab="metrics">📊 Metrics & KPIs</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Strategic Overview Tab -->
+            <div id="overview" class="tab-content active">
+                <div class="section-header">
+                    <h1 class="section-title">Strategic Overview</h1>
+                    <p class="section-subtitle">Building the "Weights & Biases for RL Agent Training" - 90-Day Launch Plan</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Overall Project Progress</h3>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%;">0%</div>
+                    </div>
+                </div>
+
+                <div class="grid-4" style="margin-bottom: 2rem;">
+                    <div class="metric-card">
+                        <div class="metric-value">$0</div>
+                        <div class="metric-label">Current MRR</div>
+                        <div class="metric-change positive">Target: $2K by Month 3</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">0</div>
+                        <div class="metric-label">Waitlist Signups</div>
+                        <div class="metric-change positive">Target: 200+ by Week 4</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">0</div>
+                        <div class="metric-label">Beta Users</div>
+                        <div class="metric-change positive">Target: 30 by Week 12</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">0</div>
+                        <div class="metric-label">Paid Customers</div>
+                        <div class="metric-change positive">Target: 50 by Month 3</div>
+                    </div>
+                </div>
+
+                <h2 style="margin: 2rem 0 1rem;">📅 Project Timeline</h2>
+                <div class="timeline">
+                    <!-- Phase 1: Validation -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker current">W1-4</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Phase 1: Validation</div>
+                            <div class="timeline-meta">
+                                <span>📅 Weeks 1-4</span>
+                                <span>🎯 Goal: Validate problem & solution</span>
+                                <span>✅ Go/No-Go Decision Point</span>
+                            </div>
+                            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                                Conduct user interviews, create landing page, drive waitlist signups, and make critical go/no-go decision.
+                            </p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%;">0% Complete</div>
+                            </div>
+                            <ul class="timeline-tasks">
+                                <li>📞 20 problem validation interviews</li>
+                                <li>🌐 Create validation landing page</li>
+                                <li>📧 Drive 100+ waitlist signups</li>
+                                <li>🎯 Make go/no-go decision by Week 4</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Phase 2: Pre-Launch -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker upcoming">W5-12</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Phase 2: Pre-Launch Foundation</div>
+                            <div class="timeline-meta">
+                                <span>📅 Weeks 5-12</span>
+                                <span>🎯 Goal: Build assets & community</span>
+                            </div>
+                            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                                Foundation building, community engagement, content creation, and launch preparation.
+                            </p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%;">0% Complete</div>
+                            </div>
+                            <ul class="timeline-tasks">
+                                <li>📝 GitHub repo with comprehensive README</li>
+                                <li>🌐 Product landing page + docs site</li>
+                                <li>✍️ First 5 blog posts published</li>
+                                <li>💬 Community building (HN, Reddit, Twitter)</li>
+                                <li>👥 20-30 beta users recruited</li>
+                                <li>🎨 Product Hunt assets prepared</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Phase 3: Launch Week -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker upcoming">W13</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Phase 3: Launch Week</div>
+                            <div class="timeline-meta">
+                                <span>📅 Week 13</span>
+                                <span>🎯 Goal: 500+ signups, viral traction</span>
+                            </div>
+                            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                                Coordinated launch across Hacker News, Product Hunt, and social media.
+                            </p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%;">0% Complete</div>
+                            </div>
+                            <ul class="timeline-tasks">
+                                <li>🚀 Show HN Launch (Monday)</li>
+                                <li>🏆 Product Hunt Launch (Tuesday)</li>
+                                <li>📱 Social media amplification</li>
+                                <li>📧 Email supporter mobilization</li>
+                                <li>🔍 Real-time monitoring & response</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Phase 4: Post-Launch -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker upcoming">W14-26</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Phase 4: Growth & Scaling</div>
+                            <div class="timeline-meta">
+                                <span>📅 Weeks 14-26</span>
+                                <span>🎯 Goal: $5K-15K MRR, PMF signals</span>
+                            </div>
+                            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                                Content marketing, community expansion, partnerships, and revenue growth.
+                            </p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%;">0% Complete</div>
+                            </div>
+                            <ul class="timeline-tasks">
+                                <li>📝 3 blog posts per week</li>
+                                <li>🎓 20-30 customer development interviews</li>
+                                <li>💬 Launch Discord community</li>
+                                <li>🔗 Integration partnerships (LangChain, AutoGen)</li>
+                                <li>📊 Implement top feature requests</li>
+                                <li>🎪 First virtual event (100+ attendees)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 class="card-title">🎯 Success Criteria</h3>
+                        <ul class="timeline-tasks">
+                            <li><strong>Week 4:</strong> 200+ waitlist, 60%+ express interest → GO decision</li>
+                            <li><strong>Week 12:</strong> 70%+ beta users complete training, NPS >40</li>
+                            <li><strong>Week 13:</strong> 500+ signups from launch, Top 3 Product Hunt</li>
+                            <li><strong>Month 3:</strong> 1,000 signups, 50 paid customers, $2K MRR</li>
+                            <li><strong>Month 6:</strong> 3,000 signups, 150 paid, $8K MRR, 5% conversion</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">⚡ Key Differentiators</h3>
+                        <ul class="timeline-tasks">
+                            <li><strong>Only RL platform:</strong> First UI for Agent Lightning</li>
+                            <li><strong>Radical simplicity:</strong> "Magic Train" button, <5 min setup</li>
+                            <li><strong>Fair pricing:</strong> $39 Pro, $199 Team (no tracked hours trap)</li>
+                            <li><strong>Complete platform:</strong> Training + deployment + monitoring</li>
+                            <li><strong>Zero competitors:</strong> 12-18 month window to dominate</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Validation Tab -->
+            <div id="validation" class="tab-content">
+                <div class="section-header">
+                    <h1 class="section-title">Validation Phase (Weeks 1-4)</h1>
+                    <p class="section-subtitle">De-risk before building - validate problem, solution, and willingness to pay</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Phase Progress</h3>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%;">0%</div>
+                    </div>
+                </div>
+
+                <h2 style="margin: 2rem 0 1rem;">📋 Task Board</h2>
+                <div class="task-board">
+                    <div class="task-column">
+                        <div class="task-column-header">
+                            <span>📝 To Do</span>
+                            <span class="task-count">12</span>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-title">Conduct 20 Problem Validation Interviews</div>
+                            <div class="task-meta">
+                                <span class="badge priority-high">High Priority</span>
+                                <span class="badge status">Week 1-2</span>
+                            </div>
+                            <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: 0.5rem;">
+                                10 Agent Lightning users + 10 AI agent builders
+                            </p>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-title">Create Interview Guide & Questions</div>
+                            <div class="task-meta">
+                                <span class="badge priority-high">High Priority</span>
+                                <span class="badge status">Week 1</span>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-title">Find Interview Participants (GitHub, Discord)</div>
+                            <div class="task-meta">
+                                <span class="badge priority-high">High Priority</span>
+                                <span class="badge status">Week 1</span>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-title">Design Validation Landing Page</div>
+                            <div class="task-meta">
+                                <span class="badge priority-high">High Priority</span>
+                                <span class="badge status">Week 2-3</span>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-title">Create Demo Video Mockup</div>
+                            <div class="task-meta">
+                                <span class="badge priority-medium">Medium Priority</span>
+                                <span class="badge status">Week 3</span>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-title">Build Landing Page (Framer/Webflow)</div>
+                            <div class="task-meta">
+                                <span class="badge priority-high">High Priority</span>
+                                <span class="badge status">Week 3</span>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-title">Setup Email Collection (ConvertKit/Loops)</div>
+                            <div class="task-meta">
+                                <span class="badge priority-high">High Priority</span>
+                                <span class="badge status">Week 3</span>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-title">Post "Ask HN: Would you use..." on Hacker News</div>
+                            <div class="task-meta">
+                                <span class="badge priority-high">High Priority</span>
+                                <span class="badge status">Week 3</span>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-title">Share in ML/AI Communities (Reddit)</div>
+                            <div class="task-meta">
+                                <span class="badge priority-medium">Medium Priority</span>
+                                <span class="badge status">Week 3</span>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-title">Tweet Landing Page from Founder Account</div>
+                            <div class="task-meta">
+                                <span class="badge priority-medium">Medium Priority</span>
+                                <span class="badge status">Week 3</span>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-title">Email Interview Participants About Launch</div>
+                            <div class="task-meta">
+                                <span class="badge priority-medium">Medium Priority</span>
+                                <span class="badge status">Week 3</span>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-title">Analyze Validation Results</div>
+                            <div class="task-meta">
+                                <span class="badge priority-high">High Priority</span>
+                                <span class="badge status">Week 4</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="task-column">
+                        <div class="task-column-header">
+                            <span>🔄 In Progress</span>
+                            <span class="task-count">0</span>
+                        </div>
+                        <p style="color: var(--text-muted); text-align: center; margin-top: 2rem;">No tasks in progress yet</p>
+                    </div>
+
+                    <div class="task-column">
+                        <div class="task-column-header">
+                            <span>✅ Done</span>
+                            <span class="task-count">0</span>
+                        </div>
+                        <p style="color: var(--text-muted); text-align: center; margin-top: 2rem;">No completed tasks yet</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">🎯 Go/No-Go Decision Criteria (End of Week 4)</h3>
+                    <div style="margin-top: 1.5rem;">
+                        <div class="checkbox-item">
+                            <div class="checkbox"></div>
+                            <div>
+                                <strong>200+ Waitlist Signups</strong>
+                                <div style="font-size: 0.875rem; color: var(--text-muted);">Current: 0 signups</div>
+                            </div>
+                        </div>
+                        <div class="checkbox-item">
+                            <div class="checkbox"></div>
+                            <div>
+                                <strong>60%+ Express Strong Interest</strong>
+                                <div style="font-size: 0.875rem; color: var(--text-muted);">From interviews: Clear pain point identified</div>
+                            </div>
+                        </div>
+                        <div class="checkbox-item">
+                            <div class="checkbox"></div>
+                            <div>
+                                <strong>40%+ Willing to Pay $39-49/month</strong>
+                                <div style="font-size: 0.875rem; color: var(--text-muted);">Price sensitivity validated</div>
+                            </div>
+                        </div>
+                        <div class="checkbox-item">
+                            <div class="checkbox"></div>
+                            <div>
+                                <strong><60% Bounce Rate on Landing Page</strong>
+                                <div style="font-size: 0.875rem; color: var(--text-muted);">Engagement signals positive</div>
+                            </div>
+                        </div>
+                        <div class="checkbox-item">
+                            <div class="checkbox"></div>
+                            <div>
+                                <strong>Positive Community Feedback</strong>
+                                <div style="font-size: 0.875rem; color: var(--text-muted);">HN, Reddit comments supportive</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px;">
+                        <strong>✅ GO if:</strong> All criteria met → Proceed to build MVP<br>
+                        <strong>❌ NO-GO if:</strong> <3 criteria met → Pivot or iterate
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 class="card-title">❓ Interview Questions</h3>
+                        <ul class="timeline-tasks">
+                            <li>How do you currently improve your AI agents?</li>
+                            <li>What would make RL training accessible to you?</li>
+                            <li>What tools frustrate you today and why?</li>
+                            <li>Would you pay for a managed RL training platform?</li>
+                            <li>What price seems fair for this? ($20? $50? $100?)</li>
+                            <li>What features are must-haves vs. nice-to-haves?</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">📊 Tracking Metrics</h3>
+                        <ul class="timeline-tasks">
+                            <li><strong>Interviews completed:</strong> 0/20</li>
+                            <li><strong>Waitlist signups:</strong> 0 (Target: 200+)</li>
+                            <li><strong>Landing page traffic:</strong> 0 visitors</li>
+                            <li><strong>Bounce rate:</strong> N/A (Target: <60%)</li>
+                            <li><strong>Pricing page views:</strong> 0 (Target: 10%+)</li>
+                            <li><strong>HN engagement:</strong> 0 upvotes, 0 comments</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pre-Launch Tab -->
+            <div id="prelaunch" class="tab-content">
+                <div class="section-header">
+                    <h1 class="section-title">Pre-Launch Phase (Weeks 5-12)</h1>
+                    <p class="section-subtitle">Foundation building, community engagement, and launch preparation</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Phase Progress</h3>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%;">0%</div>
+                    </div>
+                </div>
+
+                <h2 style="margin: 2rem 0 1rem;">Weeks 5-8: Foundation Building</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 class="card-title">📝 Content & Documentation</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>GitHub repo with comprehensive README</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>One-command installation guide</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Architecture diagram</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Quick start guide (5 minutes)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Code examples (Python, API)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Contributing guidelines</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>5-10 example notebooks</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Product landing page (Next.js)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Documentation site setup</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>API reference documentation</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Framework integration guides</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Troubleshooting guide</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">✍️ Blog Posts (First 5)</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <div>
+                                    <strong>Why RL Training for Agents Matters</strong>
+                                    <div style="font-size: 0.875rem; color: var(--text-muted);">Vision post, SEO-optimized</div>
+                                </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <div>
+                                    <strong>Agent Lightning Under the Hood</strong>
+                                    <div style="font-size: 0.875rem; color: var(--text-muted);">Technical deep-dive</div>
+                                </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <div>
+                                    <strong>Building a Customer Service Agent with RL</strong>
+                                    <div style="font-size: 0.875rem; color: var(--text-muted);">Practical tutorial</div>
+                                </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <div>
+                                    <strong>RL vs. Prompt Engineering: When to Use Each</strong>
+                                    <div style="font-size: 0.875rem; color: var(--text-muted);">Educational comparison</div>
+                                </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <div>
+                                    <strong>Open Source ML Tools We Love</strong>
+                                    <div style="font-size: 0.875rem; color: var(--text-muted);">Community building</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 style="margin: 2rem 0 1rem;">Community Building</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 class="card-title">💬 Hacker News Strategy</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Create HN account (build karma early)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Upvote relevant posts daily</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Comment thoughtfully 3-5x/week</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Target 50+ karma before launch</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Draft Show HN post (test with friends)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Prepare first comment (personal story)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>FAQ document for common questions</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">🐦 Twitter/X Presence</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Create founder account</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Create product account</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Follow 100+ ML/AI accounts</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Post daily (tips, learnings, progress)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Engage with ML community regularly</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Build in public thread series</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">📱 Reddit Strategy</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Join r/MachineLearning</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Join r/LocalLLaMA</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Join r/MLOps</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Answer questions (provide value)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Share relevant content (not promotional)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Build karma & credibility (4 weeks)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">👥 Beta User Outreach</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Identify 50 target users (GitHub profiles)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Personalized outreach emails (not templates)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Offer: Free lifetime Pro for feedback</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Weekly feedback calls scheduled</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Goal: 20-30 design partners recruited</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 style="margin: 2rem 0 1rem;">Weeks 9-12: Launch Preparation</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 class="card-title">🏆 Product Hunt Preparation</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Logo animation (3-5 seconds)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Feature GIFs (5-7 features)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Screenshots (before/after)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Tagline A/B testing (3 versions)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>First comment template written</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Maker story drafted</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Identify & reach out to PH hunter</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Build relationship with hunter</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">🎯 Supporter Mobilization</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Create supporter list (100+ people)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Email beta users (launch heads-up)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>DM Twitter followers</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Reach out to newsletter subscribers</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Ask advisors/investors for support</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Prepare coordination doc (timing, links)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">📰 Press Kit</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Press release written</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Company one-pager</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Founder bios</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>High-res logos (multiple formats)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Screenshots collection</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Media contact info page</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">📊 Analytics & Infrastructure</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Mixpanel/Amplitude setup</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Google Analytics 4 configured</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>PostHog session replay enabled</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Custom metrics dashboard built</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Email automation (welcome sequence)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Monitoring alerts configured</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Launch Week Tab -->
+            <div id="launch" class="tab-content">
+                <div class="section-header">
+                    <h1 class="section-title">Launch Week Execution (Week 13)</h1>
+                    <p class="section-subtitle">Coordinated launch across HN, Product Hunt, and all channels</p>
+                </div>
+
+                <div style="background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem;">
+                    <h3 style="margin-bottom: 0.5rem;">🎯 Launch Week Goals</h3>
+                    <ul style="list-style: none; line-height: 2;">
+                        <li>✅ 500+ signups from combined launch efforts</li>
+                        <li>✅ Top 3 on Product Hunt in Dev Tools category</li>
+                        <li>✅ Front page of Hacker News for 4+ hours</li>
+                        <li>✅ 1,000+ GitHub stars</li>
+                        <li>✅ 50+ quality comments/feedback</li>
+                        <li>✅ 10+ media mentions</li>
+                    </ul>
+                </div>
+
+                <div class="timeline">
+                    <!-- Sunday -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker upcoming">Sun</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Sunday - Final Preparation (Day 0)</div>
+                            <ul class="timeline-tasks">
+                                <li><strong>9:00 AM:</strong> Final product testing (all features)</li>
+                                <li><strong>11:00 AM:</strong> Team briefing call (roles, responsibilities)</li>
+                                <li><strong>1:00 PM:</strong> Pre-schedule social media posts</li>
+                                <li><strong>3:00 PM:</strong> Email beta users (launch heads-up)</li>
+                                <li><strong>5:00 PM:</strong> Monitoring dashboard final check</li>
+                                <li><strong>8:00 PM:</strong> Early night (prepare for Monday 6 AM)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Monday -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker current">Mon</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Monday - Show HN Launch (Day 1)</div>
+                            <ul class="timeline-tasks">
+                                <li><strong>6:00 AM:</strong> Post Show HN (8:00 AM PST optimal)
+                                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                                        <li>Title: "Show HN: AgentGym – Train AI Agents with RL in 5 Minutes"</li>
+                                        <li>Link to GitHub repo (not landing page)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>6:05 AM:</strong> Post first comment (personal story)</li>
+                                <li><strong>6:10 AM:</strong> Share on Twitter, LinkedIn</li>
+                                <li><strong>6:00-10:00 AM:</strong> CRITICAL - Respond to EVERY comment within 30 min</li>
+                                <li><strong>10:00 AM:</strong> Email supporters (thank you + share link)</li>
+                                <li><strong>12:00 PM:</strong> Status update tweet with traction</li>
+                                <li><strong>2:00 PM:</strong> Reddit post to r/MachineLearning (if trending)</li>
+                                <li><strong>4:00 PM:</strong> Evening engagement (European hours)</li>
+                                <li><strong>6:00 PM:</strong> Day 1 retrospective call</li>
+                                <li><strong>8:00 PM:</strong> Prep for Product Hunt launch</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Tuesday -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker upcoming">Tue</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Tuesday - Product Hunt Launch (Day 2)</div>
+                            <ul class="timeline-tasks">
+                                <li><strong>12:01 AM PST:</strong> Product Hunt goes live</li>
+                                <li><strong>12:01-2:00 AM:</strong> CRITICAL FIRST 2 HOURS
+                                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                                        <li>Mobilize ALL supporters (email, DM, Slack)</li>
+                                        <li>Goal: Top 3 in first hour</li>
+                                        <li>Hunter posts, team upvotes immediately</li>
+                                        <li>Early comments from team/supporters</li>
+                                    </ul>
+                                </li>
+                                <li><strong>6:00 AM:</strong> Second wave coordination</li>
+                                <li><strong>8:30 AM:</strong> US East Coast mobilization
+                                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                                        <li>Email blast to subscribers</li>
+                                        <li>Twitter announcement</li>
+                                        <li>LinkedIn post</li>
+                                    </ul>
+                                </li>
+                                <li><strong>All day:</strong> Respond to EVERY comment within 5-10 minutes</li>
+                                <li><strong>12:00 PM:</strong> Check position (goal: holding Top 3)</li>
+                                <li><strong>3:00 PM:</strong> Final push for #1 Dev Tool</li>
+                                <li><strong>6:00 PM:</strong> Day end analysis</li>
+                                <li><strong>8:00 PM:</strong> Thank you post if #1</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Wednesday -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker upcoming">Wed</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Wednesday - Amplification (Day 3)</div>
+                            <ul class="timeline-tasks">
+                                <li><strong>8:00 AM:</strong> Publish "How We Launched" blog post</li>
+                                <li><strong>9:00 AM:</strong> DEV.to syndication</li>
+                                <li><strong>10:00 AM:</strong> Submit to r/SideProject, r/Entrepreneur</li>
+                                <li><strong>12:00 PM:</strong> Engage with everyone who tried product</li>
+                                <li><strong>2:00 PM:</strong> Email early users for feedback</li>
+                                <li><strong>4:00 PM:</strong> Twitter thread on launch learnings</li>
+                                <li><strong>6:00 PM:</strong> Product fixes based on feedback</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Thursday -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker upcoming">Thu</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Thursday - Momentum Building (Day 4)</div>
+                            <ul class="timeline-tasks">
+                                <li><strong>8:00 AM:</strong> User interview sessions (5-10 scheduled)</li>
+                                <li><strong>10:00 AM:</strong> Medium publication pitches</li>
+                                <li><strong>12:00 PM:</strong> Hacker News engagement (other posts)</li>
+                                <li><strong>2:00 PM:</strong> Newsletter outreach (5-10 relevant)</li>
+                                <li><strong>4:00 PM:</strong> Social media engagement</li>
+                                <li><strong>6:00 PM:</strong> Product improvements implementation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Friday -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker upcoming">Fri</div>
+                        <div class="timeline-content">
+                            <div class="timeline-title">Friday - Analysis & Planning (Day 5)</div>
+                            <ul class="timeline-tasks">
+                                <li><strong>9:00 AM:</strong> Week metrics review
+                                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                                        <li>Total signups</li>
+                                        <li>Activation rate</li>
+                                        <li>Conversion rate</li>
+                                        <li>Top traffic sources</li>
+                                        <li>User feedback themes</li>
+                                    </ul>
+                                </li>
+                                <li><strong>11:00 AM:</strong> Team retrospective (what worked, what didn't)</li>
+                                <li><strong>1:00 PM:</strong> Next week planning</li>
+                                <li><strong>3:00 PM:</strong> Product roadmap adjustment</li>
+                                <li><strong>5:00 PM:</strong> Week celebration 🎉 (if goals hit)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 class="card-title">📝 Show HN Post Template</h3>
+                        <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; margin-top: 1rem; font-family: monospace; font-size: 0.9rem;">
+                            <strong>Title:</strong><br>
+                            Show HN: AgentGym – Train AI Agents with RL in 5 Minutes<br><br>
+                            <strong>URL:</strong><br>
+                            https://github.com/yourusername/agentgym<br><br>
+                            <strong>First Comment:</strong><br>
+                            "Hey HN! I built this because [personal story]. Agent Lightning from Microsoft is amazing but requires ML PhD-level expertise. I wanted to make RL training accessible to every developer building AI agents. Would love your feedback!"
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">🏆 Product Hunt Post Template</h3>
+                        <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; margin-top: 1rem; font-family: monospace; font-size: 0.9rem;">
+                            <strong>Tagline:</strong><br>
+                            Train AI agents with reinforcement learning in 5 minutes<br><br>
+                            <strong>Description:</strong><br>
+                            The first platform to make RL training accessible for AI agents. No ML PhD required. Just upload your data, click train, and deploy. Built on Microsoft's Agent Lightning framework.<br><br>
+                            <strong>First Comment:</strong><br>
+                            "Hey Product Hunt! 👋 [Maker story]. We're live and would love your feedback..."
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post-Launch Tab -->
+            <div id="postlaunch" class="tab-content">
+                <div class="section-header">
+                    <h1 class="section-title">Post-Launch Growth (Weeks 14-26)</h1>
+                    <p class="section-subtitle">Content marketing, community building, and revenue growth</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Growth Targets</h3>
+                    </div>
+                    <div class="grid-4">
+                        <div>
+                            <div style="font-size: 1.5rem; font-weight: bold; color: var(--accent-primary);">3,000</div>
+                            <div style="color: var(--text-muted);">Total Signups by Week 26</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 1.5rem; font-weight: bold; color: var(--accent-primary);">150</div>
+                            <div style="color: var(--text-muted);">Paying Customers</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 1.5rem; font-weight: bold; color: var(--accent-primary);">$8K</div>
+                            <div style="color: var(--text-muted);">MRR Target</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 1.5rem; font-weight: bold; color: var(--accent-primary);">5%</div>
+                            <div style="color: var(--text-muted);">Free-to-Paid Conversion</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 style="margin: 2rem 0 1rem;">📝 Content Marketing System</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 class="card-title">Blog Publishing Schedule</h3>
+                        <div style="margin-top: 1rem;">
+                            <div style="padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; margin-bottom: 1rem;">
+                                <strong>Monday: Tutorial / How-To Guide</strong>
+                                <ul style="margin-left: 1.5rem; margin-top: 0.5rem; color: var(--text-muted);">
+                                    <li>"How to train a customer service agent"</li>
+                                    <li>"Building a coding assistant with RL"</li>
+                                    <li>"Optimizing agent response quality"</li>
+                                </ul>
+                            </div>
+                            <div style="padding: 1rem; background: var(--bg-tertiary); border-radius: 8px; margin-bottom: 1rem;">
+                                <strong>Wednesday: Technical Deep-Dive</strong>
+                                <ul style="margin-left: 1.5rem; margin-top: 0.5rem; color: var(--text-muted);">
+                                    <li>"Understanding PPO for agent training"</li>
+                                    <li>"Reward function design patterns"</li>
+                                    <li>"Multi-agent coordination strategies"</li>
+                                </ul>
+                            </div>
+                            <div style="padding: 1rem; background: var(--bg-tertiary); border-radius: 8px;">
+                                <strong>Friday: Use Case / Case Study</strong>
+                                <ul style="margin-left: 1.5rem; margin-top: 0.5rem; color: var(--text-muted);">
+                                    <li>"How Company X improved agent accuracy"</li>
+                                    <li>"Building production AI agents at scale"</li>
+                                    <li>"From prototype to production in 2 weeks"</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">SEO Strategy</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <div>
+                                    <strong>Keyword Research</strong>
+                                    <div style="font-size: 0.875rem; color: var(--text-muted);">Ahrefs/SEMrush analysis</div>
+                                </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Target "agent lightning alternative"</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Target "how to train AI agents"</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Target "reinforcement learning platform"</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Framework integration keywords</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Build 10+ backlinks per month</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Guest posts on ML blogs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 style="margin: 2rem 0 1rem;">💬 Community Expansion</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3 class="card-title">Discord Community</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Launch Discord at 100+ users</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Set up channel structure</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Daily team presence</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Weekly challenges with prizes</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Monthly hackathon</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Community showcase</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Top contributor recognition</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">Newsletter Growth</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Embed signup CTAs in blog</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Lead magnet: "RL Training Guide"</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Weekly newsletter to subscribers</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Goal: 500 subscribers by Week 26</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">Template Marketplace</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Seed with 20 templates</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Enable community contributions</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Implement rating system</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Feature top templates</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 style="margin: 2rem 0 1rem;">🤝 Partnerships & Integrations</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 class="card-title">Integration Partners</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <div>
+                                    <strong>LangChain Official Integration</strong>
+                                    <div style="font-size: 0.875rem; color: var(--text-muted);">Get listed in their docs</div>
+                                </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <div>
+                                    <strong>AutoGen Integration</strong>
+                                    <div style="font-size: 0.875rem; color: var(--text-muted);">Microsoft partnership opportunity</div>
+                                </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <div>
+                                    <strong>Hugging Face Collaboration</strong>
+                                    <div style="font-size: 0.875rem; color: var(--text-muted);">Host models on their platform</div>
+                                </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Listed in partner marketplaces</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">Influencer Collaborations</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>5 micro-influencer partnerships</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>2 YouTube tutorial collaborations</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>3 newsletter sponsorships</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <div>
+                                    <strong>Affiliate Program Launch</strong>
+                                    <div style="font-size: 0.875rem; color: var(--text-muted);">20% commission structure</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 style="margin: 2rem 0 1rem;">💰 Paid Acquisition Testing</h2>
+                <div class="card">
+                    <div class="grid-3">
+                        <div>
+                            <h4>Google Ads</h4>
+                            <ul class="timeline-tasks">
+                                <li>Budget: $500 test</li>
+                                <li>Target CAC: $50-100</li>
+                                <li>Keywords: "RL training", "agent platform"</li>
+                                <li>Landing page A/B test</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>LinkedIn Ads</h4>
+                            <ul class="timeline-tasks">
+                                <li>Budget: $500 test</li>
+                                <li>Target: ML engineers, data scientists</li>
+                                <li>Job titles, company size filters</li>
+                                <li>Track demo requests</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Reddit Ads</h4>
+                            <ul class="timeline-tasks">
+                                <li>Budget: $300 test</li>
+                                <li>Target: r/MachineLearning, r/LocalLLaMA</li>
+                                <li>Native ad format</li>
+                                <li>Track click-through rate</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px;">
+                        <strong>Strategy:</strong> Scale winners, cut losers after 2-week test period
+                    </div>
+                </div>
+            </div>
+
+            <!-- Operations Tab -->
+            <div id="operations" class="tab-content">
+                <div class="section-header">
+                    <h1 class="section-title">Operations & Business Setup</h1>
+                    <p class="section-subtitle">Legal, financial, team, and operational infrastructure</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 class="card-title">🏢 Legal & Compliance</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <div>
+                                    <strong>Company Formation</strong>
+                                    <div style="font-size: 0.875rem; color: var(--text-muted);">Delaware C-Corp or LLC</div>
+                                </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>EIN registration (IRS)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Business bank account</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Stripe account setup (payments)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Terms of Service drafted</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Privacy Policy (GDPR compliant)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Cookie Policy</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Data Processing Agreement (DPA)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Trademark search & filing</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Domain registration (+ variants)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">💰 Financial Setup</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>QuickBooks / Xero setup</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Chart of accounts configured</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Revenue recognition policy</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Monthly financial dashboard</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Burn rate tracking</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Unit economics model</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Cash runway calculator</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Find accountant/bookkeeper</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Tax planning consultation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">👥 Team & Hiring</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <div>
+                                    <strong>Hire 2-3 Full-Stack Engineers</strong>
+                                    <div style="font-size: 0.875rem; color: var(--text-muted);">ML + web experience required</div>
+                                </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Contract technical designer for UI</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Identify technical advisor (ML platform)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Employment contracts drafted</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Equity/option plan setup</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Contractor agreements</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Onboarding documentation</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Team communication setup (Slack)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">🛠️ Tools & Software</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>GitHub organization & repos</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Linear or Notion (project mgmt)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Slack workspace</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Google Workspace / Microsoft 365</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>1Password (team password manager)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Figma (design collaboration)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Intercom / Crisp (customer support)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Calendly (scheduling)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Loom (video recordings)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">📧 Customer Support</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Support email setup (support@)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Help center / knowledge base</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Common FAQ documented</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Support ticket system</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Response time SLA defined</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Support escalation process</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Weekly support ticket review</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">🔐 Security & Infrastructure</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>AWS/GCP account setup</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Production environment secured</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Staging environment setup</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>CI/CD pipeline configured</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Database backups automated</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>SSL certificates configured</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>DDoS protection (Cloudflare)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Monitoring & alerting (Sentry)</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Incident response plan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Risk Management Tab -->
+            <div id="risks" class="tab-content">
+                <div class="section-header">
+                    <h1 class="section-title">Risk Management</h1>
+                    <p class="section-subtitle">Identify, assess, and mitigate potential threats to success</p>
+                </div>
+
+                <div class="risk-matrix">
+                    <div class="risk-matrix-cell risk-matrix-header"></div>
+                    <div class="risk-matrix-cell risk-matrix-header">Low Impact</div>
+                    <div class="risk-matrix-cell risk-matrix-header">Medium Impact</div>
+                    <div class="risk-matrix-cell risk-matrix-header">High Impact</div>
+
+                    <div class="risk-matrix-cell risk-matrix-label">High Probability</div>
+                    <div class="risk-matrix-cell risk-medium">
+                        <div class="risk-item">Feature creep</div>
+                    </div>
+                    <div class="risk-matrix-cell risk-high">
+                        <div class="risk-item">Larger platform adds RL</div>
+                    </div>
+                    <div class="risk-matrix-cell risk-high">
+                        <div class="risk-item">Burn rate exceeds revenue</div>
+                    </div>
+
+                    <div class="risk-matrix-cell risk-matrix-label">Medium Probability</div>
+                    <div class="risk-matrix-cell risk-low">
+                        <div class="risk-item">Community backlash</div>
+                    </div>
+                    <div class="risk-matrix-cell risk-medium">
+                        <div class="risk-item">Microsoft commercializes AL</div>
+                        <div class="risk-item">Low PMF signals</div>
+                    </div>
+                    <div class="risk-matrix-cell risk-high">
+                        <div class="risk-item">Technical complexity</div>
+                    </div>
+
+                    <div class="risk-matrix-cell risk-matrix-label">Low Probability</div>
+                    <div class="risk-matrix-cell risk-low">
+                        <div class="risk-item">Key hire leaves</div>
+                    </div>
+                    <div class="risk-matrix-cell risk-low">
+                        <div class="risk-item">Security breach</div>
+                    </div>
+                    <div class="risk-matrix-cell risk-medium">
+                        <div class="risk-item">RL paradigm shift</div>
+                    </div>
+                </div>
+
+                <h2 style="margin: 2rem 0 1rem;">Top 5 Risks & Mitigation Plans</h2>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">🔴 Risk 1: Microsoft Commercializes Agent Lightning</h3>
+                        <span class="badge priority-medium">Probability: Medium (30-40%)</span>
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <strong>Impact:</strong> High - Could eliminate need for wrapper platform<br><br>
+                        <strong>Mitigation Strategy:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Speed to market (launch before they do - 90 days)</li>
+                            <li>Build superior UX (can't compete on framework, compete on experience)</li>
+                            <li>Establish community moats (users, content, integrations)</li>
+                            <li>Create switching costs (data, models, workflows)</li>
+                            <li>Position as complementary if needed</li>
+                        </ul>
+                        <strong style="display: block; margin-top: 1rem;">Contingency Plan:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Pivot to "best UI for Agent Lightning" positioning</li>
+                            <li>Focus on enterprise features Microsoft won't prioritize</li>
+                            <li>Explore adjacent problems (multi-agent, deployment, monitoring)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">🔴 Risk 2: Larger ML Platform Adds RL Features</h3>
+                        <span class="badge priority-high">Probability: High (40-50% within 18 months)</span>
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <strong>Impact:</strong> Medium-High - Fierce competition from established players<br><br>
+                        <strong>Mitigation Strategy:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Be category leader before they enter (timing advantage)</li>
+                            <li>Specialize in agents (they'll be generalists)</li>
+                            <li>Better pricing (no tracked hours trap like W&B)</li>
+                            <li>Community ownership (open source components)</li>
+                            <li>Developer-first positioning (not enterprise-first)</li>
+                        </ul>
+                        <strong style="display: block; margin-top: 1rem;">Contingency Plan:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Become acquisition target for larger player</li>
+                            <li>Differentiate through agent-specific features they won't prioritize</li>
+                            <li>Focus on underserved segments (SMBs, indie developers)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">🔴 Risk 3: Low Adoption / Product-Market Fit Risk</h3>
+                        <span class="badge priority-medium">Probability: Medium (30-40%)</span>
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <strong>Impact:</strong> Extreme - Company failure<br><br>
+                        <strong>Mitigation Strategy:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Extensive validation before building (20 interviews, 200 waitlist)</li>
+                            <li>Rapid iteration based on user feedback (weekly releases)</li>
+                            <li>Talk to users constantly (20+ interviews/month)</li>
+                            <li>Ruthless focus on activation (time-to-first-model <5 min)</li>
+                            <li>Track leading indicators (NPS, retention, engagement)</li>
+                        </ul>
+                        <strong style="display: block; margin-top: 1rem;">Contingency Plan:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Pivot based on learnings within 2-4 weeks</li>
+                            <li>Explore adjacent problems: agent deployment? monitoring? multi-agent?</li>
+                            <li>Consider narrower wedge (specific vertical like customer support)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">🟡 Risk 4: Technical Complexity Exceeds Capability</h3>
+                        <span class="badge priority-medium">Probability: Low-Medium (20-30%)</span>
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <strong>Impact:</strong> High - Delayed launch, poor product quality<br><br>
+                        <strong>Mitigation Strategy:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Start with simplest MVP (single GPU, basic workflow)</li>
+                            <li>Use proven infrastructure (Temporal, MLflow, Kubernetes)</li>
+                            <li>Hire experienced ML platform engineer early</li>
+                            <li>Leverage Agent Lightning's heavy lifting</li>
+                            <li>Technical advisor with relevant experience</li>
+                        </ul>
+                        <strong style="display: block; margin-top: 1rem;">Contingency Plan:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Partner with infrastructure provider (RunPod, Modal, Replicate)</li>
+                            <li>Pivot to managed Agent Lightning as a service (less technical)</li>
+                            <li>Focus on UI layer, outsource infrastructure</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">🟡 Risk 5: Burn Rate Exceeds Revenue Growth</h3>
+                        <span class="badge priority-medium">Probability: Medium (30-40%)</span>
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <strong>Impact:</strong> High - Run out of money<br><br>
+                        <strong>Mitigation Strategy:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Lean team (3-4 engineers initially, contractors for design)</li>
+                            <li>Focus on freemium conversion (not just growth)</li>
+                            <li>Early enterprise deals (3-5 in first 6 months)</li>
+                            <li>Spot instances and cost optimization from Day 1</li>
+                            <li>Monitor unit economics weekly</li>
+                            <li>18-month runway minimum</li>
+                        </ul>
+                        <strong style="display: block; margin-top: 1rem;">Contingency Plan:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Raise seed round earlier than planned</li>
+                            <li>Reduce scope to lower-cost MVP</li>
+                            <li>Cut non-essential features/team</li>
+                            <li>Focus on immediate revenue vs. long-term growth</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 style="margin: 2rem 0 1rem;">Decision Gates (Go/No-Go Points)</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 class="card-title">After Problem Validation (Week 2)</h3>
+                        <div style="margin-top: 1rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px;">
+                            <div style="color: var(--success); margin-bottom: 0.5rem;"><strong>✅ GO if:</strong></div>
+                            <ul style="margin-left: 1.5rem;">
+                                <li>60%+ express strong interest</li>
+                                <li>Clear pain identified</li>
+                                <li>Willingness to pay validated</li>
+                            </ul>
+                            <div style="color: var(--danger); margin-top: 1rem; margin-bottom: 0.5rem;"><strong>❌ NO-GO if:</strong></div>
+                            <ul style="margin-left: 1.5rem;">
+                                <li><40% interest</li>
+                                <li>Unclear if willing to pay</li>
+                                <li>Pain not significant enough</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">After Solution Validation (Week 4)</h3>
+                        <div style="margin-top: 1rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px;">
+                            <div style="color: var(--success); margin-bottom: 0.5rem;"><strong>✅ GO if:</strong></div>
+                            <ul style="margin-left: 1.5rem;">
+                                <li>200+ waitlist signups</li>
+                                <li>Positive community feedback</li>
+                                <li><60% bounce rate</li>
+                            </ul>
+                            <div style="color: var(--danger); margin-top: 1rem; margin-bottom: 0.5rem;"><strong>❌ NO-GO if:</strong></div>
+                            <ul style="margin-left: 1.5rem;">
+                                <li><100 waitlist</li>
+                                <li>Negative comments</li>
+                                <li>>70% bounce rate</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">After MVP Beta (Week 12)</h3>
+                        <div style="margin-top: 1rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px;">
+                            <div style="color: var(--success); margin-bottom: 0.5rem;"><strong>✅ GO if:</strong></div>
+                            <ul style="margin-left: 1.5rem;">
+                                <li>70%+ complete first training</li>
+                                <li>NPS >40</li>
+                                <li>Clear PMF signals</li>
+                                <li>Users asking to pay</li>
+                            </ul>
+                            <div style="color: var(--danger); margin-top: 1rem; margin-bottom: 0.5rem;"><strong>❌ NO-GO if:</strong></div>
+                            <ul style="margin-left: 1.5rem;">
+                                <li><50% complete training</li>
+                                <li>NPS <30</li>
+                                <li>Negative feedback themes</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">After Launch (Week 20)</h3>
+                        <div style="margin-top: 1rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 8px;">
+                            <div style="color: var(--success); margin-bottom: 0.5rem;"><strong>✅ GO if:</strong></div>
+                            <ul style="margin-left: 1.5rem;">
+                                <li>3-5% conversion rate</li>
+                                <li>Strong retention (50%+ W1)</li>
+                                <li>Organic growth signals</li>
+                                <li>Clear path to $5K MRR</li>
+                            </ul>
+                            <div style="color: var(--danger); margin-top: 1rem; margin-bottom: 0.5rem;"><strong>❌ NO-GO if:</strong></div>
+                            <ul style="margin-left: 1.5rem;">
+                                <li><2% conversion</li>
+                                <li>High churn (>50% monthly)</li>
+                                <li>No organic signups</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Metrics Tab -->
+            <div id="metrics" class="tab-content">
+                <div class="section-header">
+                    <h1 class="section-title">Metrics & KPIs Dashboard</h1>
+                    <p class="section-subtitle">Track progress toward product-market fit and revenue goals</p>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">🌟 North Star Metric</h3>
+                    <div style="margin-top: 1rem; text-align: center; padding: 2rem; background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); border-radius: 12px;">
+                        <div style="font-size: 3rem; font-weight: bold;">0</div>
+                        <div style="font-size: 1.25rem; margin-top: 0.5rem;">Models Successfully Trained Per Week</div>
+                        <div style="margin-top: 1rem; font-size: 0.9rem;">Target Trajectory: 50 (M1) → 200 (M3) → 500 (M6) → 1,500 (M12)</div>
+                    </div>
+                </div>
+
+                <h2 style="margin: 2rem 0 1rem;">Key Performance Indicators</h2>
+                <div class="grid-4">
+                    <div class="metric-card">
+                        <div class="metric-value">0</div>
+                        <div class="metric-label">Total Signups</div>
+                        <div class="metric-change positive">Target: 1,000 by Month 3</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">0%</div>
+                        <div class="metric-label">Activation Rate</div>
+                        <div class="metric-change positive">Target: 60%+ (first training)</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">0%</div>
+                        <div class="metric-label">Free-to-Paid Conversion</div>
+                        <div class="metric-change positive">Target: 3-5%</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">N/A</div>
+                        <div class="metric-label">NPS Score</div>
+                        <div class="metric-change positive">Target: >40</div>
+                    </div>
+                </div>
+
+                <h2 style="margin: 2rem 0 1rem;">Revenue Metrics</h2>
+                <div class="grid-4">
+                    <div class="metric-card">
+                        <div class="metric-value">$0</div>
+                        <div class="metric-label">MRR</div>
+                        <div class="metric-change positive">Target: $2K (M3), $8K (M6)</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">$0</div>
+                        <div class="metric-label">ARR</div>
+                        <div class="metric-change positive">Target: $360K by Month 12</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">0</div>
+                        <div class="metric-label">Paying Customers</div>
+                        <div class="metric-change positive">Target: 50 (M3), 500 (M12)</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">N/A</div>
+                        <div class="metric-label">Average MRR/Customer</div>
+                        <div class="metric-change positive">Target: $50-80</div>
+                    </div>
+                </div>
+
+                <h2 style="margin: 2rem 0 1rem;">Growth Metrics</h2>
+                <div class="grid-3">
+                    <div class="metric-card">
+                        <div class="metric-value">0</div>
+                        <div class="metric-label">Weekly Active Users</div>
+                        <div class="metric-change positive">Target: 30% of signups</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">N/A</div>
+                        <div class="metric-label">Week 1 Retention</div>
+                        <div class="metric-change positive">Target: 50%+</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">N/A</div>
+                        <div class="metric-label">Monthly Churn</div>
+                        <div class="metric-change positive">Target: <5%</div>
+                    </div>
+                </div>
+
+                <h2 style="margin: 2rem 0 1rem;">Community Metrics</h2>
+                <div class="grid-4">
+                    <div class="metric-card">
+                        <div class="metric-value">0</div>
+                        <div class="metric-label">GitHub Stars</div>
+                        <div class="metric-change positive">Target: 500 (M3), 3,000 (M12)</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">0</div>
+                        <div class="metric-label">Discord Members</div>
+                        <div class="metric-change positive">Target: 100 (M3), 600 (M12)</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">0</div>
+                        <div class="metric-label">Newsletter Subscribers</div>
+                        <div class="metric-change positive">Target: 500 by Month 6</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">0</div>
+                        <div class="metric-label">Monthly Organic Traffic</div>
+                        <div class="metric-change positive">Target: 50K by Month 6</div>
+                    </div>
+                </div>
+
+                <h2 style="margin: 2rem 0 1rem;">Milestone Tracking</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3 class="card-title">3-Month Milestones</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <div>
+                                    <strong>1,000 signups</strong>
+                                    <div style="font-size: 0.875rem; color: var(--text-muted);">Current: 0</div>
+                                </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <div>
+                                    <strong>50 paying customers</strong>
+                                    <div style="font-size: 0.875rem; color: var(--text-muted);">Current: 0</div>
+                                </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <div>
+                                    <strong>$2,000 MRR</strong>
+                                    <div style="font-size: 0.875rem; color: var(--text-muted);">Current: $0</div>
+                                </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>60% activation rate</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>40+ NPS</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>500 GitHub stars</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>100 Discord members</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">6-Month Milestones</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <div>
+                                    <strong>3,000 signups</strong>
+                                    <div style="font-size: 0.875rem; color: var(--text-muted);">Current: 0</div>
+                                </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <div>
+                                    <strong>150 paying customers</strong>
+                                    <div style="font-size: 0.875rem; color: var(--text-muted);">Current: 0</div>
+                                </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <div>
+                                    <strong>$8,000 MRR</strong>
+                                    <div style="font-size: 0.875rem; color: var(--text-muted);">Current: $0</div>
+                                </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>5% free-to-paid conversion</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>50+ NPS</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>1,500 GitHub stars</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>5 enterprise pilots</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">12-Month Milestones</h3>
+                        <div style="margin-top: 1rem;">
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <div>
+                                    <strong>10,000 signups</strong>
+                                    <div style="font-size: 0.875rem; color: var(--text-muted);">Current: 0</div>
+                                </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <div>
+                                    <strong>500 paying customers</strong>
+                                    <div style="font-size: 0.875rem; color: var(--text-muted);">Current: 0</div>
+                                </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <div>
+                                    <strong>$30,000 MRR ($360K ARR)</strong>
+                                    <div style="font-size: 0.875rem; color: var(--text-muted);">Current: $0</div>
+                                </div>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>5%+ conversion</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>60+ NPS</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>3,000 GitHub stars</span>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox"></div>
+                                <span>Series A ready</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 style="margin: 2rem 0 1rem;">Leading vs. Lagging Indicators</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 class="card-title">📈 Leading Indicators</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 1rem;">Predict future success</p>
+                        <ul class="timeline-tasks">
+                            <li><strong>GitHub stars growth rate</strong> - Community interest</li>
+                            <li><strong>Discord engagement (DAU/MAU)</strong> - Active community</li>
+                            <li><strong>Blog organic traffic</strong> - SEO momentum</li>
+                            <li><strong>Time-to-first-model</strong> - Activation quality</li>
+                            <li><strong>NPS score</strong> - User satisfaction</li>
+                            <li><strong>Feature request themes</strong> - Product direction</li>
+                            <li><strong>Community contributions</strong> - Ecosystem health</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 class="card-title">📊 Lagging Indicators</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 1rem;">Measure current success</p>
+                        <ul class="timeline-tasks">
+                            <li><strong>Revenue (MRR/ARR)</strong> - Financial performance</li>
+                            <li><strong>Paid user count</strong> - Monetization success</li>
+                            <li><strong>Churn rate</strong> - Product stickiness</li>
+                            <li><strong>CAC and LTV</strong> - Unit economics</li>
+                            <li><strong>Gross margin</strong> - Business sustainability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Tab Navigation
+        const tabs = document.querySelectorAll('.nav-tab');
+        const contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.dataset.tab;
+
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                tab.classList.add('active');
+                document.getElementById(target).classList.add('active');
+
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+
+        // Checkbox functionality
+        document.querySelectorAll('.checkbox').forEach(checkbox => {
+            checkbox.addEventListener('click', () => {
+                checkbox.classList.toggle('checked');
+                updateProgress();
+            });
+        });
+
+        // Progress calculation
+        function updateProgress() {
+            const allCheckboxes = document.querySelectorAll('.checkbox');
+            const checkedBoxes = document.querySelectorAll('.checkbox.checked');
+
+            const totalTasks = allCheckboxes.length;
+            const completedTasks = checkedBoxes.length;
+            const progress = totalTasks > 0 ? Math.round((completedTasks / totalTasks) * 100) : 0;
+
+            // Update header stats
+            document.getElementById('overall-progress').textContent = progress + '%';
+            document.getElementById('tasks-completed').textContent = `${completedTasks}/${totalTasks}`;
+
+            // Update all progress bars
+            document.querySelectorAll('.progress-fill').forEach(bar => {
+                bar.style.width = progress + '%';
+                bar.textContent = progress + '%';
+            });
+        }
+
+        // Calculate days to launch (90 days from now)
+        const launchDate = new Date();
+        launchDate.setDate(launchDate.getDate() + 90);
+        const today = new Date();
+        const daysToLaunch = Math.ceil((launchDate - today) / (1000 * 60 * 60 * 24));
+        document.getElementById('days-to-launch').textContent = daysToLaunch;
+
+        // Initialize
+        updateProgress();
+
+        // Print functionality
+        window.addEventListener('beforeprint', () => {
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.add('active');
+            });
+        });
+
+        window.addEventListener('afterprint', () => {
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById('overview').classList.add('active');
+        });
+    </script>
+</body>
+</html>

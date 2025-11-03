@@ -1,0 +1,1928 @@
+is this a good practice having system message of this length (this system message is for the supervisor agent)
+
+image.png 
+
+[![image.png](https://files.slack.com/files-tmb/T05P4BNF01J-F0997CGFXGU-a72ca1c3f0/image_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F0997CGFXGU/image.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F0997CGFXGU/download/image.png?origin_team=T05P4BNF01J)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U0995CJ4N58-a23af401a078-48)
+
+Curtis Szmania  [17:24 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1754493885821779)
+
+Hello all! I'm curious what would be the use case for a supervisor of supervisors implementation versus 1 supervisor of multiple agents. Taking this as an example: <https://github.com/langchain-ai/langgraph-supervisor-py>  supervisor of supervisors example:
+
+```
+research_team = create_supervisor(
+    [research_agent, math_agent],
+    model=model,
+    supervisor_name="research_supervisor"
+).compile(name="research_team")
+
+writing_team = create_supervisor(
+    [writing_agent, publishing_agent],
+    model=model,
+    supervisor_name="writing_supervisor"
+).compile(name="writing_team")
+
+top_level_supervisor = create_supervisor(
+    [research_team, writing_team],
+    model=model,
+    supervisor_name="top_level_supervisor"
+).compile(name="top_level_supervisor")
+```
+
+versus:  1 supervisor that has a writing agent (or team of writing agents) and  that has a research agent (or team of research agents). (bearbeitet) 
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08M6GM42SV-g1b3a05ccd0d-48)
+
+Vijay  [18:34 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1754498079064429)
+
+I built my own LangGraph compiler to take YAML -> LangGraph so product managers and other business stakeholders can just define graphs via YAML (register tools, set prompts, etc.) It would be great to have something like that baked into LangGraph.Anyone know of other projects / options that would be able to take YAML and generate a LangGraph?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U099PN96PFX-82cf3f55bddc-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08M6GM42SV-g1b3a05ccd0d-24)2 Antworten
+
+Letzte Antwort vor 3 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08BXMBT3TK-gfb203e400a6-48)
+
+Cahue  [00:16 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1754605015135429)
+
+hey guys, do I have to enable thinking for Anthropic models?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U099T6CJC0L-13fdc44c887d-48)
+
+Eden Djanashvili  [13:51 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1754740308038169)
+
+<https://platform.openai.com/docs/guides/latest-model>The new GPT-5 Model supports different configuration inputs such as verbosity and reasoning effort. How can we configure this in langchain when defining the llm object?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U07LVCQH5PZ-415362ee5e92-24)![](https://ca.slack-edge.com/T05P4BNF01J-U099T6CJC0L-13fdc44c887d-24)2 Antworten
+
+Letzte Antwort vor 3 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U07NUN8SYDV-g196ce6b66ce-48)
+
+Dharshana Ratnayake  [21:15 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1754853346581739)
+
+hi [#talking-shop](https://langchaincommunity.slack.com/archives/C07EHF3HC87) do you know if there is a way to access long term memory, from inside a tool?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U069HDF3N5T-d67860b624fe-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09AQV9C4JF-g7a28f79f102-24)2 Antworten
+
+Letzte Antwort vor 3 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U0811KNG0GG-gcf4ebcc186b-48)
+
+Nigel Daniels  [19:23 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1754933014365609)
+
+Does anyone know where I can use `crons`, it turns out the `dev` server does not support `crons` so I cannot schedule tasks there, are they supported in the self-hosted environments, e.g. `docker` or is this a cloud only feature? I could not see in the cron documentation where this feature can be used :(
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U07NS06UR4L-e11bd119bd0b-48)
+
+Albeiro Espitia  [20:51 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1754938290639399)
+
+Has anyone migrated to hybrid deployment or standalone self-hosted server deployment? Do you know what's needed for this?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09A2NGTHSA-gf89cd1ce1e4-48)
+
+JP  [16:56 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1755010593858279)
+
+Heyy\
+Wanted to learn and work with langchain at my company\
+Any suggestions would be appreciated
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08SB6N90S0-8cc0247d020e-24)1 Antwort
+
+vor 3 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U07C6QY05DK-g869529dd0b6-48)
+
+Michael Irey  [20:08 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1755022095661169)
+
+Is this best channel for help with langsmith?Trying to run an experiment and noticing: that LangSmith's experiment runner is incorrectly handling the base64 image data - it's tokenizing the entire base64 string as text rather than processing it as an image input to the model.But it works fine when running the llm call locally with a trace, the trace is captured perfectly, and I can run it in the langsmith web playground, I just can't seem to get it to work in the experiments, at all.Using way too many tokens!The error:
+
+```
+BadRequestError("Error code: 400 - {'error': {'message': 'Input tokens exceed the configured limit of 272000 tokens. Your messages resulted in 885355 tokens. Please reduce the length of the messages.', 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}")Traceback (most recent call last):
+```
+
+(bearbeitet)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U07C6QY05DK-g869529dd0b6-24)1 Antwort
+
+vor 3 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09AS22KW3T-3b32ba336a11-48)
+
+Etienne Duclos  [15:45 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1755179143316629)
+
+Hello everyone,\
+I’m currently developing an autonomous agent using LangChain/LangGraph and have several questions about memory management.\
+**1. Short-term memory:** Is it really necessary to save all the `AiChatMessage` data? It appears to be sent in raw format, which consumes more tokens and adds complexity to the input prompt sent to the LLM. Would it be more efficient to extract only the important content (results, tool calls), format them as Q\&A pairs, and then save them to short-term memory?\
+**2. Long-term memory:** I’ve seen different implementation approaches. Some developers use a tool that allows the AI to add memories to the vector database itself. Is it actually beneficial to give the AI this choice, or would it be simpler to automatically save all content results from each iteration and retrieve them through vector queries as needed?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U07C6QY05DK-g869529dd0b6-48)
+
+Michael Irey  [19:26 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1755192379029969)
+
+I wish we could have better error messages from langsmith UI when running an experiment:Not much anyone can do with this (bearbeitet) 
+
+image.png 
+
+[![image.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09AGMDHER4-e4bb371316/image_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09AGMDHER4/image.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09AGMDHER4/download/image.png?origin_team=T05P4BNF01J)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U099Z925M1V-gca81b715e5c-48)
+
+Manish  [08:24 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1755239058282199)
+
+Hello everyone,\
+Question - I have built an simple ai web search tool call chatbot using langraph but it's making tool calls for even normal conversation like greetings  anyone has any solutions for this problem. Please help me I am new to this
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U091D96M7DJ-g24f391600de-24)![](https://ca.slack-edge.com/T05P4BNF01J-U099Z925M1V-gca81b715e5c-24)2 Antworten
+
+Letzte Antwort vor 3 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U097WBEUYJJ-gcf5b864f3a4-48)
+
+Andre Moreira  [10:57 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1755248258689659)
+
+Hello everyone! I want to share here a silly architecture error that I made in one the graph workflows that I built in recent times. Making a long story short, I built a little "interim jobs scanner" for a friend of mine, who is a headhunter and asked me if I could get AI to scan a bunch of very specific sites for him and come back with a few "high value jobs" that he could then match with his clients.So I built a very simple workflow that uses the Send pattern to do scraping of the target sites in parallel. Each node is a ReAct agent armed with a single tool, a scraper (I use Scraping Bee for it - not cheap, but effective). The idea is really simple: the pages we scrape have a lot of garbage (so I limit the tokens that is passed to the agent), and let it sift through the garbage to find interesting stuff. It finds stuff, puts that in the State in a clean way, if not, then returns that it did not find anything. Lazy and nice.The problem that I did not see is that because it is a ReAct agent, there is a chance that if the tool call returns a capped text (because of the token limit) it may decide to scrape again. And again. And again. Etc! I did not foresee this, so this morning I got a failed run and I am like WTF?! Fortunately I have LangSmith on, so I could trace back and I realized that in some pages (the ones that are usually **really full of garbage**) the ReAct agent would try to scrape a few times - in one case it went overboard and tried 4 times and ended up accumulating too many tokens in its internal state.So, I guess my "lazy solution" was not so nice after all. I am simplifying that node, as it does not need a ReAct agent, I only used it for laziness :-)
+
+![:verschwitztes\_lachen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f605.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U099PN96PFX-82cf3f55bddc-24)![](https://ca.slack-edge.com/T05P4BNF01J-U097WBEUYJJ-gcf5b864f3a4-24)3 Antworten
+
+Letzte Antwort vor 3 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BE1QG2F2-g27170c3cfd6-48)
+
+Nikhil Chandrappa  [23:25 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1755293151357509)
+
+Hello Everyone, Great to be here! looking forward to learning from and contributing to the Langchain community. I'm looking to get some help for contributing an integration for Langchain.I'm one of the Staff Engineers on YugabyteDB - AI integrations team and we have implemented [langchain-yugabytedb](https://github.com/yugabyte/langchain-yugabytedb) module for supporting YugabyteDB distributed sql as a vector store. I have opened a contribution PR and I wanted to get guidance on merging the PR with langcahin community repo. Thanks
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09A41YHZFB-g8083b2ace17-48)
+
+Christoph Bussler  [16:14 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1755353644907779)
+
+Hi everyone! I am trying to find an explanation in context of LangGraph, specifically, the node execution algorithm of nodes in a graph. I basically understand that a node can be executed if all incoming required messages (and other dependencies) are fulfilled. "Can be" does not imply that it will at the earliest possibility, though.What I am observing is behavior like this: when starting a compiled graph, it determines the list of nodes that can be executed ("node set"), and executes those nodes. Only after all of those nodes in the node set have been executed, it evaluates the next set of nodes that can be executed (and executes those). The execution is node set after node set until no more nodes can be executed.From an execution logic viewpoint, this is totally fine. However, this also means that truly parallel paths in a graph are not executed independently of each other as the node set is determined with the entire graph in scope. The parallel paths are not evaluated independently of each other.This is an observation based on different scenarios I created and might not be accurate, hence the question: is there any document or write-up that confirms the above or explains how the execution works?As a side note: of course the code explains it as well. However, I am looking for an explanation on a graph abstraction level, not code or implementation level.Thank you very much for any input!
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09AQV9C4JF-g7a28f79f102-48)
+
+Brandon  [23:33 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1755552805455969)
+
+Hey Everyone!I'm super confused by the new Runtime added in 0.6.0. I'm see two expressly different behaviors between when Runtime is passed at graph creation time vs when Runtime is retrieved in a tool.\
+When I'm passing runtime to my make\_graph function I have to access it like a dictionary, accessing the "configurable" key:
+
+```
+async def make_graph(runtime: Runtime[Context]):
+
+    # Define the tools available to the agent
+    default_tools = [
+        "manage_personal_info_tool",
+        "search_personal_info_tool",
+    ]
+
+    context = runtime['configurable']
+
+    tools = default_tools + context.get('tools', [])
+
+
+    generation_agent = create_react_agent(
+        context.get('model', 'anthropic:claude-3-5-sonnet-latest'),
+        tools=get_tools(tools),
+        prompt=react_agent_prompt_node,
+        state_schema=ChatAgentState,
+        context_schema=Context,
+    )
+    return generation_agent
+```
+
+In a tool function I can use `get_context()` and then access the context like an object:
+
+```
+@tool
+async def questions_to_ask(
+    state: Annotated[dict, InjectedState],
+) -> Question:
+    """
+    Intelligently selects the next best question to ask based on conversation context.
+    Automatically stores the selected question as asked.
+
+    Args:
+        state: The state of the agent
+
+    Returns:
+        Question: The next best question to ask
+    """
+    runtime = get_runtime(Context)
+    store = get_store()
+    namespace = ("agent_assistant", runtime.context.user_id,)
+```
+
+It feels to me like `config["configurable"]` had use as a means of populating LangGraph Studio's Assistants, but was replaced with `context` which seems designed primarily to serve as an immutable state. Is anyone struggling with this confusion, or have found a way to separate the responsibility of configuring an assistant vs providing immutable state?Storing my user\_id in the same data structure as my prompts and model selectors just feels wrong to me. (bearbeitet) 
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08MGE606V9-868e63e5d1b2-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09AQV9C4JF-g7a28f79f102-24)4 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09ALKWQASW-g591ed6ec736-48)
+
+Luke  [15:51 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1755611508405419)
+
+LangChain doesn’t seem to report available tools on LLM traces - I would expect it to. Any thoughts?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09ALKWQASW-g591ed6ec736-48)
+
+Luke  [16:01 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1755612114833819)
+
+So, you can see the LLM call, you can see the messages, but a key element - available tools, is just never actually surfaced. So really, you’re just looknig at the messages, which is a bit of a “observability” fail
+
+[16:03 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1755612182987899)
+
+Additionally, I can’t seem to get official OpenTel instrumentation to actually yield spans relating to LangChain LLM calls via `fetch` (nodejs)
+
+[16:06 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1755612367270329)
+
+I’m frustrated with the lack of transparency provided by LangChain et al as to the actual LLM request being made (bearbeitet) 
+
+[16:06 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1755612393789749)
+
+At the moment, I’m seeing less than a full LLM request, and I know it
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09AD971KEF-g17a2ac89973-48)
+
+Saad  [08:03 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1755756181079349)
+
+Hello team, has anyone used guardrails-ai or llm guard or any other library in LangGraph project? I am confused if such libraries can run on LangGraph Platform (cloud hosting).
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09AQV9C4JF-g7a28f79f102-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09AD971KEF-g17a2ac89973-24)2 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09B7JCDGHH-g4baf3d38a7d-48)
+
+Nuno  [10:28 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1755764919992839)
+
+Hello everyone. I am using langgraph with AzureChatOpenAI , seems like there is no way to setup multiple graphs using different api\_key/endpoint combinations as they are reliant on a single environment variable, anyone has any way to move forward?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U099PN96PFX-82cf3f55bddc-24)![](https://ca.slack-edge.com/T05P4BNF01J-U092D6SAHU0-d31f08839963-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09B7JCDGHH-g4baf3d38a7d-24)3 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09AQV9C4JF-g7a28f79f102-48)
+
+Brandon  [21:26 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1755804393354319)
+
+Hello! How can I completely clear store memory in Langgraph Studio when developing locally? I want a fresh env.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09AQV9C4JF-g7a28f79f102-24)1 Antwort
+
+vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U099Z925M1V-gca81b715e5c-48)
+
+Manish  [04:48 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1755917296180659)
+
+Hello everyone can anyone please tell me how to give user input between the nodes or in a node because I am creating an evaluation agent in the first node the llm asks the question in the second node the answer is evaluated how do I give the user input in between the nodes please someone help me with this
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09B4BVF588-g210e21434d8-48)
+
+dammy  [10:51 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1755939069217119)
+
+hey everyone ![:winken:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f44b.png) – so i'm building a dataset using langsmith and i think it'd be useful if we could add a labelling checklist for annotators when adding new examples.\
+(what do you guys think?) (bearbeitet) 
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BWJM2RRA-g1da56d48a1b-48)
+
+Thomas Taylor  [16:53 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756047217593069)
+
+Hey everyone! Can someone articulate the key distinctions / differences between using LangGraph vs. the Pydantic AI Graph mechanism? This is specifically for a production use case that will coordinate multiple agents together _with_ deterministic nodes. (bearbeitet) 
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BWJM2RRA-g1da56d48a1b-48)
+
+Thomas Taylor  [17:01 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756047712063149)
+
+For starters, I noticed that parallel node execution is not natively supported in Pydantic graphs. (bearbeitet) 
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U0929766HFY-g56ae08009c7-48)
+
+Alexey Sayfulin  [08:40 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756104005334339)
+
+Can the newly released openai Conversations API be used as a conversation store for langchain?<https://platform.openai.com/docs/changelog>
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C5AP50KW-g0a37cef8061-48)
+
+Larry  [10:49 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756198166494889)
+
+Hi everyone,\
+I have a question about the execution queue. In the attached example, the **art\_review** node waits for other branches—such as _code\_engine\_development_, _code\_game\_design_, and _sound\_background\_music_—to finish, even though _art\_character_ and _art\_city_ are already completed earlier.\
+Is it possible to have **art\_review** run immediately once its own dependencies are done, instead of waiting for the other branches?\
+Thank you!
+
+2 Dateien 
+
+Alle herunterladen
+
+[![image.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09BNMGPZHD-13206f547b/image_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09BNMGPZHD/image.png)
+
+[![image.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09BX4M01TM-6de35e22fd/image_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09BX4M01TM/image.png)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C5AP50KW-g0a37cef8061-24)1 Antwort
+
+vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C3GSAWJJ-fd9e1fe13f89-48)
+
+Matthijs van Wijk  [11:20 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756200008645279)
+
+Hi there  ![:winken:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f44b.png)  I'm quite new to langchain and a bit confused on the supported providers for the [Embedding models](https://python.langchain.com/docs/integrations/text_embedding/). I would like to use Google Gemini to create embeddings, but when I try to pass it as a provider to [init\_embeddings](https://python.langchain.com/api_reference/_modules/langchain/embeddings/base.html#init_embeddings). It raises a Provider not supported error.\
+How do the embedding models relate to the init\_embeddings? Why are some supported and others not?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U069HDF3N5T-d67860b624fe-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09C3GSAWJJ-fd9e1fe13f89-24)2 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C16MVD9B-317801414771-48)
+
+Immo Blaese  [15:04 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756213466932289)
+
+Hi there, anyone else having issues with HNSWLib not setting numDimensions properly with GoogleGenerativeAIEmbeddings text-embedding-004 today?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-48)
+
+Artur Baghramyan  [20:41 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756233700676829)
+
+Hi everyone, new to langgraph i wanted to ask question is langgraph good fit for many users using it like chat? For example is it good fit for 10 thousand users using it?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09CJSH5R0R-g19c9f1c0687-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08FULYA2UT-59e0dbac9ca7-24)5 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08VDDCJSFP-3cfec469cb64-48)
+
+Adham Bishr  [21:16 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756235810381899)
+
+Does someone have a suggested way to speed up latency when making model calls? I’m using o3-mini with the open ai api and am very happy with the outputs but latency can be more that 10 seconds.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BDD0UH8X-bc0c6c4a2883-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08VDDCJSFP-3cfec469cb64-24)![](https://ca.slack-edge.com/T05P4BNF01J-U082NL333HA-g317649dac6b-24)7 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09CBP3SQ4U-gfab2c113d22-48)
+
+Tich  [09:14 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756278866070869)
+
+Hi all, Anyone know how to enable LangChain Agent Auth ? I'm getting this error when trying to Create Google OAuth provider on the Langchain Executive AI Assistant project.
+
+```
+Warning: Could not check existing providers: HTTP 403: {"detail":"LangChain Agent Auth is not enabled for this organization"}
+Creating Google OAuth provider...
+Error creating Google OAuth provider: HTTP 403: {"detail":"LangChain Agent Auth is not enabled for this organization"}
+```
+
+(bearbeitet)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-48)
+
+Artur Baghramyan  [16:08 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756390100415259)
+
+Hi all, does anyone know how to customize DB if im deploying on langgraph platform any sources?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08MGE606V9-868e63e5d1b2-48)
+
+Sameer Jiwani  [22:53 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756500802891199?thread_ts=1755552805.455969\&cid=C07EHF3HC87)
+
+hat auf einen Thread geantwortet:Hey Everyone!…
+
+yes I’m having the same issue. I also see this
+
+> **Static runtime context** represents immutable data like user metadata, tools, and database connections that are passed to an application at the start of a run via the `context` argument to `invoke`/`stream`.
+
+and I’m not sure how storing database connections here makes sense? and if it does, how does one go about that?
+
+Neuere Antworten anzeigen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U098L1KFCRY-gf36754e385e-48)
+
+Addie  [04:15 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756606528656679)
+
+Hey folks! Can someone kindly help me instrument my tool calls correctly so they nest properly under the parent trace in Langsmith or point me to the proper docs? I get these `LLMRun`s appearing at the top level that should be part of the `test_agent` trace.
+
+Screenshot 2025-08-30 at 10.14.39 PM.png 
+
+[![Screenshot 2025-08-30 at 10.14.39 PM.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09D7JF265P-f612cf7049/screenshot_2025-08-30_at_10.14.39___pm_480.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09D7JF265P/screenshot_2025-08-30_at_10.14.39___pm.png)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U07TYD0J5UL-cec33899e665-48)
+
+Gustaf G  [14:28 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756643293482209)
+
+**I'm facing an embedding challenge at work.**\
+We have a chatbot where users can search for clothing items on various eCommerce sites. Each site has their own chatbot instance, but the implementation is the same.For the most part, it works really well. But we do see certain queries like "white dress" not returning all the white dresses in a store.We embed each product in a vector DB as a string like this:\
+**"title: {title}, product\_type: {product\_type}, color: {color}, tags: {tags}"**&#x49; just inherited this project from someone else who built the MVP, so I'm looking to improve the semantic search, since right now it seems to neglect certain products even when their title is literally "White Dress"There are many ways to do this, so looking to see if someone overcame a similar challenge and can share some insights? Someone suggested GraphRag, and I see LangChain has LLMGraphTransformer, which looked interesting.
+
+ecommerce-chatbot.png 
+
+[![ecommerce-chatbot.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09CZC74JSY-9830dce5b0/ecommerce-chatbot_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09CZC74JSY/ecommerce-chatbot.png)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09CJ83RMAT-a903fbd64acb-24)![](https://ca.slack-edge.com/T05P4BNF01J-U07TYD0J5UL-cec33899e665-24)3 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09CJ83RMAT-a903fbd64acb-48)
+
+Vinay  [13:32 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756726350868619)
+
+Is there a way to specify a timeout for the tools in python langchain MCP adapter? The JS version seems to have it.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09CJ83RMAT-a903fbd64acb-24)1 Antwort
+
+vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-48)
+
+Artur Baghramyan  [14:09 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756728548187459)
+
+Guy do you know how to map user id to its thread ids so user uses his chats and keep it good im deploying on langgraph platform and developing fastapi client via sdk in python i can’t find any info or documentation regarding that please help and thank you! (bearbeitet) 
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U099PN96PFX-82cf3f55bddc-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-24)20 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09CJ83RMAT-a903fbd64acb-48)
+
+Vinay  [16:47 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756738042045469?thread_ts=1756726350.868619\&cid=C07EHF3HC87)
+
+hat auf einen Thread geantwortet:Is there a way to specify a timeout for the tools in python langchain MCP adapter? The JS version seems to have it.
+
+I was able to set a timeout using the parameter "sse\_read\_timeout", this is an argument to the mcp sse.py so it may break in future versions but works for now
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BGQ1TN7M-g666174ca93b-48)
+
+Edvinas  [19:50 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756749009799689)
+
+(javascript) Hello! Is there any way to retrieve all nodes from a langsmith trace in order to calculate progress later?
+
+```
+import { Client } from 'langsmith';
+const run = await client.readRun(runId, { loadChildRuns: true });
+```
+
+This returns sometimes all nodes, sometimes only those which started....
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09D4KWGP0E-gb4e94c2a86d-48)
+
+e  [15:06 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756818396804349)
+
+How do I view thinking tokens when using AgentExecutor and RunnableWithMessageHistory? I set Verbose=True but it only shows tool calls and outputs, and not the thinking outputs.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U069HDF3N5T-d67860b624fe-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09D4KWGP0E-gb4e94c2a86d-24)3 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09CZ1K2RA6-b2dcf4b9f014-48)
+
+Bob  [16:50 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756824635157449)
+
+Hi, I noticed that LangChain often shares open-source projects built with their technology. Could you please let me know what the process is for submitting or getting my project considered for a feature on their X account? (edited)
+
+![:eyes:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f440.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)1 Antwort
+
+vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-48)
+
+Artur Baghramyan  [20:53 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756839200495569)
+
+Guys i wanted to know as alpha released are courses in langchain academy outdated now or no?  (bearbeitet) 
+
+![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/2705.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)1 Antwort
+
+vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09D987V3L5-gce9380ba445-48)
+
+dani  [16:43 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756910631732239)
+
+hello everyone! hope you are all doing great, as a junior dev I joined the slack because I failed to find some documentation that confirms createReactAgent uses parallel tool calls, is that possible? or just sequentially? thanks in advanced!
+
+![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/2705.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)1 Antwort
+
+vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08LC731ZLY-41e5c33e7838-48)
+
+Lloyd Dugmore  [05:51 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756957863333979)
+
+Hey, i've placed a post on the forum. Not getting any responses from technical support\
+<https://forum.langchain.com/t/lgp-deployment-via-nx-monorepo/1430/2>
+
+![LangChain Forum](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fcanada1.discourse-cdn.com%2Fflex007%2Fuploads%2Flangchain%2Foptimized%2F1X%2Fc78409f876a57ca196d5665bbcb711252369766c_2_180x180.png)LangChain Forum
+
+[LGP deployment via NX monorepo](https://forum.langchain.com/t/lgp-deployment-via-nx-monorepo/1430/2)
+
+Hey, anyone able to assist?
+
+4\. Sept.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08LC731ZLY-41e5c33e7838-24)![](https://ca.slack-edge.com/T05P4BNF01J-U066F7VA278-c24fb088b5d9-24)5 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09AQV9C4JF-g7a28f79f102-48)
+
+Brandon  [17:16 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1756998974719829)
+
+Hi everyone! Has anyone faced this issues? I was attempting to use child classes of Pydantic's BaseModel for my agent state. When using a `create_react_agent` based agent with tools that leveraged the `InjectedState` parameter, if I did not have all fields in the state, even if they were explicitly optional or defaulted to None, the tool would raise a Pydantic validation error claiming missing fields. I resolved this by changing my state types to `TypedDict`, and then eventually had to create a `ValidatedTypeDict`  abstract, fundamentally rewriting Pydantic ![:enttäuscht:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f61e.png) I've seen a couple of similar issues on Github, but wasn't sure if it was exactly this issue.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09AQV9C4JF-g7a28f79f102-24)3 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-48)
+
+Artur Baghramyan  [11:24 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1757409875911659)
+
+Guys are there any guides regarding langgraph sdk to create client on fastapi?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09AQV9C4JF-g7a28f79f102-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-24)2 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U086Z9HH2CR-g9c59d5e8db4-48)
+
+Damon Suen  [11:55 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1757498113549719)
+
+Does Langchain support to use `gemini-2.5-flash-image-preview` using VertexAI?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U069HDF3N5T-d67860b624fe-24)![](https://ca.slack-edge.com/T05P4BNF01J-U086Z9HH2CR-g9c59d5e8db4-24)6 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U085RV6DRE3-9fc850924cf1-48)
+
+Mahdi Yusuf  [22:43 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1757623391792879)
+
+how can I get a dashboard for TPM. I am can get total token for a 8 hour period, but I would like a graph of that.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)1 Antwort
+
+vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09EUHW6FDY-g85ee8304615-48)
+
+Syed B. Ahmed  [19:09 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1757696995134509)
+
+Hello Team -- New to langgraph & Just started the langacademy course on it.  I just got personal access token API Key -- when I try to execute the module-0 basic notebook example -- I get Ratelimit error (http 429) -- I just started using the key why it is limiting me ?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09EUHW6FDY-g85ee8304615-48)
+
+Syed B. Ahmed  [19:13 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1757697197692109)
+
+Also is there a separate channel for newbie types of questions?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)1 Antwort
+
+vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09E5FWDP5M-gf179f6aa923-48)
+
+Aditya Sharma  [19:46 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1757699179292289)
+
+hello , I want to know what is different between making ai agent by n8n and langchain with langgraph , and which one should prefer
+
+![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/2705.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U091D96M7DJ-g24f391600de-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08V4AF9DT6-08da89406f1a-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)3 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-48)
+
+Artur Baghramyan  [14:35 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1757853321314779)
+
+Guys im reading about langgraph sdk for client and in platform you have possibility to create custom routes can i create client inside my graph project and write custom endpoints or i need to create separate middleware on fastapi ?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09DQGLR5U7-f1dec90f9572-48)
+
+Sarfraz Ali  [10:14 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1757924074216469)
+
+Hello Everyone,\
+As AI and language models become an integral part of modern applications, understanding their internal processes and optimizing their behavior has become more crucial than ever. To help developers, engineers, and data scientists gain deeper insight into their language models, we're excited to introduce LangSmith—a powerful framework for tracing, debugging, and analyzing the behavior of language models (LLMs). ![:globus\_mit\_meridianen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f310.png)\
+LangSmith provides a comprehensive suite of tools and components designed to seamlessly integrate with your language model applications, enabling traceability at every step of the model's lifecycle. Whether you're developing chatbots, recommendation engines, or complex NLP systems, LangSmith ensures that you can monitor and optimize your model’s performance with ease. ![:lupe:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f50d.png)\
+Key Features of LangSmith:
+
+1. ![:lupe\_rechts:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f50e.png) Traces: In-Depth Visibility of Model DecisionsLangSmith enables you to trace the execution of your language model at every level. By recording and visualizing the internal states, decisions, and outputs, it allows you to track how your model processes inputs and generates outputs. This insight can help identify inefficiencies, biases, or errors within the model and guide future improvements.
+2. ![:schraubenschlüssel:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f527.png) Modular and Flexible ComponentsLangSmith is built with flexibility in mind. Its modular design lets you select and implement the components most relevant to your use case. Whether it’s logging, error tracking, performance optimization, or custom trace generation, LangSmith provides the building blocks to suit your needs.
+3. ![:zahnrad:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2699-fe0f.png) Seamless IntegrationLangSmith is designed for quick integration into your existing projects. With easy-to-use APIs and minimal setup, you can incorporate LangSmith’s tracing and debugging capabilities into any language model workflow, reducing overhead while boosting your ability to optimize and debug.
+4. ![:hammer\_und\_schraubenschlüssel:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f6e0-fe0f.png) Advanced Debugging and Performance MonitoringLangSmith’s debugging tools provide granular control over model behavior, making it easier to identify potential issues early in the development process. Whether it's tracking latency, pinpointing bottlenecks, or detecting incorrect model outputs, LangSmith empowers you to enhance your model’s reliability and efficiency.
+5. ![:balkendiagramm:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4ca.png) Actionable Insights for OptimizationWith LangSmith, it’s not just about monitoring your model’s behavior—it’s about acting on the insights. The tool gives you data-driven feedback to refine your model, optimize its outputs, and ensure that it meets performance expectations across various use cases.
+6. ![:diagramm\_aufwärtstrend:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4c8.png) Comprehensive Visualization and ReportingLangSmith provides intuitive dashboards that visually represent trace data, allowing for easy analysis of model behavior. The interactive reports allow you to drill down into specific areas of interest, enabling more informed decisions on model refinement and deployment.
+
+Why LangSmith is a Game Changer for LLM Development:
+
+* ![:schraubenschlüssel:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f527.png) Enhanced Debugging: Traditional debugging for LLMs is challenging due to the complexity and non-deterministic nature of these models. LangSmith offers transparency, allowing you to understand model decisions and catch edge cases that would otherwise go unnoticed.
+* ![:blitzschnell:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/26a1.png) Better Performance and Optimization: By leveraging detailed traces, you can identify performance bottlenecks, optimize response times, and fine-tune your models for better accuracy and efficiency.
+* ![:stoppuhr:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/23f1-fe0f.png) Faster Iteration: With LangSmith, you can quickly pinpoint problems in the model’s behavior, enabling faster iterations and quicker delivery of robust AI solutions.
+* ![:handschlag:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f91d.png) Improved Collaboration: Teams working on LLM-powered applications can easily share trace logs and insights, improving collaboration and fostering more efficient problem-solving.
+
+Use Cases for LangSmith:
+
+* ![:sprechblase:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4ac.png) Chatbots and Virtual Assistants: Track interactions, optimize responses, and improve the user experience.
+* ![:lupe:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f50d.png) Recommendation Systems: Analyze the decision-making process behind recommendations and improve accuracy.
+* ![:memo:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4dd.png) Content Generation: Monitor model-generated content for quality assurance and identify patterns that lead to suboptimal outputs.
+* ![:balkendiagramm:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4ca.png) NLP Applications: From sentiment analysis to question answering, LangSmith’s traces ensure your models operate as intended.
+
+Get Started with LangSmith Today:\
+LangSmith is an invaluable tool for anyone working with language models who needs better transparency, optimization, and debugging capabilities. Whether you're at the research phase or deploying a full-scale AI system, LangSmith ensures you're in control of your model’s behavior and performance. ![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png)
+
+Capt.PNG 
+
+[![Capt.PNG](https://files.slack.com/files-tmb/T05P4BNF01J-F09ET3V7P4P-9ef0cd76c6/capt_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09ET3V7P4P/capt.png)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09DKJ01E3T-g98ef6bdc36f-48)
+
+Avisw  [10:44 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1757925883091739)
+
+hey!\
+I'd like to know the differences between the supervisor multi agent (<https://langchain-ai.github.io/langgraph/tutorials/multi_agent/agent_supervisor/>) and the subgraph (<https://langchain-ai.github.io/langgraph/how-tos/subgraph/>)imagine I want to have multiple "expertise" agents with tools and an orchestrator agent that gets a request and know which sub agent to callboth solution does the same, but I want to see differences in terms of cost, performance and efficiency
+
+langchain-ai.github.io
+
+[Agent Supervisor](https://langchain-ai.github.io/langgraph/tutorials/multi_agent/agent_supervisor/)
+
+Build reliable, stateful AI systems, without giving up control
+
+langchain-ai.github.io
+
+[Use subgraphs](https://langchain-ai.github.io/langgraph/how-tos/subgraph/)
+
+Build reliable, stateful AI systems, without giving up control
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08NTK9FFCK-c4d0ce9bd7ae-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09DKJ01E3T-g98ef6bdc36f-24)2 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08NTK9FFCK-c4d0ce9bd7ae-48)
+
+johnda98  [12:38 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1757932684948669)
+
+Anyone created a Long term memory - longer than thread specific Langgraph provision.. but storing the Vectorstore embeddings in say public cloud.. cheap SQL for  a continuous memory draw for the life of a Agent's interaction with a known logged User.. name.. to tuple for Langgraph's store class .. a full chat option to toggle off long term memory at any stage that wipes since first instance DB entries created.   ie Long term memory for Agents hosted on Langgraph Platform.. a token heavy option but high-value for those Users wishing to use that feature. (bearbeitet) 
+
+![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-48)
+
+Artur Baghramyan  [13:26 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1757935609107749)
+
+If i deploy on langgraph platform long term memory and short term memory is managed for me?
+
+![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/2705.png)1![:+1:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f44d.png)1![:gb:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f1ec-1f1e7.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U06BTAT1NGG-6a66b619cd42-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08NTK9FFCK-c4d0ce9bd7ae-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-24)4 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U07MG9AFV2L-d512b97fa973-48)
+
+Jesse (Virgent AI)  [21:21 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1757964094584189)
+
+Anyone want to tinker with A coordination agent system that I've been developing? It utilizes LangChain a lot. I'll put a link in the thread
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U07MG9AFV2L-d512b97fa973-24)1 Antwort
+
+vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09EZJKF023-geff33fec4b7-48)
+
+Divyansh jain  [08:50 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758005438387369)
+
+Hello! Has anyone worked with LangChain’s record\_manager and indexing API to maintain vector store synchronization?
+
+![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09ECCKHFT5-g6d05a62a9b7-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)2 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08NTK9FFCK-c4d0ce9bd7ae-48)
+
+johnda98  [09:27 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758007638478519)
+
+well Checkpoint based..  thread specific.. but.. I'm going to add a long term - cloud based cheap SQL based store for embeddings.. load up specific to the User's Agent since startup.. but with a clear-mem toggle switch.Long term Cloud based embeddings stored... pricey to suck back in upon instantiation BUT.. may have high value for some Users.. despite token cost etc/ over heads.Anyone done a long term cloud RDBMs based memory yet ? .. efficient costings?I deployed local then will do to langgraph platform for the Agents.. a OAP based frame.. incl RAG langconnect and MCP tools access for Sub-Agents(Vehicle subsystems Technician engineer specialists)<https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1757015836390009> (bearbeitet) 
+
+[09:27 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758007649953919)
+
+Anyone done that yet?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08NTK9FFCK-c4d0ce9bd7ae-48)
+
+johnda98  [13:07 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758020851659769)
+
+ooh I see..  Langgraph docs..  API moves pretty fast eh.  <https://langchain-ai.github.io/langgraph/concepts/persistence/#semantic-search>
+
+langchain-ai.github.io
+
+[Overview](https://langchain-ai.github.io/langgraph/concepts/persistence/#semantic-search)
+
+Build reliable, stateful AI systems, without giving up control
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09CZ1K2RA6-b2dcf4b9f014-48)
+
+Bob  [18:53 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758041623481839)
+
+Hey guys, can you share your opinion on my project <https://github.com/CaviraOSS/neuropilot>
+
+CaviraOSS/neuropilot
+
+Neuropilot is a Open-source education platform that transforms study materials into interactive resources like quizzes, flashcards, notes, and podcasts.
+
+Stars
+
+84
+
+Language
+
+TypeScript
+
+Hinzugefügt von [GitHub](https://langchaincommunity.slack.com/services/B05UKKYNE8J "GitHub")
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U094JGJNJUX-9e564b3d9802-48)
+
+Radi  [15:01 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758114113968409)
+
+Hi All,\
+I was thinking about why we don't create a React agent that natively supports Pydantic models. Similarly to how we provide tools to React agents, we could provide "molds," and the agent would be able to call both tools and molds while using structured output.\
+Inspired by DeepAgent and aiming to remove complexity, I created a demo where we call tools as well as molds. I called it _MOLD Agent - Modular Output Learning Design_ - where you can equip the agent with Pydantic models alongside tools, and it will fill them in.\
+I think that as LLMs get better at following instructions, it becomes important to be able to add some "control" to our agents by providing molds - pre-structured schemas. These could be Todo schemas, requirement schemas, or any structure designed to keep information in a structured form as we iterate through messages.\
+I'm not yet aware of any LangChain 1.0 version that does this, but I would be surprised if at some point in the future we don't make our LLM models call tools and also call molds natively to follow certain structured data formats.\
+Here is the graph:
+
+image.png 
+
+[![image.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09F90EB5HD-fd9b8b30bf/image_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09F90EB5HD/image.png)
+
+![:gehirn:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f9e0.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08436M1Y2Y-e629476349a3-24)![](https://ca.slack-edge.com/T05P4BNF01J-U094JGJNJUX-9e564b3d9802-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08SB6N90S0-8cc0247d020e-24)5 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-48)
+
+Artur Baghramyan  [16:28 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758119314538779)
+
+how to make semantic search of long term memory if i deploy on langgraph platform??
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)2 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09FQSSHCJH-a2cf516292d2-48)
+
+Daniel Ruskin  [00:38 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758148699589159)
+
+I am building an agent where I `interrupt` in certain nodes to ask for input from the user.  For example, imagine a signup flow where I ask the user for their email address, `interrupt` until the user responds, and then resume with `Command(resume=value)`.I have a few questions.
+
+1. Is it acceptable to also update the graph state at the same time that I resume, or is this an antipattern?  The idea here is to add the user's most recent message to the `messages` field in the graph state.  So, I do `Command(resume=True, update={"messages": user_input_message})`
+   1. How does this work with subgraphs? If there is an interrupt in a subgraph, will this command update the parent state or the subgraph state?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-48)
+
+Artur Baghramyan  [19:29 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758216551105809)
+
+Does someone deploy on langgraph platform and write client using FastAPI + Langgraph sdk?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U0951QB5JKV-a7c24c38f53d-48)
+
+Mike Hjorleifsson  [19:54 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758218096233509)
+
+all the time ![:leichtes\_lächeln:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f642.png)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09APQ8S7PA-2962d791207b-48)
+
+Sidharth Kakkar  [21:13 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758222783278149)
+
+![:winken:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f44b.png)  Hi! Has anyone else deployed their langgraph agent on Heroku? We're seeing really significant slowdowns when an agent runs sub-agents and we're not totally sure why everything slows to a crawl.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09DQGLR5U7-f1dec90f9572-48)
+
+Sarfraz Ali  [08:49 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758264557612529)
+
+why we updatete state partially in parallel workflows and why not in squetially workflows?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09CZ1K2RA6-b2dcf4b9f014-48)
+
+Bob  [09:55 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758268524252049)
+
+Which one is better?
+
+2 Dateien 
+
+Alle herunterladen
+
+[![image.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09FXV47W2F-703317237a/image_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09FXV47W2F/image.png)
+
+[![image.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09G0K86RAR-e75772faa3/image_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09G0K86RAR/image.png)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08436M1Y2Y-e629476349a3-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09CZ1K2RA6-b2dcf4b9f014-24)2 Antworten
+
+Letzte Antwort vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09CZ1K2RA6-b2dcf4b9f014-48)
+
+Bob  [16:13 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758377599114279)
+
+Hey, I was attempting to add audio transcribe to my project, and this is how the UI ended up. I am really stuck here and cannot come up with new ideas to improve this. Please suggest some ways to improve this
+
+2025-09-20 19-40-35.mkv 
+
+> Transkript erstellen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09GA52CC3C-ga6d7caa4aee-48)
+
+Wes  [01:20 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758410438215979)
+
+Hey all - just curious if anyone has any general advice for langgraph courses / tutorials that focus on the JavaScript side of the ecosystem instead of python. I've watched a bunch of courses / videos on youtube, which are incredibly helpful for building out understanding of concepts, but wondering if there are any courses that gear towards the Lang\* JS ecosystem
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09GG2Y03S5-g80d23087af6-24)![](https://ca.slack-edge.com/T05P4BNF01J-U069HDF3N5T-d67860b624fe-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09GA52CC3C-ga6d7caa4aee-24)3 Antworten
+
+Letzte Antwort vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-48)
+
+Artur Baghramyan  [20:46 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758480372003789)
+
+Why when deploying on langgraph platform build logs are not showed please fix that bug
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)1 Antwort
+
+vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09ENBPE13M-g92dfeb86313-48)
+
+Pamela Fox  [00:42 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758580953279229)
+
+If we're filing an issue with langchain-openai, that's still an issue on the langchain repo itself, correct? The langchain-openai package seems to link to a subfolder in that repo, versus langchain-community, but I do see similar code in langchain-community, so am not 100% sure. (bearbeitet) 
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09ENBPE13M-g92dfeb86313-24)![](https://ca.slack-edge.com/T05P4BNF01J-U092D6SAHU0-d31f08839963-24)3 Antworten
+
+Letzte Antwort vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08VDDCJSFP-3cfec469cb64-48)
+
+Adham Bishr  [17:15 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758640539185179)
+
+Has anyone developed with the Gemini models? Thoughts compared to anthropic and/or open ai’s models?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09G6U4N5T4-g3f179dea87c-48)
+
+Carl Marrelli  [17:27 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758641229127949)
+
+Hello all.  Hoping this is the right place to ask.  I am taking the Foundation: Introduction to LangGraph course and I am stuck on the environment setup.  I am not super technical, been quite some time since I've worked in a terminal and written any scripts.  I have all the API keys, Python installed and the LangGraph CLI installed.  I am stuck on setting up LangGraph Studio.  The langgraph dev command does not work, and I know for a fact I do not have the config files correct.  I am not sure what to do here.  Wondering if anyone could put this in "for dummies" language so I can finish getting environment set up and do the course.   Thank you so much in advance.  I realize I am "taking" in this scenario with out anything to "give", so I am grateful!I am on Mac OS and I am stuck here with this error:"Usage: langgraph dev \[OPTIONS]\
+Try 'langgraph dev --help' for help.Error: Invalid value for '--config': Path 'langgraph.json' does not exist."
+
+Screenshot 2025-09-23 at 11.25.25 AM.png 
+
+[![Screenshot 2025-09-23 at 11.25.25 AM.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09GMC1QLBF-53c993dac4/screenshot_2025-09-23_at_11.25.25___am_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09GMC1QLBF/screenshot_2025-09-23_at_11.25.25___am.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09GMC1QLBF/download/screenshot_2025-09-23_at_11.25.25___am.png?origin_team=T05P4BNF01J)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U094ANLP3MX-g31b044936b3-48)
+
+Shubham  [20:57 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758653849218039)
+
+Hey folks ![:winken:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f44b.png)\
+I’m using **LangGraph Cloud** as my backend and the `NewAgentChat`**&#xA0;UI** on the frontend. With `gpt-5`, I’d like to stream not just the final response but also the **“thinking” traces** (`on_thinking` events).\
+![:nach\_rechts\_zeigen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f449.png) What’s the recommended way to surface those `on_thinking` events from LangGraph Cloud and display them in `NewAgentChat`?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)![](https://ca.slack-edge.com/T05P4BNF01J-U094ANLP3MX-g31b044936b3-24)2 Antworten
+
+Letzte Antwort vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U085AKS4Y1K-9ca723cca4c9-48)
+
+Curtis Nye  [22:29 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758745791432509)
+
+Are cron jobs included in a self-hosted Langgraph platform on the free plan or is that a premium feature through Langsmith?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-24)1 Antwort
+
+vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09GNK18JG7-g7933a4fecd4-48)
+
+Sumit Pal  [14:37 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758803868698129)
+
+Question on LangSmith - Evals please - When Creating a Custom Code Evaluator through the UI - Is it true - I cannot use any external python libraries like jellyfish / sqlglot ?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09GNK18JG7-g7933a4fecd4-24)4 Antworten
+
+Letzte Antwort vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09D9U284MC-44badae23db9-48)
+
+Jong Hyeok Choi  [16:20 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758810040994059)
+
+Hi!![:breites\_lächeln:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f600.png) I'm looking to improve retrieval quality when combining LLMs with web search. What strategies, tools, or best practices do you recommend for integrating live web search into an LLM pipeline?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09GYF7LTFY-8c9c275e2eb4-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09D9U284MC-44badae23db9-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-24)4 Antworten
+
+Letzte Antwort vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08N0U9LSLV-g16e5de2933e-48)
+
+Mike  [20:08 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758823708320179)
+
+Hey folks! Is there a way to use `aupdate_state` in LangGraph without potentially blowing away state like human-in-the-loop interrupts? We're doing a fairly simple
+
+```
+aupdate_state(values={"messages": messages})
+```
+
+But noticing that when we do this, things like interrupts are blown away
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09GYF7LTFY-8c9c275e2eb4-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08N0U9LSLV-g16e5de2933e-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)5 Antworten
+
+Letzte Antwort vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09GFQTD858-02522c978036-48)
+
+Kwabena Bediako  [13:10 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758885037193549)
+
+Is there a reason the academy lessons/github is locked to much older versions of Langchain/Langgraph? I just spent the whole day upgrade the codebase to 1.0. I feel like I Know everything now lol
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09H6TNKQLD-8b9a6bb11b87-48)
+
+Roko Čirjak  [16:34 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758897265237609)
+
+Hello everyone,\
+I wanted to share an issue I encountered and how I resolved it in case it’s helpful for others. I was using `agent_executor.invoke` on a React agent like this:
+
+```
+
+agent_executor.invoke({
+    "role": "user", 
+    "input": user_query_input,
+}, config=config)
+```
+
+The agent was using an LLM with the `ChatOllama` class, and it kept returning an empty message with the reason `"load"`. I wasn’t aware of the `ChatMessage` or `HumanMessage` classes and tried to parse the input directly.\
+Because this incorrect usage didn’t produce a clear error message, I spent about 9 hours troubleshooting, including porting to WSL and modifying LangGraph code to accept empty messages, thinking it might be a Windows/Ollama issue.\
+Eventually, I realized the correct approach is to use the `ChatMessage` or `HumanMessage` classes when invoking the agent. After updating the code accordingly, the issue was resolved.
+
+![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09F6CKQH89-1e6b00e87484-48)
+
+Emryz Ekanem  [12:07 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758967638858289)
+
+hi fam..\
+I was working on building deep agents on top of the prebuilt create\_react\_agent module,i discovered some major updates:\
+the traditional v0 langchain-python format:\
+from langgraph.prebuilt import create\_react agent has been deprecated and moved,\
+so now we have:\
+from langchain.agents.react\_agent import create\_agent.\
+also the langgraph.prebuilt import ToolNode has also been deprecated and moved:\
+now we have;\
+from langchain.agents.tool\_node import ToolNode.
+
+![:gesicht\_mit\_monokel:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f9d0.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09G4P0BP7S-b41c83aa814e-48)
+
+Carter Leffen  [20:12 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758996763494329)
+
+gpt-5-codex is really good at creating langgraph agents. been playing with it this morning. so cool updating it, then running it in langsmith on the web and seeing the turns show up in the trace  (bearbeitet) 
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-48)
+
+Artur Baghramyan  [20:50 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1758999002268849)
+
+Guys can you combine create\_agent normally with graphs ? (bearbeitet) 
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09GYF7LTFY-8c9c275e2eb4-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-24)2 Antworten
+
+Letzte Antwort vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U098WT0HYLF-gced6d2bae6c-48)
+
+Nikhil  [08:48 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759042134913029)
+
+hi all, im working on a project to store metadata and embeddings, im using faiss to do the similarity search (flat and hnsw).\
+Does anyone know a way to pre filter a faiss index ?\
+The only method i know is filtering after the search(post filter) but that may not guarantee the best data unless i search for a large amount of data.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09GYF7LTFY-8c9c275e2eb4-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09FGSLU1QD-ga31df2e4eba-24)![](https://ca.slack-edge.com/T05P4BNF01J-U098WT0HYLF-gced6d2bae6c-24)3 Antworten
+
+Letzte Antwort vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09H6T7M0LV-gfda6f30b06b-48)
+
+Nived  [06:45 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759121107011239)
+
+Hi all,\
+I’m working on evaluating a RAG-based agent. I’m able to run experiments locally using an evaluator (LLM as judge), but when I try running the same thing on the deployed app — with the same dataset and evaluator — the experiments don’t run (run count stays at 0).\
+Has anyone faced this issue or knows what might be causing it? Any guidance would be appreciated ![:beten:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f64f.png)
+
+2 Dateien 
+
+Alle herunterladen
+
+[![Screenshot 2025-09-29 at 10.14.38 AM.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09JF0E9Y8Y-4c090f64b4/screenshot_2025-09-29_at_10.14.38___am_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09JF0E9Y8Y/screenshot_2025-09-29_at_10.14.38___am.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09JF0E9Y8Y/download/screenshot_2025-09-29_at_10.14.38___am.png?origin_team=T05P4BNF01J)
+
+[![Screenshot 2025-09-29 at 10.14.56 AM.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09JF0FJ388-f27d42e949/screenshot_2025-09-29_at_10.14.56___am_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09JF0FJ388/screenshot_2025-09-29_at_10.14.56___am.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09JF0FJ388/download/screenshot_2025-09-29_at_10.14.56___am.png?origin_team=T05P4BNF01J)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09H6T7M0LV-gfda6f30b06b-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09JA3SR7UZ-66d15390cdf1-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09F5TCBBPD-13f79f04f08c-24)14 Antworten
+
+Letzte Antwort vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-48)
+
+Artur Baghramyan  [10:27 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759134466157219)
+
+what's the difference betwee multi-agent and supervisor in docs i can't understand
+
+![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)1![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)1![:klatschen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f44f.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09F5TCBBPD-13f79f04f08c-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-24)6 Antworten
+
+Letzte Antwort vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U094JGJNJUX-9e564b3d9802-48)
+
+Radi  [00:07 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759183659658799)
+
+I have reviewed the v1 alpha documentation and wanted to say that Middleware Is the next thing in building AI. Can we have some conversation about how Langchain envision Middlewares and if there is a plan to build a shop for it ?
+
+![:herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/2764-fe0f.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U07PS7ZU0V9-13c9f07b3a96-48)
+
+Daniel Kelly  [19:16 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759252564930179)
+
+Does anyone use the `Command` object to return an array of nodes to run in parallel? We've had trouble with this. Returning an array of nodes from a `conditionalEdge` ensures that all of the nodes in the array run in parallel. Returning an array of nodes using `goto` in a `Command` object makes all of the nodes run sequentially in the order they are listed in the array.From a `conditionalEdge` all of these nodes would run in parallel:
+
+```
+return [
+        'Node1',
+        'Node2',
+        'Node3',
+      ];
+```
+
+From a `Command` object all of these nodes run sequentially
+
+```
+      return new Command({
+        update: {
+          // State updates
+        },
+        goto: [
+        'Node1',
+        'Node2',
+        'Node3',
+      ],
+      });
+```
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09F5TCBBPD-13f79f04f08c-24)![](https://ca.slack-edge.com/T05P4BNF01J-U07PS7ZU0V9-13c9f07b3a96-24)2 Antworten
+
+Letzte Antwort vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09HK2VBRDM-d547810ccffc-48)
+
+Avery  [22:03 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759262581538259)
+
+Howdy! I’m having trouble getting token usage to show up correctly in LangSmith when using Gemini models. Since there’s no Gemini wrapper, I can’t get the token metadata nested under `usage_metadata`, so it doesn’t roll up into the top-level LangGraph run summary. Here’s what OpenAI’s auto-formatted usage looks like vs. what I can produce with Gemini notice how mine isn’t under `usage_metadata`, so it’s not being summed.Could anyone share a pattern or example for shaping Gemini traces so token usage lands in `usage_metadata` and aggregates at the run level?
+
+2 Dateien 
+
+Alle herunterladen
+
+[![Screenshot 2025-09-30 at 12.54.49 PM.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09J0F9CNTC-6e06ef65f8/screenshot_2025-09-30_at_12.54.49___pm_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09J0F9CNTC/screenshot_2025-09-30_at_12.54.49___pm.png)
+
+[![Screenshot 2025-09-30 at 12.54.58 PM.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09JDHVEFBK-b77d2242d3/screenshot_2025-09-30_at_12.54.58___pm_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09JDHVEFBK/screenshot_2025-09-30_at_12.54.58___pm.png)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09HK2VBRDM-d547810ccffc-24)1 Antwort
+
+vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09HLAQLREZ-g488553a35a9-48)
+
+Nchourupouo Mohamed  [05:12 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759288364373789)
+
+Hello everyone, please can you help me with resources regarding how langgraph handles background tasks?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09HLAQLREZ-g488553a35a9-24)3 Antworten
+
+Letzte Antwort vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09JA3SR7UZ-66d15390cdf1-48)
+
+Sujay Prabhu  [06:43 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759293791988519?thread_ts=1759121107.011239\&cid=C07EHF3HC87)
+
+hat auf einen Thread geantwortet:Hi all,…
+
+Hey folks, any help with this would be awesome
+
+Neuere Antworten anzeigen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09G4P0BP7S-b41c83aa814e-48)
+
+Carter Leffen  [16:09 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759327772778549)
+
+so this month langchain v1.0 is coming out?
+
+![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/2705.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09HP5S0XST-ga33ec840bf7-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09G4P0BP7S-b41c83aa814e-24)5 Antworten
+
+Letzte Antwort vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09HLAQLREZ-g488553a35a9-48)
+
+Nchourupouo Mohamed  [17:10 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759331420264599?thread_ts=1759288364.373789\&cid=C07EHF3HC87)
+
+hat auf einen Thread geantwortet:Hello everyone, please can you help me with resources regarding how langgraph handles background tasks?
+
+Thank you  [@Amada Echeverría (LangChain)](https://langchaincommunity.slack.com/team/U09BY617HEH)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08NTK9FFCK-c4d0ce9bd7ae-48)
+
+johnda98  [09:50 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759391433003169)
+
+going to use Langgraph platform's backend LTM feature..  presume langgraph local run will use SQL lite or similar so LTM will run when local. Plan to have a prefix to prompt say ' MEM ON' that permits User to toggle LTM on and off for each thread session.. to save on the costs of pulling in the totality of the Long Term memory when it is not needed.Soon as user send prompt MEM ON .. response can draw from LTM the basics and say hi to the User's name and show the context summary of the last session thread.. say 'Bob, do you have questions relating to our last convo ? pertainign to your RAM Truck electrical fault code issues .. or  somethign else on your mind ?...  etc
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08NTK9FFCK-c4d0ce9bd7ae-24)3 Antworten
+
+Letzte Antwort vor 28 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09HT07DJMD-45d799f29ef5-48)
+
+Roop Yekollu  [17:56 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759420560066529)
+
+Anyone come across a sample github repo to demonstrate deepagents to provide citations on the final responses?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09HT07DJMD-45d799f29ef5-24)3 Antworten
+
+Letzte Antwort vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09J1HZPM2B-g66592e7f22f-48)
+
+ss  [02:40 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759452032842919)
+
+i am new to langchain/langgraph..and rag, all that stuff.. lets say i am building an agent that prices out a project.. and i have a csv full of past projects with different variables and its final price.. will that be a good usecase for using langchain/graph/rag? might be a stupid question
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U07TYD0J5UL-cec33899e665-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08NTK9FFCK-c4d0ce9bd7ae-24)2 Antworten
+
+Letzte Antwort vor 27 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09J1HZPM2B-g66592e7f22f-48)
+
+ss  [02:40 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759452043487049)
+
+i understand how it works with text.. but im not sure how it works with structured data
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09JA3SR7UZ-66d15390cdf1-48)
+
+Sujay Prabhu  [07:02 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759467748461049)
+
+Hi folks,\
+I see that LangSmith provides support for adding unit tests for evals using `langsmith/jest`, `vitest`, and also `pytest` in Python. The docs briefly mention caching, but from what I understand, caching in CI is only implemented for pytest.\
+My question is: if unit tests only retrieve cached responses instead of making fresh API calls, doesn’t that somewhat defeat the purpose of testing, especially given that AI behavior can be less predictable than traditional web apps? I get that cost is a concern, but is there a recommended way to periodically invalidate the cache? Or are there any guidelines from the package on how caching should be used in CI?**PS:** I had previously posted this question on the forum but didn’t receive a response, so I’m reaching out here for guidance (bearbeitet) 
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09JA3SR7UZ-66d15390cdf1-24)9 Antworten
+
+Letzte Antwort vor 26 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U094EDB5BBR-g824f00982d6-48)
+
+Amit Chaudhary  [07:51 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759470674784379)
+
+Has anyone tried deep-agents with multiple agents?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09HT07DJMD-45d799f29ef5-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08NTK9FFCK-c4d0ce9bd7ae-24)![](https://ca.slack-edge.com/T05P4BNF01J-U094EDB5BBR-g824f00982d6-24)7 Antworten
+
+Letzte Antwort vor 20 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09G4P0BP7S-b41c83aa814e-48)
+
+Carter Leffen  [16:07 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759673231561229)
+
+is there anyway to delete feedback tags? i see them all in the settings / feedback tab, but can’t edit/delete them.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08AEAVKPJL-d7420f0dd4d0-48)
+
+Wataru Takamine  [12:30 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759746655075349)
+
+Hi, forks. I have a question about `@langchain/google-vertexai`.\
+Is `gpt-oss-120b-maas` not supported yet?When I tried to use `gpt-oss-120b` on Langsmith Playground, I got this error:
+
+```
+Error: Unable to verify model params: {"lc":1,"type":"constructor","id":["langchain","chat_models","chat_integration","ChatVertexAI"],"kwargs":{"temperature":1,"max_tokens":1024,"top_k":40,"top_p":0.95,"model":"gpt-oss-120b-maas","credentials":"....
+```
+
+Any guidance on enabling this model (or the correct model name/params) would be appreciated.Reference: <https://cloud.google.com/vertex-ai/generative-ai/docs/maas/openai> (bearbeitet) 
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U069HDF3N5T-d67860b624fe-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08AEAVKPJL-d7420f0dd4d0-24)5 Antworten
+
+Letzte Antwort vor 22 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U0951QB5JKV-a7c24c38f53d-48)
+
+Mike Hjorleifsson  [13:30 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759750202730349)
+
+try removing the temp, tokens, topK and topP params and re-run, add them back in one at a time. i think temp isnt supported
+
+![:verbeugen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f647.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08AEAVKPJL-d7420f0dd4d0-24)![](https://ca.slack-edge.com/T05P4BNF01J-U0951QB5JKV-a7c24c38f53d-24)2 Antworten
+
+Letzte Antwort vor 26 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09JGAWPN4F-gd37ba7b50a9-48)
+
+dominic  [13:41 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759750867675829)
+
+Hi I’m doing some testing in Deep Agents, and run via langgraph cli, and have deep agent UI running to it, now its possible I can deploy it to a cloud? like google cloud?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09JGNN2HHD-2f3a620e9744-48)
+
+Adam  [18:07 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759766877478639)
+
+Hey all, I’m building a deep agent using deepagents and wondering if it’s possible to have sub agents with specialised tools, without exposing those tools to the main agent?It seems like this would be a fairly common design pattern, as some tools might require special prompting to use properly. I can’t see anywhere in the docs/examples where this is done, and I can’t see how I can pass middleware to the main agent to reduce its available tools… is this pattern possible and if so how? Thanks!
+
+![:starkes\_pluszeichen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/2795.png)2
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U06KNR1PNC9-7a4488a08c38-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09F5TCBBPD-13f79f04f08c-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09JGNN2HHD-2f3a620e9744-24)4 Antworten
+
+Letzte Antwort vor 28 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09JRB8JBQA-af16b7e8c43d-48)
+
+Rzini  [18:50 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759769456261919)
+
+Hey community,Can someone share with me 3 projects made with langgraph ? I would like to be able de reproduce them to learn more about building agents using langGraph.\
+Thanks
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08QKKUDU6L-191f8cb7302f-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08NTK9FFCK-c4d0ce9bd7ae-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09JRB8JBQA-af16b7e8c43d-24)5 Antworten
+
+Letzte Antwort vor 26 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08QKKUDU6L-191f8cb7302f-48)
+
+Alam  [01:14 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759792449294639)
+
+im so excited for building agentic rag systems with langchain,\
+any senior or mentor is here for guide me in a best way\
+how is it possible and what's the best approach for it?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08NTK9FFCK-c4d0ce9bd7ae-24)1 Antwort
+
+vor 27 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09K79F9YBE-g0bba321a89f-48)
+
+Lina Yang  [11:59 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759831180942279)
+
+Hello, folks. Am the blockchain game business manager. I would like to make the project with AI now. So I joined here.\
+Please help me.
+
+[11:59 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1759831198421459)
+
+If you interested in, please dm me. thank you.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09F6CKQH89-1e6b00e87484-48)
+
+Emryz Ekanem  [11:46 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760003203940189)
+
+hi fam please apart from langgraph platform who know where to host langgraph AI agents free for testing ?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09JRB8JBQA-af16b7e8c43d-24)1 Antwort
+
+vor 24 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09JRB8JBQA-af16b7e8c43d-48)
+
+Rzini  [11:47 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760089621644459)
+
+I ran the same LangGraph agent code with **GPT-5-mini** and **GPT-4o**, and the tool-use behavior was totally different. GPT-5-mini followed the full ReAct flow (`ls`, `write_file`, `read_file`), while GPT-4o skipped most steps and went straight to `web_search`. Same code, different reasoning patterns - worth keeping in mind when testing agents!
+
+2 Dateien 
+
+Alle herunterladen
+
+[![image.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09KCMQ03HD-6615c05313/image_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09KCMQ03HD/image.png)
+
+[![image.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09KU67U9MG-c629f106fa/image_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09KU67U9MG/image.png)
+
+![:glühbirne:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f4a1.png)2![:gb:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f1ec-1f1e7.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08NTK9FFCK-c4d0ce9bd7ae-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09JRB8JBQA-af16b7e8c43d-24)![](https://ca.slack-edge.com/T05P4BNF01J-U094EDB5BBR-g824f00982d6-24)3 Antworten
+
+Letzte Antwort vor 21 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09KRDDAU0K-3245b4ba3140-48)
+
+Brennan Batalla  [21:53 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760126003902199)
+
+Anyone know how to delete your account on LangSmith? It has an old email assocated with my account and I have no way of updating it.
+
+![:eyes:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f440.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09HYU1RP8X-6674e888a667-48)
+
+Sunse Kwon  [00:56 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760136968979169)
+
+Hi guys I'm just curious is there any javascript version of Langmem?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08NTK9FFCK-c4d0ce9bd7ae-48)
+
+johnda98  [10:54 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760172849797989)
+
+anyone modified langgraph create\_supervisor deployed graph and or the create\_react\_agent graph.. ? so one or more could then use the 'store' and checkpointer for across thread long term memory... either sql lite local or the langgraph backend resources when deployed to langgraph
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09L2K7SBK4-f75d1c97c16c-48)
+
+EEEEE  [13:23 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760268227884279)
+
+hi all. has anyone successfully enabled the [1 million token context window on Claude sonnet 4.x through Vertex](https://anthropic.mintlify.app/en/docs/claude-code/google-vertex-ai#1m-token-context-window)? i tried something like this (based on these [docs](https://anthropic.mintlify.app/en/docs/build-with-claude/context-windows#1m-token-context-window)):
+
+```
+init_chat_model(model='claude-sonnet-4-5@20250929', {'model_provider': 'google_anthropic_vertex', 'additional_headers': {'anthropic-beta': 'context-1m-2025-08-07'}})
+```
+
+but it doesnt seem to be working. am i doing it wrong/missing something?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-48)
+
+Artur Baghramyan  [13:33 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760268791017799)
+
+If i use agents as tools why i cant view the nodes like subgraphs it just shows tools node and thats it i think it can be more beautiful
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U098WT0HYLF-gced6d2bae6c-48)
+
+Nikhil  [20:07 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760292450007539)
+
+Hi everyone!Recently i have been working on a **local MongoDB Vector Store** that can help developers test a vector search application on a local environment with MongoDB data storage.\
+I have used FAISS for the similarity search and use a mapping to handle updates and deletes, currently i only have Flat and HNSW index types for this version but i am going to keep updating this.\
+I have submitted a PR and its awaiting approval, i would love feedback and help in writing tests, i would also like to learn how to write proper documentation for this.\
+PR : <https://github.com/langchain-ai/langchain-community/pull/363>
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09KYSX40MR-g6b9b22635fd-48)
+
+Atanu Sen  [09:23 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760340192250699)
+
+(lc-academy-env) atanusen@MacBookPro langchain-academy % pip install -r requirements.txt\
+ERROR: Ignored the following yanked versions: 0.0.8\
+ERROR: Could not find a version that satisfies the requirement langgraph (from versions: none)\
+ERROR: No matching distribution found for langgraphI am getting this error when installing the requirements - can someone help ?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09F5TCBBPD-13f79f04f08c-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09KYSX40MR-g6b9b22635fd-24)3 Antworten
+
+Letzte Antwort vor 19 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09H13PCUE9-g483ae066a60-48)
+
+Venkata  [15:27 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760362064170329)
+
+There seems to be a bug here <https://github.com/langchain-ai/deepagents/blob/master/src/deepagents/graph.py>   ToolConfig to be changed to InterruptOnConfig
+
+![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/2705.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09F5TCBBPD-13f79f04f08c-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09H13PCUE9-g483ae066a60-24)13 Antworten
+
+Letzte Antwort vor 21 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09LATA19V2-67ba573d8190-48)
+
+Kevin Robertson  [15:42 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760362968670499)
+
+Possibly an over-asked question, but I'll go for it anyway. If you were advising someone who was learning LangChain/LangGraph from scratch - what resources would you point them towards? In terms of a training course, or literature/book etc.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09H4FGHBLP-g8a625d4dd51-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09H13PCUE9-g483ae066a60-24)4 Antworten
+
+Letzte Antwort vor 21 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08AU1C0K2B-g959fa3598fd-48)
+
+Roberto  [21:24 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760383477679819)
+
+Not sure if this is the right channel but for the LangGraph academy courses, are there transcripts of the videos somewhere?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08AU1C0K2B-g959fa3598fd-24)8 Antworten
+
+Letzte Antwort vor 13 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09H13PCUE9-g483ae066a60-48)
+
+Venkata  [17:53 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760457197087959)
+
+Good read on Agent Auth<https://blog.langchain.com/agent-authorization-explainer/>
+
+![LangChain Blog](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fblog.langchain.com%2Fcontent%2Fimages%2Fsize%2Fw256h256%2F2024%2F03%2FTwitter_ProfilePicture.png)LangChain Blog
+
+[Securing your agents with authentication and authorization](https://blog.langchain.com/agent-authorization-explainer/)
+
+Agents can take action which makes proper authentication and authorization critical. Read on for how to implement and evolve agent auth.
+
+Written by
+
+LangChain
+
+13\. Okt.
+
+[https://blog.langchain.com/agent-authorization-explainer/](https://blog.langchain.com/agent-authorization-explainer/ "Securing your agents with authentication and authorization")
+
+[](https://blog.langchain.com/agent-authorization-explainer/)
+
+![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)1![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08200GH1DY-g30a54ffd4e5-48)
+
+thomas benham  [22:19 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760473156213009)
+
+yes this was a good base overview. does anyone know of any langchain or related resources on prompt injection and other cyber security frameworks? This is becoming a bigger or more important issue as we build out ambient agents.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08SB6N90S0-8cc0247d020e-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08200GH1DY-g30a54ffd4e5-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09LE5KMDPB-g15b057c752f-24)5 Antworten
+
+Letzte Antwort vor 19 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09LL00HLPK-63c38e376acc-48)
+
+AnK  [08:07 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760508456732479)
+
+Does anyone know any good benchmarks for general purpose long running agents (apart from Gaia) ?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09H4FGHBLP-g8a625d4dd51-24)1 Antwort
+
+vor 19 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09ERKK52UF-g163c950719c-48)
+
+Peyman  [09:59 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760601580588019)
+
+Hello friends, I am working on a multi-agent system and wanted to ask how you would approach a challenge I’m facing.I’m building a ReAct agent with a web search tool, and the topic it researches can require around 40 tool calls. The agent accumulates text after each tool call and passes it to the LLM again, so I need a way to handle this accumulation efficiently to optimize latency and token usage.One idea I had is to compress the web search results after each tool call. However, LangChain seems to require that each AIMessage with a tool call be followed by a ToolMessage generated in the tool\_node with the same tool\_call\_id in the message history. This prevents me from inserting a compression node that adds a compressed ToolMessage in between.How would you handle this situation? Are there any resources or design patterns you’d recommend for managing this kind of context growth in a ReAct workflow?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09LA2D2PP0-f5215b2940e4-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09L0HRELK0-219ebcfdcff4-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09F5TCBBPD-13f79f04f08c-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09JMSTV57C-73316bd0ee32-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09ERKK52UF-g163c950719c-24)
+
++1
+
+15 Antworten
+
+Letzte Antwort vor 17 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U094JGJNJUX-9e564b3d9802-48)
+
+Radi  [04:34 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760668460938599)
+
+Can we have subagent Middleware?
+
+![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/2705.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)1 Antwort
+
+vor 14 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U0964V0HWPQ-e37f1108fd2f-48)
+
+Umut Alper  [11:46 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760694417799059)
+
+Hi, I have a question. Even a basic call to gemini-2.5-flash, which is a ChatVertexAI instance, takes 10s of seconds. I mean, what I basically do is:\
+`llm = ChatVertexAI(`\
+`model="gemini-2.5-flash",`\
+`)`\
+`res = llm.invoke("Hey! How is the weather today?")`\
+And even this takes around 15-25 seconds. I thought the problem was in my environment, but even after I deployed to the gcloud run, it is that slow.I'd really appreciate if you guys could tell what I am missingAnd the weird thing is that gpt-4.1-mini responds in 2-5 seconds. Is it possible that gemini is slow because I use 300$ free trial of VertexAI ?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09H4FGHBLP-g8a625d4dd51-24)![](https://ca.slack-edge.com/T05P4BNF01J-U094EDB5BBR-g824f00982d6-24)![](https://ca.slack-edge.com/T05P4BNF01J-U0964V0HWPQ-e37f1108fd2f-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09LDQDRJP4-158d068e5aca-24)5 Antworten
+
+Letzte Antwort vor 17 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09M1QAQ370-gf7fcab49057-48)
+
+Ludvig Johansson  [14:40 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760704815245179)
+
+Hello, I have question about testing custom checkpointing & replay under langgraph dev. I’m building an app and I am looking to integrate custom checkpointing and checkpoint replay (inspecting get\_state\_history, selecting a prior checkpoint, and running from there). In production I must set my own checkpointer (like MemorySaver or a persistent backend). However, when I run the graph under langgraph dev, it seems to own the checkpointer and I can’t pass mine in (and not access the dev managed checkpoints). This blocks me from verifying replay flows locally. How can this be handled?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09F5TCBBPD-13f79f04f08c-24)2 Antworten
+
+Letzte Antwort vor 17 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08KG5FDL8H-75bc264df04e-48)
+
+Ken MacInnis  [18:11 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760717518721629)
+
+anyone have a better way to contact support for langsmith? we'd like to get our Startup plan upgraded to Plus ASAP (today.. like, now ![:sich\_vor\_lachen\_auf\_dem\_boden\_wälzen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f923.png)) but the process doesn't take effect until the next billing cycle. I did email, but any other methods would be appreciated!
+
+![:beten:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64f.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U092D6SAHU0-d31f08839963-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)2 Antworten
+
+Letzte Antwort vor 14 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09JRB8JBQA-af16b7e8c43d-48)
+
+Rzini  [10:55 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760777708578619)
+
+What’s the difference between `create_deep_agent` and `create_agent` in LangChain? Also, where can I find the official documentation for `create_deep_agent`?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09L0HRELK0-219ebcfdcff4-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09JRB8JBQA-af16b7e8c43d-24)4 Antworten
+
+Letzte Antwort heute um 09:44 UhrThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09L0HRELK0-219ebcfdcff4-48)
+
+Duarte Cardoso  [20:51 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760813463334559?thread_ts=1760777708.578619\&cid=C07EHF3HC87)
+
+hat auf einen Thread geantwortet:What’s the difference between create\_deep\_agent and create\_agent in LangChain? Also, where can I find the official documentation for create\_deep\_agent?
+
+create\_agent is the renaming of create\_react\_agent which is based on the reason and act approach for agents, it is easily applied to must use cases and in my experience deals well with tool calling and agentic workflows. the create\_deep\_agent is from the deep agents approach, which is usually applied to more complex workflows - in the docs it is usually associated with file system usage, sub-agents and planning (most related to context engineering), so it applies to different use cases.Documentation is at: <https://docs.langchain.com/labs/deep-agents/overview#acknowledgements>\
+Github repository is at: <https://github.com/langchain-ai/deepagents>
+
+![:beten:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64f.png)2
+
+Neuere Antworten anzeigen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09H13PCUE9-g483ae066a60-48)
+
+Venkata  [05:15 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1760930142819509)
+
+New coursese from langchain academy -   <https://academy.langchain.com/collections/quickstart>   Langchain and Langgrapgh essentials
+
+![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)2![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/2705.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09H13PCUE9-g483ae066a60-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09F5TCBBPD-13f79f04f08c-24)7 Antworten
+
+Letzte Antwort vor 14 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09H13PCUE9-g483ae066a60-48)
+
+Venkata  [18:56 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761065767866209)
+
+<https://www.linkedin.com/posts/langchain_weve-raised-a-125m-series-b-at-a-125b-activity-7386444697369665536-E_YX?utm_source=share&utm_medium=member_android&rcm=ACoAADYGBu4Bi4cBOa0bd6fY9oPOuiSYjC_rwqY>
+
+![linkedin.com](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fstatic.licdn.com%2Faero-v1%2Fsc%2Fh%2Fal2o9zrvru7aqj8e1x2rzsrca)linkedin.com
+
+[We’ve raised a $125M Series B at a $1.25B valuation to build the platform for agent engineering.  ​Thank you to our investors (IVP, Sequoia Capital, Benchmark , Amplify Partners, Sapphire Ventures… | LangChain](https://www.linkedin.com/posts/langchain_weve-raised-a-125m-series-b-at-a-125b-activity-7386444697369665536-E_YX?utm_source=share\&utm_medium=member_android\&rcm=ACoAADYGBu4Bi4cBOa0bd6fY9oPOuiSYjC_rwqY)
+
+We’ve raised a $125M Series B at a $1.25B valuation to build the platform for agent engineering.Thank you to our investors (IVP, Sequoia Capital, Benchmark , Amplify Partners, Sapphire Ventures, CapitalG, and more) for your belief in us, and to our customers like Replit, Clay, Vanta, Cloudflare, Rippling, Cisco, Workday, and many more, for your trust and feedback along the way.Over the past few years, we’ve come to believe building agents requires a new discipline. We call it agent engineering, or the iterative process of refining non-deterministic LLM systems into reliable experiences. It combines aspects of product, engineering, and data science thinking, creating a way of working that pro… Mehr anzeigen
+
+[https://www.linkedin.com/posts/langchain\_weve-raised-a-125m-series-b-at-a-125b-activity-7386444697369665536-E\_YX?utm\_source=share\&utm\_medium=member\_android\&rcm=ACoAADYGBu4Bi4cBOa0bd6fY9oPOuiSYjC\_rwqY](https://www.linkedin.com/posts/langchain_weve-raised-a-125m-series-b-at-a-125b-activity-7386444697369665536-E_YX?utm_source=share\&utm_medium=member_android\&rcm=ACoAADYGBu4Bi4cBOa0bd6fY9oPOuiSYjC_rwqY "We’ve raised a $125M Series B at a $1.25B valuation to build the platform for agent engineering.  Thank you to our investors (IVP, Sequoia Capital, Benchmark , Amplify Partners, Sapphire Ventures… | LangChain")
+
+[](https://www.linkedin.com/posts/langchain_weve-raised-a-125m-series-b-at-a-125b-activity-7386444697369665536-E_YX?utm_source=share\&utm_medium=member_android\&rcm=ACoAADYGBu4Bi4cBOa0bd6fY9oPOuiSYjC_rwqY)
+
+![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)5
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09LFLUQBFG-gc8bc67b148c-48)
+
+Umang  [00:50 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761173434810649)
+
+Hey everyone,\
+I’m running into this error when using the new `create_agent` function (LangChain v1):
+
+```
+Recursion limit of 25 reached without hitting a stop condition. You can increase the limit by setting the recursion_limit config key.
+```
+
+I’d like to increase this limit, but I can’t find any clear documentation on _where or how_ to set the `recursion_limit` config key for `create_agent`.\
+Does anyone know the correct syntax or location for setting this (e.g., inside the config dict or as a parameter to `create_agent`)?\
+Thanks in advance!
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U05PNH5J08P-6809b64cb65e-24)![](https://ca.slack-edge.com/T05P4BNF01J-U094EDB5BBR-g824f00982d6-24)2 Antworten
+
+Letzte Antwort vor 10 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09MNBL9VST-g9e63ffbd944-48)
+
+Aaron Whiteside  [05:19 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761189582967809)
+
+After upgrading to 1.0 (js/ts), and switching to ContentBlocks, seeing issues with:
+
+1. OpenAI Chat Model incorrectly mapping AIMessage content types to "input\_text" instead of "output\_text".
+2. Anthropic Chat Models dropping all File/Image Content Blocks, they're completely absent from the final request being sent to Anthropic.
+
+(bearbeitet)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U05PNH5J08P-6809b64cb65e-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09MNBL9VST-g9e63ffbd944-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08SVJ9MFB5-9422bdbc68ae-24)27 Antworten
+
+Letzte Antwort vor 4 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09GBQCJV62-gc37ce09c627-48)
+
+Jithin Shaji  [08:14 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761286482413349)
+
+I had a doubt, Does langchain have too much additional overhead or slows down my agentic system compared to openAI client or some small framework that could be developed by myself. Or Could it be langgraph but that doesn't seem to be the issue.\
+I had also utilized pre-build React agents in langgraph using the `create_react_agent()` function which I will be changing out of soon. Would be thankful for any advice on how to make my multiagent system faster. ThanksAlso need an opinion, I have heard langchain should be utilized only for quick prototyping and Langgraph is fine for production.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U05PNH5J08P-6809b64cb65e-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09GBQCJV62-gc37ce09c627-24)5 Antworten
+
+Letzte Antwort vor 9 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08RDM2F276-65f691dc73ff-48)
+
+Hesam  [20:24 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761330258123779)
+
+Hi, I've upgraded to 1.0 in (js/ts) and I'm seeing problems with
+
+```
+ Error: Error loading "langsmith" package, install it via `npm install langsmith` before you use this function.
+      Error: require_range is not a function
+```
+
+when I do
+
+```
+import * as hub from 'langchain/hub/node';
+await hub.pull<ChatPromptTemplate>(name, {
+  includeModel: false
+});
+```
+
+is this some bundling issue or something from new updates I would appreciate any help
+
+![:eyes:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f440.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U05PNH5J08P-6809b64cb65e-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08RDM2F276-65f691dc73ff-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08SVJ9MFB5-9422bdbc68ae-24)27 Antworten
+
+Letzte Antwort vor 7 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U05PNH5J08P-6809b64cb65e-48)
+
+Jacob Lee (LangChain)  [20:29 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761330597864839?thread_ts=1761330258.123779\&cid=C07EHF3HC87)
+
+hat auf einen Thread geantwortet:Hi, I've upgraded to 1.0 in (js/ts) and I'm seeing problems with…
+
+I think we did change this to use a dynamic import (bearbeitet) 
+
+![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)1
+
+Neuere Antworten anzeigen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08RDM2F276-65f691dc73ff-48)
+
+Hesam  [22:21 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761337308521749)
+
+I'm getting this error when using `@langchain/aws ts/js`ChatBedrockConverse although the maxTokens property is set higher
+
+```
+The maximum tokens you requested exceeds the model limit of 4096. Try again with a maximum tokens value that is lower than 4096. 
+```
+
+is this some configuration from aws or with the langchain 1.0?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)1 Antwort
+
+vor 10 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09JNGKBDA7-e12dd81bc938-48)
+
+Blaine Hatab  [21:53 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761421989957819)
+
+I'm going through the langgraph tutorial and im at the time travel section. have any updates been made to the API where when you call 'get\_state' it now includes the next tool call in the tasks key that wasn't stored in the V1? Just trying replicate the tutorial and there just seems to be a 'tasks' key that has the next step of a tool call that never shows up in the tutorial when calling get\_state.if this is true happy to push a fix to the github on the tutorial! (bearbeitet) 
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U05PNH5J08P-6809b64cb65e-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09JNGKBDA7-e12dd81bc938-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08SVJ9MFB5-9422bdbc68ae-24)14 Antworten
+
+Letzte Antwort vor 3 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09N8DWE5MM-gae407d81bd6-48)
+
+Harsh  [08:16 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761462960907109)
+
+Hey, i have a doubt, We are trying to integrate langsmith traces into our prod chatbot.\
+Even at paid level langsmith offers 10k traces and we are expecting our agents to be run much much more than that so my question is, ideally do we trace every execution in prod or we set some kind of settings so the traces are run after some interval?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U05PNH5J08P-6809b64cb65e-24)1 Antwort
+
+vor 8 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09CZ1K2RA6-b2dcf4b9f014-48)
+
+Bob  [09:06 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761465969367369)
+
+Langchain's post about "OpenMemory" becomes one of the most liked, viewed, and commented-on posts from LangChain's Social Media. The LinkedIn post reaches 1k+ likes in under 15 hours, and the [x.com](http://x.com/) post reaches 50k+ views. OpenMemory - Break into your peak.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09FX50BR7E-g76275129aa3-48)
+
+Frank Febbraro  [21:16 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761509782864429)
+
+Has anyone use the LangSmith wrapper with the OpenAI SDK/Responses API & Background=True?  I have the LLM calls being recognized in my tracing project, but I’m not seeing the token counts & cost showing up.  Is that not supported or am I missing something?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U05PNH5J08P-6809b64cb65e-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09FX50BR7E-g76275129aa3-24)6 Antworten
+
+Letzte Antwort vor 8 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C0F7N6MR-g55f26577fe0-48)
+
+Artur Baghramyan  [23:59 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761519548907019)
+
+<https://www.youtube.com/watch?v=fMsQX6pwXkE> so in that video it is provided to use config\_schema but in langchain v1 there is not such parametere anymore so i tried to passsing to context\_schema it worked but as i understand context\_schema is not used for that please provide information on how to do that on new version
+
+```
+example code :
+async def make_supervisor_agent(config: RunnableConfig):
+    configurable = config.get("configurable", {})
+    llm = configurable.get("model", "openai/gpt-4.1")
+    prompt = configurable.get(
+        "system_prompt", "You are a helpful assistant")
+
+    graph = create_agent(
+        model=load_chat_model(llm),
+        tools=[research_stock, execute_order],
+        system_prompt=prompt,
+        context_schema=Configuration,
+        state_schema=SupervisorState,
+        name="Supervisor Agent",
+    )
+
+    return graph
+```
+
+[![YouTube](https://a.slack-edge.com/80588/img/unfurl_icons/youtube.png)](https://www.youtube.com/)[YouTube](https://www.youtube.com/) | [LangChain](https://www.youtube.com/@LangChain)
+
+[LangGraph Assistants: Building Configurable AI Agents](https://www.youtube.com/watch?v=fMsQX6pwXkE) __
+
+__[__](https://www.youtube.com/watch?v=fMsQX6pwXkE)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08RDM2F276-65f691dc73ff-48)
+
+Hesam  [17:35 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761582940152389)
+
+Hi quick question, I'm using langchain v1.0 in typescript and when creating a middleware it only allows me to pass zod schemas for the state schema but I can't do reducers on zod schemas as I understand. can I? can't use zod 4 due to dependency issues.\
+`.register` doesn't work (bearbeitet) 
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U05PNH5J08P-6809b64cb65e-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08SVJ9MFB5-9422bdbc68ae-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08RDM2F276-65f691dc73ff-24)4 Antworten
+
+Letzte Antwort vor 7 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08RDM2F276-65f691dc73ff-48)
+
+Hesam  [19:54 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761591287123279)
+
+Hi I'm trying to adapt the deepagent from python library to typescript I'm confused about what is this error\
+`Error: Tool runtime is required for subagent invocation\n Please fix your mistakes`\
+I can't find much in the typescript documentation about the tool runtime or any corresponding types could you guide me in the right direction?\
+This is the error throwing code in python:
+
+```
+def task(
+        description: str,
+        subagent_type: str,
+        runtime: ToolRuntime,
+    ) -> str | Command:
+        subagent, subagent_state = _validate_and_prepare_state(subagent_type, description, runtime)
+        result = subagent.invoke(subagent_state)
+        if not runtime.tool_call_id:
+            value_error_msg = "Tool call ID is required for subagent invocation"
+            raise ValueError(value_error_msg)
+```
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08SVJ9MFB5-9422bdbc68ae-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08RDM2F276-65f691dc73ff-24)2 Antworten
+
+Letzte Antwort vor 6 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09MTAVULR4-gab5ee2bd4f3-48)
+
+Daniel Innovate  [11:40 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761648027951429)
+
+Hi Devs!\
+I am a backend dev, currently learning AI Agent. Although I have gained some fundamental knowledge while reading blogs, articles, and books on AI Agent.\
+I want to go into building real-world projects.\
+Someone gave me advice not to learn LangChain at first, claiming it is suitable for prototyping, not production level. Instead, I should learn Google ADK. I did some research and found the claim was not true.I want to learn how to build complex agents that can carry out tasks suitable for large-scale production, not just prototyping. Please, I need your advice on which framework to learn.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U094EDB5BBR-g824f00982d6-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09MTAVULR4-gab5ee2bd4f3-24)2 Antworten
+
+Letzte Antwort vor 6 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09NEGWDAP8-gf4e849d9a2b-48)
+
+Tiago Bessa  [15:17 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761661066131469)
+
+Hello, hope you're alright. I recently updated to langchain v1.0. Previously, I was able to get real time information of the execution of agent (check the tools it is calling and their result). Now, I do not see an option to do so. Is anyone available to help me? (bearbeitet) 
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U092D6SAHU0-d31f08839963-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09NEGWDAP8-gf4e849d9a2b-24)3 Antworten
+
+Letzte Antwort vor 5 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09P3B03PKP-3cb478aca1c0-48)
+
+Yuriy Favi  [16:44 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761666240794219)
+
+Howdy all, Is any one else having problems with self-hosted deployment using LangChain v1 and Docker images (eg. `langchain/langgraphjs-api:20`) ? (bearbeitet) 
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09P3B03PKP-3cb478aca1c0-24)2 Antworten
+
+Letzte Antwort vor 5 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09NZPZCJ8P-g2be59cbbe5a-48)
+
+Jason  [15:38 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761748728963959)
+
+Hi! I'm testing gpt-oss-120b via AWS Bedrock. If you're wondering why I'm doing this, it's because I'm evaluating models for on-prem deployments.Things are working okay, but I'm running into model specific issues with regards to parsing `ReasoningContentBlock`It appears as though gpt-oss has a slightly different format. Here you can see the parsed ContentBlocks:
+
+```
+[
+  {
+    "type": "non_standard",
+    "value": {
+      "type": "reasoning_content",
+      "reasoningText": {
+        "text": "The user asks \"How are you?\" It's a casual question. Assistant should respond politely."
+      }
+    }
+  },
+  {
+    "type": "text",
+    "text": "I'm doing great, thanks for asking! How can I help you today?"
+  }
+]
+```
+
+Here is the raw content:
+
+```
+[
+  {
+    "type": "reasoning_content",
+    "reasoningText": {
+      "text": "User asks \"How are you?\" Simple friendly small talk. Should respond politely."
+    }
+  },
+  {
+    "type": "text",
+    "text": "I'm doing great, thanks for asking! How can I assist you today?"
+  }
+]
+```
+
+Is there any way to extend the parsing for ContentBlocks? It would be great to have some override here without the need to do post-processing
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U092D6SAHU0-d31f08839963-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09NZPZCJ8P-g2be59cbbe5a-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08SVJ9MFB5-9422bdbc68ae-24)13 Antworten
+
+Letzte Antwort vor 5 TagenThread ansehen
+
+Diese Nachricht wurde gelöscht.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09PMJLCH7W-fa55fb9a24eb-24)5 Antworten
+
+Letzte Antwort vor 5 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U098WT0HYLF-gced6d2bae6c-48)
+
+Nikhil  [13:11 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761826305186079)
+
+hi guys, can someone explain how i should run the tests locally for a new feature im trying to test for langchain community.\
+I keep running into this snapshot error and this vcr error:snapshot error:\
+ERROR: usage: pytest \[options] \[file\_or\_dir] \[file\_or\_dir] \[...]\
+pytest: error: unrecognized arguments: --snapshot-warn-unusedvcr error:\
+Langchain\_community\langchain-community\libs\community\tests\integration\_tests\vectorstores\conftest.py'.\
+tests\integration\_tests\vectorstores\conftest.py:5: in \<module>\
+    from vcr.request import Request\
+E   ModuleNotFoundError: No module named 'vcr'I have git cloned the repo\
+made my changes\
+Went to langchain-community/libs/community and created a venv\
+activated the venv and did: < pip install . >\
+It says everything is installed,\
+then i try to run the test : < pytest test\_feature.py >\
+and it returns those errors.\
+What could be the cause ?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)1 Antwort
+
+vor 4 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08G3DWTKT5-435b2f46da42-48)
+
+Eric Burel  [22:20 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761859227681049)
+
+Are LCEL chains just dead these days? It seems the syntax is not used much throughout the doc, especially with the more functionnal API of create\_agent
+
+![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/2705.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09PUR4D4BY-d8b0f01527e8-24)2 Antworten
+
+Letzte Antwort vor 3 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08G3DWTKT5-435b2f46da42-48)
+
+Eric Burel  [22:21 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761859310453339)
+
+I feel like Runnable are still quite present but more as an internal utility right?
+
+![:+1:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f44d.png)3
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09QWEH6YBA-g4251686692d-48)
+
+FatmaSükeyna  [21:46 Uhr](https://langchaincommunity.slack.com/archives/C07EHF3HC87/p1761943615397279)
+
+Hello everyone my name is Sükeyna I'm from Türkiye. I'm new here, support me :)

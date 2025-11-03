@@ -1,0 +1,2027 @@
+I built deep research for seo keywords (hours of keyword research in minutes): <https://www.jelloseo.com/>
+
+![Jello SEO](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fwww.jelloseo.com%2Ficon-192.png)Jello SEO
+
+[Jello SEO - AI Keyword Research Tool | Find High-Converting Keywords](https://www.jelloseo.com/)
+
+Discover profitable keywords with Jello SEO's AI-powered research tool. Get search volume, competition data, and keyword suggestions to boost your organic traffic and conversions. (141 kB)__
+
+[https://www.jelloseo.com/](https://www.jelloseo.com/ "Jello SEO - AI Keyword Research Tool | Find High-Converting Keywords")
+
+[](https://www.jelloseo.com/)
+
+![:feuer:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f525.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08SB6N90S0-8cc0247d020e-24)![](https://ca.slack-edge.com/T05P4BNF01J-U096BFFRRGF-1cf96b508b28-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08174F0E3B-07c601c76015-24)3 Antworten
+
+Letzte Antwort vor 3 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U094U05PNPQ-g2646d5f83e8-48)
+
+Abhishek Tomar  [20:53 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1754419987368069)
+
+I am just learning to build an end to end agent and done with my poc currently I don’t have langsmith account how can I deploy my python agent without the key. It’s a simple ReAct agent.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U07TSDJCZ8X-a4cbdcc30f2f-48)
+
+Dimitris Kargatzis  [23:58 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1754431123164649)
+
+Hello everyone ![:winken:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f44b.png)It's been a week since we open-sourced Watchflow - its engine runs on GitHub events and uses LangGraph agents to reason over violations in pull requests, deployments, and more.It’s early-stage and not yet production-hardened, but it’s functional and already supports key use cases.We’re looking for contributors who have experience with LangGraph!Repo: <https://github.com/warestack/watchflow>
+
+![:winken:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f44b.png)2
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U099VRCJ1Q8-e9927b2b393b-48)
+
+Erez Azaria  [15:19 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1754486351021519)
+
+For anyone building RAG pipelines and yak-shaving over retrieval quality when the splitter keeps breaking context, I’ve released `Axonode-Chunker`.**What it does (and why it’s different)**\
+• Scans the entire document first, then cuts where the embedding drift shows real topic shifts—so related paragraphs aren’t separated by page boundaries.\
+• Lets you mark HOLD / RESUME, OPTIONAL\_CUT and NO\_CUT regions with regex patterns, keeping code blocks, tables or any layout you care about intact.\
+• Learns an adaptive drift threshold per file, so you don’t have to retune between chatty e-mails and dense legal briefs.\
+• Treats max/min token counts as guidelines; it will bend them rather than destroy coherence.\
+• Preserves original page numbers on every chunk, making source citations trivial.Install with:
+
+```
+pip install axonode-chunker
+```
+
+GitHub  <https://github.com/bazilicum/axonode-chunker>\
+PyPI   <https://pypi.org/project/axonode-chunker/>If you try it on your own corpus, I’d love to hear how it performs!
+
+![:eyes:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f440.png)1![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/2705.png)2
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08D8GZUZ88-74080d3b650c-48)
+
+Lautaro Gesuelli Pinto  [18:45 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1754585116985499)
+
+Built this experimental fork of Deep Agents that lets you spin up deep agents, connect them to MCP servers (Claude-style), with pre-built tools and specialized subagents from a simple CLI.An MCP registry that allows you to:
+
+* Connect to remote MCP servers using the Claude format
+* Manage and dynamically connect with available tools as needed
+* mcp add --transport http deepwiki [mcp.deepwiki.com/mcp](http://mcp.deepwiki.com/mcp)
+
+Create and load specialized subagents that can be invoked to handle specific types of tasks:
+
+* Subagents are stored as human-readable Markdown files
+* Each subagent has its own expertise and tool access
+* Dynamically load subagents based on task requirements
+
+<https://x.com/lgesuelli_p/status/1953491264743055703?s=46>
+
+![X (formerly Twitter)](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=http%3A%2F%2Fabs.twimg.com%2Ffavicons%2Ftwitter.3.ico)X (formerly Twitter)
+
+[Lautaro Gesuelli (@lgesuelli\_p) on X](https://x.com/lgesuelli_p/status/1953491264743055703?s=46)
+
+Built an experimental fork of Deep Agents @LangChainAI that lets you spin up deep agents, connect them to MCP servers (Claude-style), with pre-built tools and specialized subagents from a simple CLI.An MCP registry that allows you to:\
+\- Connect to remote MCP servers using the
+
+[https://x.com/lgesuelli\_p/status/1953491264743055703?s=46](https://x.com/lgesuelli_p/status/1953491264743055703?s=46 "Lautaro Gesuelli (@lgesuelli_p) on X")
+
+[](https://x.com/lgesuelli_p/status/1953491264743055703?s=46)
+
+![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)3![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U099H5JGW1G-99c57d095d62-48)
+
+Christian Alexander Nonis  [09:55 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1754639750032129)
+
+Hey!! I am working on a on-demand memory layer for LLMs, for many years I've been building chatbots and agents and everytime had to implement from scratch a memory layer, what I am working rn is more than a barely "all conversation messages attached to the prompt" or semantic RAG retrieval, as you might imagine RAG is quite unaccurate if you are looking for something specific, the solution I am working on uses a combination of NLP for coreference resolution and triplet extraction with GraphRAG to find ideally extactly what you are looking for (just for reference is quite the same thing google search uses to output search results) curious what are your ideas on this just because everyone is sharing a url here is the docs xD <https://brainapi.lumen-labs.ai/docs>
+
+brainapi.lumen-labs.ai
+
+[Introduction](https://brainapi.lumen-labs.ai/docs)
+
+Get started with BrainAPI
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U099MBQLQ3G-g99b7c17b8ce-48)
+
+sahana  [23:42 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1754689358332039)
+
+![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png) **LangSmith meets robotics! (My first Robotics project :D)**\
+I’m excited to share my first robotics project, built for the Gemma 3N Hackathon:\
+ **"Hi Robot meets Gemma – An Interactive Robotic System"** – inspired by the Hi-Robot paper.\
+The system combines **Gemma3n** (offline, multimodal reasoning) with **SmolVLA** (real-time execution) so the robot can not only perform actions but also _explain its reasoning_ in both text and voice.\
+**The twist?**\
+ I used **LangSmith** for real-time performance profiling _inside_ a robotic workflow — something that traditionally relied on separate packages or behind-the-scenes logging. Seeing execution timing in one integrated view made optimization **so much smoother**. It showed me how LangSmith could be a game-changer for embodied AI systems.\
+One limitation I ran into: I couldn’t visualize the **image inputs / or any input for this trace** in LangSmith. I am happy to chat more.\
+ Being able to _see_ what the model was reasoning over (rather than just text logs) would have been incredibly powerful for robotics debugging and analysis.\
+![:glühbirne:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4a1.png) **Why this mattered:**
+
+* Rapid iteration — I could measure, tweak, and re-run _without breaking the loop thanks to LangSmith&#xA0;_![:herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2764-fe0f.png)
+
+![:blatt\_oben:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4c4.png) Write-up: [Kaggle Hackathon Project](https://www.kaggle.com/competitions/google-gemma-3n-hackathon/writeups/robot-meet-gemma)\
+Medium Article (same if you don't have an account in kaggle) : <https://medium.com/p/f1e7bc7c6803>\
+ ![:hammer\_und\_schraubenschlüssel:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f6e0-fe0f.png) Code + details: <https://github.com/Sahanave/hi-robot-gemma3n>\
+     Youtube Demo : <https://www.youtube.com/watch?v=IOxbG6RAJmM>
+
+![kaggle.com](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fwww.kaggle.com%2Ffavicon.ico)kaggle.com
+
+[HiRobot Meets Gemma | Kaggle](https://www.kaggle.com/competitions/google-gemma-3n-hackathon/writeups/robot-meet-gemma)
+
+Bringing the best of two worlds together - Embodied AI.
+
+![Medium](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afill%3A304%3A304%2F10fd5c419ac61637245384e7099e131627900034828f4f386bdaa47a74eae156)Medium
+
+[![:roboter:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f916.png) Hi Robot meets Gemma — An Interactive Robotic System Using Gemma3n and SmolVLA](https://medium.com/p/f1e7bc7c6803)
+
+In this project, I set out to combine offline multimodal reasoning with real-time robotic execution — and discovered how tools like…
+
+Reading time
+
+9 min read
+
+8\. Aug.
+
+[https://medium.com/p/f1e7bc7c6803](https://medium.com/p/f1e7bc7c6803 ":robot_face: Hi Robot meets Gemma — An Interactive Robotic System Using Gemma3n and SmolVLA")
+
+[](https://medium.com/p/f1e7bc7c6803)
+
+[![YouTube](https://a.slack-edge.com/80588/img/unfurl_icons/youtube.png)](https://www.youtube.com/)[YouTube](https://www.youtube.com/) | [Sahana Venkatesh](https://www.youtube.com/@SahanaVenkatesh1606)
+
+[HiRobot Meets Gemma Project for Google - The Gemma 3n Impact Challenge](https://www.youtube.com/watch?v=IOxbG6RAJmM) __
+
+__[__](https://www.youtube.com/watch?v=IOxbG6RAJmM)
+
+![:feuer:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f525.png)2
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U098WT0HYLF-gced6d2bae6c-48)
+
+Nikhil  [21:24 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1754853850254559)
+
+Hello everyone,im new to this community, i propose a new langchain vector store integration, a local mongo vector store : a lightweight, local vector store for standard Mongodb (community/free version) which could be used without Atlas or external software. Its meant to be something locally used and simple to use.Motivation\
+i use mongodb for app data, people want embeddings and metadata in the same db without using Atlas vector search as it is not completely free\
+something useful is needed for local and privacy work\
+even if performance lags behind FAISS/Qdrant on large data stores, this enables an easy migration path and a single db useAPI\
+a method to store/upload text ,data, metadata and embedding vectors\
+a method for similarity search on a query for some top n data\
+a method to parse some pdf or txt files and semantically chunk the most relevant data together\
+Some more features can be added in the futureFAISS/Qdrant can be used for production or >100k vectors,this feature is primarily for local convenience or smaller data.Would this be a good feature for langchain , i would like to contribute and would love to work on this with others if this is a worthy project.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08HWF18K5G-9786906f63ec-48)
+
+Muhammad Saad  [18:58 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1754931527191639)
+
+Hi everyone!I’m Muhammad Saad, a Google Summer of Code 2025 contributor working with mentors from Google DeepMind on the project "Enhancing Gemini API Integrations in OSS Agent Tools." My work focuses on advancing Gemini API integration in LangChain by adding dedicated support for structured output, improving tool calling and code execution features, and providing clear documentation with hands-on example workflows. I’m excited to share that I’ve had 13 PRs merged so far and am now the top contributor to the project! ![:partygesicht:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f973.png)Today, I'm excited to share two new LangChain workflows:
+
+* **Grounded Search Agent**: Combines real-time Google Search with PDF analysis for comprehensive research.
+* **Code Executing Chatbot**: Enables dynamic Python code execution and multi-turn data analysis with visualization.
+
+You can find the workflows and details in my public repo: [gsoc-workflows](https://github.com/msaadg/gsoc-workflows) ![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png)\
+I’d love your feedback, suggestions, and any ideas for further improvements. If you try out the workflows, let me know how they work for you or if you spot any issues. Your input will help shape the final deliverables and documentation!Thanks for your support and looking forward to your thoughts! ![:leichtes\_lächeln:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f642.png)
+
+![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)2![:winken:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f44b.png)2
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08HWF18K5G-9786906f63ec-24)1 Antwort
+
+vor 3 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U0811KNG0GG-gcf4ebcc186b-48)
+
+Nigel Daniels  [20:30 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1754937027499579)
+
+Recently LangChain published the [Ambient Agents](https://academy.langchain.com/courses/ambient-agents/) course. It's a really great introduction to LangGraph, and builds up an email assistant step by step. Really useful to know but all in Python. If you are a JS developer, like my-self, here is a 'translation' of the course material for LangChain.JS developers:<https://github.com/nigel-daniels/ambient-agents> (bearbeitet) 
+
+![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)3![:herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/2764-fe0f.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U099PN96PFX-82cf3f55bddc-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08SB6N90S0-8cc0247d020e-24)2 Antworten
+
+Letzte Antwort vor 3 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U099KFJKL79-f0521636eb7e-48)
+
+Scott  [02:00 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1754956854454109)
+
+Greetings ans salutations, everyone!I'm Scott. Just some guy with a computer that likes to build stuff.I built a Persistent Mind Model (PMM) so you can train & evolve a personalized AI — and take it anywhere: across sessions, models (GPT, Claude, LLaMA, Mistral), even devices — with all memories & commitments intact because most AI “personalities” vanish when you switch models or devices.You could think of it as your very own personal AI Tamagotchi.You tell it what to think, how to think, and it learns and develops through its interactions and recursive, self-referential reflections over time, and works with LangChain for orchestration; the PMM stores the persona and its memory as portable, verifiable JSON.The best part? It’s fully portable. APIs or local LLMs simply serve as a substrate engine for its development.Its long-term operability is 100% decoupled from third-party vendors.I would really love some feedback from this community.Thoughts?[You can check it out here.](https://github.com/scottonanski/persistent-mind-model)
+
+![:winken:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f44b.png)1![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U092GSES2DQ-g066d91d91a4-48)
+
+Chandrani Mukherjee  [08:01 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1755064897502779)
+
+Hi Team, Hope everyone is doing good. Just wanted to share my Langchain work here and also would like to convey my interest in the Captain/Ambassador programme [@LangChain Community Admin (Not Monitored)](https://langchaincommunity.slack.com/team/U05NV9115FY) [@Matt (LangChain)](https://langchaincommunity.slack.com/team/U08PQPZ7FS4) [@Graz](https://langchaincommunity.slack.com/team/U0989JEG7NY)\
+ **1. Contributions to LangChain**
+
+* Reported and documented multiple LangChain core issues and improvements:
+
+  * [React agent with ChatOpenAI doesn't stream tool call args on "message" stream mode](https://github.com/langchain-ai/langchain/issues/31620)
+  * [Tool execution handling improvements](https://github.com/langchain-ai/langchain/issues/31680)
+  * [Agent execution pipeline refinements](https://github.com/langchain-ai/langchain/issues/31725)
+  * [Zero-shot agent performance feedback](https://github.com/langchain-ai/langchain/issues/31767)
+  * [Memory and execution consistency fix proposal](https://github.com/langchain-ai/langchain/issues/31766)
+  * [LangChain API feedback with example implementation](https://github.com/langchain-ai/langchain/issues/31870) & [follow-up comment](https://github.com/langchain-ai/langchain/issues/31870#issuecomment-3045986240)
+  * [Support for enhanced agentic workflows](https://github.com/langchain-ai/langchain/issues/32066)
+
+**2. Technical Publications & Research**
+
+* [Use of Agentic AI with LLM and Prompt Engineering to Detect IoT Network Intrusion Patterns](https://www.techrxiv.org/users/920742/articles/1292925-use-of-agentic-ai-with-llm-and-prompt-engineering-and-state-of-the-art-machine-learning-algorithm-to-detect-the-patterns-in-iot-device-network-intrusion-attacks) – TechRxiv
+* [Combating Digital Media Piracy with Agentic AI](https://www.techrxiv.org/users/920742/articles/1306932-combating-digital-media-piracy-with-agentic-ai-leveraging-video-transcription-and-character-recognition-for-automated-enforcement) – TechRxiv
+* [Revolutionize Chatbots with Gemini Flash’s Multi-Intent Speed](https://medium.com/@chandrani121189/revolutionize-chatbots-with-gemini-flashs-multi-intent-speed-e8058f0b7c68) – Medium
+
+**3. Community Engagement & Content**
+
+* **LinkedIn Articles & Demos:**
+
+  * [Build a Smart LangChain Agent with OpenAI](https://www.linkedin.com/posts/chandrani-mukherjee-usa-nj_build-a-smart-langchain-agent-with-openai-activity-7360514185392201728-rNYf)
+  * [Smart Search Meets LLM – AWS Powered Retrieval-Augmented Generation](https://www.linkedin.com/posts/chandrani-mukherjee-usa-nj_smart-search-meets-llm-aws-powered-retrieval-augmented-activity-7349272559055462403-3JHI)
+  * [AWS S3 Pre-Signed URL Generator with Agents](https://www.linkedin.com/posts/chandrani-mukherjee-usa-nj_aws-s3-presignedurl-activity-7348158277584625664-76E-)
+  * [Dockerizing LangChain Agents for Production](https://www.linkedin.com/posts/chandrani-mukherjee-usa-nj_from-prompt-to-production-dockerizing-a-activity-7347485291345068033-9Dg9)
+
+* **[Dev.to](http://dev.to/)****&#xA0;Articles:**
+
+  * [From Prompt to Production: Dockerizing a LangChain Agent with FastAPI](https://dev.to/moni121189/from-prompt-to-production-dockerizing-a-langchain-agent-with-fastapi-1pe3)
+  * [S3cret Agent – Build an AI that Generates AWS Pre-Signed URLs](https://dev.to/moni121189/s3cret-agent-build-an-ai-that-generates-aws-presigned-urls-on-command-31l8)
+  * [Effortless AWS Model Deployments](https://dev.to/moni121189/effortless-aws-model-deployments-sync-your-ai-models-to-ec2-in-minutes-30f2)
+  * [Smart Search Meets LLM – AWS Powered RAG](https://dev.to/moni121189/smart-search-meets-llm-aws-powered-retrieval-augmented-generation-2hn7)
+
+* **YouTube Demo:**
+  * [LangChain Agent & RAG Demo](https://www.youtube.com/watch?v=03jrwTQp55w)
+
+![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)3
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U06KR7RHAUT-afae6f40c7c2-24)![](https://ca.slack-edge.com/T05P4BNF01J-U092GSES2DQ-g066d91d91a4-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)6 Antworten
+
+Letzte Antwort vor 13 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U085AKS4Y1K-9ca723cca4c9-48)
+
+Curtis Nye  [21:28 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1755113321520229)
+
+Hi everyone! I am building an app for no-code users to quickly spin up AI agents and assign tools, knowledge, memory, etc... Then users can build agent teams to automate workflows. It is a work in progress but coming along great! I am looking for some early beta users that can test and give feedback. I am also building it solo currently and would love to find another good dev or two that might want to hop on board and help get it over the finish line.  Here is the site, simply request access and I will send an invite code. Thanks!AgentHub - [https://agenthub.click](https://agenthub.click/)
+
+agenthub.click
+
+[AgentHub](https://agenthub.click/)
+
+Build and manage AI agent workflows
+
+![:feuer:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f525.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09AFM0FQ0J-g551b7aaa79e-24)![](https://ca.slack-edge.com/T05P4BNF01J-U085AKS4Y1K-9ca723cca4c9-24)3 Antworten
+
+Letzte Antwort vor 3 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U094U05PNPQ-g2646d5f83e8-48)
+
+Abhishek Tomar  [06:58 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1755147509242579)
+
+**Question**- when we build a multi agent graph how the main agent get the awareness about other agent and how agent handles routing in LangGraph any detail and examples helps….
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U099Z925M1V-gca81b715e5c-48)
+
+Manish  [08:33 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1755153229663859)
+
+Question - I have built an simple ai web search tool call chatbot using langraph but it's making tool calls for even normal conversation anyone has any solutions for this problem
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U07F0UZ8KL1-2f735e6fcf1f-48)
+
+Bobur Umurzokov  [13:40 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1755171603688469)
+
+Hi Everyone,We have recently launched an open-source memory solution for AI Agents called [Memori](https://github.com/GibsonAI/memori). I created an integration example with LangChain today, tested how it works and result is truly great!Check out the integration example in our GitHub repo - it’s surprisingly simple to implement: <https://github.com/GibsonAI/memori/blob/main/examples/integrations/langchain_example.py>\
+Here is a short demo of it: <https://x.com/BoburUmurzokov/status/1955944250547351596>I’d love feedback from the community.  If you find it useful, please star the repo to help more devs discover Memori. Thanks!
+
+![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)3
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U07T97LDYTH-e612b96507ad-48)
+
+Nick Sherrow  [19:15 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1755191744553659)
+
+Hey guys, I created a **patch driver for LLMs to let them modify big documents with patches** (both structured and unstructured). Something like ‘_trustcall_’ but works both for strings (like legal docs, codebases, etc) and JSONs. Also I was focused on building something framework-agnostic and scalable for more patch types (XML, images, etc.)<https://github.com/NickSherrow/llm_patch_driver>I would really appreciate if you **star and share my repo**. Pull requests are welcome: it needs more ApiAdapter, more patch types, and some optimization.
+
+![:+1:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f44d.png)2
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09A9NPHXB3-73482b12438e-48)
+
+samarasimha reddy  [21:21 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1755199292361999)
+
+codex cli initiation
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U07C6QY05DK-g869529dd0b6-48)
+
+Michael Irey  [01:05 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1755212749274349)
+
+Want to give a shout out to langsmith! An amazing tool for AI development. Our team is loving it!
+
+image.png 
+
+[![image.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09AGJM2726-98e368bca1/image_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09AGJM2726/image.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09AGJM2726/download/image.png?origin_team=T05P4BNF01J)
+
+![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)2
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09AKHR3VL3-b4231fd5c651-48)
+
+Kanishk Gupta  [19:52 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1755453177454869)
+
+Hello everyone ![:winken:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f44b.png) Loving all the projects being shared here! Excited to add mine to the list.\
+Over the past year, I’ve been building agents, and out of that journey came **Promptius AI** — an agent that builds production-grade AI agents, exportable as LangChain and LangGraph code.\
+The idea came from necessity: while no-code/drag-and-drop tools are great, as a developer I wanted full transparency and control — from how LLMs are prompted to how state is managed across graphs, subgraphs, and structured outputs with Pydantic models. It should feel like writing AI-native software.\
+But here’s the challenge: even developers struggle with frameworks like LangChain/LangGraph. The learning curve is steep, and many teams simply don’t have the bandwidth to explore. Promptius makes these frameworks accessible — while keeping the flexibility developers love.\
+![:blitzschnell:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/26a1.png) To speed up prototyping, we also include an **evaluation pipeline** that tests agents before handing them over to you.\
+ ![:stecker:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f50c.png) And with seamless integration to **10,000+ agent skills via Composio**, you can connect your agents to real-world actions instantly.\
+![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png) We’re launching on **Product Hunt on August 30th**!\
+ ![:nach\_rechts\_zeigen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f449.png) Follow and support us here: <https://www.producthunt.com/products/promptius-ai?utm_source=linkedin&utm_medium=social>\
+ ![:globus\_mit\_meridianen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f310.png) Learn more: <https://promptius.ai/>\
+We’re still in beta — if you’d like early access, DM me and let’s connect!
+
+![Product Hunt](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fph-static.imgix.net%2Fph-ios-icon.png%3Fauto%3Dformat)Product Hunt
+
+[Promptius AI: Build production-grade AI agents in minutes! | Product Hunt](https://www.producthunt.com/products/promptius-ai?utm_source=linkedin\&utm_medium=social)
+
+Promptius is an AI-powered development environment designed to build and deploy autonomous agents based on user prompts. (105 kB)__
+
+[https://www.producthunt.com/products/promptius-ai?utm\_source=linkedin\&utm\_medium=social](https://www.producthunt.com/products/promptius-ai?utm_source=linkedin\&utm_medium=social "Promptius AI: Build production-grade AI agents in minutes! | Product Hunt")
+
+[](https://www.producthunt.com/products/promptius-ai?utm_source=linkedin\&utm_medium=social)
+
+promptius.ai
+
+[Promptius - Enterprise AI Agent Creation Platform](https://promptius.ai/)
+
+Build, customize, and deploy AI agents in minutes without extensive coding. Automate workflows, analyze data, and enhance customer interactions.
+
+![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09675C85ST-0759ab1299c2-48)
+
+Knooz Fatima  [20:07 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1755626871610029)
+
+Hi there,\
+Just created a LinkedIn Post Generator with n8n ![:blitzschnell:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/26a1.png) Want the workflow? Comment below and I’ll DM you the JSON!
+
+image.png 
+
+[![image.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09B322LYP4-59602c018f/image_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09B322LYP4/image.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09B322LYP4/download/image.png?origin_team=T05P4BNF01J)
+
+![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)4
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U097WBEUYJJ-gcf5b864f3a4-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09675C85ST-0759ab1299c2-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09A3LXT6LF-7be5e41de93c-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08PSCGED4Y-g109fa6d144f-24)4 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U07HH4K482W-69a1a90cc9da-48)
+
+Nir Diamant  [08:48 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1755672490293609)
+
+hey all!\
+my agents-towards-production repo that teaches devs to build production level agents crossed 10K in just two months\
+<https://github.com/NirDiamant/agents-towards-production>
+
+![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)2![:tada:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f389.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U06GPNW2QR0-cd793aa1b54e-48)
+
+Matt Carey (old stackone account pls delete this)  [19:23 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1755796986866809)
+
+Hey Langchain crew, we just launched our MCP hub (Disco) on Product Hunt ![:discokugel:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1faa9.png)And we have the first (I think) MCP server for **Langsmith** on the platform!!\
+Give agents remote access to your application logs super easily with Disco's preauth. Connectors are open-source and designed from the ground up to be vibe coded ![:tänzerin::hautton-2:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f483-1f3fb.png)It's also FREE to use while in research preview ![:partygesicht:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f973.png)If that sounds cool pls give us an upvote of Product Hunt, we need about ~100 likes+comments more to get to the front page. Your support would be very much appreciatedClick -> [here](https://www.producthunt.com/products/disco-dev) <-Thanks all :))
+
+riverside\_disco\_dev edited \_ aug 21, 2025 001\_you've\_been a bad a.mp4 
+
+> Hey, I'm Matt, and we just released Disco to the world. I'm gonna show you how to use it to automate your life as a software engineer. Let's go to… Transkript anzeigen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U0968L4LST1-68e4ae46563f-48)
+
+Abdul Samad Gilal  [18:57 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1755881867860589)
+
+Hey everyone! I just put together a guide on implementing **RAG** and building vector databases in LangChain. I am Open to **internships** and **project collaborations**feel free to DM me!
+
+PDF 
+
+[__](https://langchaincommunity.slack.com/files/U09QB9WK4FQ/F09BH0EV7CK/vector_databases_and_rag_retrieval_augmented_generation__1755881755.pdf?origin_team=T05P4BNF01J\&origin_channel=C079U7CRJR2)
+
+[Vector\_Databases\_and\_RAG\_Retrieval\_Augmented\_Generation\_\_1755881755](https://langchaincommunity.slack.com/files/U09QB9WK4FQ/F09BH0EV7CK/vector_databases_and_rag_retrieval_augmented_generation__1755881755.pdf?origin_team=T05P4BNF01J\&origin_channel=C079U7CRJR2)
+
+[PDF](https://langchaincommunity.slack.com/files/U09QB9WK4FQ/F09BH0EV7CK/vector_databases_and_rag_retrieval_augmented_generation__1755881755.pdf?origin_team=T05P4BNF01J\&origin_channel=C079U7CRJR2)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09BH0EV7CK/download/vector_databases_and_rag_retrieval_augmented_generation__1755881755.pdf?origin_team=T05P4BNF01J)
+
+![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)4
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U096M05559U-gbb1fd762ab9-48)
+
+Meir Kadosh  [13:48 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1756208904193969)
+
+Hi Everyone,Just build a cool OSS event hunter using Deep Agents which was one of the EASIEST ways to set up a multi agent system, I highly recommend on exploring it, feel free to use my repo :\
+<https://github.com/brightdata/event-hunter>\
+Demo video:\
+<https://www.youtube.com/watch?v=eB3A4Gd91Pc>\
+Dev .to blog:\
+<https://dev.to/meirk-codes/building-event-hunter-ai-a-multi-agent-system-for-intelligent-event-discovery-1cij>Feel free to use it, fork it, and contribute if you want ![:herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2764-fe0f.png)
+
+![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)2![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08D8GZUZ88-74080d3b650c-48)
+
+Lautaro Gesuelli Pinto  [17:26 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1756222012754419)
+
+Hey everyone,Handling concurrent interrupts with human-in-the-loop (hilt) is not trivial, so I built a minimal LangGraph ReAct agent to demonstrate it:- Each worker/tool executes its action and then pauses with \`interrupt()\`, waiting for human input (accept, edit, or reject)\
+\- The \`resume()\` method allows resolving one or a batch of interrupts out of order\
+\- Once all workers complete, the agent produces a single consolidated responseI'm working on adapting the front-end to support this. Will share it soon.\
+<https://x.com/lgesuelli_p/status/1960357458662072370>
+
+![X (formerly Twitter)](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=http%3A%2F%2Fabs.twimg.com%2Ffavicons%2Ftwitter.3.ico)X (formerly Twitter)
+
+[Lautaro Gesuelli (@lgesuelli\_p) on X](https://x.com/lgesuelli_p/status/1960357458662072370)
+
+Handling concurrent interrupts with human-in-the-loop (hilt) is not trivial, so I built a minimal LangGraph ReAct agent to demonstrate it:- Each worker/tool executes its action and then pauses with `interrupt()`, waiting for human input (accept, edit, or reject)\
+\- The (145 kB)__
+
+[https://x.com/lgesuelli\_p/status/1960357458662072370](https://x.com/lgesuelli_p/status/1960357458662072370 "Lautaro Gesuelli (@lgesuelli_p) on X")
+
+[](https://x.com/lgesuelli_p/status/1960357458662072370)
+
+![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f680.png)2![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)3![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)3
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08S7FC3951-f0b1dbd48d37-48)
+
+Matheus  [16:25 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1756304744571369)
+
+Hey guys!! How is everyone doing? I created a RAG architecture, and I'm still improving it actually. I'm new to the world of AI applications, and I would like to know your opinions!\
+<https://github.com/Optimus-Data/cmcj-chatbot>
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U088BNTQAKW-g77c33ebf87b-48)
+
+Esteban  [05:21 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1756351287988429)
+
+Hey all ![:winken:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f44b.png) I built a **text2SQL RAG** for all your databases and agents called [ToolFront](https://docs.toolfront.ai/). (bearbeitet) 
+
+image.png 
+
+[![image.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09D78VT65N-50c3cc53a7/image_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09D78VT65N/image.png)
+
+![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f680.png)2![:herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/2764-fe0f.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U088BNTQAKW-g77c33ebf87b-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09CJSH5R0R-g19c9f1c0687-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08TMGE5NJ1-g07ff2be316e-24)7 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U0976D6N6ES-2fc86e2a82b1-48)
+
+Narendra Ogety  [08:18 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1756448295836159)
+
+Hey everyone! [#i-made-this](https://langchaincommunity.slack.com/archives/C079U7CRJR2) [#i-read-this](https://langchaincommunity.slack.com/archives/C06BRDE7UF7)I’m on a mission to really learn LangChain and eventually become an engineer who uses it daily in their job. I already have a strong base in SQL, Python, and scripting, but I know that to get good at LangChain I need to go beyond theory.That’s why I’d love it if people here who build something — big or small — could share a complete doc + working prototype. It helps learners like me study how things fit together, re-create the flow, and truly understand the “why” behind the build.I’m here not just to watch but to participate, share back my learnings, and hopefully collaborate with some of you along the way. Every shared experiment makes all of us better
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09D2M02EGZ-daed5bbbbc38-48)
+
+Tal  [15:55 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1756475706037959)
+
+I’ve been working on a **retrieval firewall** for RAG pipelines.\
+Instead of filtering LLM outputs, it scans _retrieved chunks before they hit the model_:\
+ – auto-deny prompt injection & secret leaks\
+ – flag/rerank PII, encoded blobs, and unapproved URLs\
+ – YAML policies + JSONL audit logs\
+Works as a drop-in wrapper for LangChain retrievers:
+
+```
+from rag_firewall import Firewall, wrap_retriever  
+fw = Firewall.from_yaml("firewall.yaml")  
+safe = wrap_retriever(base_retriever, firewall=fw)  
+docs = safe.get_relevant_documents("What is our mission?")  
+```
+
+OSS, Apache-2.0: <https://github.com/taladari/rag-firewall>\
+Would love feedback — especially if you’ve seen real-world prompt injections or retrieval poisoning we should test against.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09D2M02EGZ-daed5bbbbc38-24)1 Antwort
+
+vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09AKHR3VL3-b4231fd5c651-48)
+
+Kanishk Gupta  [21:35 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1756496118523509)
+
+Hey folks, I recently posted about promptius a few days ago, it's an agent that can build langgraph agents\
+I created an interactive demo:<https://app.arcade.software/share/aciddZeC5CQWIFC8VUSv?ref=share-link>\
+Trying to see if this resonates with folks here. If anyone feels excited particularly to collaborate or participate as an early adopter, please hit me up on DM or join our waitlist at <https://promptius.ai/waitlist>
+
+![Arcade](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fcdn.arcade.software%2Fimages%2Fbutton-logo-128.png)Arcade
+
+[Create and Automate Email, Issue, and Ticket Workflows](https://app.arcade.software/share/aciddZeC5CQWIFC8VUSv?ref=share-link) (234 kB)__
+
+[https://app.arcade.software/share/aciddZeC5CQWIFC8VUSv?ref=share-link](https://app.arcade.software/share/aciddZeC5CQWIFC8VUSv?ref=share-link "Create and Automate Email, Issue, and Ticket Workflows")
+
+[](https://app.arcade.software/share/aciddZeC5CQWIFC8VUSv?ref=share-link)
+
+promptius.ai
+
+[Promptius - Enterprise AI Agent Creation Platform](https://promptius.ai/waitlist)
+
+Build, customize, and deploy AI agents in minutes without extensive coding. Automate workflows, analyze data, and enhance customer interactions.
+
+![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09D2M02EGZ-daed5bbbbc38-48)
+
+Tal  [16:16 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1756563405085969?thread_ts=1756475706.037959\&cid=C079U7CRJR2)
+
+hat auf einen Thread geantwortet:I’ve been working on a retrieval firewall for RAG pipelines.…
+
+300+ installs in 24h, RAG Firewall now with GraphRAG support.
+
+![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U07TYD0J5UL-cec33899e665-48)
+
+Gustaf G  [11:20 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1756632015977689)
+
+Hi everyone, sharing the open-source project I made to get my first AI Engineer job a year ago (I'm self-taught), since a lot of people seem to like it:\
+<https://youtu.be/k7zFH1PYaRA>Happy to help with any questions from people who are on the same journey!
+
+[![YouTube](https://a.slack-edge.com/80588/img/unfurl_icons/youtube.png)](https://www.youtube.com/)[YouTube](https://www.youtube.com/) | [PropTech Founder](https://www.youtube.com/@PropTechFounder)
+
+[This project got me my first AI Engineer job](https://youtu.be/k7zFH1PYaRA) __
+
+__[__](https://youtu.be/k7zFH1PYaRA)
+
+![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09CZ1K2RA6-b2dcf4b9f014-48)
+
+Bob  [17:17 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1756739825257249)
+
+NeuroPilot: An Open-Source Study CompanionI’ve been working on an open-source project called NeuroPilot that transforms study materials into interactive learning resources.\
+It’s built with LangChain + JavaScript and is designed to help students, educators, and researchers study more effectively.Features include:\
+\- Contextual chat with uploaded documents (PDF, DOCX, Markdown, TXT)\
+\- Automatic generation of Cornell-style notes\
+\- Flashcards for spaced repetition\
+\- Quizzes with hints, explanations, and scoring\
+\- Podcasts and audio lessons generated from notesRepo: <https://github.com/CaviraOSS/neuropilot>Would love feedback, ideas for new use cases, or thoughts on where this could fit into learning workflows.
+
+neuropilot.png 
+
+[![neuropilot.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09D434K4HJ-d03d346a82/neuropilot_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09D434K4HJ/neuropilot.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09D434K4HJ/download/neuropilot.png?origin_team=T05P4BNF01J)
+
+![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)4![:herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/2764-fe0f.png)1![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U092GSES2DQ-g066d91d91a4-48)
+
+Chandrani Mukherjee  [05:10 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1756955409341619)
+
+Hi All, Hope everyone is doing good. Wanted to share my latest article on Langchain <https://dev.to/moni121189/from-scanned-pdfs-to-smart-docs-ocr-with-langchain-docker-aws-3jlm>
+
+![DEV Community](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fmedia2.dev.to%2Fdynamic%2Fimage%2Fwidth%3D180%2Cheight%3D%2Cfit%3Dscale-down%2Cgravity%3Dauto%2Cformat%3Dauto%2Fhttps%253A%252F%252Fdev-to-uploads.s3.amazonaws.com%252Fuploads%252Farticles%252F8j7kvp660rqzt99zui8e.png)DEV Community
+
+[From Scanned PDFs to Smart Docs: OCR with LangChain, Docker & AWS](https://dev.to/moni121189/from-scanned-pdfs-to-smart-docs-ocr-with-langchain-docker-aws-3jlm)
+
+![:gehirn:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f9e0.png) OCR Any PDF with LangChain, Docker, and AWS Using OCRmyPDF Many PDFs are just images —... (37 kB)__
+
+[https://dev.to/moni121189/from-scanned-pdfs-to-smart-docs-ocr-with-langchain-docker-aws-3jlm](https://dev.to/moni121189/from-scanned-pdfs-to-smart-docs-ocr-with-langchain-docker-aws-3jlm "From Scanned PDFs to Smart Docs: OCR with LangChain, Docker \&amp; AWS")
+
+[](https://dev.to/moni121189/from-scanned-pdfs-to-smart-docs-ocr-with-langchain-docker-aws-3jlm)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09675C85ST-0759ab1299c2-48)
+
+Knooz Fatima  [14:41 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1756989681634129)
+
+![:umschlag\_mit\_pfeil:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4e9.png)I built something I wish I had years ago, a Gmail Inbox Manager & Classifier with n8n.\
+It auto-sorts emails into categories, applies labels, and sends smart replies. ![:roboter:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f916.png)\
+![:nach\_rechts\_zeigen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f449.png)No more inbox overwhelm, no more missed priorities.\
+![:nach\_rechts\_zeigen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f449.png)Sharing it here so more people can reach inbox zero!\
+![:nach\_rechts\_zeigen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f449.png)drop “JSON” in reply to get the file
+
+Gmail Classifier n8n.mp4 
+
+> Hey there. This is another AI workflow. this workflow automatically manages Gmail by classifying emails and sending smart replies using AI. So let's… Transkript anzeigen
+
+![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)1
+
+[14:43 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1756989806291269)
+
+![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png) Built something cool with n8n + AI – a workflow that auto-creates posts for LinkedIn, Facebook & Blogs!\
+ ![:blitzschnell:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/26a1.png) Say goodbye to repetitive content writing, and hello to automation.\
+ ![:glühbirne:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4a1.png) drop “JSON” in reply to get the file
+
+n8n 3 contents.mp4 
+
+> Hey there. so it is an AI workflow which will, insert. Content for 3 platforms. One is LinkedIn, Facebook, and the website blog. So we are gonna,,… Transkript anzeigen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09DG5LMSUA-g67f4bfa5c8e-48)
+
+Gajanan Patil  [15:30 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1756992638865449)
+
+Getting structured JSON from small language models (SLMs) can be a real challenge. It's far more natural for them to generate a simple query like this:\
+"show name, price where price < 20"\
+...than a verbose JSON object like this:\`\`\`\
+{\
+ "command": {\
+  "type": "filter",\
+  "select": "name, rollno",\
+  "condition": {\
+   "column": "age",\
+   "operator": ">",\
+   "value": 25\
+  }\
+ }\
+}\
+\`\`\`So, I built a new app to explore a more natural way to get structured data from SLMs (1.7b model), right in your browser!𝐌𝐲 𝐚𝐩𝐩𝐫𝐨𝐚𝐜𝐡 𝐥𝐞𝐚𝐧𝐬 𝐢𝐧𝐭𝐨 𝐭𝐡𝐞 𝐦𝐨𝐝𝐞𝐥'𝐬 𝐬𝐭𝐫𝐞𝐧𝐠𝐭𝐡𝐬 𝐢𝐧𝐬𝐭𝐞𝐚𝐝 𝐨𝐟 𝐟𝐢𝐠𝐡𝐭𝐢𝐧𝐠 𝐭𝐡𝐞𝐦:\
+𝐆𝐮𝐢𝐝𝐞 𝐰𝐢𝐭𝐡 𝐆𝐫𝐚𝐦𝐦𝐚𝐫: I feed the SLM a system prompt containing a formal grammar (using EBNF/Lark). This nudges the model to produce output that follows a predictable, text-based structure like the first example.\
+𝐏𝐚𝐫𝐬𝐞 𝐭𝐡𝐞 𝐎𝐮𝐭𝐩𝐮𝐭: A custom output parser, built with Lark and running in Pyodide, then easily transforms this structured text into a developer-friendly format like JSON.This entire pipeline runs client-side in browser thanks to an awesome tech stack:\
+𝐌𝐨𝐝𝐞𝐥: Qwen3-1.7b (q4f16)\
+𝐄𝐧𝐠𝐢𝐧𝐞: MLC's WebLLM engine for in-browser inference\
+𝐑𝐮𝐧𝐭𝐢𝐦𝐞: **[LangChain](https://www.linkedin.com/feed/#)**’s LangGraph Web\
+𝐀𝐫𝐜𝐡𝐢𝐭𝐞𝐜𝐭𝐮𝐫𝐞: Two separate web workers—one for the model and one for the Python-based Lark parser.\
+𝐔𝐈: assistant-ui𝐀𝐩𝐩 𝐋𝐢𝐧𝐤: [https://bendernet.vercel.app](https://bendernet.vercel.app/)\
+𝐆𝐢𝐭𝐡𝐮𝐛 𝐋𝐢𝐧𝐤: <https://lnkd.in/dnGcwRE3>Original Linkedin Post: <https://www.linkedin.com/feed/update/urn:li:activity:7369358620875993088>
+
+BenderLinkedInDemo.mp4 
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09675C85ST-0759ab1299c2-48)
+
+Knooz Fatima  [18:12 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1757002321397049)
+
+![:nach\_rechts\_zeigen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f449.png) What if you could create SEO-optimized blogs in minutes?![:funkelnde\_sterne:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2728.png) “This workflow automates the entire process ->research, writing, refining, and even designing visuals.”---------------------------------Steps-----------------------------------------\
+![:reißzwecke:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4cc.png) Step 1 – Scraping Top Results\
+ “We start by pulling content directly from Google’s top-ranking articles on your topic.”![:reißzwecke:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4cc.png) Step 2 – Cleaning & Extracting\
+ “The workflow cleans up the data, keeping only the valuable body text.”![:reißzwecke:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4cc.png) Step 3 – AI Summarization & Writing\
+ “AI then analyzes, summarizes, and turns it into a detailed blog that’s engaging and SEO-friendly.”![:reißzwecke:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4cc.png) Step 4 – Refinement & Personalization\
+ “It refines the tone to feel human, conversational, and tailored for readers.”![:reißzwecke:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4cc.png) Step 5 – Final Touch\
+ “And finally, it auto-generates visuals and saves the polished blog with images straight into Google Drive.”![:nach\_rechts\_zeigen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f449.png)drop “JSON” to get the file
+
+Seo Content N8N.mp4 
+
+> Hey there, this is Kunu Fatma, and here is the another AI workflow which is related to SEO content generation. OK. let's execute this workflow and… Transkript anzeigen
+
+![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)2
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U0951QB5JKV-a7c24c38f53d-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09CF4597DG-g604bf1515c9-24)2 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08NTK9FFCK-c4d0ce9bd7ae-48)
+
+johnda98  [21:57 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1757015836390009)
+
+Progress !  Full local deploy of a Open Agent Platform,  production capable, - next step deploy to GCP/ CloudRun for a containerized Langconnect RAG server and Langgraph for both Supervisor Agent and SubAgents. Flex App Engine for the next.js webapp you can see here.  Uses Supabase, Arcade for MCP Sub Agent Tools select and use as the SubAgents sees fit.  Langsmith all sewn in of course and can choose use of own LLM API keys. Client Stellantis - MOPAR/Chrysler - RAM.Create account.. logon and enter your Vehicle make, model year and trim and miles..  Create new subagents first..3 or 4 clicks - edit pre-presented prompt - kick off Engineer Sub-Agents( Tools & RAG doc access for all subAgents) essentially specialized Technicians for Engine,brakes,transmission,electrical and the Supervisor Agent( akin to a Dealer Service Manager).. but a decent ROI % cheaper than a visit to a Dealer.. in time and Hour charges for diagnostics.AI Tech Engineer specialists that have access to your own Service documents/build sheet/old pdf invoices of work done.. etc..    are less likely to up-sell you or bait you in for more billable diagnostics.  You can even ask the Agents to go shopping for parts, itteratively.Working on long term memory secured- b/e Postgre - or similar..  prob use langgraph platform store class for each Customer signup/login/ email as tuple.. and session saves...  so each login will enable Agents to draw from prior sessions memory but with a toggle switch to be added for Erase of long term.. embeddings  to use the semantic or sequential search memory feature to be used .. method of Store.   more cost but a feature if Customer wishes to utilize via toggle. (bearbeitet) 
+
+3 Dateien 
+
+Alle herunterladen
+
+[![Screenshot 2025-09-04 at 12.49.56 PM.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09DGSJ5G4T-b067593462/screenshot_2025-09-04_at_12.49.56___pm_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09DGSJ5G4T/screenshot_2025-09-04_at_12.49.56___pm.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09DGSJ5G4T/download/screenshot_2025-09-04_at_12.49.56___pm.png?origin_team=T05P4BNF01J)
+
+[![Screenshot 2025-09-04 at 12.49.01 PM.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09EE6FCAG0-cfe54c1557/screenshot_2025-09-04_at_12.49.01___pm_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09EE6FCAG0/screenshot_2025-09-04_at_12.49.01___pm.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09EE6FCAG0/download/screenshot_2025-09-04_at_12.49.01___pm.png?origin_team=T05P4BNF01J)
+
+[![Screenshot 2025-09-04 at 12.48.27 PM.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09D6D1QX9D-1eb8a6fdcd/screenshot_2025-09-04_at_12.48.27___pm_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09D6D1QX9D/screenshot_2025-09-04_at_12.48.27___pm.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09D6D1QX9D/download/screenshot_2025-09-04_at_12.48.27___pm.png?origin_team=T05P4BNF01J)
+
+![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08NTK9FFCK-c4d0ce9bd7ae-48)
+
+johnda98  [22:06 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1757016387581779)
+
+Smart enough to give me Ohm meter ranges for each diesel cummins injector posts - to detect any failing injector AND to indicate that a errant Chassis 'trouble code' in a EMU sub module can indicate a short in the license plate bulb area that can throw a sensor in the transfer case shift motor(the nearest sensor to the rear of the chassis)... ie it points to red herrings... savings 1000$s.ie..  Humanoid.. won't have to pay 400$ for a new xfer case Shift motor.. the sensor over voltage could be due to a 12V short in the license plate area(vibration caused).. and indeed that was the case... fix cost.. 0$ ( self inspection and find and tape up chaffed wire). (bearbeitet) 
+
+![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)1![:+1:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f44d.png)1
+
+[22:08 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1757016532135489)
+
+Screenshot 2025-09-04 at 1.08.25 PM.png 
+
+[![Screenshot 2025-09-04 at 1.08.25 PM.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09EE8NNQE4-d202f03879/screenshot_2025-09-04_at_1.08.25___pm_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09EE8NNQE4/screenshot_2025-09-04_at_1.08.25___pm.png)
+
+[22:12 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1757016730448119)
+
+Screenshot 2025-09-04 at 1.11.39 PM.png 
+
+[![Screenshot 2025-09-04 at 1.11.39 PM.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09DR64DDN0-07ebedec02/screenshot_2025-09-04_at_1.11.39___pm_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09DR64DDN0/screenshot_2025-09-04_at_1.11.39___pm.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09DR64DDN0/download/screenshot_2025-09-04_at_1.11.39___pm.png?origin_team=T05P4BNF01J)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08CCSZHAAW-gdf4054c7591-48)
+
+Adesola Adedewe  [09:13 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1757056402538639)
+
+[https://epoch.trade](https://epoch.trade/)
+
+__
+
+Diese Datei wurde gelöscht.
+
+![Epoch Trade](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fwww.epoch.trade%2Ffavicon.ico)Epoch Trade
+
+[Epoch Trade - Professional Algorithmic Trading Platform](https://epoch.trade/)
+
+Build, test, and deploy algorithmic trading strategies, without writing code. Access historical and live market data, high-performance backtesting, and automated trade management. (114 kB)__
+
+[https://epoch.trade/](https://epoch.trade/ "Epoch Trade - Professional Algorithmic Trading Platform")
+
+[](https://epoch.trade/)
+
+![:+1:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f44d.png)1
+
+[09:14 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1757056453434729)
+
+TwitterReady.mp4 
+
+> Transkript erstellen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08PUDLK3K6-ge1fcf9f64bc-48)
+
+Andrew Le Guelaff  [22:25 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1757190331797579)
+
+![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png) **Hey i-made-this fam!**&#x49;’m part of **Key Singularity**, an AI Lab pushing the boundaries of **voice-enabled agents**. Using **LangGraph**, we’ve built **CASI** — an **AI Interviewer & Screener** that adapts in real time and makes the hiring process way smarter (and a lot more fun).We’re on the lookout for some **brilliant vibe coders** ![:noten:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f3b6.png)![:technologin:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f469-200d-1f4bb.png)![:technologe:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f468-200d-1f4bb.png) to join our team and help us create the next wave of AI-powered products.![:nach\_rechts\_zeigen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f449.png) **Try CASI here:** <https://futureinterview.com/apply/e372e2bb-0c5f-4f80-afb3-7091d31adbd9>Take it for a spin, drop your info if you’re interested, and let us know what you think of your screening experience — we’d love the feedback!Let’s build something amazing together. ![:blitzschnell:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/26a1.png)— Andrew @ Key Singularity (bearbeitet) 
+
+futureinterview.com
+
+[AI Interview Screening](https://futureinterview.com/apply/e372e2bb-0c5f-4f80-afb3-7091d31adbd9)
+
+AI-powered employment screening interviews
+
+![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U085AKS4Y1K-9ca723cca4c9-48)
+
+Curtis Nye  [00:27 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1757284069126109)
+
+Hey everyone,I’m building **AffinityBots**, a platform that makes it easy to **create, connect, and deploy AI agents** powered by LangGraph.With AffinityBots you can:
+
+* ![:hammer\_und\_schraubenschlüssel:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f6e0-fe0f.png) Spin up custom agents in minutes with built-in tools & memory
+* ![:link:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f517.png) Connect multiple agents into **multi-agent workflows**
+* ![:bücher:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4da.png) Add knowledge bases & cross-thread memory for richer context
+* ![:eyes:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f440.png) Track & observe everything with full transparency
+
+Whether you’re experimenting, prototyping, or deploying production-ready agents, AffinityBots is built to give you **flexibility without the complexity**.![:nach\_rechts\_zeigen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f449.png) Try it out here: [https://AffinityBots.com](https://affinitybots.com/) We’re currently in early access, and I’d love your feedback as we shape the next wave of agent collaboration.
+
+![affinitybots.com](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fwww.affinitybots.com%2Ffavicon.ico)affinitybots.com
+
+[AffinityBots](https://affinitybots.com/)
+
+Build and manage AI agent workflows
+
+![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)3
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08TR1S3VJM-g8a38dc9563b-48)
+
+Neeraj Kumar  [09:03 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1757401397003089)
+
+Hi All,\
+ I’ve just released my latest project on Hugging Face:\
+ ![:umarmendes\_gesicht:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f917.png) <https://huggingface.co/neeraj-kumar-47/aibastion-prompt-injection-jailbreak-detector>\
+![:rundumleuchte:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f6a8.png) The threat isn’t just what AI can do — it’s how attackers hijack it with prompt injections & jailbreaks.\
+I’ve fine-tuned **AI Bastion: Prompt Injection & Jailbreak Detector**, a guardrail model that is:\
+ ![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png) Lightweight – Runs on laptops, no GPU needed\
+ ![:vorhängeschloss:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f512.png) Privacy-first – Works locally, data never leaves your system\
+ ![:schild:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f6e1-fe0f.png) Robust – Trained on diverse adversarial attacks (encoding, persona abuse, obfuscation, tool misuse)\
+ ![:balkendiagramm:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4ca.png) Accurate – Tested with 98%+ performance (F1 = 0.9896, Precision = 0.9836, Recall = 0.9956)\
+Please check it out and share your thoughts — your feedback will be very valuable.
+
+huggingface.co
+
+[neeraj-kumar-47/aibastion-prompt-injection-jailbreak-detector · Hugging Face](https://huggingface.co/neeraj-kumar-47/aibastion-prompt-injection-jailbreak-detector)
+
+We’re on a journey to advance and democratize artificial intelligence through open source and open science. (426 kB)__
+
+[https://huggingface.co/neeraj-kumar-47/aibastion-prompt-injection-jailbreak-detector](https://huggingface.co/neeraj-kumar-47/aibastion-prompt-injection-jailbreak-detector "neeraj-kumar-47/aibastion-prompt-injection-jailbreak-detector · Hugging Face")
+
+[](https://huggingface.co/neeraj-kumar-47/aibastion-prompt-injection-jailbreak-detector)
+
+[09:03 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1757401413132059)
+
+Hi All,\
+ Here’s a short demo video I’ve shared on LinkedIn showing **AI Bastion** in action:\
+ ![:link:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f517.png) <https://www.linkedin.com/feed/update/urn:li:activity:7371055720672366593/>\
+![:schild:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f6e1-fe0f.png) **AI Bastion: Prompt Injection & Jailbreak Detector** is my fine-tuned guardrail model for GenAI apps.\
+The video shows how it:\
+ ![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png) Detects harmful prompts (injections, jailbreaks, abuse) before they reach your LLMs\
+ ![:vorhängeschloss:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f512.png) Lets harmless prompts pass safely, preserving usability\
+ ![:blitzschnell:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/26a1.png) Runs lightweight on laptops — no GPU required\
+ ![:balkendiagramm:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4ca.png) Achieves 98%+ accuracy on test data\
+Please take a look, and let me know what you think — I’d love your feedback.
+
+![:herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/2764-fe0f.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09AEKQPW2J-gd993927a47f-48)
+
+David Bacelj  [09:23 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1757489035807689)
+
+Hi All! Just submited our AI Models for function calling to producthunt! ![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png) Please check it out, appreciate if you guys could leave a comment ![:lächeln:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f604.png)
+
+![:nach\_unten\_zeigen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f447.png)![:nach\_unten\_zeigen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f447.png)![:nach\_unten\_zeigen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f447.png)![:nach\_unten\_zeigen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f447.png)![:nach\_unten\_zeigen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f447.png)
+
+**[PRODUCTHUNT](http://www.producthunt.com/products/incredible?launch=incredible-small-1-0-by-incredible)**
+
+![:nach\_oben\_zeigen2:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f446.png)![:nach\_oben\_zeigen2:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f446.png)![:nach\_oben\_zeigen2:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f446.png)![:nach\_oben\_zeigen2:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f446.png)![:nach\_oben\_zeigen2:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f446.png)
+
+**Thanks a lot!!&#xA0;**![:beten::hautton-2:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f64f-1f3fb.png)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09675C85ST-0759ab1299c2-48)
+
+Knooz Fatima  [18:24 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1757521476574709)
+
+![:glühbirne:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4a1.png)Want ad-ready images without designers? Let me show you my NanoBanana Workflow in n8n that makes it happen in seconds.![:nach\_rechts\_zeigen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f449.png)This workflow automatically takes an image, analyzes it, and generates a professional ad-ready version using AI. Let’s walk through how it works.![:reißzwecke:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4cc.png) Step 1 – Form Trigger\
+ “We start with a simple form trigger. Here, I can upload an image and give it a short description. This kicks off the entire workflow.”![:reißzwecke:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4cc.png) Step 2 – Upload to Google Drive\
+ “Next, the workflow uploads that image to Google Drive. This makes the file accessible for the next AI steps.”![:reißzwecke:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4cc.png) Step 3 – AI Image Analysis\
+ “Then, the image is analyzed using OpenAI’s vision model. It checks whether the picture is mainly a product, a character, or both, and describes the visual details in structured YAML format.”![:reißzwecke:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4cc.png) Step 4 – Prompt Generation\
+ “Based on that analysis, another AI agent creates a short and natural image prompt. This prompt is carefully designed for ad use, making sure the product looks authentic, the text stays accurate, and the style feels realistic—like a genuine ad photo.”![:reißzwecke:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4cc.png) Step 5 – Structured Parsing\
+ “To keep things consistent, the prompt is passed through a structured parser. This ensures the final text is clean and ready to use.”![:reißzwecke:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4cc.png) Step 6 – Image Generation via OpenRouter\
+ “Now comes the fun part! The workflow sends both the original image and the AI-generated prompt to the OpenRouter API, which calls Google’s Gemini 2.5 Flash model. This generates a brand new ad-style image.”![:reißzwecke:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4cc.png) Step 7 – File Conversion & Save\
+ “The generated image data is processed, converted into a file, and stored. So at the end, I get a ready-to-use ad image that matches my original product shot, but looks polished for marketing.”![:nach\_rechts\_zeigen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f449.png)drop “ad-ready” in the comments to get the file
+
+Ad-Image Ready NanoBanana Workflow.mp4 
+
+> Transkript erstellen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09675C85ST-0759ab1299c2-24)4 Antworten
+
+Letzte Antwort vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09ERRFAXEV-ge5d1aface41-48)
+
+OriW  [20:15 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1757528111164919)
+
+![:winken:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f44b.png) Hi all,\
+ My team and I at Forter are working on [Trusted Agentic Commerce Protocol (TACP)](https://github.com/forter/trusted-agentic-commerce-protocol) - an open standard for how agents can safely interact with commerce flows (checkout, payments, accounts, etc.).\
+I think it could be relevant for LangChain builders working with tool-driven, multi-step agents. I’m planning to share a LangChain example using the protocol soon — would love feedback or contributions from the community.\
+<https://github.com/forter/trusted-agentic-commerce-protocol>\
+![:stern:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2b50.png) (bearbeitet) 
+
+![:herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/2764-fe0f.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U086KGJTRP1-f770cbb924ad-48)
+
+Victor von Sohsten  [12:47 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1758192459012229)
+
+Hey guys, I’ve revamped my Awesome LangGraph repo to reflect the broader LangChain + LangGraph ecosystem following the LangChain v1 (alpha) release.Repo: <https://github.com/von-development/awesome-LangGraph>Open to enhancements suggestions and new project adds, PRs or DMs welcome. Hope you find it useful!
+
+![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)1![:gb:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f1ec-1f1e7.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08SB6N90S0-8cc0247d020e-24)1 Antwort
+
+vor 2 MonatenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U094JGJNJUX-9e564b3d9802-48)
+
+Radi  [13:14 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1758194047058579)
+
+[https://www.linkedin.com/posts/pisakhov\_ai-machinelearning-opensource-activity-737439\[…\]m=member\_desktop\&rcm=ACoAAAxL3AIBX5UOQLC075aL7bBXbYXVSrfY83o](https://www.linkedin.com/posts/pisakhov_ai-machinelearning-opensource-activity-7374399231861686272-t9qh?utm_source=share\&utm_medium=member_desktop\&rcm=ACoAAAxL3AIBX5UOQLC075aL7bBXbYXVSrfY83o)MOLD Agent extends Prebuilt ReAct Agent from LangGraph by combining traditional tools (for actions) with molds (for data structure).free to use, would love to hear feedback. I believe that if models will be fine-tuned to mold calling and tool calling, it would be a game changer for agentic frameworks. I believe there is a better way to build it. don't you?
+
+image.png 
+
+[![image.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09GAD4B9PB-d581289ed3/image_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09GAD4B9PB/image.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09GAD4B9PB/download/image.png?origin_team=T05P4BNF01J)
+
+![linkedin.com](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fstatic.licdn.com%2Faero-v1%2Fsc%2Fh%2Fal2o9zrvru7aqj8e1x2rzsrca)linkedin.com
+
+[#ai #machinelearning #opensource #langgraph #react #mold | Radi Pisakhov](https://www.linkedin.com/posts/pisakhov_ai-machinelearning-opensource-activity-7374399231861686272-t9qh?utm_source=share\&utm_medium=member_desktop\&rcm=ACoAAAxL3AIBX5UOQLC075aL7bBXbYXVSrfY83o)
+
+𝐈𝐧𝐭𝐫𝐨𝐝𝐮𝐜𝐢𝐧𝐠 𝐌𝐎𝐋𝐃 𝐀𝐠𝐞𝐧𝐭 - 𝐌𝐨𝐝𝐮𝐥𝐚𝐫 𝐎𝐮𝐭𝐩𝐮𝐭 𝐋𝐞𝐚𝐫𝐧𝐢𝐧𝐠 𝐃𝐞𝐬𝐢𝐠𝐧Working with AI agents often means dealing with inconsistent outputs and manual data parsing. I've been exploring a different approach through "molds" - predefined schemas that guide how agents structure their thinking.MOLD Agent extends Prebuilt ReAct Agent from LangGraph by combining traditional tools (for actions) with molds (for data structure). Instead of free-form responses, agents organize their reasoning around your defined schemas.Key features:\
+1\. Schema-driven context engineering\
+2\. Dynamic state management based on your data models\
+3\. Separation of action tools and structure molds\
+4… Mehr anzeigen (21 kB)__
+
+[https://www.linkedin.com/posts/pisakhov\_ai-machinelearning-opensource-activity-7374399231861686272-t9qh?utm\_source=share\&utm\_medium=member\_desktop\&rcm=ACoAAAxL3AIBX5UOQLC075aL7bBXbYXVSrfY83o](https://www.linkedin.com/posts/pisakhov_ai-machinelearning-opensource-activity-7374399231861686272-t9qh?utm_source=share\&utm_medium=member_desktop\&rcm=ACoAAAxL3AIBX5UOQLC075aL7bBXbYXVSrfY83o "#ai #machinelearning #opensource #langgraph #react #mold | Radi Pisakhov")
+
+[](https://www.linkedin.com/posts/pisakhov_ai-machinelearning-opensource-activity-7374399231861686272-t9qh?utm_source=share\&utm_medium=member_desktop\&rcm=ACoAAAxL3AIBX5UOQLC075aL7bBXbYXVSrfY83o)
+
+![:glühbirne:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f4a1.png)3
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09GAL8T0GH-1d28d756deb5-48)
+
+yash  [14:26 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1758198375052439)
+
+<https://github.com/yswa-var/rfp-bid>generate Request for Proposal applications, focuses on managing best context. using multiple rags for each type of conversationp.s. langGraph's supervisor agent system and agent's grouping take is awesome.\
+kudos to the creators ![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f64c.png)Short demo: <https://youtu.be/Sj3u_DqEyEM> (bearbeitet) 
+
+image.png 
+
+[![image.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09GQ62PRRN-438d9ca692/image_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09GQ62PRRN/image.png)
+
+[![YouTube](https://a.slack-edge.com/80588/img/unfurl_icons/youtube.png)](https://www.youtube.com/)[YouTube](https://www.youtube.com/) | [ZeroToBlock](https://www.youtube.com/@ZeroToBlock)
+
+[RFP-BID application System - langGraph Studio](https://youtu.be/Sj3u_DqEyEM) __
+
+__[__](https://youtu.be/Sj3u_DqEyEM)
+
+![:gb:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f1ec-1f1e7.png)2
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08SB6N90S0-8cc0247d020e-48)
+
+atc  [18:19 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1758298796512799)
+
+Wrote some thoughts on the 1.0 release and the Deep Research project: <https://www.langchainpages.com/blog/09-19-2025-langchain-pages-weekly-updates>
+
+![langchainpages.com](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fwww.langchainpages.com%2Fimages%2Ffavicon.ico)langchainpages.com
+
+[LangChain Pages - LangChain use cases, templates, and practical guides](https://www.langchainpages.com/blog/09-19-2025-langchain-pages-weekly-updates)
+
+LangChain use cases, templates, and practical guides
+
+![:herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/2764-fe0f.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09FUMRURFZ-19efe2cf3341-48)
+
+Yash Giri  [17:24 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1758381848745489)
+
+Simple RAG is dead for complex domains like finance.\
+To answer tough tax and compliance questions, you need an AI that can think. An agent that can create a plan, execute it, and validate its own findings.\
+So I built one.\
+My new article breaks down the architecture of an Agentic RAG system I developed.\
+<https://medium.com/@yashgiri803/advanced-ai-for-finance-and-tax-a-deep-dive-into-an-agentic-rag-system-e2efd1a83a06>
+
+![Medium](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afill%3A304%3A304%2F10fd5c419ac61637245384e7099e131627900034828f4f386bdaa47a74eae156)Medium
+
+[Advanced AI for Finance and Tax: A Deep Dive into an Agentic RAG System](https://medium.com/@yashgiri803/advanced-ai-for-finance-and-tax-a-deep-dive-into-an-agentic-rag-system-e2efd1a83a06)
+
+In the world of finance and tax, answers are rarely simple. A single query can depend on jurisdiction, the current year, recent legal…
+
+Reading time
+
+7 min read
+
+19\. Sept.
+
+[https://medium.com/@yashgiri803/advanced-ai-for-finance-and-tax-a-deep-dive-into-an-agentic-rag-system-e2efd1a83a06](https://medium.com/@yashgiri803/advanced-ai-for-finance-and-tax-a-deep-dive-into-an-agentic-rag-system-e2efd1a83a06 "Advanced AI for Finance and Tax: A Deep Dive into an Agentic RAG System")
+
+[](https://medium.com/@yashgiri803/advanced-ai-for-finance-and-tax-a-deep-dive-into-an-agentic-rag-system-e2efd1a83a06)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U098NGZ9AR0-28ebbabd5e71-48)
+
+Pramod Rudrapatna  [20:38 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1758479932199969)
+
+Hi all. I wanted a suggestion if anyone has built anything like this. My kids go for supplementary math classes and they have weekly homework that I need to submit every week. I need to type in answers to each question and it is a bit of a challenge across 2 kids with about 20-25 problems each. I am planning to create an agent that can dot hat for me. Do any of you have pointers on or have done something similar that I can replicate or have suggestions?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09F5TCBBPD-13f79f04f08c-24)![](https://ca.slack-edge.com/T05P4BNF01J-U098NGZ9AR0-28ebbabd5e71-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09CZ1K2RA6-b2dcf4b9f014-24)4 Antworten
+
+Letzte Antwort vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09DQGLR5U7-f1dec90f9572-48)
+
+Sarfraz Ali  [21:02 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1758481344207969)
+
+**![:funkelnde\_sterne:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2728.png)****&#xA0;Bringing Sindhi Heritage into the Digital Era&#xA0;****![:funkelnde\_sterne:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2728.png)**\
+I’m excited to share that I’ve developed a Sindhi-language chatbot dedicated to the life and wisdom of Shah Abdul Latif Bhittai — one of the greatest Sufi poets and thinkers of Sindh.\
+![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png) Key highlights of the project:\
+![:globus\_mit\_meridianen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f310.png) The chatbot communicates entirely in Sindhi, a language often considered difficult for digital integration.\
+![:roboter:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f916.png) It answers from knowledge base + feeded data of Shah Abdul Latif Bhittai’s life and works.\
+![:kunst:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f3a8.png) Built a user-friendly UI with Streamlit, making interaction smooth and engaging.\
+This wasn’t just a technical challenge but also a cultural responsibility — preserving and promoting the Sindhi language and heritage through AI.
+
+ڀٽائي چيٽ باٽ and 1 more page - Profile 1 - Microsoft Edge 2025-09-21 23-39-31.mp4 
+
+> Transkript erstellen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09HD0Q4A9W-2065f76def28-48)
+
+Cristhian Gomez  [23:30 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1758576635644969)
+
+I’ve been working on making LangGraph agents more reliable, and just added Handit support for it.The idea is simple: run one command (or add 3 lines) and your agent starts sending traces, flagging issues in real time, and even opening PRs with tested fixes.I put together a short blog post walking through the setup with LangGraph step by step:  <https://medium.com/@gfcristhian98/langgraph-handit-more-reliable-than-95-of-agents-b165c43de052>
+
+![Medium](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afill%3A304%3A304%2F10fd5c419ac61637245384e7099e131627900034828f4f386bdaa47a74eae156)Medium
+
+[LangGraph + Handit: More Reliable Than 95% of Agents](https://medium.com/@gfcristhian98/langgraph-handit-more-reliable-than-95-of-agents-b165c43de052)
+
+If you’ve built with LangGraph, you already know the power of creating custom AI agents. But you also know the pain:
+
+Reading time
+
+4 min read
+
+22\. Sept.
+
+[https://medium.com/@gfcristhian98/langgraph-handit-more-reliable-than-95-of-agents-b165c43de052](https://medium.com/@gfcristhian98/langgraph-handit-more-reliable-than-95-of-agents-b165c43de052 "LangGraph + Handit: More Reliable Than 95% of Agents")
+
+[](https://medium.com/@gfcristhian98/langgraph-handit-more-reliable-than-95-of-agents-b165c43de052)
+
+![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)1![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08VDDCJSFP-3cfec469cb64-48)
+
+Adham Bishr  [17:15 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1758640535844859)
+
+Has anyone developed with the Gemini models? Thoughts compared to anthropic and/or open ai’s models?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U0951QB5JKV-a7c24c38f53d-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08VDDCJSFP-3cfec469cb64-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09GFQTD858-02522c978036-24)5 Antworten
+
+Letzte Antwort vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U0924VANFHV-g7373e4e78c6-48)
+
+Oxi  [18:23 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1758644615124219)
+
+Hi everyone! I’m super excited to share **DentalDesk** – a toy project I built using **LangChain + LangGraph**. It’s a WhatsApp chatbot for dental clinics where patients can book or reschedule appointments, register as new patients, and get answers to some FAQs — with **persistent memory** so the conversation stays contextual. I separated the agent logic from the business tools (via an MCP server), which makes it easy to extend and play around with. It’s open-source, and I’d love feedback, ideas, or contributions: <https://github.com/oxi-p/DentalDesk>
+
+![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)2![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)1![:+1:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f44d.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08SB6N90S0-8cc0247d020e-24)![](https://ca.slack-edge.com/T05P4BNF01J-U0924VANFHV-g7373e4e78c6-24)2 Antworten
+
+Letzte Antwort vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09F5TCBBPD-13f79f04f08c-48)
+
+Paweł Twardziak  [21:37 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1758656220761779)
+
+<https://medium.com/@twardziak.p/structured-output-from-llms-more-than-just-prompt-engineering-b47408a0f8d3>
+
+![Medium](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afill%3A304%3A304%2F10fd5c419ac61637245384e7099e131627900034828f4f386bdaa47a74eae156)Medium
+
+[Structured output from LLMs: more than just prompt engineering](https://medium.com/@twardziak.p/structured-output-from-llms-more-than-just-prompt-engineering-b47408a0f8d3)
+
+Practical guide with LangChain & LangGraph
+
+Reading time
+
+5 min read
+
+23\. Sept. (1 MB)__
+
+[https://medium.com/@twardziak.p/structured-output-from-llms-more-than-just-prompt-engineering-b47408a0f8d3](https://medium.com/@twardziak.p/structured-output-from-llms-more-than-just-prompt-engineering-b47408a0f8d3 "Structured output from LLMs: more than just prompt engineering")
+
+[](https://medium.com/@twardziak.p/structured-output-from-llms-more-than-just-prompt-engineering-b47408a0f8d3)
+
+![:gb:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f1ec-1f1e7.png)1![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U085AKS4Y1K-9ca723cca4c9-48)
+
+Curtis Nye  [22:55 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1758747328055259)
+
+Hey everyone! I am building [AffinityBots](https://affinitybots.com/), an AI app that allows no-code users to quickly create and manage optimized AI agents. It utilizes a self-hosted Langgraph Platform on the backend.  Users can create multiple agents, i.e. Researcher, Content Creator, Social Media Expert, Etc... and utilize them to build multi-agent collaborative workflows. User can easily add tools (Search, Notion, Github, Supabase, Etc...) and a knowledgebase for better context. The agents have built-in long-term memory that allows the agent to learn and improve as it executes workflows.  Each agent can take in different tools and knowledge, give your DB agent just your SOP's or technical data and give your content creation agent your business description and style guide. The app is basically an AI first n8n with additional features. No need to build out 15 different nodes to do 2 things, with AffinityBots you can literally create two nodes (AI tasks) to do the exact same thing.  We do not have all the integrations they do, yet, but we'll get there. The app is a work in progress and has some bugs for sure but I think it has massive potential.The app is in early beta and I am looking for users to test it out for FREE.  If you are interested, head to [https://affinitybots.com](https://affinitybots.com/) and request access.   I am also looking to build a team, it is just me currently and I know I am going to need help to build and grow it with users. I am unable to pay anything, however, the app or business is incorporated and ready for funding and I am willing to negotiate equity in the company. Once funded I can pay salaries. Please DM me if you are interested. Thanks! (bearbeitet) 
+
+![AffinityBots](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fwww.affinitybots.com%2Ffavicon.ico)AffinityBots
+
+[AffinityBots](https://affinitybots.com/)
+
+Build and manage AI agent workflows (173 kB)__
+
+[https://affinitybots.com/](https://affinitybots.com/ "AffinityBots")
+
+[](https://affinitybots.com/)
+
+![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)1![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)1![:herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/2764-fe0f.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09DQGLR5U7-f1dec90f9572-48)
+
+Sarfraz Ali  [07:47 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1758779220389999)
+
+I’ve recently worked on an exciting project that involved building a chatbot with Streamlit UI and Short-Term Memory capabilities, powered by LangGraph. This chatbot doesn’t just provide natural language responses using an advanced language model but also integrates with various tools to enhance its functionality.\
+![:schraubenschlüssel:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f527.png) Key Features:
+
+1. Numerical Calculations – The chatbot can perform complex calculations in real-time. Whether it's basic arithmetic or more advanced math, it's got you covered. ![:glühbirne:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4a1.png)
+2. Internet Search – By integrating with the DuckDuckGo search engine, it fetches real-time data from the web, making it your intelligent assistant for queries. ![:globus\_mit\_meridianen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f310.png)
+3. Stock Price Tool – Just provide the name of a company, and the bot retrieves the live stock price instantly. ![:diagramm\_aufwärtstrend:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4c8.png)
+
+All of this is powered by SQLite for data persistence, Streaming for smooth interactions, and LangGraph to seamlessly integrate these capabilities into the chatbot. LangGraph made it much easier to handle tool integrations and memory management within the model. ![:pfeile\_gegen\_uhrzeigersinn:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f504.png)
+
+Streamlit - Profile 1 - Microsoft Edge 2025-09-25 10-31-19.mp4 
+
+> Transkript erstellen
+
+![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)1![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)3
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09F5TCBBPD-13f79f04f08c-24)1 Antwort
+
+vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09F5TCBBPD-13f79f04f08c-48)
+
+Paweł Twardziak  [16:17 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1758809844864529)
+
+<https://pawetwardziak.substack.com/p/selective-memory-in-langgraph-persist?r=e59xd> ![:leichtes\_lächeln:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f642.png) (bearbeitet) 
+
+![pawetwardziak.substack.com](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fsubstackcdn.com%2Ficons%2Fsubstack%2Fapple-touch-icon.png)pawetwardziak.substack.com
+
+[Selective Memory in LangGraph: Persist Only What You Need](https://pawetwardziak.substack.com/p/selective-memory-in-langgraph-persist?r=e59xd)
+
+When to use state, when to use store? (53 kB)__
+
+[https://pawetwardziak.substack.com/p/selective-memory-in-langgraph-persist?r=e59xd](https://pawetwardziak.substack.com/p/selective-memory-in-langgraph-persist?r=e59xd "Selective Memory in LangGraph: Persist Only What You Need")
+
+[](https://pawetwardziak.substack.com/p/selective-memory-in-langgraph-persist?r=e59xd)
+
+![:feuer:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f525.png)2![:+1:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f44d.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09HD0Q4A9W-2065f76def28-48)
+
+Cristhian Gomez  [23:09 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1758834546810329)
+
+**Reliable document-processing agent with LangGraph + Handit (tutorial)****What it does**\
+ Schema inference → extraction → summarization → consistency checks. Turns messy docs into structured JSON and grounded summaries.**Reliability layer (Handit)**\
+ Run traces per node, real-time issue alerts, and auto-generated GitHub PRs that tighten prompts/config when something drifts.**Where it’s useful**\
+ Works beyond the medical example for contracts, invoices, resumes, and research papers.**Read the walkthrough (code + screenshots):&#xA0;**<https://medium.com/@gfcristhian98/build-a-reliable-document-agent-with-handit-langgraph-3c5eb57ef9d7>
+
+![Medium](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afill%3A304%3A304%2F10fd5c419ac61637245384e7099e131627900034828f4f386bdaa47a74eae156)Medium
+
+[Build a Reliable Document Agent with Handit + LangGraph](https://medium.com/@gfcristhian98/build-a-reliable-document-agent-with-handit-langgraph-3c5eb57ef9d7)
+
+Most business data lives in unstructured documents — medical notes, contracts, invoices, resumes. LLMs can extract and summarize them, but…
+
+Reading time
+
+9 min read
+
+25\. Sept.
+
+[https://medium.com/@gfcristhian98/build-a-reliable-document-agent-with-handit-langgraph-3c5eb57ef9d7](https://medium.com/@gfcristhian98/build-a-reliable-document-agent-with-handit-langgraph-3c5eb57ef9d7 "Build a Reliable Document Agent with Handit + LangGraph")
+
+[](https://medium.com/@gfcristhian98/build-a-reliable-document-agent-with-handit-langgraph-3c5eb57ef9d7)
+
+![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09D7QJMR33-g563e3a25f5d-48)
+
+Ming Fang  [23:47 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1758836873005619)
+
+Hi. I'm sharing this code that takes `mermaid` code and creates a link to Mermaid Live to visualize.\
+<https://gist.github.com/mingfang/2f45c792f0668c85e9f8206c145e5b1a>
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09H92ENJJW-g69e3971fe0c-48)
+
+Rain  [11:32 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1758879135795349)
+
+<https://github.com/zhongyu09/openchatbi>\
+Hi guys, I recently published OpenChatBI, an open source intelligent chat-based BI tool powered by LLM. It designed to help developers to easily create ChatBI app that support users query, analyze, and visualize data through natural language conversations. It uses **LangChain** and **LangGraph&#xA0;**&#x74;o build chat agent and workflows that support natural language to SQL conversion and data analysis.\
+Welcome to have a try. I would really appreciate if you **star and share my repo, raising requirements, finding issues or even contribute code!**\
+The video is just a demo, you can built your own UI based on the LangGraph graph.
+
+OpenChatBI\_Demo.mov 
+
+> Transkript erstellen
+
+![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)1![:tada:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f389.png)1![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09JW2YJJ7N-f8ee2d51557f-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09H92ENJJW-g69e3971fe0c-24)2 Antworten
+
+Letzte Antwort vor 29 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09DQGLR5U7-f1dec90f9572-48)
+
+Sarfraz Ali  [14:18 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1758889138672319)
+
+I’ve developed an automated blog generation system that takes a simple topic and transforms it into a full-length blog post, using a two-step process powered by LangGraph. ![:roboter:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f916.png)![:funkelnde\_sterne:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2728.png)\
+**How it Works:**\
+**Step 1: Generate Outline&#xA0;****![:memo:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4dd.png)**\
+ The workflow first takes the topic provided by the user and generates a detailed blog outline. This helps structure the content by breaking it down into key sections.\
+**Step 2: Generate Blog Content&#xA0;****![:federhalter\_links\_unten:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f58b-fe0f.png)**\
+ With the outline in hand, the system then uses it to generate a detailed blog post, ensuring each section of the outline is fully fleshed out into a coherent and informative blog.**LangGraph Workflow Design:**\
+The workflow is built with LangGraph and consists of two primary nodes: ![:schraubenschlüssel:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f527.png)\
+**Node 1: Create Outline&#xA0;****![:klemmbrett:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4cb.png)**\
+ **Functionality:** This node takes the user-provided topic and uses it to generate a structured outline for the blog. The model understands the topic and breaks it down into key points and sub-topics.\
+**Node 2: Create Blog Content&#xA0;****![:kugelschreiber\_links\_unten:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f58a-fe0f.png)**\
+ **Functionality:** This node takes the topic and the outline and generates a full-length blog based on the outline. It ensures the content is well-organized and aligned with the initial structure, providing a comprehensive blog post.**Key Features:**
+
+* **Efficient Workflow&#xA0;****![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png)****:** Seamlessly moves from generating a structured outline to creating a detailed blog.
+* **Node-based Process&#xA0;****![:zahnrad:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2699-fe0f.png)****:** Clear and easy-to-understand flow with specific functionalities for each node.
+* **Real-Time Streaming&#xA0;****![:stoppuhr:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/23f1-fe0f.png)****:** The content is streamed progressively to the user, ensuring a dynamic and engaging experience.
+
+This system showcases the power of LangGraph in structuring complex workflows for content generation, allowing for automation and efficiency in content creation. ![:stern2:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f31f.png)\
+Check out the demo to see how the system works in action! ![:filmkamera:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f3a5.png)\
+\#AI #BlogGeneration #LangGraph #MachineLearning #Automation #ContentCreation #TechInnovation #Python #ArtificialIntelligence #NodeBasedWorkflow ![:funkelnde\_sterne:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2728.png)plz free to reach out me :[sarfrazdeveloper7gmail.com](http://sarfrazdeveloper7gmail.com/)\
+github: <https://github.com/Sarfrazali-123>
+
+Demo.mp4 
+
+> Transkript erstellen
+
+![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)2![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)2![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)3
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09DQGLR5U7-f1dec90f9572-48)
+
+Sarfraz Ali  [10:49 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1758962954605799)
+
+**![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png)****Example of Parallelization /Parallel Workflow****![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png)**![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png) Introducing a Parallel Workflow for UPSC Essay Evaluation ![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png)As part of my ongoing work to assist UPSC aspirants, I’ve created a simple yet powerful parallel workflow aimed at evaluating essays in the UPSC exam using LangGraph.![:lupe:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f50d.png) How It Works:\
+This platform allows aspirants to submit their essay, which is then evaluated on multiple key aspects, ensuring a well-rounded feedback mechanism.![:glühbirne:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4a1.png) The Process Includes:Start Node:\
+The workflow receives an essay and begins the evaluation process.Evaluation on Key Aspects:\
+The essay is evaluated in three areas:1. Clarity of Thought: How clear and coherent the essay's arguments and ideas are. (Score: 0-10)\
+2\. Depth of Analysis: The depth at which the topic is explored and the analysis presented. (Score: 0-10)\
+3\. Language: The quality of language, including grammar, vocabulary, and fluency. (Score: 0-10)Final Evaluation:\
+After the individual assessments, all feedback is merged and summarized using LLM, resulting in:\
+A final evaluation score based on the average of the three aspects.\
+A comprehensive feedback report to help candidates improve their essays.\
+![:schraubenschlüssel:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f527.png) The Technology Behind the Scenes:This workflow was built using LangGraph, a powerful tool that allows me to design and manage parallel processes efficiently. LangGraph enables the independent evaluation of different aspects of the essay while seamlessly merging the results for a final, cohesive assessment.![:stern2:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f31f.png) Whether you’re preparing for UPSC or simply looking to improve your essay-writing skills, this tool can provide valuable insights into how well-rounded and impactful your essays are.\
+Let me know if you have any thoughts or suggestions on this workflow.fell free to reach out me : <sarfrazdeveloper7@gmail.com>
+
+3 Dateien 
+
+Alle herunterladen
+
+[![Capture-145.PNG](https://files.slack.com/files-tmb/T05P4BNF01J-F09J9V777HN-9d075d72e1/capture-145_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09J9V777HN/capture-145.png)
+
+[![Capture-60.PNG](https://files.slack.com/files-tmb/T05P4BNF01J-F09HAUP3AV9-f52b614ff7/capture-60_480.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09HAUP3AV9/capture-60.png)
+
+[![Capture-7.PNG](https://files.slack.com/files-tmb/T05P4BNF01J-F09HG524L4S-604798447b/capture-7_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09HG524L4S/capture-7.png)
+
+![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)1![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)2![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)3
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09DQGLR5U7-f1dec90f9572-48)
+
+Sarfraz Ali  [11:14 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1759223691866339)
+
+![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png) Building Smarter Customer Review Workflows with LangGraph + LLMs\
+Handling customer reviews isn’t just about responding quickly—it’s about responding intelligently. Some reviews are full of praise ![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f64c.png), while others highlight real frustrations ![:triumph:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f624.png). Both deserve thoughtful, tailored responses.\
+I recently built a workflow using LangGraph + OpenAI models that automates this process end-to-end:\
+![:raute\_blau\_klein:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f539.png) Step 1: Sentiment DetectionThe system first identifies whether the review is positive or negative.\
+![:raute\_blau\_klein:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f539.png) Step 2a: Positive ReviewsIf it’s positive, the LLM crafts a warm thank-you message and encourages the customer to leave feedback on our website.\
+![:raute\_blau\_klein:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f539.png) Step 2b: Negative ReviewsIf it’s negative, the system runs a diagnosis layer, extracting:
+
+1. Issue type (UX, Bug, Performance, etc.)
+2. Tone (angry, calm, frustrated…)
+3. Urgency (low, medium, high)
+
+Using these insights, the LLM generates an empathetic, problem-solving reply that matches the user’s sentiment and urgency.\
+![:glühbirne:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4a1.png) The result? A workflow that not only saves time but also elevates customer experience by ensuring responses are context-aware and personalized.
+
+2 Dateien 
+
+Alle herunterladen
+
+[![Capture-455.PNG](https://files.slack.com/files-tmb/T05P4BNF01J-F09HSKAMPV3-7bbe1644be/capture-455_360.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09HSKAMPV3/capture-455.png)
+
+[![Capture-jfdjfd.PNG](https://files.slack.com/files-tmb/T05P4BNF01J-F09HSKB9TB7-000dc2230e/capture-jfdjfd_480.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09HSKB9TB7/capture-jfdjfd.png)
+
+![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)4![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)2![:+1:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f44d.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09F5TCBBPD-13f79f04f08c-24)1 Antwort
+
+vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09DQGLR5U7-f1dec90f9572-48)
+
+Sarfraz Ali  [10:26 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1759307208877699)
+
+**Exploring MCP Model Context Protocol, Client-Server Architecture.&#xA0;****![:computer:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4bb.png)****![:lupe:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f50d.png)**\
+Today, I had the opportunity to dive deeper into Model Context Protocol (MCP) and its practical applications with Claude Desktop. As part of my learning, I explored the dynamics between client and server in system interactions. ![:pfeile\_gegen\_uhrzeigersinn:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f504.png)\
+![:raute\_blau\_klein:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f539.png) Client-Server Architecture:\
+In this setup, Claude Desktop acted as the client ![:desktop-computer:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f5a5-fe0f.png), requesting data and services, while my file system served as the server ![:aktenschrank:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f5c4-fe0f.png), providing the resources requested. This separation of roles allowed me to better understand how systems communicate and work together to achieve specific tasks.\
+![:raute\_blau\_klein:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f539.png) Practical Task:\
+With just a simple command to Claude Desktop, I automated the creation of a folder named "sarfraz-python" ![:offener\_ordner:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4c2.png) on my desktop, and it automatically created a Python script, "[sa.py](http://sa.py/)"![:schlange:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f40d.png), which, when executed, prints the name "Sarfraz." Here’s a quick overview of the process:\
+1\. Issued a command to Claude Desktop to create the folder and Python script automatically. ![:sprechende\_silhouette:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f5e3-fe0f.png)\
+2\. The script was generated to output the name "Sarfraz" upon execution. ![:funkelnde\_sterne:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2728.png)\
+3\. Everything was seamlessly executed by Claude without manual intervention. ![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png)\
+This experience not only enhanced my understanding of client-server communication but also demonstrated how powerful automation tools like Claude Desktop can simplify tasks like directory creation and script execution. ![:roboter:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f916.png)![:schraubenschlüssel:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f527.png)\
+I’m excited to continue exploring MCP, client-server systems, and how Python can be used to automate real-world tasks. The journey of learning never stops! ![:sämling:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f331.png)![:bücher:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4da.png)\
+\#MCP #ClientServerArchitecture #ClaudeDesktop #Python #Programming #Automation #TechLearning #SoftwareDevelopment #ContinuousImprovement #TechJourney
+
+2 Dateien 
+
+Alle herunterladen
+
+[![Capture------------5.PNG](https://files.slack.com/files-tmb/T05P4BNF01J-F09J3Q3PZDG-f60931894e/capture------------5_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09J3Q3PZDG/capture------------5.png)
+
+[![Capture---------1.PNG](https://files.slack.com/files-tmb/T05P4BNF01J-F09HXB956SX-00d7a02935/capture---------1_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09HXB956SX/capture---------1.png)
+
+![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)1![:gb:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f1ec-1f1e7.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08NTK9FFCK-c4d0ce9bd7ae-24)1 Antwort
+
+vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08NTK9FFCK-c4d0ce9bd7ae-48)
+
+johnda98  [09:52 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1759391541779409)
+
+Anyone used Langgraph platform's long term memory across threads and session feature ?  any costs or lag in retrieving the vector stored embeddings from the platforms backend ?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09H4FGHBLP-g8a625d4dd51-24)![](https://ca.slack-edge.com/T05P4BNF01J-U08NTK9FFCK-c4d0ce9bd7ae-24)![](https://ca.slack-edge.com/T05P4BNF01J-U094ANLP3MX-g31b044936b3-24)10 Antworten
+
+Letzte Antwort vor 1 MonatThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09JW2YJJ7N-f8ee2d51557f-48)
+
+Yotam Ben-Gera  [01:07 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1759619234113609?thread_ts=1758879135.795349\&cid=C079U7CRJR2)
+
+hat auf einen Thread geantwortet:https://github.com/zhongyu09/openchatbi…
+
+this is some good stuff! as an educational project it rlly highlights ur fullstack and agentic capabilities, and from a biz perspective these seem like useful tools!what kinda data can it handle, can the user just dump any old file into its knowledge base?
+
+Neuere Antworten anzeigen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09JB3E64NB-g35586532e79-48)
+
+Sidh  [01:10 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1759619410787389)
+
+I am currently making an agentic supervisor flow. Where i am thinking to forward an agent response directly to the user. I see create\_forward\_message\_tool but have some doubts. Has anyone used it here then please let me know.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09DQGLR5U7-f1dec90f9572-48)
+
+Sarfraz Ali  [13:32 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1759750337798549)
+
+![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png) **Streamlining Form Data to Airtable with Seamless Automation!** ![:pfeile\_gegen\_uhrzeigersinn:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f504.png)\
+I’ve been working on an exciting project where I leveraged n8n to automate form submissions, trigger data updates, and enrich records dynamically. This powerful automation workflow seamlessly integrates multiple nodes, transforming how data flows through Airtable.![:reißzwecke:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4cc.png) Here’s a Breakdown of the Workflow:Trigger Node: Form Submission ![:memo:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4dd.png)\
+The process starts with a form submission, capturing user data like Name, Looks, and Profession (such as Video Editor, Graphic Designer, AI Manager). The form data is gathered from a user-friendly form URL.Create Record in Airtable ![:balkendiagramm:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4ca.png)\
+The submitted form data is automatically mapped and sent to Airtable to create a record in a specified base and table.Routing with Switch Node ![:pfeile\_gewunden\_nach\_rechts:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f500.png)\
+Depending on the Profession selected in the form, the workflow routes the data into different branches for further processing:\
+Video Editor\
+Graphic Designer\
+AI ManagerPoetry Generation with Google Gemini Chat model ![:roboter:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f916.png)![:schreibende\_hand:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/270d-fe0f.png)\
+For a touch of creativity, I’ve added an AI-based poetry generation node that crafts simple, beautiful poems based on the submitted form data! ![:stern2:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f31f.png)Updating Airtable Record ![:pfeile\_gegen\_uhrzeigersinn:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f504.png)\
+Once the poem is generated, the Airtable record is updated with the poem, ensuring a smooth flow of information.
+
+Capture-jfdhfjd.PNG 
+
+[![Capture-jfdhfjd.PNG](https://files.slack.com/files-tmb/T05P4BNF01J-F09JGHD7QUX-4a781bd37d/capture-jfdhfjd_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09JGHD7QUX/capture-jfdhfjd.png)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09AKHR3VL3-b4231fd5c651-48)
+
+Kanishk Gupta  [18:18 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1759853884121159)
+
+Hi everyone! Want to share something super exciting! And yes I have a demo you can play with!I wrote a specification protocol (just like A2A/MCP/AGUI), which I am calling the Agentic Human-In-The-Loop protocol!TLDR: Have you noticed how agents are not great at taking feedback/input for humans? When you start on cursor, and the agent build mode asks you bulleted questions with multiple choices, which are supposed to be answered strategically to ensure the agent understands that x is the answer to q1. That's not how the agentic world will scale. I face a similar issue at promptius, there is no standard way how agents can put their requirements to users.AHITL solves that, agents can now generate structured forms to ask questions to the users!I built a playground for anyone to try it out: [AHITL demo](https://promptius.ai/ahitl-agent)\
+The spec protocol document: [AHITL specification](https://promptius.ai/ahitl-spec)\
+Github repo with POC built on langgraph, langchain and Copilotkit: <https://github.com/AgentBossMode/AHITL-protocol>I wrote an announcement post: [Linkedin Announcement post](https://www.linkedin.com/posts/promptius-ai_ahitl-demo-activity-7381354334267244544-yaXy?utm_source=social_share_send\&utm_medium=member_desktop_web\&rcm=ACoAACFatM4BHQdTTv-6lfxBG8a1COl6ouJNY6Q) (bearbeitet) 
+
+![promptius.ai](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fpromptius.ai%2Fpromptius-logo.png)promptius.ai
+
+[Promptius - AI Agent Creation Platform](https://promptius.ai/ahitl-spec)
+
+Build, customize, and deploy AI agents in minutes without extensive coding. Automate workflows, analyze data, and enhance customer interactions.
+
+![linkedin.com](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fstatic.licdn.com%2Faero-v1%2Fsc%2Fh%2Fal2o9zrvru7aqj8e1x2rzsrca)linkedin.com
+
+[AHITL Demo | Promptius AI](https://www.linkedin.com/posts/promptius-ai_ahitl-demo-activity-7381354334267244544-yaXy?utm_source=social_share_send\&utm_medium=member_desktop_web\&rcm=ACoAACFatM4BHQdTTv-6lfxBG8a1COl6ouJNY6Q) (60 kB)__
+
+[https://www.linkedin.com/posts/promptius-ai\_ahitl-demo-activity-7381354334267244544-yaXy?utm\_source=social\_share\_send\&utm\_medium=member\_desktop\_web\&rcm=ACoAACFatM4BHQdTTv-6lfxBG8a1COl6ouJNY6Q](https://www.linkedin.com/posts/promptius-ai_ahitl-demo-activity-7381354334267244544-yaXy?utm_source=social_share_send\&utm_medium=member_desktop_web\&rcm=ACoAACFatM4BHQdTTv-6lfxBG8a1COl6ouJNY6Q "AHITL Demo | Promptius AI")
+
+[](https://www.linkedin.com/posts/promptius-ai_ahitl-demo-activity-7381354334267244544-yaXy?utm_source=social_share_send\&utm_medium=member_desktop_web\&rcm=ACoAACFatM4BHQdTTv-6lfxBG8a1COl6ouJNY6Q)
+
+![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)1![:+1:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f44d.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U07QE96LJBY-8929265094ac-48)
+
+Malachy Donovan  [18:59 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1759856344942419)
+
+I just launched Tracecast, an AI product analyst! This product incorporates LangChain's Open Deep Research and ambient agent architecture. It's an event-driven agent that helps sales and customer success teams understand and act on their product usage data.You can learn more and try a demo here: <https://tracecast.co/>I'm always looking to connect with people building and leveraging AI tools for product growth. Please reach out with your thoughts and feedback!
+
+![tracecast.co](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Ftracecast.co%2Ffavicon.ico)tracecast.co
+
+[Tracecast](https://tracecast.co/)
+
+Tracecast (2 MB)__
+
+[https://tracecast.co/](https://tracecast.co/ "Tracecast")
+
+[](https://tracecast.co/)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09DQGLR5U7-f1dec90f9572-48)
+
+Sarfraz Ali  [14:56 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1759928170880249)
+
+**![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png)****&#xA0;Transforming Feedback Management with AI Automation&#xA0;****![:schraubenschlüssel:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f527.png)**\
+To streamline our feedback management process, we’ve introduced an AI-powered framework designed to reduce manual workloads and improve response times, driving overall operational efficiency. ![:aktentasche:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4bc.png)![:funkelnde\_sterne:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2728.png)Objective:\
+Our goal is to simplify the feedback process by automatically analyzing, categorizing, and directing feedback to the appropriate department for swift resolution. ![:darts:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f3af.png)How It Works:1. Feedback Submission: Customers submit their feedback via a form. ![:memo:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4dd.png)\
+2\. AI Analysis: The AI agent analyzes the feedback, classifying it as a complaint, compliment, or feature request. ![:roboter:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f916.png)\
+3\. Routing & Notifications:\
+![:pfeile\_gegen\_uhrzeigersinn:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f504.png)Complaints are forwarded directly to the relevant department for resolution. ![:rundumleuchte:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f6a8.png)\
+![:pfeile\_gegen\_uhrzeigersinn:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f504.png) Feature requests are sent to the appropriate team for review. ![:glühbirne:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4a1.png)\
+![:pfeile\_gegen\_uhrzeigersinn:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f504.png) Compliments are routed to management. ![:stern2:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f31f.png)\
+4\. Customer Communication: If the feedback is negative or includes a complaint, the customer is automatically notified via email. ![:e-mail:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4e7.png)\
+5\. Team Collaboration: The relevant team is instantly notified, ensuring a timely response and resolution. ![:pfeile\_gegen\_uhrzeigersinn:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f504.png)Expected Impact\
+This AI-driven approach will enable faster feedback processing, improved customer experience, and more efficient team collaboration. By automating these processes, we empower our teams to focus on what truly matters—driving innovation and customer satisfaction. ![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png)\
+\#AI #Automation #CustomerFeedback #BusinessEfficiency #TechInnovation #WorkflowAutomation #CustomerExperience
+
+WhatsApp Image 2025-10-08 at 5.33.35 PM.jpeg 
+
+[![WhatsApp Image 2025-10-08 at 5.33.35 PM.jpeg](https://files.slack.com/files-tmb/T05P4BNF01J-F09K7C5EUN7-8206b4529c/whatsapp_image_2025-10-08_at_5.33.35_pm_720.jpg)](https://files.slack.com/files-pri/T05P4BNF01J-F09K7C5EUN7/whatsapp_image_2025-10-08_at_5.33.35_pm.jpeg)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09K7C5EUN7/download/whatsapp_image_2025-10-08_at_5.33.35_pm.jpeg?origin_team=T05P4BNF01J)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08GMJDH264-d89255b2e7d1-48)
+
+Iman Makaremi  [20:44 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1759949077011449)
+
+![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png) **Open-source release: GraphQA**Hi everyone – we’ve open-sourced **GraphQA**, an agent framework built with **LangGraph** + **Langfuse** that enables agents to reason structurally over **graphs**.\
+It’s designed for cases where relationships define behavior – like cloud architectures, data lineage, or system dependencies. Agents can now run graph algorithms (shortest paths, centrality, clustering, etc.) directly through natural language.\
+ ![:sprechblase:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4ac.png) **Announcement post:** <https://www.linkedin.com/posts/imakaremi_github-catio-techgraphqa-graphqa-natural-activity-7381716715069509632-7AdZ>![:link:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f517.png) **Repo:** <https://github.com/catio-tech/graphqa>\
+ ![:memo:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4dd.png) **Blog:** <https://www.catio.tech/blog/introducing-graphqa-an-agent-for-asking-graphs-questions>\
+Excited to see what the LangChain community builds with it – feedback and contributions welcome!
+
+![linkedin.com](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fstatic.licdn.com%2Faero-v1%2Fsc%2Fh%2Fal2o9zrvru7aqj8e1x2rzsrca)linkedin.com
+
+[GitHub - catio-tech/graphqa: GraphQA: Natural Language Graph Analysis Framework - Ask questions about any graph in natural language | Iman Makaremi](https://www.linkedin.com/posts/imakaremi_github-catio-techgraphqa-graphqa-natural-activity-7381716715069509632-7AdZ)
+
+LLMs can’t reason over structure. Graphs can.\
+We needed both – so we built GraphQA. And now it’s open source.At Catio, we model cloud architectures – and they’re inherently graphs. Services, databases, configs, dependencies: all connected. We needed an agent that could answer any question about those graphs for our recommendation and chat modules.- We tried RAG. Garbage.\
+\- We tried Cypher agents. Brittle.\
+\+ So we built GraphQA.GraphQA is:\
+![:lupe:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f50d.png) Agent-first: natural questions → graph-native answers.\
+Mehr anzeigen
+
+[https://www.linkedin.com/posts/imakaremi\_github-catio-techgraphqa-graphqa-natural-activity-7381716715069509632-7AdZ](https://www.linkedin.com/posts/imakaremi_github-catio-techgraphqa-graphqa-natural-activity-7381716715069509632-7AdZ "GitHub - catio-tech/graphqa: GraphQA: Natural Language Graph Analysis Framework - Ask questions about any graph in natural language | Iman Makaremi")
+
+[](https://www.linkedin.com/posts/imakaremi_github-catio-techgraphqa-graphqa-natural-activity-7381716715069509632-7AdZ)
+
+catio.tech
+
+[Introducing GraphQA: An Agent for Asking Graphs Questions | Catio](https://www.catio.tech/blog/introducing-graphqa-an-agent-for-asking-graphs-questions)
+
+GraphQA is Catio’s new open-source agent for natural-language questions over architecture graphs, fusing LLMs with graph algorithms to deliver fast, structure-aware answers for dependencies, flows, and system reasoning. (1 MB)__
+
+[https://www.catio.tech/blog/introducing-graphqa-an-agent-for-asking-graphs-questions](https://www.catio.tech/blog/introducing-graphqa-an-agent-for-asking-graphs-questions "Introducing GraphQA: An Agent for Asking Graphs Questions | Catio")
+
+[](https://www.catio.tech/blog/introducing-graphqa-an-agent-for-asking-graphs-questions)
+
+![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)2![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)1![:+1:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f44d.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09GAL8T0GH-1d28d756deb5-48)
+
+yash  [07:27 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1759987651342009)
+
+Docx-Worker-Agent (<https://github.com/yswa-var/DOCX-agent>): reliable langgraph system to work with Word Document do CURD operations, with features like Human-in-the-loop/ image adding/ index management/ one click format management. Can be used as MCP as well.
+
+image.png 
+
+[![image.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09LDD92L72-584ce66fc8/image_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09LDD92L72/image.png)
+
+yswa-var/DOCX-agent
+
+Professional worker docx agent
+
+Language
+
+Python
+
+Last updated
+
+6 days ago
+
+Hinzugefügt von [GitHub](https://langchaincommunity.slack.com/services/B05UKKYNE8J "GitHub")
+
+![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)2
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U093Y90U399-ed20f2ff29e1-48)
+
+Rishiraj Bal  [23:32 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1760304739773319)
+
+![:winken:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f44b.png) Hey everyone,\
+I’ve been spending a lot of time recently on a new project that sits at the intersection of **AI agents**, **developer tools**, and **code automation**.\
+We’re building an **autocoding system** that can _write, refactor, and push code autonomously_, with native **GitHub/GitLab** integration — powered by agentic workflows.\
+Right now, we’re in **Phase 1**, which involves:
+
+* Reverse-engineering some open-source systems
+* Experimenting with **LangGraph** and similar frameworks
+* Laying the foundation for a scalable, AI-driven dev ecosystem
+
+I’m looking for collaborators who are into:\
+ ![:gehirn:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f9e0.png) AI agent design & orchestration (LangGraph, CrewAI, etc.)\
+ ![:zahnrad:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2699-fe0f.png) CLI tools, automation, and dev workflows\
+ ![:glühbirne:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4a1.png) Breaking, rebuilding, and experimenting with code automation\
+If this sounds like something you’d like to explore or contribute to — **DM me here**.\
+ Even if you’re just curious about the direction or want to discuss ideas, I’d love to connect.\
+Let’s see what we can build together. ![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09KYSX40MR-g6b9b22635fd-48)
+
+Atanu Sen  [09:21 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1760340091419899)
+
+(lc-academy-env) atanusen@MacBookPro langchain-academy % pip install -r requirements.txt\
+ERROR: Ignored the following yanked versions: 0.0.8\
+ERROR: Could not find a version that satisfies the requirement langgraph (from versions: none)\
+ERROR: No matching distribution found for langgraphI am getting this error when installing the requirements - can someone help ?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09MFLXA3LY-g06df0f8aad1-24)1 Antwort
+
+vor 19 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09HJ4K7QFQ-63aba5452a6d-48)
+
+Cade Russell  [23:57 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1760479033865819)
+
+Hey all ![:winken:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f44b.png)  I  wanted to share something I've been working on for the last few weeks. I'm a product manager who has recently changed roles to an AI Adoption Engineer at a blockchain company and what started off as a codex clone to help me manage more agents on different repos at the same time, I've built an agent development environment to create LangGraph workflows and build custom agent nodes. _Fair warning&#xA0;_- I am not a software dev by any means and have only been coding with Ai agents for 3 months, so you might see things that make you scratch your head on why I would do such a thing ![:leichtes\_lächeln:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f642.png)I got a bit obsessed with RAG and multi-agent systems after reading every huggingface paper I could find on contextual engineering and agentic AI. I had the image creating and storing agent workflows in my head as if it were an RPG videogame where you could save loadouts and depending on what task was at hand, you could have a loadout ready for it to swap to at any moment. As I work in the Blockchain/Defi/Gaming world, this seemed like something that would resonate with my company and get people engaged to want to learn more about agentic Ai.The core of my platform is the Agent Workflow Creator and Agent Builder. There is a RAG system with a pgvector db that runs throughout the platform and all agents can access it if needed, as well as behavioral learning from failed tasks, or rejected code. There's also an AI Agent who is embedded in the platform and can help users create/design their agent workflows, or help them with other features/systems within the platform.You can link a github/gitlab account to connect and manage your repositories. Send agents on tasks from your project's page, whether a single task, or a directive which is where the agent plans a series of tasks to complete a larger request, and you're able to monitor the progress.Switch into "Focus Mode" to launch an IDE with an integrating coding agent and a few other tools to be more hands on with your codebase. You're able to build out the workflow in the visualizer and it populates the LangGraph code for you to take to your own project. Another feature I'm working on is an easy few button deployment of the workflow in a test environment, or have it launch the IDE and coding agent who will take the LangGraph code and help implement it into your repo, or a standalone script to execute the workflow.There's quite a few other features and other bits I'll mention another time, as well as an extensive backlog of enhancements, but I'm looking to refine a lot of the core functionality and will begin testing it with a few coworkers to see if we're able to generate functional flows and processes from start to finish.It's still a major WIP and my bug list keeps growing, but here are a few screenshots and a video of myself navigating some of the features and testing the coding agent in the IDE. Would love any comments/feedback or if you know some amazing resources for building agentic AI or context handling, I'd love to see it! Excited to be here and thank you all ![:lächeln:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f604.png)
+
+3 Dateien 
+
+Alle herunterladen
+
+[![image (7).png](https://files.slack.com/files-tmb/T05P4BNF01J-F09MC8TM17A-0a3a764bf6/image__7__720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09MC8TM17A/image__7_.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09MC8TM17A/download/image__7_.png?origin_team=T05P4BNF01J)
+
+[![image (8).png](https://files.slack.com/files-tmb/T05P4BNF01J-F09LMGPRVM2-2efc03f6c0/image__8__720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09LMGPRVM2/image__8_.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09LMGPRVM2/download/image__8_.png?origin_team=T05P4BNF01J)
+
+![:klatschen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f44f.png)2![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)2![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09HJ4K7QFQ-63aba5452a6d-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09H2T5ASF8-7719c8ee3b30-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09F5TCBBPD-13f79f04f08c-24)3 Antworten
+
+Letzte Antwort vor 19 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09H2T5ASF8-7719c8ee3b30-48)
+
+Bernat  [10:18 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1760516290468839)
+
+I've built an AI Agent that transforms historical figures into structured timelines, using Langgraph and the supervisor pattern.It combines and deduplicates events from multiple sources applying various context engineering techniquesThis project highlights my work in AI agent development and demonstrates how AI can help in research task&#x73;**.**&#x43;heck out the project on GitHub <https://github.com/bernatsampera/event-deep-research>
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09DQGLR5U7-f1dec90f9572-48)
+
+Sarfraz Ali  [14:53 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1760532812998379)
+
+![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png) Exciting News: My New Workflow for Automating Contact Management! ![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png)\
+I'm thrilled to share a recent automation workflow I built that streamlines the process of collecting and managing contact information. Here’s how it works:![:eins:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/0031-fe0f-20e3.png) Form Submission ![:memo:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4dd.png)\
+Users fill out a "Contact Us" form with essential details: Name, Email, and Phone Number.![:zwei:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/0032-fe0f-20e3.png) Data Integration ![:link:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f517.png)\
+Once submitted, the information is automatically added to a Google Sheet, updating or appending a new row with the user's details, submission time, and form mode.![:drei:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/0033-fe0f-20e3.png) Instant Confirmation ![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png)\
+A Gmail email is immediately sent to the user confirming their submission, providing an instant acknowledgment.Key Features of the Workflow:![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png)Trigger: Form submission automatically initiates the process\
+![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png)Data Handling: Seamless storage and updates in Google Sheets\
+![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png)Communication: Instant email confirmation sent to usersBenefits:![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png) Streamlines contact management\
+![:laufende\_sanduhr:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/23f3.png) Reduces manual data entry\
+![:aktentasche:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4bc.png) Delivers a professional and quick user experience
+
+Capture-123.PNG 
+
+[![Capture-123.PNG](https://files.slack.com/files-tmb/T05P4BNF01J-F09L6NCNLLF-3caaa864df/capture-123_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09L6NCNLLF/capture-123.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09L6NCNLLF/download/capture-123.png?origin_team=T05P4BNF01J)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C9D1HBCL-g620a787a689-48)
+
+Santosh Narayanan  [12:48 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1760611711373519)
+
+![:gehirn:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f9e0.png) Example final version for LangChain Community
+
+> ![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png) Excited to share a small milestone — built an **AI-powered Dealflow Dashboard** using LangChain + Neo4j + React!\
+> Users can ask natural language questions like _“Show startups funded by Sequoia in 2023”_ — the backend (LangChain + ChatOpenAI) auto-generates a Cypher query and fetches results from Neo4j.\
+> ![:baustelle:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f3d7-fe0f.png) **Stack:** LangChain JS, Express, Neo4j Aura, React + Vite\
+> ![:balkendiagramm:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4ca.png) **Architecture & Flow:**\
+>  – LangChain PromptTemplate → Cypher generation\
+>  – Express backend → query execution\
+>  – Neo4j graph → structured results\
+> (see architecture screenshots ![:nach\_unten\_zeigen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f447.png))
+
+![:link:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f517.png) <https://github.com/santoshnarayanan/dealflow-data> (bearbeitet) 
+
+2 Dateien 
+
+Alle herunterladen
+
+[![Relatonship-Nodes.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09MPR9DP6C-def1c4ea08/screenshot_from_2025-10-16_12-23-15_480.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09MPR9DP6C/screenshot_from_2025-10-16_12-23-15.png)
+
+[![Archiecture-flow.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09LS3E2U93-cddd947556/screenshot_from_2025-10-16_12-23-26_480.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09LS3E2U93/screenshot_from_2025-10-16_12-23-26.png)
+
+![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)2
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09L0NCQU1K-d4de427f020a-48)
+
+Jacob Wood  [02:51 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1760835117589699)
+
+Fun project. Used LangGraph for the Agent and LangSmith for tracing. An agentic real-estate search experience on Couchbase Capella that personalizes property discovery with vector search and long‑term memory: <https://github.com/wooyakob/agent-on-capella>  (bearbeitet) 
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09H13PCUE9-g483ae066a60-48)
+
+Venkata  [15:37 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1760881036693219)
+
+Cafe - Order a coffee , check the menu etc all through natural language processing .  <https://github.com/GenAICloudDevOps/AgenticBarista>
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09H13PCUE9-g483ae066a60-24)2 Antworten
+
+Letzte Antwort vor 15 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09M5LDEKMH-g89946c6e4b5-48)
+
+Halil Eren  [16:07 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1760882861588259)
+
+![:winken:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f44b.png) Hello, team!
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09M5LDEKMH-g89946c6e4b5-48)
+
+Halil Eren  [16:10 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1760883002182409)
+
+please help
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09F5TCBBPD-13f79f04f08c-24)1 Antwort
+
+vor 15 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09CZ1K2RA6-b2dcf4b9f014-48)
+
+Bob  [07:06 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1760936803602929)
+
+<https://github.com/CaviraOSS/OpenMemory>
+
+CaviraOSS/OpenMemory
+
+Add long-term memory to any AI in minutes. Self-hosted, open, and framework-free.
+
+Website
+
+[https://openmemory.cavira.app](https://openmemory.cavira.app/)
+
+Language
+
+TypeScript
+
+Hinzugefügt von [GitHub](https://langchaincommunity.slack.com/services/B05UKKYNE8J "GitHub")
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U092UEFTTFH-46f2aae5c809-48)
+
+Lorenzo Matheo Ferreira Camargo  [16:09 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1760969340646729)
+
+Hey everyone, good afternoon!\
+I’ve just built a project comparing classical vs quantum search using Grover’s algorithm in Qiskit.It’s quite complete, includes full documentation, performance analysis, technical structure, and tutorials.Check it out here:\
+<https://www.linkedin.com/posts/lorenzo-camargo-041345353_github-lorenzomatheogrover-algoritm-classical-search-and-quantum-activity-7386037608881020928-8Ak6>
+
+![:glühbirne:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f4a1.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U0868AQCEH0-ge3d697a2c82-48)
+
+Rishikesh Maddhesiya  [15:56 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1761054966504599)
+
+<https://github.com/Rishikesh63/cloudcost-intelligence>
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U0868AQCEH0-ge3d697a2c82-48)
+
+Rishikesh Maddhesiya  [16:04 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1761055445135189)
+
+<https://github.com/Rishikesh63/Notion-Parsing-and-Context-Extraction>
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08S7FC3951-f0b1dbd48d37-48)
+
+Matheus  [22:04 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1761077066244529)
+
+Hey guys!! I have a question for you... I recently built a RAG application. The topic is a bit complex — it’s about the _São Paulo City Council_, some laws, and other boring information. It has memory persistence; I send the last three interactions with each call, and the retriever’s FAISS top-K is 6. The average number of tokens per call is around 6000. Do you think that’s an absurd number, or is it acceptable for an architecture like this?
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09F5TCBBPD-13f79f04f08c-24)1 Antwort
+
+vor 12 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U07RTGV907P-f2141ba38e05-48)
+
+Yohan Lasorsa  [11:23 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1761124987205819)
+
+Hey there, here's our new serverless LangChain.js v1 sample app featuring Agent + MCP scenario connecting to a business API:\
+<https://github.com/Azure-Samples/mcp-agent-langchainjs>\
+Let us know what you think, and if it's helpful!
+
+![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)2![:excited:](https://emoji.slack-edge.com/T05P4BNF01J/excited/6d1a9f362ae49934.gif)2![:lila\_herz:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f49c.png)2
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09F5TCBBPD-13f79f04f08c-24)![](https://ca.slack-edge.com/T05P4BNF01J-U07RTGV907P-f2141ba38e05-24)![](https://ca.slack-edge.com/T05P4BNF01J-U092D6SAHU0-d31f08839963-24)3 Antworten
+
+Letzte Antwort vor 12 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09FEKXMPHA-7aaba414073e-48)
+
+Francisco Krieser  [15:21 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1761139317826459)
+
+Hey everyone ![:winken:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f44b.png)I’ve been experimenting with **LangChain + Slack Bolt + pgvector**, and built a small side project called **VecBrain** — an AI agent that helps teams **find answers from their own Slack history**.It indexes past messages from selected channels and answers questions with full context (author, timestamp, and link to the original message) — no hallucinations.Here’s a quick example:
+
+> Q: _“What color was agreed for the hero graphics?”_\
+> A: _“The agreed color is a new purple gradient — see Grace’s message \[here].”_
+
+Repo and demo coming soon — would love feedback from anyone working on RAG-based Slack or internal knowledge tools!
+
+image.png 
+
+[![image.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09MV0B9N8M-6681d44d88/image_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09MV0B9N8M/image.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09MV0B9N8M/download/image.png?origin_team=T05P4BNF01J)
+
+![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)6
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09C9D1HBCL-g620a787a689-48)
+
+Santosh Narayanan  [01:55 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1761263726984409)
+
+![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png) **Excited to share my latest LangChain-powered project — the&#xA0;**_Smart Developer Assistant (SDA)_**!**\
+![:puzzle:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f9e9.png) **Summary:**\
+ A full-stack AI-powered **developer assistant** that helps you **generate, explain, and document code** using **Retrieval-Augmented Generation (RAG)** over your own technical docs and codebase.\
+![:gehirn:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f9e0.png) **Stack:**\
+ LangChain ![:puzzle:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f9e9.png) | FastAPI ![:blitzschnell:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/26a1.png) | Qdrant ![:lupe:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f50d.png) | PostgreSQL ![:elefant:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f418.png) | React + Redux ![:kunst:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f3a8.png) | Tailwind CSS ![:maniküre:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f485.png)\
+![:glühbirne:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4a1.png) **Architecture & Flow:**
+
+* LangChain + Qdrant for **contextual code and documentation retrieval**
+* FastAPI backend orchestrates LLM responses and stores request history
+* React + Redux frontend provides an interactive workspace for prompts and results
+* Integrated **MUI DataGrid** shows historical generations with sorting/search
+
+![:bücher:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4da.png) **Current Phase:**\
+ ![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png) Core Code Generation & RAG Context Retrieval complete\
+ ![:bau:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f6a7.png) Next: adding conversational memory and snippet library for persistent sessions\
+![:link:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f517.png) **Tech Highlights:**
+
+* Custom ingestion pipeline (LangChain + SentenceTransformer → Qdrant)
+* Modular API design with `ChatPromptTemplate` & `ChatOpenAI`
+* Production-style integration between AI, vector DB, and frontend UI
+
+![:desktop-computer:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f5a5-fe0f.png) _Built as part of the LangChain Community learning & dev journey!_\
+![:computer:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4bb.png) **GitHub:** [github.com/santoshnarayanan/sda](http://github.com/santoshnarayanan/sda)
+
+6 Dateien 
+
+Alle herunterladen
+
+[![Archiecture.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09NF2B3R44-e19706a2a4/archiecture_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09NF2B3R44/archiecture.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09NF2B3R44/download/archiecture.png?origin_team=T05P4BNF01J)
+
+[![Backend.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09NBFRR95G-1ffa618a38/backend_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09NBFRR95G/backend.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09NBFRR95G/download/backend.png?origin_team=T05P4BNF01J)
+
+[![ER.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09NQCJCK89-e4f9936e63/er_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09NQCJCK89/er.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09NQCJCK89/download/er.png?origin_team=T05P4BNF01J)
+
+[![Frontend-API.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09P5Q60JG0-3113226546/frontend-api_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09P5Q60JG0/frontend-api.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09P5Q60JG0/download/frontend-api.png?origin_team=T05P4BNF01J)
+
+[![Sequence.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09NF2AA412-f14f1ead03/sequence_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09NF2AA412/sequence.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09NF2AA412/download/sequence.png?origin_team=T05P4BNF01J)
+
+[![User interface.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09NBFS2602-c3d7c814cc/user_interface_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09NBFS2602/user_interface.png)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09NBFS2602/download/user_interface.png?origin_team=T05P4BNF01J)
+
+![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U06B3CKC732-a1b72f8c6611-48)
+
+Colin McNamara  [03:07 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1761268056281159)
+
+Check out Ryan Booth's presentation showing how he used LangGraph with A2A and AP2 to create a dynamic services marketplace at the Oct 5th Austin LangChain AIMUG meeting - <https://www.youtube.com/watch?v=d5l0D7h5bI4>
+
+[![YouTube](https://a.slack-edge.com/80588/img/unfurl_icons/youtube.png)](https://www.youtube.com/)[YouTube](https://www.youtube.com/) | [Austin AI MUG - AI Middleware Users Group](https://www.youtube.com/@AI-MUG)
+
+[A2A & AP2: Agent Commerce Arrives – Ryan Booth | AIMUG October 2025](https://www.youtube.com/watch?v=d5l0D7h5bI4) __
+
+__[__](https://www.youtube.com/watch?v=d5l0D7h5bI4)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08A9BEJ8A0-g187c0210e89-48)
+
+Vahid Faraji  [17:25 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1761319541228429)
+
+Hi there, I try to make a contribution for turkish community about deep agent--
+
+[17:26 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1761319607522119)
+
+<https://kubraclbi.atlassian.net/wiki/spaces/~5e8dab871c07ed0b7de743a9/pages/16809992/deep+agent>
+
+![id.atlassian.com](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fid.atlassian.com%2Ffavicon.ico)id.atlassian.com
+
+[Log in with Atlassian account](https://kubraclbi.atlassian.net/wiki/spaces/~5e8dab871c07ed0b7de743a9/pages/16809992/deep+agent)
+
+Log in to Jira, Confluence, and all other Atlassian Cloud products here. Not an Atlassian user? Sign up for free.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08NTK9FFCK-c4d0ce9bd7ae-48)
+
+johnda98  [23:03 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1761339797748399)
+
+well.. lets see if I can use any existing between thread/ ie postgre long term memory/semantic searches via  langgraph's meta agent graphs.me thinks that they dont permit use at that level of the API to use 'Store' and Checkpointer classes & methods.  ie the Supervisor-Agent and Sub-Agent-- tools/MCP & RAG. Agent frames do not have such a feature (currently) (bearbeitet) 
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09CZ1K2RA6-b2dcf4b9f014-24)1 Antwort
+
+vor 9 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08NTK9FFCK-c4d0ce9bd7ae-48)
+
+johnda98  [23:04 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1761339880904079)
+
+welcome any comments in forum , Naturally. thanks (bearbeitet) 
+
+Screenshot 2025-10-24 at 1.57.36 PM.png 
+
+[![Screenshot 2025-10-24 at 1.57.36 PM.png](https://files.slack.com/files-tmb/T05P4BNF01J-F09PD23T6UQ-42b94f4768/screenshot_2025-10-24_at_1.57.36___pm_720.png)](https://files.slack.com/files-pri/T05P4BNF01J-F09PD23T6UQ/screenshot_2025-10-24_at_1.57.36___pm.png)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09NQU25Z6Z-g2b8820b55c6-48)
+
+mahapadma  [09:10 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1761552651093669)
+
+Hello Everyone, I am trying to run open deep research using langchain and language graph. It's running from lang graph studio, but when running from api/postman, it's giving me below error. What details need to be sent in the Authorization header ? Is it langsmith api key or any other details ? Thanks.
+
+IMG20251027133720.jpg 
+
+[![IMG20251027133720.jpg](https://files.slack.com/files-tmb/T05P4BNF01J-F09NUMA0CCS-3e85703d08/img20251027133720_720.jpg)](https://files.slack.com/files-pri/T05P4BNF01J-F09NUMA0CCS/img20251027133720.jpg)
+
+[](https://files.slack.com/files-pri/T05P4BNF01J-F09NUMA0CCS/download/img20251027133720.jpg?origin_team=T05P4BNF01J)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09PNVDHHR6-783f35ca21a0-48)
+
+Arda Orkin  [12:57 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1761566264841509)
+
+Hey everyone! I am trying to get used to our codebase's LangGraph setup. The configuration doesn't belong to me and there are some obstacles that I am not familiar with because I am pretty new to LangGraph. So, I'd love to get help from the community. The thing is that I am tryin to visualize the graph on LangSmith however, apparently our LangGraph setup has some custom configuration considering the above error message:
+
+```
+ValueError: Heads up! Your graph '...' from 'some/path/in/project/folder.py' includes a custom checkpointer (type <class 'langgraph.checkpoint.memory.InMemorySaver'>). With LangGraph API, persistence is handled automatically by the platform, so providing a custom checkpointer (type <class 'langgraph.checkpoint.memory.InMemorySaver'>) here isn't necessary and will be ignored when deployed.
+```
+
+Does that mean I need to change the configuration for good to be able to visualize the flow on LangSmith? Or is there a way to use LangSmith with the current setup without affecting the project's existing settings? (bearbeitet) 
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09F5TCBBPD-13f79f04f08c-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09PNVDHHR6-783f35ca21a0-24)3 Antworten
+
+Letzte Antwort vor 7 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U07SYHQR79N-2dfbb6cda816-48)
+
+Teddy  [17:35 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1761582957686889)
+
+Hello everyone!\
+While language may not be a barrier for LLMs, it can sometimes be a barrier in countries where English isn't the primary language.\
+When utilizing a great framework like LangChain, the “English” documentation can sometimes feel like a barrier to developers in South Korea.\
+I have localized all LangChain v1.0 documentation(thx to GPT) into Korean and made it available to help minimize this barrier for all developers in South Korea.I translated about 2,000 MDX files. After LLM translation, there were various errors like syntax and linking issues, but I handled each exception case one by one. After two full days, I achieved a pretty satisfying result.Below is the Korean LangChain V1.0 documentation.\
+[https://kr.langchain-docs.com](https://kr.langchain-docs.com/)I intentionally set it to ‘kr’ as a sub-domain.\
+If there are others interested in translation from other countries like me, it would be great if various countries besides ‘kr’ could be added.Alternatively, it would be nice if multiple translations were integrated into the official LangChain documentation later!Thx, have a great day!
+
+![:beten:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64f.png)4![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)![:erhobene\_hände::hautton-5:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c-1f3fe.png)5
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U05PNH5J08P-6809b64cb65e-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09BY617HEH-614212638aab-24)3 Antworten
+
+Letzte Antwort vor 7 TagenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09NS8LDD1D-7ce9926f5d5d-48)
+
+JuanluAIEngineer  [16:53 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1761753239938639)
+
+**![:stern2:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f31f.png)****&#xA0;Pattern #1: Incremental Booking – No More Broken Flows**Hey Community!\
+Yesterday I promised **production patterns** from my live **LangGraph SaaS**. **Delivering now**:**The Fix**\
+**Incremental Booking Pattern**: Collects data _one piece at a time_, validates against real calendar, confirms explicitly.**6 nodes, 2 routers**:\
+![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png) **detect\_intent** → **extract\_booking\_data** → **check\_availability**\
+![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png) **ask\_for\_information** → **confirm\_booking** → **respond\_user**\
+**LLM only for extraction:&#xA0;**&#x64;ecisions in clean Python. **State persists** across turns.**Live Resources**\
+![:link:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f517.png) **Code**: [github.com/juanludataanalyst/langgraph-conversational-patterns](http://github.com/juanludataanalyst/langgraph-conversational-patterns)\
+![:filmkamera:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f3a5.png) **Demo**: <https://www.youtube.com/watch?v=6p7aGX2jNCY>\
+![:memo:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4dd.png) **Article**: <https://medium.com/@juanluaiengineer/stop-building-unpredictable-ai-agents-for-booking-systems-62b18b405a1e>\
+![:memo:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4dd.png) **Linkedin Post:&#xA0;****[https://www.linkedin.com/posts/juanludataanlyst\_stop-building-unpredictable-ai-agents\[…\]m=member\_desktop\&rcm=ACoAAEdeS9sB6M7vVjw8wxXv0r7uWS7\_6jHxmmM](https://www.linkedin.com/posts/juanludataanlyst_stop-building-unpredictable-ai-agents-for-activity-7389101599165599744-pIIP?utm_source=share\&utm_medium=member_desktop\&rcm=ACoAAEdeS9sB6M7vVjw8wxXv0r7uWS7_6jHxmmM)****Your turn**:
+
+* **Star + fork** it
+* **PR improvements**
+* **Using it?** Share your adaptation!
+
+**Let's make booking flows boring (the good kind) and thanks for this space for sharing my work :)**
+
+[![YouTube](https://a.slack-edge.com/80588/img/unfurl_icons/youtube.png)](https://www.youtube.com/)[YouTube](https://www.youtube.com/) | [Juan Luis Pérez Carretero](https://www.youtube.com/@juanluaiengineer)
+
+[Stop Building Unpredictable AI Agents for Booking Systems](https://www.youtube.com/watch?v=6p7aGX2jNCY) __
+
+__[__](https://www.youtube.com/watch?v=6p7aGX2jNCY)
+
+![Medium](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afill%3A304%3A304%2F10fd5c419ac61637245384e7099e131627900034828f4f386bdaa47a74eae156)Medium
+
+[Stop Building Unpredictable AI Agents for Booking Systems](https://medium.com/@juanluaiengineer/stop-building-unpredictable-ai-agents-for-booking-systems-62b18b405a1e)
+
+The deterministic workflow pattern that gives you control without losing flexibility
+
+Reading time
+
+12 min read
+
+28\. Okt. (155 kB)__
+
+[https://medium.com/@juanluaiengineer/stop-building-unpredictable-ai-agents-for-booking-systems-62b18b405a1e](https://medium.com/@juanluaiengineer/stop-building-unpredictable-ai-agents-for-booking-systems-62b18b405a1e "Stop Building Unpredictable AI Agents for Booking Systems")
+
+[](https://medium.com/@juanluaiengineer/stop-building-unpredictable-ai-agents-for-booking-systems-62b18b405a1e)
+
+![linkedin.com](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fstatic.licdn.com%2Faero-v1%2Fsc%2Fh%2Fal2o9zrvru7aqj8e1x2rzsrca)linkedin.com
+
+[Stop Building Unpredictable AI Agents for Booking Systems | Juan Luis Pérez Carretero](https://www.linkedin.com/posts/juanludataanlyst_stop-building-unpredictable-ai-agents-for-activity-7389101599165599744-pIIP?utm_source=share\&utm_medium=member_desktop\&rcm=ACoAAEdeS9sB6M7vVjw8wxXv0r7uWS7_6jHxmmM)
+
+Stop Building Unpredictable AI Agents for Booking SystemsLast year, everyone rushed to build booking bots using pure AI agents.The results? Inconsistent, unpredictable, and expensive.I've seen production systems where:![:kein\_zutritt\_schild:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f6ab.png) Agent asks for information it already has\
+![:kein\_zutritt\_schild:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f6ab.png) Skips availability checks when it shouldn't\
+![:kein\_zutritt\_schild:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f6ab.png) Confirms bookings before validating all required data\
+![:kein\_zutritt\_schild:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f6ab.png) Token costs skyrocket𝐓𝐡𝐞 𝐚𝐥𝐭𝐞𝐫𝐧𝐚𝐭𝐢𝐯𝐞𝐬 𝐚𝐫𝐞𝐧'𝐭 𝐠𝐫𝐞𝐚𝐭 𝐞𝐢𝐭𝐡𝐞𝐫.Tools like n8n? Great for simple automations. Rigid for dynamic conversations.Forms? High abandonment.So I built something different. The Incremental Booking Pattern (built with LangGraph) ![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png) Predictable flow (you control routing, not the AI)\
+ ![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png) Conv… Mehr anzeigen
+
+[https://www.linkedin.com/posts/juanludataanlyst\_stop-building-unpredictable-ai-agents-for-activity-7389101599165599744-pIIP?utm\_source=share\&utm\_medium=member\_desktop\&rcm=ACoAAEdeS9sB6M7vVjw8wxXv0r7uWS7\_6jHxmmM](https://www.linkedin.com/posts/juanludataanlyst_stop-building-unpredictable-ai-agents-for-activity-7389101599165599744-pIIP?utm_source=share\&utm_medium=member_desktop\&rcm=ACoAAEdeS9sB6M7vVjw8wxXv0r7uWS7_6jHxmmM "Stop Building Unpredictable AI Agents for Booking Systems | Juan Luis Pérez Carretero")
+
+[](https://www.linkedin.com/posts/juanludataanlyst_stop-building-unpredictable-ai-agents-for-activity-7389101599165599744-pIIP?utm_source=share\&utm_medium=member_desktop\&rcm=ACoAAEdeS9sB6M7vVjw8wxXv0r7uWS7_6jHxmmM)
+
+![:erhobene\_hände:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f64c.png)2
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09DQGLR5U7-f1dec90f9572-48)
+
+Sarfraz Ali  [09:38 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1761813488427689)
+
+“AI RAG Voice Chatbot !”![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png) Excited to share my latest AI project!I’ve built an intelligent Voice-Based RAG Chatbot — a system that can:\
+![:studiomikrophon:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f399-fe0f.png) Listen to your voice questions\
+![:bücher:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4da.png) Retrieve precise answers directly from uploaded PDFs\
+![:gehirn:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f9e0.png) Generate natural language responses with OpenAI’s GPT\
+![:lauter\_sound:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f50a.png) Speak back the answers in real timeNo typing. No clicking “play.” Just talk → it listens → it thinks → it talks back.![:glühbirne:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f4a1.png) Tech Stack![:raute\_blau\_klein:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f539.png) Streamlit – interactive UI & real-time voice interface\
+![:raute\_blau\_klein:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f539.png) OpenAI (GPT-4o) – natural language understanding\
+![:raute\_blau\_klein:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f539.png) Groq Whisper + TTS – fast voice transcription & speech generation\
+![:raute\_blau\_klein:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f539.png) Pinecone – vector database for semantic search\
+![:raute\_blau\_klein:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f539.png) LangChain – retrieval-augmented generation (RAG) pipeline![:puzzle:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f9e9.png) Features![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png) Multi-turn conversation (ask multiple questions seamlessly)\
+![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png) Auto voice playback (no clicks needed)\
+![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png) Beautiful modern chat UI with avatars\
+![:weißes\_häkchen:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/2705.png) Context-aware PDF knowledge retrievalBuilding this project taught me so much about multimodal AI, speech interfaces, and real-time RAG pipelines.\
+It’s amazing to see how far human-AI interaction has come — and where it’s headed.![:hammer\_und\_schraubenschlüssel:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f6e0-fe0f.png) The possibilities are endless — think of hands-free document assistants, voice-driven tutors, and enterprise Q\&A bots!If you’d like to try something similar or collaborate on expanding it (web app, multi-doc support, or PWA), I’d love to connect. ![:handschlag:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f91d.png)#AI #VoiceAI #OpenAI #RAG #Streamlit #LangChain #Pinecone #Groq #Python #MachineLearning #ArtificialIntelligence #VoiceAssistant #GenerativeAI #TechInnovation
+
+WhatsApp Video 2025-10-30 at 12.59.23 PM.mp4 
+
+![:+1:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f44d.png)5
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09BKNFSHRU-g69eda367bb3-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09DQGLR5U7-f1dec90f9572-24)2 Antworten
+
+Letzte Antwort vor 1 TagThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U08G3DWTKT5-435b2f46da42-48)
+
+Eric Burel  [20:23 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1761852223023069)
+
+Hey French speaking folks ![:fr:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f1eb-1f1f7.png) I've been publishing many more resources in French here : <https://www.lbke.fr/ressources#LangChain>\
+Among them:
+
+* How to halve your API costs by using LangGraph and batch APIs
+* Why preferring structured outputs to parsing results
+* Beginner resources to get started with LangChain
+
+![:geschenk:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f381.png) Bonus: 11 short videos to discover LangChain in French : <https://www.youtube.com/playlist?list=PLGV8Z-HVlsIObBzxAw1_lRbuY6u9MKfAm>
+
+![lbke.fr](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fwww.lbke.fr%2Ffavicon.ico)lbke.fr
+
+[Ressources gratuites formation IA générative LLM fullstack](https://www.lbke.fr/ressources#LangChain)
+
+Explorez nos articles pour vous former à l'intelligence artificielle générative et au développement web fullstack et LLM, rédigés par des experts formateurs. (31 kB)__
+
+[https://www.lbke.fr/ressources#LangChain](https://www.lbke.fr/ressources#LangChain "Ressources gratuites formation IA générative LLM fullstack")
+
+[](https://www.lbke.fr/ressources#LangChain)
+
+![YouTube](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fwww.youtube.com%2Fs%2Fdesktop%2F3fd9a6f6%2Fimg%2Ffavicon.ico)YouTube
+
+[LangShorts - Astuces pour le framework LangChain pour le développement d'agents IA LLM en Python](https://www.youtube.com/playlist?list=PLGV8Z-HVlsIObBzxAw1_lRbuY6u9MKfAm)
+
+Des shorts à propos de LangChain • Contenus tirés de notre formation en 3 jours • <https://www.lbke.fr/formations/developpeur-llm-langgraph-langchain/cpf>
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09MR445CF7-g72a34175bd6-48)
+
+Howard Krieger  [23:33 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1761863605716159)
+
+<https://www.xdub.io/>
+
+![xdub.io](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fframerusercontent.com%2Fimages%2FiEwbOhUfL1WFZBw21znxL8OvM.png)xdub.io
+
+[XDUB – Automatic AI Dubbing for Streamers & Creators](https://www.xdub.io/)
+
+Break language barriers with XDUB — the automatic AI dubbing tool for creators and streamers. Instantly dub videos and live content into 65+ languages using SpeechLab’s advanced voice technology, accelerated by the SHAFT Foundation. (282 kB)__
+
+[https://www.xdub.io/](https://www.xdub.io/ "XDUB – Automatic AI Dubbing for Streamers \&amp; Creators")
+
+[](https://www.xdub.io/)
+
+![:feuer:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f525.png)1
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09MR445CF7-g72a34175bd6-24)![](https://ca.slack-edge.com/T05P4BNF01J-U09PZ7GSFU3-e12a871dbc0b-24)4 Antworten
+
+Letzte Antwort vor 18 StundenThread ansehen
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09QQH1LFNC-g5373f4b1aa3-48)
+
+Pradeep Sharma  [07:49 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1761893359781269)
+
+Seeking your feedback on a project I am working on. This project cannot be completed without your feedback.\
+The key idea is to standardize the analytics data schema in order to make it easy to prove ROI for AI agents and understand user behavior.\
+With the standardization, the analytics implementation becomes interoperable and comparable across different projects.
+
+* [The proposed specification](https://github.com/rudderlabs/rudder-server/discussions/6476) for the tracking data schema (the analytics data to collect from the AI Agent)
+* [The implementation guide](https://www.rudderstack.com/blog/ai-product-analytics-privacy/) covering examples that covers the setup code, dashboard sample, and SQL queries to extract key metrics
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09PZ7GSFU3-e12a871dbc0b-48)
+
+Guy Derry  [23:46 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1762037191709919)
+
+Just pushed a new LangChain integration for GenOps AI:  <https://github.com/KoshiHQ/GenOps-AI/tree/main/examples/langchain>GenOps AI is an open-source runtime governance framework built on OpenTelemetry. It lets you capture usage, cost, and policy telemetry directly from your LangChain apps. Supports multi-model workloads as well.Would love feedback from anyone exploring governance for LLM workflows.
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U086A438Y6B-g6be702623ba-48)
+
+Mehdi Diabi  [02:07 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1762045643304319)
+
+[https://voissai.com](https://voissai.com/)Desktop application for meetings / live call suggestions with many features for post call as well - Just released the beta today ![:rakete:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f680.png)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09NTAXNGMU-a2f53d03a5b4-48)
+
+Sergey Bolshchikov  [07:11 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1762063876458739)
+
+Hi, I wrote a long step-by-step guide on how open deep research works under the hood. I cover the design patterns used there and show how the state of every agent and sub-agent changes at every step of the execution.\
+Looking forward to your feedback ![:beten:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-medium/1f64f.png)\
+<https://www.bolshchikov.com/p/open-deep-research-internals-a-step> (bearbeitet) 
+
+![bolshchikov.com](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fsubstackcdn.com%2Fimage%2Ffetch%2F%2524s_%21StUd%21%2Cf_auto%2Cq_auto%3Agood%2Cfl_progressive%3Asteep%2Fhttps%253A%252F%252Fsubstack-post-media.s3.amazonaws.com%252Fpublic%252Fimages%252Fb10c3a14-f181-40fe-9c8e-d5bcfd357f50%252Fapple-touch-icon-57x57.png)bolshchikov.com
+
+[Open Deep Research Internals: A Step-by-Step Architecture Guide](https://www.bolshchikov.com/p/open-deep-research-internals-a-step)
+
+A detailed walkthrough of Open Deep Research's architecture, showing how state evolves, agents coordinate, and design patterns combine at each execution step. (75 kB)__
+
+[https://www.bolshchikov.com/p/open-deep-research-internals-a-step](https://www.bolshchikov.com/p/open-deep-research-internals-a-step "Open Deep Research Internals: A Step-by-Step Architecture Guide")
+
+[](https://www.bolshchikov.com/p/open-deep-research-internals-a-step)
+
+![:+1:](https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-small/1f44d.png)3
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09MR445CF7-g72a34175bd6-48)
+
+Howard Krieger  [17:13 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1762099998857789)
+
+[Xdub.io](http://xdub.io/)
+
+![](https://ca.slack-edge.com/T05P4BNF01J-U09H5Q724KH-ef87b14baab1-48)
+
+Bohdan Petryshyn  [00:56 Uhr](https://langchaincommunity.slack.com/archives/C079U7CRJR2/p1762127764763169)
+
+Hey folks, I'm building [Lenzy AI](https://lenzy.ai/) - probably the first product analytics platform for AI agents.Lenzy analyzes your AI chat logs to surface actionable insights: What features are users requesting? Where do they get frustrated? What makes them churn? (Or any other custom question)Unlike observability tools (Langfuse, Helicone, Langsmith) that help you monitor and debug agent performance, Lenzy helps you understand user needs and improve your product.Contact me for early access with early adopter perks!
+
+![Lenzy AI](https://slack-imgs.com/?c=1\&o1=wi32.he32.si\&url=https%3A%2F%2Fwww.lenzy.ai%2Fapple-icon.png%3Fapple-icon.5f81d8a8.png)Lenzy AI
+
+[Lenzy AI - Conversational Analytics for AI Agents](https://lenzy.ai/)
+
+Turn AI conversations into actionable insights. Discover feature requests, identify pain points, and understand user preferences automatically. (401 kB)__
+

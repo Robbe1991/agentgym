@@ -1,0 +1,372 @@
+
+October 1st, 2025
+heartcelebratemind blownlikecompelling
+17 reactions
+Introducing Microsoft Agent Framework: The Open-Source Engine for Agentic AI Apps
+Takuto HiguchiShawn HenryElijah Straight
+Takuto
+,
+Shawn
+,
+Elijah
+
+Table of contents
+Why agents need a new foundation
+Introducing Microsoft Agent Framework
+The Four Pillars of Agent Framework
+Customer Momentum
+Path to Microsoft Agent Framework
+Get Started with Microsoft Agent Framework Today
+Read next
+October 7, 2025
+What’s new in Azure AI Foundry | September 2025
+Nick Brady
+Nick Brady
+October 14, 2025
+The Developer’s Guide to Smarter Fine-tuning: Unlock custom AI for every business challenge
+Malena Lopez-SoteloJacques Guibert de Bruet
+Malena,
+Jacques
+Create the future
+Securely design, customize, and manage AI applications and agents at scale with Azure AI Foundry.
+
+Get started
+Why agents need a new foundation
+Over the last year, developers have been experimenting with AI agents in every imaginable form. Agents are not just chatbots or copilots — they are autonomous software components that can reason about goals, call tools and APIs, collaborate with other agents, and adapt dynamically. Whether it’s a retrieval agent for research, a coding agent embedded in a dev workflow, or a compliance agent ensuring policy enforcement, agents are becoming the next layer of application logic.
+
+Yet despite the excitement, the path from prototype to production has been fraught with obstacles. Many of the most popular open-source frameworks are fragmented, each with their own APIs and abstractions. Local development rarely maps cleanly to cloud deployments. And most importantly, enterprise readiness is missing: observability, compliance hooks, security, and long-running durability are table stakes in OSS frameworks.
+
+At Microsoft, we’ve had a front-row seat to this problem. With Semantic Kernel, we gave developers a stable SDK with connectors into enterprise systems, content moderation, and telemetry. With AutoGen, pioneered in Microsoft Research, we opened the door to experimental multi-agent orchestration patterns that inspired the community. Both had passionate users — but each had gaps.
+
+Developers asked us: why can’t we have both — the innovation of AutoGen and the trust and stability of Semantic Kernel — in one unified framework?
+
+That’s exactly why we built the Microsoft Agent Framework.
+
+ 
+
+
+
+ 
+
+Introducing Microsoft Agent Framework
+Microsoft Agent Framework is an open-source SDK and runtime designed to let developers build, deploy, and manage sophisticated multi-agent systems with ease. It unifies the enterprise-ready foundations of Semantic Kernel with the innovative orchestration of AutoGen, so teams no longer have to choose between experimentation and production.
+
+Semantic Kernel	AutoGen	Microsoft Agent Framework
+Focus	Stable SDK with enterprise connectors, workflows, and observability	Experimental multi-agent orchestration from research	Unified SDK combining innovation + enterprise readiness
+Interop	Plugins, connectors, and support for MCP, A2A, OpenAPI	Tool integration supported; lacks standardized cross-runtime protocols	Built-in connectors, MCP + A2A + OpenAPI
+Memory	Multiple vector store connectors and memory store abstraction (e.g. Azure SQL Elasticsearch, MongoDB)	Support for in-memory / buffer history + external vector store memory options (ChromaDB, Mem0, etc)	Pluggable memory across stores (first-party and third-party), persistent & adaptive memory stored with retrieval, hybrid appraoches
+Orchestration	Deterministic + dynamic orchestration (Agent Framework, Process Framework)	Dynamic LLM orchestration (debate, reflection, facilitator/worker, group chat)	Deterministic + dynamic orchestration (Agent Orchestration, Workflow Orchestration)
+Enterprise readiness	Telemetry, observability, compliance hooks	Minimal	Observability, approvals, CI/CD, long-running durability, hydration
+With Microsoft Agent Framework, you get:
+
+Open standards & interoperability — MCP, A2A, and OpenAPI ensure agents are portable and vendor-neutral.
+Pipeline for research-to-production — bleeding-edge orchestration patterns from Microsoft Research are now ready for enterprise use.
+Community-driven extensibility — modular by design, with connectors, pluggable memory, and declarative agent definitions.
+Enterprise readiness — built-in observability, approvals, security, and long-running durability.
+Microsoft Agent Framework doesn’t replace Semantic Kernel and AutoGen — it builds on them. By consolidating their strengths, it gives developers one foundation to move from experimentation to enterprise deployment without compromise. Microsoft Agent Framework supports both Agent Orchestration (LLM-driven, creative reasoning and decision-making) and Workflow Orchestration (business-logic driven, deterministic multi-agent workflows). Together, they allow teams to choose the right approach for the problem: flexible collaboration for open-ended tasks, or structured workflows for repeatable enterprise processes.
+
+ 
+
+Looking ahead, Microsoft Agent Framework further advances integrations across Microsoft’s agent development stack, including the integration with the Microsoft 365 Agents SDK and a shared runtime with Azure AI Foundry Agent Service. The Microsoft 365 Agents SDK is the pro-code toolkit that lets developers build full-stack, multi-channel agents and publish them across Microsoft 365 Copilot, Teams, web, and other surfaces, with deep interoperability into Copilot Studio’s low-code connectors and Microsoft 365 Copilot custom engine agents. By converging this SDK with Microsoft Agent Framework—and aligning it with the shared runtime used in Foundry Agent Service—developers will gain one unified set of abstractions to create, run, scale, and publish agents. This means you can prototype locally, debug with consistent telemetry, and then seamlessly move into scaled hosting with enterprise-grade observability, compliance, and security—all without rewriting your agents—and then publish them into any communication channels of choice where you want to surface your agents.
+
+Screenshot 2025 10 14 214120 image
+
+The Four Pillars of Agent Framework
+Open Standards & Interoperability
+Agents don’t exist in isolation — they need to connect to data, tools, and each other. Microsoft Agent Framework was built with open standards at its core, so developers can choose their integrations and ensure their systems remain portable across frameworks and clouds.
+
+MCP (Model Context Protocol): Agents can dynamically discover and invoke external tools or data servers exposed over MCP. Microsoft Agent Framework makes it easy to connect to a growing ecosystem of MCP-compliant services without custom glue code.
+Agent-to-Agent (A2A): Agents can collaborate across runtimes using structured, protocol-driven messaging. A2A support allows developers to create workflows where one agent retrieves data, another analyzes it, and a third validates results — even if they’re running in different frameworks or environments.
+OpenAPI-first design: Any REST API with an OpenAPI specification can be imported as a callable tool instantly. Microsoft Agent Framework handles schema parsing, tool definition, and secure invocation so developers can leverage thousands of enterprise APIs without building wrappers by hand.
+Cloud-agnostic runtime: Agents can run in containers, on-premises, or across multiple clouds, making them portable across environments. Developers can spin up a single agent with their preferred SDK (Azure OpenAI, OpenAI, etc.), add tools by wrapping existing methods as AIFunctions, and immediately connect to external APIs.
+The latest update to the VS Code AI Toolkit brings a streamlined experience for building with the Microsoft Agent Framework, enabling developers to locally create, run, and visualize multi-agent workflows. These enhancements simplify the inner dev loop, making it easier to build, debug, and iterate on multi-agent systems within the familiar VS Code environment.
+
+VSCode compressed image
+
+Pipeline for Research
+Microsoft Agent Framework is designed to be the bridge between research innovation and enterprise-ready production. Many of the most exciting breakthroughs in multi-agent orchestration patterns come out of Microsoft Research in AutoGen, and the new framework makes those ideas usable in real-world systems without sacrificing durability, governance, or performance.
+
+The framework supports:
+
+Sequential orchestration for step-by-step workflows.
+Concurrent orchestration where agents work in parallel.
+Group chat orchestration where agents brainstorm collaboratively.
+Handoff orchestration where responsibility moves between agents as context evolves.
+Magentic orchestration where a manager agent builds and refines a dynamic task ledger, coordinating specialized agents (and sometimes humans) for complex, open-ended problems.
+To serve both innovators and production-minded developers, Microsoft Agent Framework also provides an extension package for experimental features — a clearly labeled incubation channel where advanced users can try out cutting-edge capabilities from Microsoft Research and the open-source community. These features are transparent about their experimental status, while successful innovations graduate naturally into the stable framework.
+
+These patterns — once prototypes — now run with durability, auditability, and enterprise controls. It’s the best of research innovation, matured for real-world use.
+
+ 
+
+Extensible by Design & Community-Driven
+Microsoft Agent Framework is 100% open source and designed to grow with the community. Its modular design makes it easy to extend, customize, and contribute.
+
+Connectors to enterprise systems: Agent Framework inherits a broad set of built-in connectors (Azure AI Foundry, Microsoft Graph, Microsoft Fabric, SharePoint, Oracle, Amazon Bedrock, MongoDB, and a various SaaS system through Azure Logic Apps) so agents can work with enterprise data from day one.
+Pluggable memory modules: Developers can choose Redis, Pinecone, Qdrant, Weaviate, Elasticsearch, Postgres, or their own store for conversational memory. Agent Framework provides the abstraction; you decide the backend.
+Declarative agents: YAML or JSON definitions allow developers to specify prompts, roles, and tools declaratively. These files can be version-controlled, templatized, and shared across teams.
+Community innovation: Agent Framework is designed to absorb community-driven orchestration strategies, new connectors, and best practices.
+This means Microsoft Agent Framework is not a fixed product — it’s a living ecosystem, continuously shaped by contributions from Microsoft Research and the global OSS community.
+
+ 
+
+Ready for Production
+Microsoft Agent Framework isn’t just for experimentation — it was built for enterprise-grade deployment from the very beginning. It delivers the end-to-end tooling and runtime features needed to confidently move from prototype to scale, while integrating deeply with the Azure AI Foundry ecosystem.
+
+Observability: OpenTelemetry can instrument and visualize every agent action, tool invocation, and orchestration step, making it easy to trace reasoning flows and monitor performance through Azure AI Foundry dashboards.
+Secure Cloud Hosting: Agents will run natively on Azure AI Foundry with enterprise controls like virtual network integration, role-based access, private data handling, and built-in content safety.
+Security & compliance: Azure AI Content Safety integration, Entra ID authentication, and structured logging mean Agent Framework agents can run in regulated industries.
+Long-running durability: Agent threads and workflows can pause, resume, and recover from interruptions, with retry and error-handling logic ensuring long-running processes remain reliable at scale.
+Human in the loop: For scenarios that require governance, tools can be marked as requiring human approval. Agent Framework automatically emits a pending approval request that can be routed to a UI or queue, then continues or denies execution accordingly. This works across local tools or remote service calls, ensuring sensitive operations remain under control.
+CI/CD integration: The framework integrates directly into GitHub Actions and Azure DevOps pipelines, with telemetry flowing into Azure Monitor and Application Insights for enterprise-grade deployment and root-cause analysis.
+With these capabilities, Microsoft Agent Framework makes it seamless to prototype locally, debug with rich telemetry, and then scale securely into production with the enterprise readiness that modern AI systems demand.
+
+Customer Momentum
+Enterprises across industries are already testing Microsoft Agent Framework in real-world scenarios:
+
+AgentFramework customers image
+
+KPMG is building Clara AI, a multi-agent system that automates audit testing and documentation. “Foundry Agent Service and Microsoft Agent Framework connect our agents to data and each other, and the governance and observability in Azure AI Foundry provide what KPMG firms need to be successful in a regulated industry” – Sebastian Stöckle, Global Head of Audit Innovation and AI, KPMG International
+Commerzbank is piloting Microsoft Agent Framework to power avatar-driven customer support, enabling more natural, accessible, and compliant customer interactions. “The new Microsoft Agent Framework simplifies coding, reduces efforts and fully supports MCP for agentic solutions. We are really looking forward to the productive usage of container-based Azure AI Foundry agents, which significantly reduces workload in IT operations” – Gerald Ertl, Managing Director/Head of Digital Banking Solutions, Commerzbank AG
+BMW: BMW is using Microsoft Agent Framework and Foundry Agent Service to orchestrate multi-agent systems that analyze terabytes of vehicle telemetry in near real time, enabling engineers to accelerate design cycles and spot issues earlier in testing. “Durability and observability are key for our operations. With multi-agent systems powered by Microsoft Agent Framework and Foundry Agent Service, engineers don’t just access data — they get insights they can act on immediately, cutting analysis from days to minutes.” – Christof Gebhart, Manager, Advanced Vehicle Measurement Technology, BMW
+Fujitsu is embedding Microsoft Agent Framework into its integration services, enabling customers to safely adopt advanced orchestration strategies such as group chat and debate. “I believe it enables us to build multi-agent systems that emphasize coexistence between humans and AI and can truly accelerate our AI transformation” – Hirotaka Ito, Lead engineer of AI, Corporate Digital Unit, Fujitsu.
+Citrix: Citrix is exploring how they can use agentic AI within VDI environments to improve enterprise productivity and efficiency. “We are excited about the Microsoft Agent Framework, which brings a modern, developer-first approach to building single- and multi-agent workflows. With support of key APIs and languages, and native adoption of emerging protocols for tool calling and observability, it enables intuitive development of agents on Azure AI Foundry, without compromising developer control. We are eager to leverage the framework to deliver enterprise-scale, production-ready AI solutions to our customers.” — George Tsolis, Distinguished Engineer, Citrix
+Fractal: Fractal’s Cogentiq is an agentic AI platform that uses Microsoft Agent Framework to orchestrate and scale enterprise AI agents and workflows across industries. “Cogentiq leverages Microsoft Agent Framework to orchestrate and scale AI agents and workflows. Microsoft Agent framework’s ease of use, flexible agent development and deployment options and support for building complex multi-agentic workflows enables us to rapidly build, deploy, and manage multi-agent solutions across industries and functions. The Agent Framework allows both technical and business teams to innovate quickly, integrate with enterprise systems, and deliver value at scale through production-ready tools and access to industry-leading AI models. It takes care of the heavy lifting around model access, deployment, scaling, security, networking helping Fractal focus on solving our client’s industry and function specific business problems.” — Himanshu Nautiyal, Chief Product Officer, Fractal
+TCS: Tata Consultancy Services is actively building a multi-agent practice on the Microsoft Agent Framework, with several initiatives underway that showcase their strategic investment and technical depth including agentic solutions for finance, IT operations, and retail. “Adopting Microsoft Agent Framework is not just a technological advancement, but a bold step towards reimagining industry value chains. By harnessing Agentic AI and Frontier models, we enable our teams to build flexible, scalable, enterprise-grade solutions that transform workflows and deliver value across platforms. True leadership is about empowering innovation, embracing change, and fostering an environment where agility and collaboration drive excellence.”  – Girish Phadke, Head, Microsoft Azure Practice, TCS
+Sitecore: Sitecore is building a solution to help marketers interact more seamlessly with the Sitecore platform by automating tasks across content supply chain, from creating and managing web experiences to digital assets, using intelligent agents. “By partnering with Microsoft to leverage its new Microsoft Agent Framework, Sitecore can bring together the best of both worlds: the flexibility to power fully non-deterministic agentic orchestrations and the reliability to run more deterministic, repeatable agents. At the same time, we benefit from Microsoft’s enterprise-grade observability and telemetry, ensuring that these orchestrations are not only powerful but also secure, measurable, and production-ready.” – Mo Cherif, VP of AI, Sitecore.
+NTT DATA: Agentic AI value includes a complete ecosystem of solutions, services, and partners. NTT DATA is adopting the Microsoft Agent Framework in alignment with efforts to standardize its R&D approach for multi-agent management, enabling the company to deploy, manage, and optimize AI solutions across industries. This will help accelerate deployments, support complex process workflows that can be customized and replicated and make it easier to connect and orchestrate sophisticated models on behalf of clients. “By adopting the Microsoft Agent Framework, NTT DATA is not only further standardizing how we develop and manage multi-agent systems, but also accelerating how our clients realize value from AI. This initiative allows us to deliver faster, more scalable, and more governed AI solutions, while staying closely in step with Microsoft’s engineering roadmap.”- Charlie Doubek, Global VP, Agentic AI Services Leader, Cloud and Security, NTT DATA
+MTech Systems: MTech Systems will use the new Agent Framework to orchestrate transactional data anomaly sweeps, human-in-the-loop approvals, and automated fixes – agent patterns that previously required extensive glue code. “The framework gives us a batteries-included developer experience and makes agent workflows far easier to build and run. Features like checkpointing and declarative YAML workflows will save us time and let us scale changes across hundreds of customer applications without redeploys” – Barry Schulz, CTO, MTech Systems
+TeamViewer: TeamViewer is embedding agentic AI into its IT support stack so that remote support agents can get real-time diagnostics, automated summarization, and contextual recommendations during sessions. “The framework strikes the right balance between technical depth and usability. Its intuitive design and modular structure make it easy for our teams to adopt quickly, while providing the scalability and flexibility we need for complex projects. That combination allows us to deliver value faster today and positions us well to take advantage of the enhancements still to come.”– Mei Dent, Chief Product and Technology Officer TeamViewer
+Weights & Biases: Weights & Biases is collaborating with Microsoft to ensure developers can seamlessly train, track, and operationalize AI agents at scale. “The new Microsoft Agentic Framework makes building production-ready agents dramatically easier. With flexible orchestration, checkpointing to save time and compute, and built-in human-in-the-loop support, it tackles the real challenges teams face when moving from prototype to production “ – Phil Gurbacki, VP of Product, Weights & Biases
+Elastic: Elasticsearch supports a native connector to Microsoft Agent Framework, enabling developers to seamlessly integrate enterprise data into intelligent agents and workflows. “Elasticsearch is the context engineering platform and vector database of choice for organizations to store and search their most valuable operational and business data. With the new Microsoft Agent Framework connector, developers can now bring the most relevant organizational context directly into intelligent agents and multi-agent workflows. This makes it easier than ever to build production-ready AI solutions that combine the reasoning power of agents with the speed and scale of Elasticsearch.” — Steve Kearns, General Manager Search Solutions, Elastic
+These early stories highlight the dual promise of Microsoft Agent Framework: innovative enough to inspire new approaches, stable enough to deploy in production.
+
+ 
+
+Path to Microsoft Agent Framework
+Many customers are already using Semantic Kernel or AutoGen in production today. Both projects will remain supported but most investment is now focused on Microsoft Agent Framework. Developers using Semantic Kernel or AutoGen will find the transition straightforward:
+
+For Semantic Kernel users:
+Migration is straightforward: replace Kernel and plugin patterns with the Agent and Tool abstractions.
+.NET developers move from Microsoft.SemanticKernel.* to the new Microsoft.Extensions.AI.* namespaces, with agents created directly from providers instead of requiring Kernel coupling.
+Python developers can install the full package (pip install agent-framework) or just the components they need (e.g., agent-framework-azure-ai, agent-framework-redis).
+Agents now manage threads natively, simplify invocation with RunAsync / RunStreamingAsync, and register tools inline without attributes or plugin wrappers.
+Existing vector store integrations (Azure AI Search, Postgres, Cosmos DB, Redis, Elasticsearch, etc.) continue to work through connectors.
+Plugins like Bing, Google, OpenAPI, and Microsoft Graph port directly as tools, often exposed via MCP or OpenAPI.
+The net result: less boilerplate, simplified memory management, and alignment with open standards.
+For AutoGen users:
+AutoGen pioneered many orchestration patterns (GroupChat, GraphFlow, event-driven runtimes), which are now unified in Agent Framework under the Workflow abstraction.
+The AssistantAgent maps directly to the new ChatAgent, which is multi-turn by default and continues tool invocation until a result is ready.
+FunctionTool wrappers migrate to the @ai_function decorator, with automatic schema inference and support for hosted tools like code interpreter or web search.
+Messaging is simplified: multiple message classes are replaced with a unified ChatMessage type, with explicit roles (USER, ASSISTANT, TOOL, SYSTEM).
+Orchestration shifts from event-driven models to a typed, graph-based Workflow API that supports checkpointing, pause/resume, and human-in-the-loop flows.
+Observability is richer and simpler, with OpenTelemetry support out of the box.
+Most single-agent migrations require only light refactoring; multi-agent migrations benefit from the new Workflow model with stronger composability and durability.
+This continuity means developers can preserve their existing investments while unlocking new capabilities. Microsoft Agent Framework is not a replacement for what came before — it is the natural evolution that unites innovation and stability. For more information about migration, see the documentation.
+
+ 
+
+Get Started with Microsoft Agent Framework Today
+Agents are fast becoming the next layer of application logic — reasoning about goals, calling tools, collaborating with each other, and adapting dynamically. With Microsoft Agent Framework, developers now have a single, open-source foundation that carries the best of research innovation into production with the durability, observability, and enterprise readiness required to scale.
+
+This is the natural evolution of the journey that began with Semantic Kernel and AutoGen — and it’s only the beginning. By building in the open and co-creating with the developer community, Microsoft Agent Framework will continue to evolve as the foundation for next-generation multi-agent systems.
+
+ 
+
+Download the SDK: aka.ms/AgentFramework
+Explore documentation for more details: https://aka.ms/AgentFramework/Docs
+See it in action: Watch demos on AI Show and Open at Microsoft
+Learn step by step: Microsoft Learn modules for Agent Framework and AI Agents for Beginners
+Join the Azure AI Foundry Discord to connect with developers and product groups, sharpen your AI skills, and stay inspired through real-time community. Join us for an AMA Tuesday 7th October 9am PST: https://aka.ms/foundry/discord
+
+
+
+[![Microsoft Agent Framework](https://github.com/microsoft/agent-framework/raw/main/docs/assets/readme-banner.png)](https://github.com/microsoft/agent-framework/blob/main/docs/assets/readme-banner.png)
+
+# Welcome to Microsoft Agent Framework!
+
+[](https://github.com/microsoft/agent-framework#welcome-to-microsoft-agent-framework)
+
+[![Microsoft Azure AI Foundry Discord](https://camo.githubusercontent.com/7e1b3bd510c3400d300c2fb09e8cb687d6d572a5067a0a771ac3078909f95f66/68747470733a2f2f646362616467652e6c696d65732e70696e6b2f6170692f7365727665722f62357a6a45727762514d3f7374796c653d666c6174)](https://discord.gg/b5zjErwbQM) [![MS Learn Documentation](https://camo.githubusercontent.com/e3084f5a03375ea5f7fb1a0876f4e50d711d7044393bd790ee5d322de602ebba/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d532532304c6561726e2d446f63756d656e746174696f6e2d626c7565)](https://learn.microsoft.com/en-us/agent-framework/) [![PyPI](https://camo.githubusercontent.com/e85cbb9c17805f36880c7380312f831d458382c9c2f9b4264b545503d404e694/68747470733a2f2f696d672e736869656c64732e696f2f707970692f762f6167656e742d6672616d65776f726b)](https://pypi.org/project/agent-framework/) [![NuGet](https://camo.githubusercontent.com/0b085fcea18fc781405f93aa279f14d9bdc86da78ca056858543f7ae79a82f1c/68747470733a2f2f696d672e736869656c64732e696f2f6e756765742f762f4d6963726f736f66742e4167656e74732e4149)](https://www.nuget.org/profiles/MicrosoftAgentFramework/)
+
+Welcome to Microsoft's comprehensive multi-language framework for building, orchestrating, and deploying AI agents with support for both .NET and Python implementations. This framework provides everything from simple chat agents to complex multi-agent workflows with graph-based orchestration.
+
+[![Watch the full Agent Framework introduction (30 min)](https://camo.githubusercontent.com/7242948eade34ec43f3828f091a3f178368c144f3e21729adaa13a7c28315973/68747470733a2f2f696d672e796f75747562652e636f6d2f76692f414167644d6866746a38772f687164656661756c742e6a7067)](https://www.youtube.com/watch?v=AAgdMhftj8w "Watch the full Agent Framework introduction (30 min)")
+
+[Watch the full Agent Framework introduction (30 min)](https://www.youtube.com/watch?v=AAgdMhftj8w)
+
+## 📋 Getting Started
+
+[](https://github.com/microsoft/agent-framework#-getting-started)
+
+### 📦 Installation
+
+[](https://github.com/microsoft/agent-framework#-installation)
+
+Python
+
+```
+pip install agent-framework --pre
+# This will install all sub-packages, see `python/packages` for individual packages.
+# It may take a minute on first install on Windows.
+```
+
+.NET
+
+```
+dotnet add package Microsoft.Agents.AI
+```
+
+### 📚 Documentation
+
+[](https://github.com/microsoft/agent-framework#-documentation)
+
+* **[Overview](https://learn.microsoft.com/agent-framework/overview/agent-framework-overview)** - High level overview of the framework
+* **[Quick Start](https://learn.microsoft.com/agent-framework/tutorials/quick-start)** - Get started with a simple agent
+* **[Tutorials](https://learn.microsoft.com/agent-framework/tutorials/overview)** - Step by step tutorials
+* **[User Guide](https://learn.microsoft.com/en-us/agent-framework/user-guide/overview)** - In-depth user guide for building agents and workflows
+* **[Migration from Semantic Kernel](https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-semantic-kernel)** - Guide to migrate from Semantic Kernel
+* **[Migration from AutoGen](https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen)** - Guide to migrate from AutoGen
+
+### ✨ **Highlights**
+
+[](https://github.com/microsoft/agent-framework#-highlights)
+
+* **Graph-based Workflows**: Connect agents and deterministic functions using data flows with streaming, checkpointing, human-in-the-loop, and time-travel capabilities
+  * [Python workflows](https://github.com/microsoft/agent-framework/blob/main/python/samples/getting_started/workflows) | [.NET workflows](https://github.com/microsoft/agent-framework/blob/main/dotnet/samples/GettingStarted/Workflows)
+* **AF Labs**: Experimental packages for cutting-edge features including benchmarking, reinforcement learning, and research initiatives
+  * [Labs directory](https://github.com/microsoft/agent-framework/blob/main/python/packages/lab)
+* **DevUI**: Interactive developer UI for agent development, testing, and debugging workflows
+  * [DevUI package](https://github.com/microsoft/agent-framework/blob/main/python/packages/devui)
+
+[![See the DevUI in action](https://camo.githubusercontent.com/06beec4ab4f74583f8953990abbeddff36b75070580e88002ad75a764792bbd1/68747470733a2f2f696d672e796f75747562652e636f6d2f76692f6d4f4161475934575076632f687164656661756c742e6a7067)](https://www.youtube.com/watch?v=mOAaGY4WPvc)
+
+[See the DevUI in action (1 min)](https://www.youtube.com/watch?v=mOAaGY4WPvc)
+
+* **Python and C#/.NET Support**: Full framework support for both Python and C#/.NET implementations with consistent APIs
+  * [Python packages](https://github.com/microsoft/agent-framework/blob/main/python/packages) | [.NET source](https://github.com/microsoft/agent-framework/blob/main/dotnet/src)
+* **Observability**: Built-in OpenTelemetry integration for distributed tracing, monitoring, and debugging
+  * [Python observability](https://github.com/microsoft/agent-framework/blob/main/python/samples/getting_started/observability) | [.NET telemetry](https://github.com/microsoft/agent-framework/blob/main/dotnet/samples/GettingStarted/AgentOpenTelemetry)
+* **Multiple Agent Provider Support**: Support for various LLM providers with more being added continuously
+  * [Python examples](https://github.com/microsoft/agent-framework/blob/main/python/samples/getting_started/agents) | [.NET examples](https://github.com/microsoft/agent-framework/blob/main/dotnet/samples/GettingStarted/AgentProviders)
+* **Middleware**: Flexible middleware system for request/response processing, exception handling, and custom pipelines
+  * [Python middleware](https://github.com/microsoft/agent-framework/blob/main/python/samples/getting_started/middleware) | [.NET middleware](https://github.com/microsoft/agent-framework/blob/main/dotnet/samples/GettingStarted/Agents/Agent_Step14_Middleware)
+
+### 💬 **We want your feedback!**
+
+[](https://github.com/microsoft/agent-framework#-we-want-your-feedback)
+
+* For bugs, please file a [GitHub issue](https://github.com/microsoft/agent-framework/issues).
+
+## Quickstart
+
+[](https://github.com/microsoft/agent-framework#quickstart)
+
+### Basic Agent - Python
+
+[](https://github.com/microsoft/agent-framework#basic-agent---python)
+
+Create a simple Azure Responses Agent that writes a haiku about the Microsoft Agent Framework
+
+```
+# pip install agent-framework --pre
+# Use `az login` to authenticate with Azure CLI
+import os
+import asyncio
+from agent_framework.azure import AzureOpenAIResponsesClient
+from azure.identity import AzureCliCredential
+
+
+async def main():
+    # Initialize a chat agent with Azure OpenAI Responses
+    # the endpoint, deployment name, and api version can be set via environment variables
+    # or they can be passed in directly to the AzureOpenAIResponsesClient constructor
+    agent = AzureOpenAIResponsesClient(
+        # endpoint=os.environ["AZURE_OPENAI_ENDPOINT"],
+        # deployment_name=os.environ["AZURE_OPENAI_RESPONSES_DEPLOYMENT_NAME"],
+        # api_version=os.environ["AZURE_OPENAI_API_VERSION"],
+        # api_key=os.environ["AZURE_OPENAI_API_KEY"],  # Optional if using AzureCliCredential
+        credential=AzureCliCredential(), # Optional, if using api_key
+    ).create_agent(
+        name="HaikuBot",
+        instructions="You are an upbeat assistant that writes beautifully.",
+    )
+
+    print(await agent.run("Write a haiku about Microsoft Agent Framework."))
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+### Basic Agent - .NET
+
+[](https://github.com/microsoft/agent-framework#basic-agent---net)
+
+Create a simple Agent, using OpenAI Responses, that writes a haiku about the Microsoft Agent Framework
+
+```
+// dotnet add package Microsoft.Agents.AI.OpenAI --prerelease
+using System;
+using OpenAI;
+
+// Replace the <apikey> with your OpenAI API key.
+var agent = new OpenAIClient("<apikey>")
+    .GetOpenAIResponseClient("gpt-4o-mini")
+    .CreateAIAgent(name: "HaikuBot", instructions: "You are an upbeat assistant that writes beautifully.");
+
+Console.WriteLine(await agent.RunAsync("Write a haiku about Microsoft Agent Framework."));
+```
+
+Create a simple Agent, using Azure OpenAI Responses with token based auth, that writes a haiku about the Microsoft Agent Framework
+
+```
+// dotnet add package Microsoft.Agents.AI.OpenAI --prerelease
+// dotnet add package Azure.Identity
+// Use `az login` to authenticate with Azure CLI
+using System;
+using OpenAI;
+
+// Replace <resource> and gpt-4o-mini with your Azure OpenAI resource name and deployment name.
+var agent = new OpenAIClient(
+    new BearerTokenPolicy(new AzureCliCredential(), "https://ai.azure.com/.default"),
+    new OpenAIClientOptions() { Endpoint = new Uri("https://<resource>.openai.azure.com/openai/v1") })
+    .GetOpenAIResponseClient("gpt-4o-mini")
+    .CreateAIAgent(name: "HaikuBot", instructions: "You are an upbeat assistant that writes beautifully.");
+
+Console.WriteLine(await agent.RunAsync("Write a haiku about Microsoft Agent Framework."));
+```
+
+## More Examples & Samples
+
+[](https://github.com/microsoft/agent-framework#more-examples--samples)
+
+### Python
+
+[](https://github.com/microsoft/agent-framework#python)
+
+* [Getting Started with Agents](https://github.com/microsoft/agent-framework/blob/main/python/samples/getting_started/agents): basic agent creation and tool usage
+* [Chat Client Examples](https://github.com/microsoft/agent-framework/blob/main/python/samples/getting_started/chat_client): direct chat client usage patterns
+* [Getting Started with Workflows](https://github.com/microsoft/agent-framework/blob/main/python/samples/getting_started/workflows): basic workflow creation and integration with agents
+
+### .NET
+
+[](https://github.com/microsoft/agent-framework#net)
+
+* [Getting Started with Agents](https://github.com/microsoft/agent-framework/blob/main/dotnet/samples/GettingStarted/Agents): basic agent creation and tool usage
+* [Agent Provider Samples](https://github.com/microsoft/agent-framework/blob/main/dotnet/samples/GettingStarted/AgentProviders): samples showing different agent providers
+* [Workflow Samples](https://github.com/microsoft/agent-framework/blob/main/dotnet/samples/GettingStarted/Workflows): advanced multi-agent patterns and workflow orchestration
+
+## Contributor Resources
+
+[](https://github.com/microsoft/agent-framework#contributor-resources)
+
+* [Contributing Guide](https://github.com/microsoft/agent-framework/blob/main/CONTRIBUTING.md)
+* [Python Development Guide](https://github.com/microsoft/agent-framework/blob/main/python/DEV_SETUP.md)
+* [Design Documents](https://github.com/microsoft/agent-framework/blob/main/docs/design)
+* [Architectural Decision Records](https://github.com/microsoft/agent-framework/blob/main/docs/decisions)
+
+## Important Notes
+
+[](https://github.com/microsoft/agent-framework#important-notes)
+
+If you use the Microsoft Agent Framework to build applications that operate with third-party servers or agents, you do so at your own risk. We recommend reviewing all data being shared with third-party servers or agents and being cognizant of third-party practices for retention and location of data. It is your responsibility to manage whether your data will flow outside of your organization's Azure compliance and geographic boundaries and any related implications.

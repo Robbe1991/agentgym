@@ -1,0 +1,370 @@
+unser AgentHub Kumpel Curtis Nye hat sich bereits weiterentwickelt in den letzten 3 Monaten ist er übergewechselt zu:
+
+
+https://www.affinitybots.com/
+
+
+[![AffinityBots Logo](https://www.affinitybots.com/_next/image?url=%2Fimages%2FAffinityBots-Icon-Dark-250px.png\&w=256\&q=75)AffinityBots](https://www.affinitybots.com/)
+
+[Features](https://www.affinitybots.com/features)[Pricing](https://www.affinitybots.com/pricing)[Docs](https://www.affinitybots.com/docs)[Blog](https://www.affinitybots.com/blog)
+
+[Request Access](https://www.affinitybots.com/early-access)
+
+Sign In
+
+Toggle theme
+
+# Don't Hire... Create!
+
+AffinityBots lets you spin up fully operational AI agents in minutes. Customize their skills, deploy them instantly, and let them handle the workload while you focus on growth.
+
+[Request Early Access](https://www.affinitybots.com/early-access)[See How It Works](https://www.affinitybots.com/#how-it-works)
+
+1min
+
+To Create\
+an Agent
+
+24/7
+
+Availability\
+Always On
+
+100%
+
+Customizable\
+Agents
+
+![AI Bot Assistant](https://www.affinitybots.com/_next/image?url=%2Fimages%2FFour-bots.png\&w=3840\&q=75)
+
+## Features
+
+Everything you need to build and deploy AI agents that work for your business
+
+### Model Agnostic AI
+
+Choose from OpenAI, Anthropic, Google Gemini, and more. Switch models anytime for optimal performance
+
+### Customizable AI Agents
+
+Design AI employees with unique personalities, skills, and capabilities
+
+### Internal & External Agents
+
+Create agents for your own use or to interact with your customers
+
+### Knowledge Integration
+
+Equip your agents with documents, websites, and custom data
+
+### Multi-Platform Deployment
+
+Keep agents private or deploy them to your website and social media
+
+## Connect to Anything
+
+Instantly connect your agents to the world's most popular APIs and tools. From **Google** to **Slack**, **Supabase**, **Redis**, and more, AffinityBots (beta) lets you automate workflows with the platforms you already use. Powered by **MCP servers** for limitless extensibility and reliability.
+
+![OpenAI Logo](https://www.affinitybots.com/integration-icons/OpenAI-light.png)OpenAI GPT-5
+
+![Anthropic Logo](https://www.affinitybots.com/integration-icons/Anthropic-light.png)Claude 4.5 Sonnet
+
+![Google Logo](https://www.affinitybots.com/integration-icons/Google-logo.png)Gemini 2.5 Pro
+
+More Coming Soon
+
+![Google](https://www.affinitybots.com/integration-icons/Google-logo.png)
+
+Google
+
+Notion
+
+Slack
+
+X
+
+GitHub
+
+Hubspot
+
+Supabase
+
+Exa
+
+**Beta:** We're starting with the biggest names, but the possibilities are nearly limitless. Want a specific integration? [Let us know](https://www.affinitybots.com/contact)!
+
+## How It Works
+
+Build your AI workforce in four simple steps. Create agents that work directly with you or deploy them to handle customer interactions automatically.
+
+🧠
+
+01
+
+### Design Your Agent
+
+Create an AI agent with the personality and skills you need. Define whether it will be a personal assistant or customer-facing representative.
+
+→
+
+🛠️
+
+02
+
+### Add Knowledge & Tools
+
+Equip your agent with knowledge bases, documents, and powerful tools to help it accomplish tasks. Configure memory options to make it even smarter.
+
+→
+
+🚀
+
+03
+
+### Test & Implement
+
+Test your agent in a sandbox environment, then use it privately within your workspace or deploy it externally to interact with customers.
+
+→
+
+📈
+
+04
+
+### Monitor & Improve
+
+Track your agent's performance, review conversations, and continuously improve its capabilities based on real interactions.
+
+## Your AI Workforce Hub
+
+Build a complete AI agency with agents that work directly with you behind the scenes and others that interact with your customers on your behalf.
+
+### Build Your Digital Agency
+
+Create a complete AI workforce with agents that handle both internal tasks and customer interactions. Each agent serves a specific purpose in your business.
+
+* Personal assistants for your own use
+* Customer-facing agents for your website
+* Specialized roles for specific tasks
+
+### Your AI, Your Rules
+
+Full control over your AI agents. Configure exactly how they work, what they know, and how they interact with both you and your customers.
+
+* Customizable personality and tone
+* Selective knowledge sharing
+* Tailored tool capabilities
+
+### Scale Your Operations
+
+Enhance your productivity with AI agents that work alongside you. Deploy customer-facing agents to handle inquiries while you focus on higher-level tasks.
+
+* Internal & external agents
+* 24/7 availability
+* Cost-effective digital workforce
+
+### Featured In
+
+[![AffinityBots - Featured AI Agent on AI Agents Directory](https://aiagentsdirectory.com/featured-badge.svg?v=2024)](https://aiagentsdirectory.com/agent/affinitybots?utm_source=badge\&utm_medium=referral\&utm_campaign=free_listing\&utm_content=affinitybots)[![Dang.ai](https://cdn.prod.website-files.com/63d8afd87da01fb58ea3fbcb/6487e2868c6c8f93b4828827_dang-badge.png)](https://dang.ai/)[![Good AI Tools](https://goodaitools.com/assets/images/badge.png)](https://goodaitools.com/)
+
+## Ready to Create Your AI Workforce?
+
+Create a complete digital workforce with agents that work directly with you and others that serve your customers. Build your personalized AI hub today.
+
+[Request Early Access](https://www.affinitybots.com/early-access)[Contact Sales](https://www.affinitybots.com/contact)
+
+[![AffinityBots Logo](https://www.affinitybots.com/_next/image?url=%2Fimages%2FAffinityBots-Icon-Dark-250px.png\&w=64\&q=75)AffinityBots](https://www.affinitybots.com/)
+
+The platform for building, deploying, and managing your AI workforce.
+
+[Twitter](https://x.com/Affinitybots)[GitHub](https://github.com/cnye36/Affinitybots)[LinkedIn](https://linkedin.com/company/Affinitybots)
+
+### Navigation
+
+* [Features](https://www.affinitybots.com/features)
+* [Pricing](https://www.affinitybots.com/pricing)
+* [Documentation](https://www.affinitybots.com/docs)
+* [Blog](https://www.affinitybots.com/blog)
+
+### Contact
+
+* <support@affinitybots.com>
+* [Terms of Service](https://www.affinitybots.com/terms)
+* [Privacy Policy](https://www.affinitybots.com/privacy)
+* [Pitch Deck](https://www.affinitybots.com/pitch-deck)
+
+
+Everything You Need to Build\
+Intelligent Agents
+==================
+
+From simple chatbots to complex workflow automation, AffinityBots provides all the tools you need to create, deploy, and manage AI agents that actually work.
+
+[Start Building Free](https://www.affinitybots.com/early-access)[View Documentation](https://www.affinitybots.com/docs)
+
+![AI Bot Assistants](https://www.affinitybots.com/_next/image?url=%2Fimages%2FTwo-bots-2.png\&w=3840\&q=75)
+
+## Core Features
+
+Everything you need to build, deploy, and scale AI agents for your business
+
+AI Agent Creation
+
+Create fully functional AI agents in under 1 minute with our intuitive 1-click agent creation. No coding required.
+
+* 1-Click Agent Creation
+* Pre-built agent templates
+* Custom skill configuration
+* Real-time testing environment
+
+Model Agnostic AI Platform
+
+Choose from leading AI providers including OpenAI, Anthropic, and Google Gemini with more models coming soon.
+
+* OpenAI GPT-5 & GPT-4o
+* Anthropic Claude 4.5 & Opus
+* Google Gemini 2.5 Pro & Flash
+* Easy model switching and comparison
+
+Workflow Automation
+
+Automate complex business processes with an easy to understand drag-and-drop interface.
+
+* Conditional logic flows
+* Integration with 70+ tools
+* Error handling and recovery
+* Performance monitoring
+
+Multi-Channel Communication
+
+Deploy agents across all your communication channels for seamless customer interactions.
+
+* Slack, Teams, Discord integration
+* Email automation
+* Live chat widgets
+* Voice and video support
+
+Analytics & Insights (Coming Soon)
+
+Comprehensive analytics to track agent performance and optimize your automation strategy.
+
+* Real-time performance metrics
+* Conversation analytics
+* ROI tracking
+* Custom reporting dashboards
+
+Enterprise Security
+
+Bank-level security with compliance certifications to protect your data and customer information.
+
+* SOC 2 Type II certified
+* GDPR and CCPA compliant
+* End-to-end encryption
+* Role-based access control
+
+## Powered by Leading AI Models
+
+AffinityBots is model agnostic, giving you the flexibility to choose the best AI model for each task. Switch between providers seamlessly and compare performance across different models.
+
+![OpenAI Logo](https://www.affinitybots.com/integration-icons/OpenAI-light.png)
+
+### OpenAI
+
+GPT-5, GPT-4.1, GPT-4o
+
+* • Advanced reasoning capabilities
+* • Multimodal understanding
+* • Code generation and analysis
+
+![Anthropic Logo](https://www.affinitybots.com/integration-icons/Anthropic-light.png)
+
+### Anthropic
+
+Claude 4.5 Sonnet, Claude Opus, Claude 3.7 Sonnet
+
+* • Exceptional safety and alignment
+* • Long context understanding
+* • Helpful and harmless responses
+
+![Google Logo](https://www.affinitybots.com/integration-icons/Google-logo.png)
+
+### Google Gemini
+
+Gemini 2.5 Pro, Gemini 2.5 Flash, Gemini 2.5 Flash Lite
+
+* • Native multimodal understanding
+* • Fast inference speeds
+* • Cost-effective performance
+
+### Model Flexibility & Future
+
+Our model agnostic architecture means you're never locked into one provider. Switch models based on task requirements, cost optimization, or performance needs.
+
+More providers coming soon
+
+Model comparison tools
+
+Automatic model selection
+
+## Technical Excellence
+
+Built for enterprise scale with developer-friendly tools and robust infrastructure
+
+### Custom Model Training
+
+Train agents on your specific data and use cases for maximum accuracy and relevance.
+
+### API Integration
+
+RESTful APIs and webhooks for seamless integration with your existing systems.
+
+### Scalable Infrastructure
+
+Auto-scaling cloud infrastructure that handles millions of interactions without breaking.
+
+### Real-time Monitoring
+
+24/7 monitoring and alerting to ensure your agents are always performing optimally.
+
+### Custom Branding
+
+White-label solutions with your branding, colors, and personality.
+
+### Multi-language Support
+
+Agents that can communicate fluently in 50+ languages with cultural context.
+
+## Proven Use Cases
+
+See how businesses are using AffinityBots to transform their operations
+
+Customer Support
+
+24/7 intelligent support agents that can handle complex queries and escalate when needed.
+
+90% query resolution rate
+
+Sales Automation
+
+AI sales assistants that qualify leads, schedule meetings, and close deals.
+
+3x faster lead qualification
+
+HR & Recruitment
+
+Automated screening, scheduling, and initial candidate interactions.
+
+75% reduction in screening time
+
+Content Creation
+
+AI writers that create marketing copy, documentation, and social media content.
+
+10x faster content production
+
+## Ready to Create Your AI Workforce?
+
+Create a complete digital workforce with agents that work directly with you and others that serve your customers. Build your personalized AI hub today.
+
+[Request Early Access](https://www.affinitybots.com/early-access)[Contact Sales](https://www.affinitybots.com/contact)
+

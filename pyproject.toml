@@ -1,0 +1,240 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentgym"
+version = "0.1.0"
+description = "The Vercel for Agent Training - Powered by Agent Lightning"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "AgentGym Team", email = "hello@agentgym.com"}
+]
+keywords = [
+    "ai",
+    "agents",
+    "machine-learning",
+    "reinforcement-learning",
+    "langchain",
+    "autogen",
+    "crewai",
+    "training",
+    "agent-training",
+    "rl",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    # Core
+    "agent-lightning>=0.1.0",  # RL training engine
+    "pydantic>=2.0",           # Data validation
+    "pydantic-settings>=2.0",  # Settings management
+
+    # CLI
+    "typer>=0.9",              # Command-line interface
+    "rich>=13.0",              # Beautiful terminal output
+    "click>=8.0",              # CLI utilities
+
+    # Framework integrations
+    "langchain>=0.1.0",        # LangChain support
+    "langchain-community>=0.1.0",
+    "autogen>=0.2.0",          # AutoGen support
+    "crewai>=0.1.0",           # CrewAI support
+
+    # ML/Data
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "torch>=2.0",              # PyTorch for Agent Lightning
+
+    # HTTP clients
+    "httpx>=0.24",             # Async HTTP
+    "requests>=2.31",          # Sync HTTP (for some integrations)
+
+    # Utilities
+    "python-dotenv>=1.0",      # Environment variables
+    "tenacity>=8.2",           # Retry logic
+    "loguru>=0.7",             # Better logging
+]
+
+[project.optional-dependencies]
+# Development dependencies
+dev = [
+    # Testing
+    "pytest>=7.4",
+    "pytest-asyncio>=0.21",
+    "pytest-cov>=4.1",
+    "pytest-mock>=3.11",
+    "pytest-xdist>=3.3",       # Parallel testing
+
+    # Code quality
+    "black>=23.0",             # Code formatting
+    "ruff>=0.1",               # Fast linting
+    "mypy>=1.5",               # Type checking
+    "pre-commit>=3.4",         # Git hooks
+
+    # Documentation
+    "mkdocs>=1.5",
+    "mkdocs-material>=9.4",
+    "mkdocstrings[python]>=0.23",
+]
+
+# Cloud platform dependencies
+cloud = [
+    "fastapi>=0.104",          # API server
+    "uvicorn[standard]>=0.24", # ASGI server
+    "sqlalchemy>=2.0",         # Database ORM
+    "alembic>=1.12",           # Database migrations
+    "asyncpg>=0.29",           # PostgreSQL driver
+    "redis>=5.0",              # Redis client
+    "boto3>=1.28",             # AWS S3
+    "temporal-sdk>=1.0",       # Workflow orchestration
+]
+
+# GPU providers
+gpu = [
+    "runpod>=1.3",             # RunPod API
+]
+
+# All optional dependencies
+all = [
+    "agentgym[dev,cloud,gpu]",
+]
+
+[project.urls]
+Homepage = "https://agentgym.com"
+Documentation = "https://docs.agentgym.com"
+Repository = "https://github.com/agentgym/agentgym"
+"Bug Tracker" = "https://github.com/agentgym/agentgym/issues"
+Changelog = "https://github.com/agentgym/agentgym/blob/main/CHANGELOG.md"
+
+[project.scripts]
+agentgym = "agentgym.cli.main:app"
+
+[tool.setuptools]
+packages = ["agentgym"]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+agentgym = ["py.typed"]
+
+# Black configuration
+[tool.black]
+line-length = 88
+target-version = ["py311", "py312"]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.mypy_cache
+  | \.pytest_cache
+  | \.ruff_cache
+  | \.venv
+  | venv
+  | build
+  | dist
+)/
+'''
+
+# Ruff configuration
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+]
+ignore = [
+    "E501",  # line too long (handled by black)
+    "B008",  # do not perform function calls in argument defaults
+    "C901",  # too complex
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]  # Unused imports in __init__.py
+
+# Mypy configuration
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = [
+    "agent_lightning.*",
+    "langchain.*",
+    "autogen.*",
+    "crewai.*",
+    "runpod.*",
+]
+ignore_missing_imports = true
+
+# Pytest configuration
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "--cov=agentgym",
+    "--cov-report=term-missing",
+    "--cov-report=html",
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+    "gpu: marks tests that require GPU",
+]
+
+# Coverage configuration
+[tool.coverage.run]
+source = ["src/agentgym"]
+omit = [
+    "*/tests/*",
+    "*/test_*.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
+
+# isort configuration (for import sorting)
+[tool.isort]
+profile = "black"
+line_length = 88
