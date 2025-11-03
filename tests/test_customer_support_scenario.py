@@ -410,13 +410,14 @@ class TestScenarioRegistryIntegration:
     """Test integration with ScenarioRegistry."""
 
     def setup_method(self):
-        """Register scenario before each test."""
-        ScenarioRegistry.register("customer_support", CustomerSupportScenario)
+        """Ensure scenario is registered before each test."""
+        # customer_support is a built-in, so it's already registered via lazy loading
+        pass
 
     def teardown_method(self):
         """Clean up registry after each test."""
-        if ScenarioRegistry.is_registered("customer_support"):
-            ScenarioRegistry.unregister("customer_support")
+        # Don't unregister built-in scenario
+        pass
 
     def test_scenario_registered(self):
         """Test that scenario can be registered."""
@@ -446,13 +447,14 @@ class TestTrainerIntegration:
     """Test integration with Trainer."""
 
     def setup_method(self):
-        """Register scenario before each test."""
-        ScenarioRegistry.register("customer_support", CustomerSupportScenario)
+        """Ensure scenario is registered before each test."""
+        # customer_support is a built-in, so it's already registered via lazy loading
+        pass
 
     def teardown_method(self):
         """Clean up registry after each test."""
-        if ScenarioRegistry.is_registered("customer_support"):
-            ScenarioRegistry.unregister("customer_support")
+        # Don't unregister built-in scenario
+        pass
 
     def test_trainer_can_load_scenario(self):
         """Test that Trainer can load customer support scenario."""

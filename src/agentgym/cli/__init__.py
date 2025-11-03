@@ -1,3 +1,8 @@
 """Command-line interface for AgentGym."""
 
-__all__ = []
+from agentgym.cli.main import cli, main
+
+__all__ = [
+    "cli",
+    "main",
+]

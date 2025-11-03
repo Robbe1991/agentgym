@@ -35,7 +35,8 @@ from agentgym.scenarios.customer_support import CustomerSupportScenario
 from agentgym.scenarios.registry import ScenarioNotFoundError, ScenarioRegistry
 
 # Integration exports
-# from agentgym.integrations.base import FrameworkAdapter  # TODO: Implement in Issue #7
+from agentgym.integrations.base import FrameworkAdapter
+from agentgym.integrations.langchain import LangChainAdapter
 
 __all__ = [
     # Version info
@@ -43,20 +44,18 @@ __all__ = [
     "__author__",
     "__email__",
     "__license__",
-
     # Core classes
     "Trainer",
     "TrainingConfig",
     "TrainingResult",
     "TrainingMetrics",
     "Trajectory",
-
     # Scenarios
     "Scenario",
     "ScenarioRegistry",
     "ScenarioNotFoundError",
     "CustomerSupportScenario",
-
     # Integrations
-    # "FrameworkAdapter",  # TODO: Implement in Issue #7
+    "FrameworkAdapter",
+    "LangChainAdapter",
 ]
