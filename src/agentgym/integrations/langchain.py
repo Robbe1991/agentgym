@@ -1,9 +1,11 @@
-"""LangChain framework adapter.
+"""LangChain framework adapter with real integration.
 
 This module provides integration with LangChain agents, enabling:
 - Converting trained models to LangChain AgentExecutor instances
 - Extracting tools from LangChain agents
 - Creating training environments from existing LangChain agents
+
+Supports both mock mode (for testing) and real mode (with LLM API keys).
 
 Example:
     >>> from agentgym.integrations.langchain import LangChainAdapter
@@ -19,9 +21,40 @@ Example:
     >>> env = adapter.create_environment(agent)
 """
 
-from typing import Any
+import os
+from typing import Any, Optional
 
 from agentgym.integrations.base import FrameworkAdapter
+
+# Try to import LangChain - graceful degradation if not available
+try:
+    from langchain.agents import AgentExecutor, AgentType, initialize_agent
+    from langchain.memory import ConversationBufferMemory
+    from langchain.tools import BaseTool, Tool
+
+    LANGCHAIN_AVAILABLE = True
+except ImportError:
+    LANGCHAIN_AVAILABLE = False
+    AgentExecutor = None
+    BaseTool = None
+    Tool = None
+
+# Try to import LLM providers
+try:
+    from langchain_openai import ChatOpenAI
+
+    OPENAI_AVAILABLE = True
+except ImportError:
+    OPENAI_AVAILABLE = False
+    ChatOpenAI = None
+
+try:
+    from langchain_anthropic import ChatAnthropic
+
+    ANTHROPIC_AVAILABLE = True
+except ImportError:
+    ANTHROPIC_AVAILABLE = False
+    ChatAnthropic = None
 
 
 class LangChainAdapter(FrameworkAdapter):
@@ -31,6 +64,8 @@ class LangChainAdapter(FrameworkAdapter):
     methods to convert between AgentGym's training format and LangChain's
     AgentExecutor format.
 
+    Supports both mock mode (testing without API keys) and real mode (with LLMs).
+
     LangChain is a popular framework for building LLM applications with:
     - AgentExecutor: Main agent runtime
     - Tools: Functions the agent can call
@@ -39,37 +74,100 @@ class LangChainAdapter(FrameworkAdapter):
 
     Attributes:
         framework_name: Always "langchain" for this adapter.
+        llm_provider: LLM provider to use ("openai", "anthropic", or "mock")
+        model_name: Model name (e.g., "gpt-4", "claude-3-sonnet")
+        temperature: Temperature for LLM generation
+        mock_mode: If True, use mock implementation
 
     Example:
-        >>> adapter = LangChainAdapter()  # doctest: +SKIP
+        >>> # With OpenAI
+        >>> adapter = LangChainAdapter(llm_provider="openai", model_name="gpt-4")
+        >>> agent = adapter.wrap_agent(trained_model, tools=[search_tool])
         >>>
-        >>> # Wrap trained model
-        >>> model_path = "./models/customer_support_ep100"  # doctest: +SKIP
-        >>> agent = adapter.wrap_agent(model_path)  # doctest: +SKIP
-        >>>
-        >>> # Extract tools
-        >>> tools = adapter.extract_tools(agent)  # doctest: +SKIP
-        >>> print([tool.name for tool in tools])  # doctest: +SKIP
-        ['search', 'calculator']
-        >>>
-        >>> # Create environment for training
-        >>> env = adapter.create_environment(agent)  # doctest: +SKIP
+        >>> # Mock mode (for testing)
+        >>> adapter = LangChainAdapter(mock_mode=True)
+        >>> agent = adapter.wrap_agent(trained_model)
     """
 
     framework_name: str = "langchain"
 
-    def wrap_agent(self, trained_model: Any) -> dict[str, Any]:
-        """Wrap a trained model as a LangChain-compatible agent.
+    def __init__(
+        self,
+        llm_provider: str = "mock",
+        model_name: Optional[str] = None,
+        temperature: float = 0.7,
+        mock_mode: bool = False,
+        verbose: bool = False,
+    ):
+        """Initialize LangChain adapter.
 
-        This method converts an AgentGym trained model into a structure
-        compatible with LangChain's AgentExecutor. In the current
-        implementation, this creates a mock structure suitable for testing.
+        Args:
+            llm_provider: LLM provider ("openai", "anthropic", "mock")
+            model_name: Model name (default: gpt-3.5-turbo for OpenAI,
+                       claude-3-sonnet for Anthropic)
+            temperature: Temperature for generation (0-1)
+            mock_mode: Force mock mode even if API keys available
+            verbose: Enable verbose logging
+        """
+        self.llm_provider = llm_provider
+        self.model_name = model_name
+        self.temperature = temperature
+        self.mock_mode = mock_mode or not LANGCHAIN_AVAILABLE
+        self.verbose = verbose
 
-        In a full implementation, this would:
-        1. Load the trained model weights
-        2. Create a LangChain LLM with the model
-        3. Initialize tools based on the training scenario
-        4. Build an AgentExecutor with the LLM and tools
+        # Auto-detect mock mode if no API keys
+        if llm_provider == "openai" and not os.getenv("OPENAI_API_KEY"):
+            self.mock_mode = True
+        elif llm_provider == "anthropic" and not os.getenv("ANTHROPIC_API_KEY"):
+            self.mock_mode = True
+
+    def _create_llm(self) -> Any:
+        """Create LLM instance based on provider.
+
+        Returns:
+            LLM instance or None if mock mode
+
+        Raises:
+            ValueError: If provider not supported or API key missing
+        """
+        if self.mock_mode:
+            return None
+
+        if self.llm_provider == "openai":
+            if not OPENAI_AVAILABLE:
+                raise ValueError(
+                    "OpenAI not available. Install: pip install langchain-openai"
+                )
+            model = self.model_name or "gpt-3.5-turbo"
+            return ChatOpenAI(model=model, temperature=self.temperature)
+
+        elif self.llm_provider == "anthropic":
+            if not ANTHROPIC_AVAILABLE:
+                raise ValueError(
+                    "Anthropic not available. Install: pip install langchain-anthropic"
+                )
+            model = self.model_name or "claude-3-sonnet-20240229"
+            return ChatAnthropic(model=model, temperature=self.temperature)
+
+        elif self.llm_provider == "mock":
+            return None
+
+        else:
+            raise ValueError(
+                f"Unknown LLM provider: {self.llm_provider}. "
+                f"Supported: openai, anthropic, mock"
+            )
+
+    def wrap_agent(
+        self,
+        trained_model: Any,
+        tools: Optional[list[Any]] = None,
+        agent_type: str = "zero-shot-react-description",
+        memory: Optional[Any] = None,
+    ) -> Any:
+        """Wrap a trained model as a LangChain agent.
+
+        Creates a real AgentExecutor if API keys available, otherwise mock.
 
         Args:
             trained_model: Path to trained model or model object from AgentGym.
@@ -77,75 +175,105 @@ class LangChainAdapter(FrameworkAdapter):
                 - str: Path to saved model (e.g., "./models/agent_ep100")
                 - dict: Model configuration/weights
                 - Any: Model object from training
+            tools: List of LangChain Tool objects to give the agent
+            agent_type: Type of agent ("zero-shot-react-description",
+                       "conversational-react-description", etc.)
+            memory: Memory instance (default: ConversationBufferMemory)
 
         Returns:
-            Dictionary representing a LangChain agent with structure:
-            {
-                "type": "langchain_agent",
-                "model": trained_model,
-                "tools": list,
-                "memory": dict,
-                "executor": dict (AgentExecutor-like structure)
-            }
+            - If real mode: LangChain AgentExecutor instance
+            - If mock mode: Dict representing agent structure
 
         Raises:
-            ValueError: If trained_model is invalid or incompatible.
+            ValueError: If trained_model is invalid or API keys missing in real mode
 
         Example:
-            >>> adapter = LangChainAdapter()  # doctest: +SKIP
-            >>> agent = adapter.wrap_agent("./models/support_agent")  # doctest: +SKIP
-            >>> print(agent["type"])  # doctest: +SKIP
-            langchain_agent
+            >>> from langchain.tools import Tool
+            >>> search_tool = Tool(
+            ...     name="search",
+            ...     func=lambda x: f"Results for: {x}",
+            ...     description="Search for information"
+            ... )
+            >>> adapter = LangChainAdapter(llm_provider="openai")
+            >>> agent = adapter.wrap_agent(trained_model, tools=[search_tool])
         """
-        # Mock implementation for Week 1
-        # Full implementation in Week 2-3 will integrate with actual LangChain
-        return {
-            "type": "langchain_agent",
-            "model": trained_model,
-            "tools": [],
-            "memory": {},
-            "executor": {
-                "agent_type": "zero-shot-react-description",
-                "verbose": False,
-            },
+        tools = tools or []
+
+        # Mock mode: Return dict representation
+        if self.mock_mode:
+            return {
+                "type": "langchain_agent",
+                "model": trained_model,
+                "tools": tools,
+                "memory": memory or {},
+                "executor": {
+                    "agent_type": agent_type,
+                    "verbose": self.verbose,
+                },
+                "_mock": True,  # Flag for testing
+            }
+
+        # Real mode: Create AgentExecutor
+        llm = self._create_llm()
+
+        # Create memory if not provided
+        if memory is None:
+            memory = ConversationBufferMemory(
+                memory_key="chat_history", return_messages=True
+            )
+
+        # Map agent_type string to AgentType enum
+        agent_type_map = {
+            "zero-shot-react-description": AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+            "conversational-react-description": AgentType.CONVERSATIONAL_REACT_DESCRIPTION,
+            "react-docstore": AgentType.REACT_DOCSTORE,
+            "self-ask-with-search": AgentType.SELF_ASK_WITH_SEARCH,
+            "openai-functions": AgentType.OPENAI_FUNCTIONS,
+            "structured-chat-zero-shot-react-description": AgentType.STRUCTURED_CHAT_ZERO_SHOT_REACT_DESCRIPTION,
         }
+
+        agent_type_enum = agent_type_map.get(
+            agent_type, AgentType.ZERO_SHOT_REACT_DESCRIPTION
+        )
+
+        # Create AgentExecutor
+        agent_executor = initialize_agent(
+            tools=tools,
+            llm=llm,
+            agent=agent_type_enum,
+            memory=memory,
+            verbose=self.verbose,
+            handle_parsing_errors=True,
+        )
+
+        # Store trained model reference for later use
+        agent_executor._agentgym_model = trained_model
+
+        return agent_executor
 
     def extract_tools(self, agent: Any) -> list[Any]:
         """Extract tools from a LangChain agent.
 
-        This method extracts the list of tools available to a LangChain agent.
-        LangChain tools have a standard structure with name, description,
-        and a function to call.
-
         Args:
-            agent: LangChain agent (typically AgentExecutor) or dict representation.
-                Expected to have one of:
-                - agent.tools: List of LangChain Tool objects
-                - agent["tools"]: List of tools in dict format
+            agent: LangChain AgentExecutor or dict representation
 
         Returns:
-            List of tools. Each tool may be:
-            - LangChain Tool object (in full implementation)
-            - Dict with tool information (in mock implementation)
-            Empty list if agent has no tools.
-
-        Raises:
-            ValueError: If agent format is invalid or unsupported.
+            List of LangChain Tool objects or dicts
 
         Example:
-            >>> adapter = LangChainAdapter()  # doctest: +SKIP
-            >>> agent = get_langchain_agent()  # doctest: +SKIP
-            >>> tools = adapter.extract_tools(agent)  # doctest: +SKIP
-            >>> for tool in tools:  # doctest: +SKIP
-            ...     print(f"{tool.name}: {tool.description}")
-            search: Search the web
-            calculator: Perform calculations
+            >>> tools = adapter.extract_tools(agent)
+            >>> for tool in tools:
+            ...     print(tool.name if hasattr(tool, 'name') else tool['name'])
         """
-        # Support both dict and object formats
+        # Dict format (mock mode)
         if isinstance(agent, dict):
             return agent.get("tools", [])
 
-        # For LangChain AgentExecutor objects (future implementation)
+        # Real AgentExecutor
+        if LANGCHAIN_AVAILABLE and isinstance(agent, AgentExecutor):
+            return agent.tools
+
+        # Object with tools attribute
         if hasattr(agent, "tools"):
             return agent.tools
 
@@ -154,46 +282,38 @@ class LangChainAdapter(FrameworkAdapter):
     def create_environment(self, agent: Any) -> dict[str, Any]:
         """Create a training environment from a LangChain agent.
 
-        This method creates an environment dictionary suitable for AgentGym
-        training based on an existing LangChain agent. The environment includes
-        the agent's tools, configuration, and metadata needed for training.
-
         Args:
-            agent: LangChain agent (AgentExecutor) or dict representation.
+            agent: LangChain AgentExecutor or dict representation
 
         Returns:
-            Environment dictionary compatible with Scenario.create_environment():
-            {
-                "type": "langchain",
-                "agent": agent,
-                "tools": list of tools,
-                "config": {
-                    "agent_type": str,
-                    "verbose": bool,
-                    ...
-                }
-            }
-
-        Raises:
-            ValueError: If agent is invalid or incompatible.
+            Environment dictionary compatible with Scenario.create_environment()
 
         Example:
-            >>> adapter = LangChainAdapter()  # doctest: +SKIP
-            >>> agent = get_langchain_agent()  # doctest: +SKIP
-            >>> env = adapter.create_environment(agent)  # doctest: +SKIP
-            >>> print(env["type"])  # doctest: +SKIP
-            langchain
-            >>> print(len(env["tools"]))  # doctest: +SKIP
-            5
+            >>> env = adapter.create_environment(agent)
+            >>> print(env["type"])  # "langchain"
+            >>> print(len(env["tools"]))  # Number of tools
         """
         tools = self.extract_tools(agent)
 
-        # Extract configuration from agent
+        # Extract configuration
         config = {}
+
         if isinstance(agent, dict):
+            # Mock mode
             config = agent.get("executor", {})
+        elif LANGCHAIN_AVAILABLE and isinstance(agent, AgentExecutor):
+            # Real AgentExecutor
+            config = {
+                "agent_type": (
+                    getattr(agent.agent, "agent_type", "unknown")
+                    if hasattr(agent, "agent")
+                    else "unknown"
+                ),
+                "verbose": getattr(agent, "verbose", False),
+                "handle_parsing_errors": getattr(agent, "handle_parsing_errors", True),
+            }
         elif hasattr(agent, "agent"):
-            # LangChain AgentExecutor has .agent attribute
+            # Other object with agent attribute
             config = {
                 "agent_type": getattr(agent.agent, "agent_type", "unknown"),
                 "verbose": getattr(agent, "verbose", False),
@@ -209,29 +329,55 @@ class LangChainAdapter(FrameworkAdapter):
     def validate_agent(self, agent: Any) -> bool:
         """Validate that an agent is compatible with LangChain.
 
-        This method checks if an agent object is a valid LangChain agent
-        or dict representation. Overrides the base class to add framework-
-        specific validation.
-
         Args:
-            agent: Agent object to validate.
+            agent: Agent object to validate
 
         Returns:
-            True if agent is a valid LangChain agent, False otherwise.
+            True if agent is valid LangChain agent, False otherwise
 
         Example:
-            >>> adapter = LangChainAdapter()  # doctest: +SKIP
-            >>> agent = adapter.wrap_agent(trained_model)  # doctest: +SKIP
-            >>> if adapter.validate_agent(agent):  # doctest: +SKIP
+            >>> if adapter.validate_agent(agent):
             ...     env = adapter.create_environment(agent)
         """
-        # Accept dict with "type" = "langchain_agent"
+        # Dict with correct type (mock mode)
         if isinstance(agent, dict):
             return agent.get("type") == "langchain_agent"
 
-        # Accept LangChain AgentExecutor objects (future)
-        # Check for common LangChain agent attributes
+        # Real AgentExecutor
+        if LANGCHAIN_AVAILABLE and isinstance(agent, AgentExecutor):
+            return True
+
+        # Object with agent and tools attributes
         if hasattr(agent, "agent") and hasattr(agent, "tools"):
             return True
 
         return False
+
+    def run_agent(self, agent: Any, input_text: str, **kwargs: Any) -> dict[str, Any]:
+        """Run the agent with given input.
+
+        Convenience method for executing agent with input.
+
+        Args:
+            agent: LangChain AgentExecutor or dict
+            input_text: Input text for the agent
+            **kwargs: Additional arguments to pass to agent
+
+        Returns:
+            Dict with "output" key containing agent response
+
+        Raises:
+            ValueError: If mock mode or agent invalid
+
+        Example:
+            >>> result = adapter.run_agent(agent, "What is 2+2?")
+            >>> print(result["output"])
+        """
+        if isinstance(agent, dict) or not LANGCHAIN_AVAILABLE:
+            raise ValueError("Cannot run agent in mock mode. Set up real LLM provider.")
+
+        if isinstance(agent, AgentExecutor):
+            result = agent.invoke({"input": input_text}, **kwargs)
+            return {"output": result.get("output", "")}
+
+        raise ValueError(f"Invalid agent type: {type(agent)}")
