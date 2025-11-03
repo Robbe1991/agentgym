@@ -27,7 +27,7 @@ __license__ = "MIT"
 # Core exports
 # from agentgym.core.trainer import Trainer  # TODO: Implement in Issue #3
 from agentgym.core.config import TrainingConfig
-# from agentgym.core.result import TrainingResult  # TODO: Implement in Issue #2
+from agentgym.core.result import TrainingMetrics, TrainingResult
 
 # Scenario exports
 # from agentgym.scenarios.base import Scenario  # TODO: Implement in Issue #4
@@ -46,7 +46,8 @@ __all__ = [
     # Core classes
     # "Trainer",  # TODO: Implement in Issue #3
     "TrainingConfig",
-    # "TrainingResult",  # TODO: Implement in Issue #2
+    "TrainingResult",
+    "TrainingMetrics",
 
     # Scenarios
     # "Scenario",  # TODO: Implement in Issue #4
