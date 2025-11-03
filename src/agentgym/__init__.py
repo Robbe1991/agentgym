@@ -25,16 +25,16 @@ __email__ = "hello@agentgym.com"
 __license__ = "MIT"
 
 # Core exports
-from agentgym.core.trainer import Trainer
+# from agentgym.core.trainer import Trainer  # TODO: Implement in Issue #3
 from agentgym.core.config import TrainingConfig
-from agentgym.core.result import TrainingResult
+# from agentgym.core.result import TrainingResult  # TODO: Implement in Issue #2
 
 # Scenario exports
-from agentgym.scenarios.base import Scenario
-from agentgym.scenarios.registry import ScenarioRegistry
+# from agentgym.scenarios.base import Scenario  # TODO: Implement in Issue #4
+# from agentgym.scenarios.registry import ScenarioRegistry  # TODO: Implement in Issue #5
 
 # Integration exports
-from agentgym.integrations.base import FrameworkAdapter
+# from agentgym.integrations.base import FrameworkAdapter  # TODO: Implement in Issue #7
 
 __all__ = [
     # Version info
@@ -44,14 +44,14 @@ __all__ = [
     "__license__",
 
     # Core classes
-    "Trainer",
+    # "Trainer",  # TODO: Implement in Issue #3
     "TrainingConfig",
-    "TrainingResult",
+    # "TrainingResult",  # TODO: Implement in Issue #2
 
     # Scenarios
-    "Scenario",
-    "ScenarioRegistry",
+    # "Scenario",  # TODO: Implement in Issue #4
+    # "ScenarioRegistry",  # TODO: Implement in Issue #5
 
     # Integrations
-    "FrameworkAdapter",
+    # "FrameworkAdapter",  # TODO: Implement in Issue #7
 ]
